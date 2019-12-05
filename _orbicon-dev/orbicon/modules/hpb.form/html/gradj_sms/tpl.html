@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HPB - Hrvatska poštanska banka - Pristupnica za uporabu HPB SMS usluga</title>
+
+
+<link href="./site/gfx/css/main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 6.5]><link href="./site/gfx/css/iefix6.css" rel="stylesheet" type="text/css"/><![endif]-->
+<!--[if gte IE 7]><link href="./site/gfx/css/iefix7.css" rel="stylesheet" type="text/css"/><![endif]-->
+
+<!>METATAGS
+
+</head>
+
+<body>
+
+<!>TOP_INFOBOX
+<!>ADMIN
+
+<div id="container"><!-- login -->
+<!>HEADER_FILE <!-- header end -->
+
+<!>NAVIGATION_FILE <!-- nav end -->
+
+
+<div id="contentWrapper">
+
+<div id="noCol">
+
+<h2 class="buster">Pristupnica za uporabu HPB SMS usluga</h2>
+
+<ul id="steps">
+	<li id="tab1_label" class="active"><strong>Osnovni podaci</strong></li>
+	<li id="tab2_label"><strong>Ostali podaci</strong></li>
+	<li id="tab3_label"><strong>Provjera i slanje zahtjeva</strong></li>
+</ul>
+<div class="clr"></div>
+
+<div id="floatingBox">
+<p></p>
+</div>
+
+
+<form id="regEntry" action="" method="post">
+<input type="hidden" id="hr" name="hr" value="mod.hpb.form" />
+<input type="hidden" id="form" name="form" value="hpb_form_gradj_sms" />
+<input type="hidden" id="fin" name="fin" value="1" />
+
+<div id="tab1">
+
+<fieldset>
+              <legend>Osobni podaci</legend><table class="form_holder">
+                <tbody>
+
+                  <tr>
+                    <td class="name"><label for="ime_prezime">Ime i prezime</label></td>
+                    <td colspan="2" class="value"><input id="ime_prezime" name="ime_prezime" size="20" value="" class="input_text required" title="Ime i prezime osnovnog korisnika kartice je obvezno" type="text"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="jmbg">MBG</label></td>
+                    <td colspan="2" class="value"><input maxlength="13" tt="Matični broj građana" id="jmbg" name="jmbg"  size="20" value="" class="input_text required" title="MBG korisnika kartice je obvezan i smije sadržavati samo brojke" type="text"></td>
+                  </tr>
+
+
+                   <tr>
+                    <td class="name"><label for="adresa">Adresa</label></td>
+                    <td colspan="2" class="value"><input id="adresa" name="adresa" size="20" value="" class="input_text required" title="Adresa s osobne iskaznice korisnika kartice je obvezna" type="text"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="mjesto">Mjesto</label></td>
+                    <td colspan="2" class="value"><input id="mjesto" name="mjesto" size="20" value="" class="input_text required" title="Mjesto je obvezno i smije sadržavati samo slova" type="text"></td>
+                  </tr>
+
+                                   <tr>
+                    <td class="name"><label for="zip">Poštanski broj</label></td>
+                    <td colspan="2" class="value"><input maxlength="5"  id="zip" name="zip" size="20" value="" class="input_text small required" title="Poštanski broj je obvezan i smije sadržavati samo brojeve" type="text"></td>
+                  </tr>
+
+				<tr>
+                    <td class="name"><label for="broj_racuna">Broj tekućeg računa</label></td>
+                    <td colspan="2" class="value"><input id="broj_racuna" name="broj_racuna" size="20" value="" class="input_text required" title="" type="text"></td>
+                  </tr>
+<tr>
+                    <td class="name"><label for="vrsta_primanja">Vrsta primanja</label></td>
+                    <td colspan="2" class="value"><input id="vrsta_primanja" name="vrsta_primanja" size="20" value="" class="input_text required" title="" type="text"></td>
+                  </tr>
+
+<tr>
+			<td class="name top">
+
+			<label class="" for="pocek">Izvadak po tekućem računu želim primati na e-mail</label>
+
+
+			</td>
+
+			<td class="value">
+
+			<label class="input_radio"><input
+				type="radio" name="primati_na_email" id="" class="input_radio"  value="1"/> DA </label><label class="input_radio"><input type="radio" name="primati_na_email" id=""
+				class="input_radio" value="0" /> NE</label> <br /></td>
+		</tr>
+
+                  <tr>
+                    <td class="name"><label for="telefon">Telefon</label></td>
+                    <td colspan="2" class="value"><input id="telefon" name="telefon" size="20" value="" class="input_text required" title="Telefon" type="text"></td>
+                  </tr>
+                  <tr>
+                    <td class="name"><label for="mobitel">Mobitel</label></td>
+                    <td colspan="2" class="value"><input id="mobitel" name="mobitel" size="20" value="" class="input_text" title="Mobitel" type="text"></td>
+                  </tr>
+                  <tr>
+                    <td class="name"><label for="email">E-mail adresa</label></td>
+                    <td colspan="2" class="value"><input id="email" name="email" size="20" value="" class="input_text validate-email" title="E-mail adresa" type="text"></td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </fieldset>
+
+<p class="buttons" id="buttons_1"><input type="button"
+	class="button cancel" onclick="history.back()" value="Odustani" title="Odustani" name="clear" />
+<input type="button" class="button next" value="Dalje;" title="Dalje"
+	name="submit" onclick="posl_kredit_2();" /></p>
+
+</div>
+
+
+<div id="tab2" class="h">
+
+<fieldset>
+              <legend>Ostali podaci</legend><table class="form_holder">
+                <tbody>
+
+                <tr>
+
+                <td colspan="3"><p class="smallInfo">Molimo Vas da popunite sljedeće podatke kako bismo Vas bolje upoznali i u budućnosti još preciznije kreirali proizvode i usluge po Vašoj mjeri</p></td>
+
+                </tr>
+
+                  <tr>
+                    <td class="name"><label for="clanova_ukucanstvo">Koliko članova ima Vaše kućanstvo</label></td>
+                    <td colspan="2" class="value"><input id="clanova_ukucanstvo" name="clanova_ukucanstvo" size="20" value="" class="input_text" title="" type="text"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="poslodavac">Naziv poslodavca</label></td>
+                    <td colspan="2" class="value"><input id="poslodavac" name="poslodavac"  size="20" value="" class="input_text" title="" type="text"></td>
+                  </tr>
+
+
+                   <tr>
+                    <td class="name"><label for="ss">Stručna sprema</label></td>
+                    <td colspan="2" class="value"><select id="ss" name="ss" class="select med">
+                    <option value="1">NSS</option>
+                    <option value="2">SSS</option>
+                    <option value="3">VSS</option>
+                    <option value="4">MR</option>
+                    <option value="5">DR</option>
+
+                    </select></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="zanimanje">Zanimanje</label></td>
+                    <td colspan="2" class="value"><input id="zanimanje" name="zanimanje" size="20" value="" class="input_text" title="" type="text"></td>
+                  </tr>
+
+                                   <tr>
+                    <td class="name"><label for="polozaj">Vaš položaj unutar poduzeća</label></td>
+                    <td colspan="2" class="value"><select id="polozaj" name="polozaj" class="select ">
+                    <option value="1">vlasnik poduzeća</option>
+                    <option value="2">viši menadžer</option>
+                    <option value="3">niži menadžer</option>
+                    <option value="4">službenik</option>
+                    <option value="5">ostalo</option>
+
+                    </select></td>
+                  </tr>
+
+				<tr>
+                    <td class="name"><label for="bracni_status">Bračni status</label></td>
+                    <td colspan="2" class="value"><select id="bracni_status" name="bracni_status" class="select ">
+                    <option value="1">oženjen/udana</option>
+                    <option value="2">neoženjen/neudana</option>
+
+
+                    </select></td>
+                  </tr>
+<tr>
+                    <td class="name"><label for="broj_djece">Broj djece</label></td>
+                    <td colspan="2" class="value"><input id="broj_djece" name="broj_djece" size="20" value="" class="input_text" title="" type="text"></td>
+                  </tr><tr>
+                    <td class="name"><label for="stanovanje">Stanovanje</label></td>
+                    <td colspan="2" class="value"><select id="stanovanje" name="stanovanje" class="select ">
+                    <option value="1">vlastiti stan</option>
+                    <option value="2">vlastita kuća</option>
+                    <option value="3">najam</option>
+                    <option value="4">kod roditelja</option>
+                    <option value="5">ostalo</option>
+
+                    </select></td>
+                  </tr><tr>
+                    <td class="name"><label for="bankomati">Služite li se bankomatima?</label></td>
+                    <td colspan="2" class="value"><select id="bankomati" name="bankomati" class="select med">
+                    <option value="1">da</option>
+                    <option value="2">ne</option>
+                    <option value="3">povremeno</option>
+
+                    </select></td>
+                  </tr><tr>
+                    <td class="name top"><label for="kartice">Posjedujete li neku od kartica?</label></td>
+                    <td colspan="2" class="value">
+
+                    <label for="mc" class="input_check"><input
+				type="checkbox" name="mc" id="mc" class="input_check" /> Mastercard</label> <label for="visa" class="input_check"><input
+				type="checkbox" name="visa" id="visa" class="input_check" /> Visa</label>
+                    <label for="amex" class="input_check"><input
+				type="checkbox" name="amex" id="amex" class="input_check" /> American Express</label> <label for="maestro" class="input_check"><input
+				type="checkbox" name="maestro" id="maestro" class="input_check" /> Maestro</label>
+                    <label for="diners" class="input_check"><input
+				type="checkbox" name="diners" id="diners" class="input_check" /> Diners</label>
+
+
+                    </td>
+                  </tr><tr>
+                    <td class="name top"><label for="bankarske_usluge">Koje od sljedećih bankarskih proizvoda i usluga koristite u drugim bankama?</label></td>
+                    <td colspan="2" class="value">
+
+                     <label for="stednja" class="input_check"><input
+				type="checkbox" name="stednja" id="stednja" class="input_check" /> štednja</label> <label for="tel_bankarstvo" class="input_check"><input
+				type="checkbox" name="tel_bankarstvo" id="tel_bankarstvo" class="input_check" value="1" /> telefonsko bankarstvo</label>
+
+                     <label for="tekuci" class="input_check"><input
+				type="checkbox" name="tekuci" id="tekuci" class="input_check" value="1" /> tekući račun</label>
+
+                    <label for="ib" class="input_check"><input
+				type="checkbox" name="ib" id="ib" class="input_check" value="1" /> internet bankarstvo</label> <label for="kred" class="input_check"><input
+				type="checkbox" name="kred" id="kred" class="input_check" value="1" /> kreditne kartice</label>
+                    <label for="stambena" class="input_check"><input
+				type="checkbox" name="stambena" id="stambena" class="input_check" value="1" /> stambena štednja</label>
+                    <label for="fondovi" class="input_check"><input
+				type="checkbox" name="fondovi" id="fondovi" class="input_check" value="1" /> investicijski fondovi</label>
+
+
+
+                    </td>
+                  </tr><tr>
+                    <td class="name top"><label for="">Krediti</label></td>
+                    <td colspan="2" class="value"> <label for="stambeni_kred" class="input_check"><input
+				type="checkbox" name="stambeni_kred" id="stambeni_kred" class="input_check" value="1" /> stambeni</label> <label for="nenamjenski" class="input_check"><input
+				type="checkbox" name="nenamjenski" id="nenamjenski" class="input_check" value="1" /> nenamjenski gotovinski</label>
+                    <label for="automobili" class="input_check"><input
+				type="checkbox" name="automobili" id="automobili" class="input_check" value="1" /> automobili</label> <label for="ostalo" class="input_check"><input
+				type="checkbox" name="ostalo" id="ostalo" class="input_check" value="1" /> ostalo</label>
+</td>
+
+
+                </tbody>
+              </table>
+            </fieldset>
+
+
+
+
+<p class="buttons" id="buttons_2"><input type="button"
+	class="button back" value="Povratak" title="Povratak" name="clear"
+	onclick="posl_kredit_1();" /> <input type="button" class="button next"
+	value="Dalje;" title="Dalje" name="submit" onclick="posl_kredit_3();" /></p>
+
+<p class="buttons h" id="buttons_3"><input type="button"
+	class="button edit" value="Promjeni podatke" title="Promjeni podatke" name="clear"
+	onclick="posl_kredit_2_back();" /> <input type="submit"
+	class="button save" title="Potvrđujem ispravnost podataka"
+	value="Potvrđujem ispravnost podataka" name="submit" /></p>
+
+
+
+</div>
+
+
+</form>
+
+
+<div class="clr"></div>
+
+</div>
+</div>
+
+<!>FOOTER_FILE <script type="text/javascript"
+	src="./orbicon/3rdParty/yui/build/get/get-min.js"></script> <script
+	type="text/javascript" src="./orbicon/modules/hpb.form/hpbform.js"></script>
+
+
+<script type="text/javascript">
+
+	var disable_tt = false;
+
+	append_tt();
+
+	var tIds = {};
+
+	var onSuccess = function(o) {
+		tIds[o.data] = o;
+	}
+
+	function posl_kredit_2()
+	{
+		disable_tt = false;
+
+		// tabs
+		$('tab1').style.display = 'none';
+		$('tab2').style.display = 'block';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab2_label', 'active');
+		YAHOO.util.Dom.removeClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab3_label', 'active');
+	}
+
+	function posl_kredit_3()
+	{
+		disable_tt = true;
+
+		// css
+		YAHOO.util.Get.css(orbx_site_url + '/orbicon/modules/hpb.form/gfx/hpbform_print.css', {data:'print', onSuccess: onSuccess});
+
+		// buttons
+		$('buttons_1').style.display = 'none';
+		$('buttons_2').style.display = 'none';
+		$('buttons_3').style.display = 'block';
+
+		// tabs
+		$('tab1').style.display = 'block';
+		$('tab2').style.display = 'block';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab3_label', 'active');
+		YAHOO.util.Dom.removeClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab2_label', 'active');
+	}
+
+	function posl_kredit_1()
+	{
+		disable_tt = false;
+
+		// tabs
+		$('tab1').style.display = 'block';
+		$('tab2').style.display = 'none';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab2_label', 'active');
+		YAHOO.util.Dom.removeClass('tab3_label', 'active');
+	}
+
+	function posl_kredit_2_back()
+	{
+		posl_kredit_2();
+
+		// buttons
+		$('buttons_1').style.display = 'block';
+		$('buttons_2').style.display = 'block';
+		$('buttons_3').style.display = 'none';
+
+		// css
+		tIds['print'].purge();
+	}
+
+    </script> <script type="text/javascript"
+	src="./orbicon/modules/hpb.form/jsvalidate.js"></script></div>
+
+
+
+</body>
+</html>

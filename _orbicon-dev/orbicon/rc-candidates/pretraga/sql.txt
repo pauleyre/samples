@@ -1,0 +1,9 @@
+SELECT DISTINCT *  FROM `orbx_mod_estate` 
+WHERE 
+`location` LIKE '%z%' 
+AND 
+`type` = 'stan' 
+AND 
+price BETWEEN 1300 AND 3000 
+AND 
+msquare  BETWEEN 50 AND 80

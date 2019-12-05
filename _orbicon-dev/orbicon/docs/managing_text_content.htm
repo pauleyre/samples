@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="tekst">
+			<h1><a name="tekst">Managing text content</a></h1>
+			<p><img src="gfx/tut05.png" alt="#" title="#" /></p>
+			<p>Open menu &quot;Databases&quot;, and select &quot;Texts&quot; from submenu. The window &quot;Texts&quot; opens. On the right sidebar we can see that the card entitled &quot;Database browser&quot; is opened. This is the database for all text documents. Since this is our first usage of the system we will be prompted to create our first text category. We create our first category by typing the name and submitting it. (We can see our newly created category on the right.) Now we can create a text article. We enter text's title, for example &quot;my article&quot; and submit it. The system saves text and brings up the advanced text editor. Inside text editor we can write our article's content, save it or modify it.</p>
+			<p>What have we accomplished so far? We created text database category and inside of it we have created text &quot;my article&quot;. If we wish to add additional text to our category, we simply type in another article title and submit it.</p>
+			<p><strong>Next:</strong> <a href="managing_graphical_documents.htm">Managing graphical content</a></p>
+		</div>
+</body>
+</html>

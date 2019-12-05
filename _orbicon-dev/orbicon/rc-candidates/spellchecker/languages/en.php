@@ -1,0 +1,5 @@
+<?php
+
+	$mod['spellchecker'] = 'Spellchecker';
+
+?>

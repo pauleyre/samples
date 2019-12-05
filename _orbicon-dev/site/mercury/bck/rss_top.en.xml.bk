@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://www.w3.org/2000/08/w3c-synd/style.css" type="text/css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="http://localhost/orbicon-dev/site/mercury/rss_top.en.xml" rel="self" type="application/rss+xml" />
+		<title></title>
+		<link>http://localhost/orbicon-dev/</link>
+		<description></description>
+		<lastBuildDate>Thu, 18 Dec 2008 09:52:43 +0100</lastBuildDate>
+		<generator>System2</generator>
+		<language>en</language>
+		<copyright>Copyright 2008, </copyright>
+		<managingEditor> ()</managingEditor>
+		<webMaster> ()</webMaster>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs> </channel>
+</rss>

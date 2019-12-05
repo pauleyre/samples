@@ -1,0 +1,6 @@
+#admin_errorlog_form textarea {
+	width: 99%; 
+	height: 500px; 
+	font-family: monospace; 
+	font-size: 110%;
+}

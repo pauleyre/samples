@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="example_use_orbx_log">
+			<h1><a name="example_use_orbx_log">Example usage for $orbx_log</a></h1>
+			<p><strong>$orbx_log</strong> methods example</p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// add line to error log
+	$orbx_log->ewrite('could not read file', __LINE__, __FUNCTION__);
+	// add line to debug log
+	$orbx_log->dwrite('value of X set to 21', __LINE__, __FUNCTION__);
+	// add line to system log
+	$orbx_log->swrite('shutting down process', __LINE__, __FUNCTION__);
+
+?>
+</textarea>
+
+<p>Initiating new Logger object</p>
+<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// start logger
+	require_once DOC_ROOT . '/orbicon/class/class.logger.php';
+	global $orbx_log;
+	$orbx_log = new Logger;
+
+?>
+</textarea>
+
+
+			<p><strong>Next:</strong> <a href="example_usage_for_orbx_mod.htm">Example usage for $orbx_mod</a></p>	
+				
+		</div>
+</body>
+</html>

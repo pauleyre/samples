@@ -1,0 +1,97 @@
+body {
+background:#fff;
+margin:0;
+overflow:hidden;
+}
+
+.menuc {
+position:fixed;
+left:0;
+top:0;
+}
+
+#menu {
+background:#3C3C3C;
+width:100%;
+visibility:hidden;
+border: 1px solid #9F9F9F;
+font-family: sans-serif;
+margin:0;
+padding:0
+}
+
+#menu a {
+color: #9F9F9F
+}
+
+.list,
+.list * {
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.list {
+float:left;
+width:100%;
+}
+
+.list li {
+border-bottom:1px solid #ccc;
+}
+
+.litem {
+font-size:14px;
+line-height:30px;
+overflow:hidden;
+}
+
+.litem a {
+color:#000;
+display:block;
+font-weight:bold;
+text-decoration:none;
+width:100%;
+}
+
+.litem a:hover {
+background:HoneyDew;
+text-decoration:none;
+}
+
+.litem a span {
+font-size: 0.76em;
+font-family: monospace;
+color:#888
+}
+
+#navbar {
+	margin: 0;
+	padding: 0;
+	height: 1em; }
+#navbar li {
+	list-style: none;
+	float: left; }
+#navbar li a {
+	display: block;
+	padding: 3px 8px;
+	background-color: #5e8ce9;
+	color: #fff;
+	text-decoration: none; }
+#navbar li ul {
+	display: none;
+	width: 10em; /* Width to help Opera out */
+	background-color: #69f;}
+#navbar li:hover ul, #navbar li.hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0; }
+#navbar li:hover li, #navbar li.hover li {
+	float: none; }
+#navbar li:hover li a, #navbar li.hover li a {
+	background-color: #69f;
+	border-bottom: 1px solid #fff;
+	color: #000; }
+#navbar li li a:hover {
+	background-color: #8db3ff; }

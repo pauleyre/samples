@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="adding_search">
+			<h1><a name="adding_search">Implementing Attila search</a></h1>
+
+			<p>Orbicon framework comes with Attila search node, an integrated search engine. Below is an example HTML form ready for implementation into your template. The form will work for all languages.</p>
+			
+			<p>Attila search form</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<!-- START - Attila search form -->
+<form id="attila_search_form" method="get" action="">
+	<p>
+		<input type="hidden" name="<!>ORBX_LN" id="<!>ORBX_LN" value="attila" /> 
+		<label for="q">&amp;nbsp;</label> <label for="submit">&amp;nbsp;</label><br />
+		<input type="text" name="q" id="q" class="search_field" /> 
+		<input type="submit" name="submit" id="submit" value="Submit" class="search_submit" />
+	</p>
+	<!-- container for YUI! AutoComplete ( http://developer.yahoo.com/yui/autocomplete/ ) -->
+	<div id="orbx_search_container"></div>
+</form>
+<!-- END - Attila search form -->
+</textarea>
+
+			<p><strong>Next:</strong> <a href="logs.htm">Logs</a></p>
+		</div>
+</body>
+</html>

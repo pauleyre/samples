@@ -1,0 +1,15 @@
+#files {
+	font-size:90%;
+}
+
+#files .file_row:hover {
+	background: #ffffcc;
+}
+
+option.delete {
+	background: #ffffff url(gui_icons/delete.png) right top no-repeat;
+}
+
+option.expand {
+	background: #ffffff url(gui_icons/expand.png) right top no-repeat;
+}

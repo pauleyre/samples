@@ -1,0 +1,6 @@
+<?php
+
+	// do nothing
+	return '';
+
+?>

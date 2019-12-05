@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /?Slikarstvo,koje-su-najpoznatije-slike-iz-doba-renesanse&d=4556
+Disallow: /?Slikarstvo,tko-je-bio-ivan-generalic&d=3845
+
+

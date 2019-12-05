@@ -1,0 +1,41 @@
+.column {
+	width: 285px;
+	float: left;
+}
+
+.null_it { 
+	margin: 0;
+}
+
+.text_field {
+	width: 245px;
+}
+
+#advanced_settings fieldset {
+	margin: 15px 0 5px 0;
+}
+
+#advanced_settings label {
+	padding: 1px;
+	font-size: 11px;
+}
+
+#advanced_settings { 
+	margin: 0;
+}
+
+
+#advanced_settings p {
+	line-height: 1.5em;
+	margin: 5px;
+	padding: 0;
+}
+
+#advanced_settings p span {
+	font-weight: bold;
+}
+
+#advanced_settings input {
+	margin: 0;
+}
+

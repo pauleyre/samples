@@ -1,0 +1,10 @@
+[05-Feb-2009 14:30:23] PHP Parse error:  syntax error, unexpected ';' in D:\xampp\htdocs\orbicon-dev\orbicon\modules\stats\class.stats.php on line 653
+[05-Feb-2009 14:30:23] PHP Parse error:  syntax error, unexpected ';' in D:\xampp\htdocs\orbicon-dev\orbicon\modules\stats\class.stats.php on line 653
+[05-Feb-2009 14:30:32] PHP Parse error:  syntax error, unexpected ';' in D:\xampp\htdocs\orbicon-dev\orbicon\modules\stats\class.stats.php on line 653
+[05-Feb-2009 14:30:35] PHP Parse error:  syntax error, unexpected ';' in D:\xampp\htdocs\orbicon-dev\orbicon\modules\stats\class.stats.php on line 653
+[05-Feb-2009 14:32:40] PHP Warning:  mod.ini for module orbitum-finalbuilder (D:\xampp\htdocs\orbicon-dev/orbicon/modules/orbitum-finalbuilder/mod.ini) is not a file in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 138
+[05-Feb-2009 14:32:40] PHP Notice:  Current website zone is not set in D:\xampp\htdocs\orbicon-dev\orbicon\modules\polls\class.polls.php on line 138
+[05-Feb-2009 14:33:05] PHP Warning:  mod.ini for module orbitum-finalbuilder (D:\xampp\htdocs\orbicon-dev/orbicon/modules/orbitum-finalbuilder/mod.ini) is not a file in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 138
+[05-Feb-2009 14:33:05] PHP Notice:  Current website zone is not set in D:\xampp\htdocs\orbicon-dev\orbicon\modules\polls\class.polls.php on line 138
+[05-Feb-2009 14:43:28] PHP Warning:  mod.ini for module orbitum-finalbuilder (D:\xampp\htdocs\orbicon-dev/orbicon/modules/orbitum-finalbuilder/mod.ini) is not a file in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 138
+[05-Feb-2009 14:43:28] PHP Notice:  Current website zone is not set in D:\xampp\htdocs\orbicon-dev\orbicon\modules\polls\class.polls.php on line 138

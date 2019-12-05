@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		sh('intro_grp');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+</head>
+
+<body>
+<div id="header">
+<img src="gfx/logo.gif" alt="Orbicon Framework" title="Orbicon Framework" />
+</div>
+
+	<div id="navigation">
+		<ul>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('intro_grp');" target ="showframe">Manual</a>
+				<ol id="intro_grp">
+					<li><a href="introduction.htm" target ="showframe">Introduction</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('install_grp');" target ="showframe">Installation</a>
+				<ol id="install_grp">
+					<li><a href="introduction_to_installing.htm" target ="showframe">Introduction to Installing</a></li>
+					<li><a href="client_requirements.htm" target ="showframe">Client Requirements</a></li>
+					<li><a href="server_requirements.htm" target ="showframe">Server Requirements</a></li>
+					<li><a href="server_recomendations.htm" target ="showframe">Server Recommendations</a></li>
+					<li><a href="obtaining.htm" target ="showframe">Obtaining</a></li>
+					<li><a href="uploading.htm" target ="showframe">Uploading</a></li>
+					<li><a href="installing.htm" target ="showframe">Installing</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('upgrade_grp');" target ="showframe">Upgrading</a>
+				<ol id="upgrade_grp">
+					<li><a href="introduction_to_upgrading.htm" target ="showframe">Introduction to Upgrading</a></li>
+					<li><a href="the_change_log.htm" target ="showframe">The Change Log</a></li>
+					<li><a href="before_you_upgrade.htm" target ="showframe">Before you Upgrade</a></li>
+					<li><a href="minimum_requirements.htm" target ="showframe">Check the minimum requirements</a></li>
+					<li><a href="obtaining_upgrade.htm" target ="showframe">Obtaining</a></li>
+					<li><a href="automatic_upgrade.htm" target ="showframe">Beginning the automatic upgrade</a></li>
+					<li><a href="manual_upgrade.htm" target ="showframe">Beginning the manual upgrade</a></li>
+					<li><a href="finishing_up.htm" target ="showframe">Finishing up</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('manage_grp');" target ="showframe">Using Orbicon</a>
+				<ol id="manage_grp">
+					<li><a href="login.htm" target ="showframe">Login</a></li>
+					<li><a href="desktop.htm" target ="showframe">Desktop</a></li>
+					<li><a href="managing_content.htm" target ="showframe">Managing content</a></li>
+					<li><a href="managing_text_content.htm" target ="showframe">Managing text content</a></li>
+					<li><a href="managing_graphical_documents.htm" target ="showframe">Managing graphical documents</a></li>
+					<li><a href="managing_miscellaneous_documents.htm" target ="showframe">Managing miscellaneous documents</a></li>
+					<li><a href="columns.htm" target ="showframe">Columns</a></li>
+					<li<a href="using_news_and_dashboard.htm" target ="showframe">Using news dashboard</a></li>
+					<li><a href="poll.htm" target ="showframe">Polls</a></li>
+					<li><a href="banners.htm" target ="showframe">Banners</a></li>
+					<li><a href="rss_channels.htm" target ="showframe">RSS channels</a></li>
+					<li><a href="zones.htm" target ="showframe">Zones</a></li>
+					<li><a href="template_editing.htm" target ="showframe">Template editing</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('advanced_grp');" target ="showframe">Advanced usage</a>
+				<ol id="advanced_grp">
+					<li><a href="template_marks.htm" target ="showframe">Template marks</a></li>
+					<li><a href="implementing_attila_search.htm" target ="showframe">Implementing Attila search</a></li>
+					<li><a href="logs.htm" target ="showframe">Logs</a></li>
+					<li><a href="synchronization.htm" target ="showframe">Synchronization</a></li>
+					<li><a href="3rdparty_resources.htm" target ="showframe">3rd party resources</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('modules_grp');" target ="showframe">Modules</a>
+				<ol id="modules_grp">
+					<li><a href="modules_introduction.htm" target ="showframe">Introduction</a></li>
+					<li><a href="capabilities.htm" target ="showframe">Capabilities</a></li>
+					<li><a href="module_building.htm" target ="showframe">Module building</a></li>
+					<li><a href="module_building_example.htm" target ="showframe">Module building example</a></li>
+					<li><a href="mod_ini.htm" target ="showframe" target ="showframe">mod.ini</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('globalphp_grp');" target ="showframe">Global PHP objects</a>
+				<ol id="globalphp_grp">
+					<li><a href="global_php_objects.htm" target ="showframe">Global PHP objects</a></li>
+					<li><a href="predefiend_constants.htm" target ="showframe">Predefined constants</a></li>
+					<li><a href="example_usage_for_orbicon_x.htm" target ="showframe">Example usage for $orbicon_x</a></li>
+					<li><a href="example_usage_for_dbc.htm" target ="showframe">Example usage for $dbc</a></li>
+					<li><a href="example_usage_for_orbx_log.htm" target ="showframe">Example usage for $orbx_log</a></li>
+					<li><a href="example_usage_for_orbx_mod.htm" target ="showframe">Example usage for $orbx_mod</a></li>
+				</ol>
+			</li>
+			<li><a href="javascript:void(0);" onclick="javascript: sh('troubleshooting_grp');" target ="showframe">Troubleshooting</a>
+				<ol id="troubleshooting_grp">
+					<li><a href="known_issues.htm" target ="showframe">Known Issues</a></li>
+					<li><a href="design_implementation.htm" target ="showframe">Design implementation</a></li>
+				</ol>
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>

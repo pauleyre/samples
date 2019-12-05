@@ -1,0 +1,46 @@
+.validation-failed { /* for textboxes, textareas, passwords */
+border-color: #cc0000 !important;
+}
+
+.validation-failed-cr { /* for checkboxes and radios */
+border-color: #cc0000  !important;
+}
+
+.validation-failed-sel { /* for selects */
+border-color: #cc0000  !important;
+}
+
+form#regEntry input.input_text,
+form#regEntry .select,
+form#regEntry textarea {
+border-color: transparent;
+}
+
+form#regEntry fieldset {
+border-color: transparent !important;
+}
+
+#regEntry .gray {
+	background-color:#fff !important;
+}
+
+.smallInfo,
+form#regEntry p.note {
+	display:none;
+}
+
+.terms {
+	display:block;
+}
+
+#floatingBox ul li {
+border-bottom:1px solid #F1F1F1;
+padding:10px 5px;
+}
+
+
+#floatingBox {
+overflow:hidden;
+height:530px;
+display:block;
+}

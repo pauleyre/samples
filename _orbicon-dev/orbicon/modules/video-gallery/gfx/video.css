@@ -1,0 +1,19 @@
+#video_table tr td {
+	vertical-align:top;
+}
+
+.video_fieldset {
+	margin-top: 0;
+	padding-top:0;
+	height: 150px;
+	border: 1px solid #cccccc;
+}
+
+.video_list li {
+	list-style: none;
+}
+
+.video_scroll_container {
+	overflow:auto;
+	height: 150px;
+}

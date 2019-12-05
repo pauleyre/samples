@@ -1,0 +1,3 @@
+<?php
+$mod['ponuda'] = 'Ponuda';
+?>

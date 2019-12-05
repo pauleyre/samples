@@ -1,0 +1,6 @@
+http://localhost/orbicon-dev/
+http://localhost/orbicon-dev/?en=lčkklč
+http://localhost/orbicon-dev/?en=xya
+http://localhost/orbicon-dev/?hr=dasads
+http://localhost/orbicon-dev/?hr=dsadas
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!>COLUMN_TITLE - <!>DOMAIN_NAME</title>
+<!>METATAGS
+
+<link type="text/css" rel="stylesheet" href="./site/gfx/css/main.css?<!>ORBX_BUILD" />
+
+<!--[if lt IE 6.5]><link href="./site/gfx/css/iefix6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gte IE 7]> <link href="./site/gfx/css/iefix7.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body onunload="GUnload()">
+<!>TOP_INFOBOX
+<!>ADMIN
+
+    <div id="container">
+
+      <!-- login -->
+
+     	<!>HEADER_FILE
+
+      <!-- header end -->
+
+	<!>NAVIGATION_FILE
+
+      <!-- nav end -->
+
+
+      <div id="contentWrapper" class="step1">
+
+         <div id="breadcrumbs"><strong>Nalazim se:</strong> <!>BREADCRUMBS</div>
+
+<div id="innerLeftCol">
+<div id="innerContent">
+
+<h2 class="buster">Pregled bankomata</h2>
+
+<xscript src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAzj0eBCROX5Ju3pTCI8qGIxTG9HyvPNvXlZzv_rMjxsAYbgHy8hRElKd2i81RteQXHed9To8Oh54FZw" type="text/javascript"></xscript>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAzj0eBCROX5Ju3pTCI8qGIxR4SIu4QRrh4blECsznyYLijVSBrBQvCLRSAWfIsRkAxlwnrRYN6b06nw" type="text/javascript"></script>
+
+
+         <div id="map" style="width: 570px; height: 600px"></div>
+
+    <noscript><b>JavaScript mora biti uključen.</b>
+    </noscript>
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+
+
+      function createMarker(point,html,icon) {
+        var marker = new GMarker(point, icon);
+        GEvent.addListener(marker, "click", function() {
+	     marker.openInfoWindowHtml(html);
+	     map.setCenter(marker.getLatLng(), 13);
+
+        });
+        return marker;
+
+      }
+
+      // Display the map, with some controls and set the initial location
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(44.72332, 16.484863), 7);
+
+      var Icon = new GIcon();
+      Icon.image = "/site/gfx/hpb.png";
+      Icon.iconSize = new GSize(10, 10);
+      Icon.iconAnchor = new GPoint(5, 5);
+      Icon.infoWindowAnchor = new GPoint(0, 0);
+      Icon.transparent = "/site/gfx/hpb.png";
+      Icon.imageMap=[9,0,6,1,4,2,2,4,0,8,0,12,1,14,2,16,5,
+      19,7,23,8,26,9,30,9,34,11,34,11,30,12,26,13,24,14,21,
+      16,18,18,16,20,12,20,8,18,4,16,2,15,1,13,0];
+
+
+
+	//Popis Bankomata
+	// Aktivni bankomati;datum ažuriranja:23.01.2009;Jasmin
+
+var ATM050 =new GLatLng(45.812386,15.979078); var marker=createMarker(ATM050,'<b>ATM050</b><br>POSLOVNICA<br><br>JURIŠIĆEVA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM051 =new GLatLng(45.812359,15.979013); var marker=createMarker(ATM051,'<b>ATM051</b><br>POSLOVNICA<br><br>PETRINJSKA<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM052 =new GLatLng(44.867123,13.844512); var marker=createMarker(ATM052,'<b>ATM052</b><br>POŠTANSKI URED<br><br>DANTEOV TRG 4<br>PULA',Icon); map.addOverlay(marker);
+var ATM053 =new GLatLng(45.805843,15.981653); var marker=createMarker(ATM053,'<b>ATM053</b><br>HT CENTAR<br><br>PALMOTIĆEVA 82<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM054 =new GLatLng(45.805088,15.981342); var marker=createMarker(ATM054,'<b>ATM054</b><br>POŠTANSKI URED<br><br>BRANIMIROVA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM055 =new GLatLng(43.506279,16.441685); var marker=createMarker(ATM055,'<b>ATM055</b><br>POŠTANSKI URED<br><br>OBALA KNEZA DOMAGOJA 3<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM056 =new GLatLng(46.029449,15.910606); var marker=createMarker(ATM056,'<b>ATM056</b><br>POŠTANSKI URED<br><br>MATIJE GUPCA 19<br>ZABOK',Icon); map.addOverlay(marker);
+var ATM057 =new GLatLng(45.765434,15.987875); var marker=createMarker(ATM057,'<b>ATM057</b><br>POŠTANSKI URED<br><br>V.VARIĆAKA 13<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM058 =new GLatLng(43.509983,16.438841); var marker=createMarker(ATM058,'<b>ATM058</b><br>POŠTANSKI URED<br><br>KRALJA TOMISLAVA 9<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM059 =new GLatLng(45.326542,14.442472); var marker=createMarker(ATM059,'<b>ATM059</b><br>POŠTANSKI URED<br><br>KORZO 13<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM060 =new GLatLng(44.109753,15.235441); var marker=createMarker(ATM060,'<b>ATM060</b><br>POŠTANSKI URED<br><br>KRALJA STJEPANA DRŽISLAVA 1<br>ZADAR',Icon); map.addOverlay(marker);
+var ATM061 =new GLatLng(46.305882,16.336285); var marker=createMarker(ATM061,'<b>ATM061</b><br>POSLOVNICA<br><br>TRG SLOBODE 9A<br>VARAŽDIN',Icon); map.addOverlay(marker);
+var ATM062 =new GLatLng(45.488297,16.372417); var marker=createMarker(ATM062,'<b>ATM062</b><br>POŠTANSKI URED<br><br>S. I A. RADIĆA 29<br>SISAK',Icon); map.addOverlay(marker);
+var ATM063 =new GLatLng(45.157272,18.012342); var marker=createMarker(ATM063,'<b>ATM063</b><br>POŠTANSKI URED<br><br>TRG POBJEDE 2<br>SLAVONSKI BROD',Icon); map.addOverlay(marker);
+var ATM064 =new GLatLng(45.561428,18.677006); var marker=createMarker(ATM064,'<b>ATM064</b><br>POŠTANSKI URED<br><br>TRG A. STARČEVIĆA BB<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM065 =new GLatLng(42.642769,18.103708); var marker=createMarker(ATM065,'<b>ATM065</b><br>POŠTANSKI URED<br><br>DR. ANTE STARČEVIĆA 2<br>DUBROVNIK',Icon); map.addOverlay(marker);
+var ATM066 =new GLatLng(45.798695,15.962362); var marker=createMarker(ATM066,'<b>ATM066</b><br>ZAGREPČANKA<br><br>SAVSKA 41<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM067 =new GLatLng(45.352062,18.999632); var marker=createMarker(ATM067,'<b>ATM067</b><br>FINA<br><br>FRANJE TUĐMANA 8<br>VUKOVAR',Icon); map.addOverlay(marker);
+var ATM068 =new GLatLng(45.287586,18.80234); var marker=createMarker(ATM068,'<b>ATM068</b><br>FINA<br><br>H.D. GENSCHERA 2<br>VINKOVCI',Icon); map.addOverlay(marker);
+var ATM069 =new GLatLng(45.494873,15.553583); var marker=createMarker(ATM069,'<b>ATM069</b><br>POŠTANSKI URED<br><br>I.G.KOVAČIĆA 1<br>KARLOVAC',Icon); map.addOverlay(marker);
+var ATM070 =new GLatLng(44.870621,13.848438); var marker=createMarker(ATM070,'<b>ATM070</b><br>POŠTANSKI URED<br><br>ISTARSKA 7<br>PULA',Icon); map.addOverlay(marker);
+var ATM071 =new GLatLng(45.227242,13.59615); var marker=createMarker(ATM071,'<b>ATM071</b><br>POŠTANSKI URED<br><br>PINO BUDIČIN 1<br>POREČ',Icon); map.addOverlay(marker);
+var ATM072 =new GLatLng(45.198219,13.591182); var marker=createMarker(ATM072,'<b>ATM072</b><br>POŠTANSKI URED<br><br>ZELENA LAGUNA<br>POREČ ZL',Icon); map.addOverlay(marker);
+var ATM073 =new GLatLng(45.431763,13.522325); var marker=createMarker(ATM073,'<b>ATM073</b><br>POŠTANSKI URED<br><br>1.SVIBNJA BR.1<br>UMAG',Icon); map.addOverlay(marker);
+var ATM074 =new GLatLng(45.080906,13.639612); var marker=createMarker(ATM074,'<b>ATM074</b><br>POŠTANSKI URED<br><br>M. BENUSSI 4<br>ROVINJ',Icon); map.addOverlay(marker);
+var ATM075 =new GLatLng(45.125656,14.792554); var marker=createMarker(ATM075,'<b>ATM075</b><br>POŠTANSKI URED<br><br>KRALJA TOMISLAVA 31A<br>NOVI VINODOLSKI',Icon); map.addOverlay(marker);
+var ATM076 =new GLatLng(45.026123,14.572699); var marker=createMarker(ATM076,'<b>ATM076</b><br>POŠTANSKI URED<br><br>BODULSKA BB<br>KRK',Icon); map.addOverlay(marker);
+var ATM077 =new GLatLng(45.172523,14.691339); var marker=createMarker(ATM077,'<b>ATM077</b><br>POŠTANSKI URED<br><br>IVANA SKOMERŽE 1<br>CRIKVENICA',Icon); map.addOverlay(marker);
+var ATM078 =new GLatLng(45.487621,16.371195); var marker=createMarker(ATM078,'<b>ATM078</b><br>FINA<br><br>I.K.SAKCINSKOG 1<br>SISAK',Icon); map.addOverlay(marker);
+var ATM080 =new GLatLng(43.732243,15.896616); var marker=createMarker(ATM080,'<b>ATM080</b><br>POŠTANSKI URED<br><br>ANTE STARČEVIĆA BB<br>ŠIBENIK',Icon); map.addOverlay(marker);
+var ATM081 =new GLatLng(43.758354,15.776539); var marker=createMarker(ATM081,'<b>ATM081</b><br>POŠTANSKI URED<br><br>OBALA I.J.COTE 4<br>VODICE',Icon); map.addOverlay(marker);
+var ATM083 =new GLatLng(45.453598,13.649558); var marker=createMarker(ATM083,'<b>ATM083</b><br>POŠTANSKI URED<br><br>GRANIČNI PRIJELAZ<br>KAŠTEL',Icon); map.addOverlay(marker);
+var ATM084 =new GLatLng(42.96418,16.716063); var marker=createMarker(ATM084,'<b>ATM084</b><br>POŠTANSKI URED<br><br>OBALA 2 BR.1<br>VELA LUKA',Icon); map.addOverlay(marker);
+var ATM085 =new GLatLng(43.295261,17.017609); var marker=createMarker(ATM085,'<b>ATM085</b><br>POSLOVNICA<br><br>TRG 4.SVIBNJA 1<br>MAKARSKA',Icon); map.addOverlay(marker);
+var ATM086 =new GLatLng(43.519211,16.447971); var marker=createMarker(ATM086,'<b>ATM086</b><br>POŠTANSKI URED<br><br>DOMOVINSKOG RATA 53<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM087 =new GLatLng(43.514488,16.45443); var marker=createMarker(ATM087,'<b>ATM087</b><br>POŠTANSKI URED<br><br>VINKOVAČKA 8<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM088 =new GLatLng(44.039757,16.195692); var marker=createMarker(ATM088,'<b>ATM088</b><br>FINA<br><br>KRALJA BRANIMIRA 4<br>KNIN',Icon); map.addOverlay(marker);
+var ATM089 =new GLatLng(44.54586,15.374851); var marker=createMarker(ATM089,'<b>ATM089</b><br>FINA<br><br>KANIŠKA 4<br>GOSPIĆ',Icon); map.addOverlay(marker);
+var ATM090 =new GLatLng(46.158909,15.874043); var marker=createMarker(ATM090,'<b>ATM090</b><br>FINA<br><br>FRANA GALOVIĆA<br>KRAPINA',Icon); map.addOverlay(marker);
+var ATM091 =new GLatLng(46.387943,16.438681); var marker=createMarker(ATM091,'<b>ATM091</b><br>FINA<br><br>OTOKARA KERŠOVANIJA 7<br>ČAKOVEC',Icon); map.addOverlay(marker);
+var ATM092 =new GLatLng(45.884663,16.415956); var marker=createMarker(ATM092,'<b>ATM092</b><br>FINA<br><br>BRDO 3<br>VRBOVEC',Icon); map.addOverlay(marker);
+var ATM093 =new GLatLng(43.053478,17.649601); var marker=createMarker(ATM093,'<b>ATM093</b><br>FINA<br><br>I. GUNDULIĆA 1<br>METKOVIĆ',Icon); map.addOverlay(marker);
+var ATM094 =new GLatLng(45.490795,18.094181); var marker=createMarker(ATM094,'<b>ATM094</b><br>FINA<br><br>J.J.ŠTROSMAJERA 3<br>NAŠICE',Icon); map.addOverlay(marker);
+var ATM095 =new GLatLng(44.991074,14.901162); var marker=createMarker(ATM095,'<b>ATM095</b><br>POŠTANSKI URED<br><br>OBALA KRALJA ZVONIMIRA 5<br>SENJ',Icon); map.addOverlay(marker);
+var ATM096 =new GLatLng(45.308327,18.411585); var marker=createMarker(ATM096,'<b>ATM096</b><br>PANTRGOPROMET<br><br>HRVATSKIH VELIKANA 10<br>ĐAKOVO',Icon); map.addOverlay(marker);
+var ATM097 =new GLatLng(45.778957,15.996115); var marker=createMarker(ATM097,'<b>ATM097</b><br>POŠTANSKI URED<br><br>MEŠTROVIĆEV TRG BB<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM098 =new GLatLng(45.804817,15.895329); var marker=createMarker(ATM098,'<b>ATM098</b><br>POŠTANSKI URED<br><br>TRG IVANA KUKULJEVIĆA 5<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM099 =new GLatLng(45.713417,16.070412); var marker=createMarker(ATM099,'<b>ATM099</b><br>POŠTANSKI URED<br><br>SLAVKA KOLARA 15<br>VELIKA GORICA',Icon); map.addOverlay(marker);
+var ATM100 =new GLatLng(45.797382,15.937128); var marker=createMarker(ATM100,'<b>ATM100</b><br>POŠTANSKI URED<br><br>OZALJSKA 150<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM101 =new GLatLng(45.770615,15.968199); var marker=createMarker(ATM101,'<b>ATM101</b><br>POŠTANSKI URED<br><br>SIGET 18C<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM102 =new GLatLng(45.814743,16.009119); var marker=createMarker(ATM102,'<b>ATM102</b><br>POŠTANSKI URED<br><br>KENNEDYEV TRG 11<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM103 =new GLatLng(45.806576,16.020342); var marker=createMarker(ATM103,'<b>ATM103</b><br>POŠTANSKI URED<br><br>TRG S.KONZULA 5<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM104 =new GLatLng(46.159828,16.335255); var marker=createMarker(ATM104,'<b>ATM104</b><br>INICIJA D.O.O.<br><br>ZAGREBAČKA B.B.<br>NOVI MAROF',Icon); map.addOverlay(marker);
+var ATM105 =new GLatLng(45.858814,15.803275); var marker=createMarker(ATM105,'<b>ATM105</b><br>POŠTANSKI URED<br><br>D. ŠVAJCARA 5<br>ZAPREŠIĆ',Icon); map.addOverlay(marker);
+var ATM106 =new GLatLng(44.857475,13.839372); var marker=createMarker(ATM106,'<b>ATM106</b><br>POŠTANSKI URED<br><br>TOMASSINIJEVA 13<br>PULA',Icon); map.addOverlay(marker);
+var ATM107 =new GLatLng(43.447514,17.214848); var marker=createMarker(ATM107,'<b>ATM107</b><br>ROBNA KUĆA IMA<br><br>ŠETALIŠTE S. RADIĆA 22<br>IMOTSKI',Icon); map.addOverlay(marker);
+var ATM108 =new GLatLng(46.091389,16.077162); var marker=createMarker(ATM108,'<b>ATM108</b><br>TEKSTIL D.O.O.<br><br>ZAGREBAČKA 2/A<br>ZLATAR',Icon); map.addOverlay(marker);
+var ATM109 =new GLatLng(45.839161,16.061991); var marker=createMarker(ATM109,'<b>ATM109</b><br>KONZUM-AGROKOR<br><br>ULICA VILE VELEBITA BB<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM110 =new GLatLng(43.512535,16.44207); var marker=createMarker(ATM110,'<b>ATM110</b><br>POSLOVNICA<br><br>BIHAĆKA 2<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM111 =new GLatLng(45.807026,15.941066); var marker=createMarker(ATM111,'<b>ATM111</b><br>KONZUM-AGROKOR<br><br>ZAGORSKA 27<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM113 =new GLatLng(45.8008,15.929618); var marker=createMarker(ATM113,'<b>ATM113</b><br>KONZUM-AGROKOR<br><br>BAŠTIJANOVA-DRVINJE<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM114 =new GLatLng(45.330894,17.677132); var marker=createMarker(ATM114,'<b>ATM114</b><br>FINA<br><br>TRG SVETOG TROJSTVA 19<br>POŽEGA',Icon); map.addOverlay(marker);
+var ATM115 =new GLatLng(45.334892,17.677946); var marker=createMarker(ATM115,'<b>ATM115</b><br>POŠTANSKI URED<br><br>KAMENITA VRATA 8<br>POŽEGA',Icon); map.addOverlay(marker);
+var ATM116 =new GLatLng(45.482597,16.776274); var marker=createMarker(ATM116,'<b>ATM116</b><br>POŠTANSKI URED<br><br>TRG KRALJATOMISLAVA 19<br>KUTINA',Icon); map.addOverlay(marker);
+var ATM117 =new GLatLng(43.743446,15.89859); var marker=createMarker(ATM117,'<b>ATM117</b><br>POŠTANSKI URED<br><br>B.I.MAŽURANIĆA 5<br>ŠIBENIK',Icon); map.addOverlay(marker);
+var ATM118 =new GLatLng(43.588192,15.925241); var marker=createMarker(ATM118,'<b>ATM118</b><br>POŠTANSKI URED<br><br>TRG S. RADIĆA 9<br>PRIMOŠTEN',Icon); map.addOverlay(marker);
+var ATM119 =new GLatLng(43.723228,15.908546); var marker=createMarker(ATM119,'<b>ATM119</b><br>KONZUM-AGROKOR<br><br>VIDICI BB<br>ŠIBENIK',Icon); map.addOverlay(marker);
+var ATM120 =new GLatLng(45.811661,15.944778); var marker=createMarker(ATM120,'<b>ATM120</b><br>POŠTANSKI URED<br><br>PRILAZ BARUNA FILIPOVIĆA 54<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM121 =new GLatLng(45.564037,18.652843); var marker=createMarker(ATM121,'<b>ATM121</b><br>POŠTANSKI URED<br><br>LJUDEVITA POSAVSKOG BB<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM122 =new GLatLng(43.507423,16.471371); var marker=createMarker(ATM122,'<b>ATM122</b><br>POŠTANSKI URED<br><br>PAPANDOPULOVA 1<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM123 =new GLatLng(43.368057,16.931669); var marker=createMarker(ATM123,'<b>ATM123</b><br>POŠTANSKI URED<br><br>TRG A. STEPINCA 1<br>BRELA',Icon); map.addOverlay(marker);
+var ATM124 =new GLatLng(45.895714,16.842106); var marker=createMarker(ATM124,'<b>ATM124</b><br>KONZUM<br><br>MATICE HRVATSKE 14A<br>BJELOVAR',Icon); map.addOverlay(marker);
+var ATM125 =new GLatLng(45.826256,16.043774); var marker=createMarker(ATM125,'<b>ATM125</b><br>KONZUM-AGROKOR<br><br>DUBRAVA 33<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM126 =new GLatLng(45.791061,15.950818); var marker=createMarker(ATM126,'<b>ATM126</b><br>POŠTANSKI URED<br><br>ALBAHARIJEVA 7<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM127 =new GLatLng(43.553432,16.353085); var marker=createMarker(ATM127,'<b>ATM127</b><br>PRIVAT PROSTOR<br><br>FRANJE TUĐMANA 19<br>KAŠTEL STARI',Icon); map.addOverlay(marker);
+var ATM128 =new GLatLng(45.834801,17.387098); var marker=createMarker(ATM128,'<b>ATM128</b><br>NARODNE NOVINE<br><br>TRG KRALJA TOMISLAVA 6<br>VIROVITICA',Icon); map.addOverlay(marker);
+var ATM129 =new GLatLng(44.876965,13.861141); var marker=createMarker(ATM129,'<b>ATM129</b><br>POŠTANSKI URED<br><br>KOPARSKA 64<br>PULA',Icon); map.addOverlay(marker);
+var ATM131 =new GLatLng(45.772762,15.989699); var marker=createMarker(ATM131,'<b>ATM131</b><br>KONZUM-AGROKOR<br><br>TURININA BB<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM132 =new GLatLng(45.523354,18.564793); var marker=createMarker(ATM132,'<b>ATM132</b><br>POŠTANSKI URED<br><br>KRALJA ZVONIMIRA 99<br>ČEPIN',Icon); map.addOverlay(marker);
+var ATM135 =new GLatLng(45.799294,15.721757); var marker=createMarker(ATM135,'<b>ATM135</b><br>TRGOVINA BEBER<br><br>SVETONEDJELJSKA 22<br>SAMOBOR',Icon); map.addOverlay(marker);
+var ATM136 =new GLatLng(45.560112,18.685974); var marker=createMarker(ATM136,'<b>ATM136</b><br>POŠTANSKI URED - INDOOR<br><br>ALOJZIJA STEPINCA 17<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM138 =new GLatLng(43.355873,16.949297); var marker=createMarker(ATM138,'<b>ATM138</b><br>KONZUM-AGROKOR<br><br>OBALA SV. NIKOLE<br>BAŠKA VODA',Icon); map.addOverlay(marker);
+var ATM139 =new GLatLng(45.158787,18.023918); var marker=createMarker(ATM139,'<b>ATM139</b><br>POŠTANSKI URED<br><br>N. ZRINSKOG 86<br>SLAVONSKI BROD',Icon); map.addOverlay(marker);
+var ATM140 =new GLatLng(45.162903,18.009172); var marker=createMarker(ATM140,'<b>ATM140</b><br>POŠTANSKI URED<br><br>TRG HRV. PROLJEĆA BB<br>SLAVONSKI BROD',Icon); map.addOverlay(marker);
+var ATM141 =new GLatLng(46.305408,16.32959); var marker=createMarker(ATM141,'<b>ATM141</b><br>KONZUM -AGROKOR<br><br>BRAĆE RADIĆA 8A<br>VARAŽDIN',Icon); map.addOverlay(marker);
+var ATM142 =new GLatLng(46.297966,16.338472); var marker=createMarker(ATM142,'<b>ATM142</b><br>POŠTANSKI URED<br><br>MIROSLAVA KRLEŽE 1<br>VARAŽDIN',Icon); map.addOverlay(marker);
+var ATM143 =new GLatLng(46.250565,16.61931); var marker=createMarker(ATM143,'<b>ATM143</b><br>POŠTANSKI URED<br><br>TRG SV. TROJSTVA BB<br>LUDBREG',Icon); map.addOverlay(marker);
+var ATM144 =new GLatLng(46.225098,16.12484); var marker=createMarker(ATM144,'<b>ATM144</b><br>POŠTANSKI URED<br><br>VLADIMIRA NAZORA 2<br>IVANEC',Icon); map.addOverlay(marker);
+var ATM145 =new GLatLng(44.533718,14.468093); var marker=createMarker(ATM145,'<b>ATM145</b><br>POŠTANSKI URED<br><br>IVANA I STJEPANA VIDULIĆA 38<br>MALI LOŠINJ',Icon); map.addOverlay(marker);
+var ATM146 =new GLatLng(45.079445,14.158802); var marker=createMarker(ATM146,'<b>ATM146</b><br>POŠTANSKI URED<br><br>OBALA M. TITA BB<br>RABAC',Icon); map.addOverlay(marker);
+var ATM147 =new GLatLng(45.23024,13.606106); var marker=createMarker(ATM147,'<b>ATM147</b><br>NARODNE NOVINE<br><br>M. VLAŠIĆA 20<br>POREČ',Icon); map.addOverlay(marker);
+var ATM148 =new GLatLng(45.898865,16.840967); var marker=createMarker(ATM148,'<b>ATM148</b><br>POŠTANSKI URED<br><br>GAJEVA 2<br>BJELOVAR',Icon); map.addOverlay(marker);
+var ATM149 =new GLatLng(45.593712,17.22328); var marker=createMarker(ATM149,'<b>ATM149</b><br>FINA<br><br>TRG KRALJA TOMISLAVA 3<br>DARUVAR ',Icon); map.addOverlay(marker);
+var ATM150 =new GLatLng(46.041088,17.068409); var marker=createMarker(ATM150,'<b>ATM150</b><br>POŠTANSKI URED<br><br>STJEPANA RADIĆA 3<br>ĐURĐEVAC',Icon); map.addOverlay(marker);
+var ATM152 =new GLatLng(42.651638,18.092937); var marker=createMarker(ATM152,'<b>ATM152</b><br>POŠTANSKI URED<br><br>VUKOVARSKA 28<br>DUBROVNIK',Icon); map.addOverlay(marker);
+var ATM153 =new GLatLng(45.441856,16.283636); var marker=createMarker(ATM153,'<b>ATM153</b><br>POŠTANSKI URED<br><br>TURKULINOVA 48<br>PETRINJA',Icon); map.addOverlay(marker);
+var ATM154 =new GLatLng(45.551033,18.695019); var marker=createMarker(ATM154,'<b>ATM154</b><br>POŠTANSKI URED<br><br>SJENJAK137<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM155 =new GLatLng(45.702881,17.701414); var marker=createMarker(ATM155,'<b>ATM155</b><br>FINA<br><br>VLADIMIRA NAZORA 1<br>SLATINA',Icon); map.addOverlay(marker);
+var ATM156 =new GLatLng(45.258945,17.381336); var marker=createMarker(ATM156,'<b>ATM156</b><br>POŠTANSKI URED<br><br>KRALJA TOMISLAVA B.B.<br>NOVA GRADIŠKA',Icon); map.addOverlay(marker);
+var ATM157 =new GLatLng(45.571243,16.628107); var marker=createMarker(ATM157,'<b>ATM157</b><br>LONIA<br><br>TRG GROFOVA  ERDODYA BB<br>POPOVAČA',Icon); map.addOverlay(marker);
+var ATM158 =new GLatLng(45.812328,15.979142); var marker=createMarker(ATM158,'<b>ATM158</b><br>POSLOVNICA<br><br>JURIŠIĆEVA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM159 =new GLatLng(45.793755,15.959648); var marker=createMarker(ATM159,'<b>ATM159</b><br>TISAK<br><br>SLAVONSKA AVENIJA 2<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM160 =new GLatLng(45.830196,16.054672); var marker=createMarker(ATM160,'<b>ATM160</b><br>POŠTANSKI URED<br><br>DUBRAVA 53<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM161 =new GLatLng(45.328613,14.440665); var marker=createMarker(ATM161,'<b>ATM161</b><br>FINA<br><br>FRANA KURELCA 8<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM162 =new GLatLng(44.757767,14.760518); var marker=createMarker(ATM162,'<b>ATM162</b><br>FINA<br><br>M. DOMINISA 3<br>RAB',Icon); map.addOverlay(marker);
+var ATM163 =new GLatLng(44.55658,14.882848); var marker=createMarker(ATM163,'<b>ATM163</b><br>POŠTANSKI URED<br><br>DOMAGOJEVA OBALA 1<br>NOVALJA',Icon); map.addOverlay(marker);
+var ATM164 =new GLatLng(45.375854,18.963314); var marker=createMarker(ATM164,'<b>ATM164</b><br>BOROVO STANDARD<br><br>BLAGE ZADRE 2<br>BOROVO',Icon); map.addOverlay(marker);
+var ATM165 =new GLatLng(45.223518,19.369267); var marker=createMarker(ATM165,'<b>ATM165</b><br>PLAVI 9<br><br>TRG NIKOLE ILOČKOG 2<br>ILOK',Icon); map.addOverlay(marker);
+var ATM166 =new GLatLng(45.814846,15.873935); var marker=createMarker(ATM166,'<b>ATM166</b><br>POŠTANSKI URED<br><br>MEKSIČKA BB<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM167 =new GLatLng(45.805363,16.235407); var marker=createMarker(ATM167,'<b>ATM167</b><br>POŠTANSKI URED<br><br>J. ZORIĆA 26<br>DUGO SELO',Icon); map.addOverlay(marker);
+var ATM168 =new GLatLng(45.674179,15.653694); var marker=createMarker(ATM168,'<b>ATM168</b><br>POŠTANSKI URED<br><br>K. TOMISLAVA 2<br>JASTREBARSKO',Icon); map.addOverlay(marker);
+var ATM169 =new GLatLng(45.80476,15.981224); var marker=createMarker(ATM169,'<b>ATM169</b><br>POŠTANSKI URED<br><br>BRANIMIROVA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM170 =new GLatLng(46.379452,16.443508); var marker=createMarker(ATM170,'<b>ATM170</b><br>POŠTANSKI URED<br><br>NIKOLE PAVIĆA 14<br>ČAKOVEC',Icon); map.addOverlay(marker);
+var ATM171 =new GLatLng(45.812904,15.976009); var marker=createMarker(ATM171,'<b>ATM171</b><br>GENERALTURIST<br><br>ILICA 1<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM172 =new GLatLng(45.352055,19.002743); var marker=createMarker(ATM172,'<b>ATM172</b><br>POSLOVINCA BANKE<br><br>STROSSMAJERA 4<br>VUKOVAR',Icon); map.addOverlay(marker);
+var ATM173 =new GLatLng(45.77874,15.98721); var marker=createMarker(ATM173,'<b>ATM173</b><br>POŠTANSKI URED<br><br>I. ŠIBLA 22<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM174 =new GLatLng(45.80146,15.707574); var marker=createMarker(ATM174,'<b>ATM174</b><br>LJEKARNA PABLO<br><br>LIVADIĆEVA 10<br>SAMOBOR',Icon); map.addOverlay(marker);
+var ATM175 =new GLatLng(45.813015,15.902152); var marker=createMarker(ATM175,'<b>ATM175</b><br>POŠTANSKI URED<br><br>ILICA 508<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM176 =new GLatLng(45.803288,15.793018); var marker=createMarker(ATM176,'<b>ATM176</b><br>POSLOVNICA<br><br>FRANJE TUĐMANA BB SV. NEDJELJA<br>SVETA NEDJELJA',Icon); map.addOverlay(marker);
+var ATM177 =new GLatLng(45.816628,16.17458); var marker=createMarker(ATM177,'<b>ATM177</b><br>POŠTANSKI URED<br><br>DUGOSELSKA 35<br>SESVETSKI KRALJEVEC',Icon); map.addOverlay(marker);
+var ATM178 =new GLatLng(45.786118,15.927751); var marker=createMarker(ATM178,'<b>ATM178</b><br>POŠTANSKI URED<br><br>HRGOVIĆI  38<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM179 =new GLatLng(43.443897,16.692417); var marker=createMarker(ATM179,'<b>ATM179</b><br>TRGOVINA SPORT<br><br>BENKOVIĆEVA 1<br>OMIŠ',Icon); map.addOverlay(marker);
+var ATM180 =new GLatLng(42.641228,18.108334); var marker=createMarker(ATM180,'<b>ATM180</b><br>POŠTANSKI URED<br><br>ŠIROKA 8<br>DUBROVNIK',Icon); map.addOverlay(marker);
+var ATM181 =new GLatLng(45.239223,13.936393); var marker=createMarker(ATM181,'<b>ATM181</b><br>ISTRACOMMERCE<br><br>ULICA 25. RUJNA 38<br>PAZIN',Icon); map.addOverlay(marker);
+var ATM182 =new GLatLng(45.072006,18.695211); var marker=createMarker(ATM182,'<b>ATM182</b><br>POŠTANSKI URED<br><br>DR F. RAČKOG 2B<br>ŽUPANJA',Icon); map.addOverlay(marker);
+var ATM183 =new GLatLng(45.290226,18.804989); var marker=createMarker(ATM183,'<b>ATM183</b><br>POŠTANSKI URED<br><br>M. A. RELJKOVIĆA 7<br>VINKOVCI',Icon); map.addOverlay(marker);
+var ATM184 =new GLatLng(45.556515,18.716133); var marker=createMarker(ATM184,'<b>ATM184</b><br>POŠTANSKI URED<br><br>TRG BANA JELAČIĆA BB<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM185 =new GLatLng(46.160789,16.842239); var marker=createMarker(ATM185,'<b>ATM185</b><br>POŠTANSKI URED<br><br>TRG EUGENA KUMIČIĆA 11<br>KOPRIVNICA',Icon); map.addOverlay(marker);
+var ATM186 =new GLatLng(43.550617,16.343); var marker=createMarker(ATM186,'<b>ATM186</b><br>POSLOVNICA<br><br>IVANA DANILA BB<br>KAŠTEL STARI',Icon); map.addOverlay(marker);
+var ATM187 =new GLatLng(45.803787,15.993251); var marker=createMarker(ATM187,'<b>ATM187</b><br>AUTOBUSNI KOLODVOR - 1 KAT<br><br>MARINA DRŽIĆA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM188 =new GLatLng(45.803856,15.993143); var marker=createMarker(ATM188,'<b>ATM188</b><br>AUTOBUSNI KOLODVOR - DOLAZNI PERONI<br><br>MARINA DRŽIĆA 4<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM189 =new GLatLng(45.76902,18.59803); var marker=createMarker(ATM189,'<b>ATM189</b><br>POŠTANSKI URED<br><br>IMRE NAGYA 2E<br>BELI MANASTIR',Icon); map.addOverlay(marker);
+var ATM190 =new GLatLng(45.48159,15.549088); var marker=createMarker(ATM190,'<b>ATM190</b><br>POŠTANSKI URED<br><br>MAKSIMILIJANA VRHOVCA 9<br>KARLOVAC',Icon); map.addOverlay(marker);
+var ATM191 =new GLatLng(43.520962,16.467733); var marker=createMarker(ATM191,'<b>ATM191</b><br>POŠTANSKI URED<br><br>GRADIŠĆANSKIH HRVATA 22<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM192 =new GLatLng(43.536308,16.489534); var marker=createMarker(ATM192,'<b>ATM192</b><br>POŠTANSKI URED<br><br>KRALJA ZVONIMIRA 77<br>SOLIN',Icon); map.addOverlay(marker);
+var ATM193 =new GLatLng(43.702072,16.639996); var marker=createMarker(ATM193,'<b>ATM193</b><br>POŠTANSKI URED<br><br>LIVANJSKA 19<br>SINJ',Icon); map.addOverlay(marker);
+var ATM194 =new GLatLng(44.116737,15.232909); var marker=createMarker(ATM194,'<b>ATM194</b><br>POŠTANSKI URED<br><br>J.J STROSSMAJERA 8<br>ZADAR',Icon); map.addOverlay(marker);
+var ATM195 =new GLatLng(45.801823,15.963934); var marker=createMarker(ATM195,'<b>ATM195</b><br>HOTO - TOWER, T-HT CENTAR<br><br>SAVSKA CESTA 32<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM196 =new GLatLng(45.449322,15.499392); var marker=createMarker(ATM196,'<b>ATM196</b><br>POŠTANSKI URED<br><br>TRG SVETOG JURJA 5<br>DUGA RESA',Icon); map.addOverlay(marker);
+var ATM197 =new GLatLng(45.489334,15.547285); var marker=createMarker(ATM197,'<b>ATM197</b><br>OTP TRŽNICA<br><br>TRG JOSIPA BROZA 2<br>KARLOVAC',Icon); map.addOverlay(marker);
+var ATM198 =new GLatLng(44.86573,13.856721); var marker=createMarker(ATM198,'<b>ATM198</b><br>OPĆA BOLNICA PULA<br><br>ZAGREBAČKA 30<br>PULA',Icon); map.addOverlay(marker);
+var ATM199 =new GLatLng(45.812359,15.977597); var marker=createMarker(ATM199,'<b>ATM199</b><br>GENERALTURIST<br><br>PRAŠKA 5<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM200 =new GLatLng(45.771362,15.994517); var marker=createMarker(ATM200,'<b>ATM200</b><br>POŠTANSKI URED<br><br>MAGOVCA 31<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM201 =new GLatLng(45.941662,17.248363); var marker=createMarker(ATM201,'<b>ATM201</b><br>MATASCOMMERCE - BENZINSKA POSTAJA<br><br>LJUDEVITA GAJA 234<br>PITOMAČA',Icon); map.addOverlay(marker);
+var ATM203 =new GLatLng(42.746098,16.824919); var marker=createMarker(ATM203,'<b>ATM203</b><br>URED CARINARNICE LASTOVO<br><br>UBLI<br>UBLI',Icon); map.addOverlay(marker);
+var ATM204 =new GLatLng(43.503304,16.426544); var marker=createMarker(ATM204,'<b>ATM204</b><br>POŠTANSKI URED<br><br>CESARČEVA 2A<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM205 =new GLatLng(43.049164,17.43395); var marker=createMarker(ATM205,'<b>ATM205</b><br>POŠTANSKI URED<br><br>PLOČE<br>PLOČE',Icon); map.addOverlay(marker);
+var ATM206 =new GLatLng(43.510956,16.454247); var marker=createMarker(ATM206,'<b>ATM206</b><br>POSLOVNICA<br><br>DUBROVAČKA 31<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM207 =new GLatLng(45.812439,15.964733); var marker=createMarker(ATM207,'<b>ATM207</b><br>HRVATSKA LUTRIJA<br><br>ILICA 73<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM208 =new GLatLng(45.340218,16.977825); var marker=createMarker(ATM208,'<b>ATM208</b><br>HRVATSKA LUTRIJA<br><br>TRG ĐURE SZABE 7<br>NOVSKA',Icon); map.addOverlay(marker);
+var ATM209 =new GLatLng(43.50486,16.455309); var marker=createMarker(ATM209,'<b>ATM209</b><br>HRVATSKA LUTRIJA<br><br>POLJIČKA 4<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM210 =new GLatLng(43.507614,16.463602); var marker=createMarker(ATM210,'<b>ATM210</b><br>HRVATSKA LUTRIJA<br><br>ŠIMIĆEVA 31<br>SPLIT',Icon); map.addOverlay(marker);
+var ATM211 =new GLatLng(45.813652,15.985065); var marker=createMarker(ATM211,'<b>ATM211</b><br>IMPORTANE GALLERIA<br><br>VLAŠKA 10- TRG DRAGE IBLERA<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM212 =new GLatLng(45.706406,16.393339); var marker=createMarker(ATM212,'<b>ATM212</b><br>POŠTANSKI URED<br><br>MOSLOVAČKA 14<br>IVANIĆ GRAD',Icon); map.addOverlay(marker);
+var ATM213 =new GLatLng(42.631451,18.164928); var marker=createMarker(ATM213,'<b>ATM213</b><br>TRGOVAČKI CENTAR SPIONA LAND<br><br>GORNJA ČIBAČA 14<br>MLINI',Icon); map.addOverlay(marker);
+var ATM214 =new GLatLng(45.828613,16.051165); var marker=createMarker(ATM214,'<b>ATM214</b><br>POSLOVNICA<br><br>AVENIJA DUBRAVA 47<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM215 =new GLatLng(46.294289,16.37126); var marker=createMarker(ATM215,'<b>ATM215</b><br>POŠTANSKI URED<br><br>MAROFSKA 2<br>KUČAN MAROF',Icon); map.addOverlay(marker);
+var ATM216 =new GLatLng(44.115345,15.224884); var marker=createMarker(ATM216,'<b>ATM216</b><br>POŠTANSKI URED<br><br>ŠIMUNA KOŽIČIĆA BENJE 1<br>ZADAR',Icon); map.addOverlay(marker);
+var ATM217 =new GLatLng(45.094551,14.121144); var marker=createMarker(ATM217,'<b>ATM217</b><br>POŠTANSKI URED<br><br>ZELENICE<br>LABIN',Icon); map.addOverlay(marker);
+var ATM218 =new GLatLng(45.713535,16.075573); var marker=createMarker(ATM218,'<b>ATM218</b><br>POSLOVNICA<br><br>TRG KRALJA TOMISLAVA 37<br>VELIKA GORICA',Icon); map.addOverlay(marker);
+var ATM219 =new GLatLng(42.561001,18.260286); var marker=createMarker(ATM219,'<b>ATM219</b><br>ZRAČNA LUKA DUBROVNIK<br><br>ZRAČNA LUKA DUBROVNIK<br>ČILIPI',Icon); map.addOverlay(marker);
+var ATM220 =new GLatLng(45.80442,15.965946); var marker=createMarker(ATM220,'<b>ATM220</b><br>STUDENTSKI CENTAR<br><br>SAVSKA CESTA 25<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM221 =new GLatLng(45.327709,14.437162); var marker=createMarker(ATM221,'<b>ATM221</b><br>AUTOBUSNI KOLODVOR<br><br>TRG ŽABICA 1<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM222 =new GLatLng(44.547558,15.371418); var marker=createMarker(ATM222,'<b>ATM222</b><br>POSLOVNICA<br><br>TRG STJEPANA RADIĆA BB<br>GOSPIĆ',Icon); map.addOverlay(marker);
+var ATM223 =new GLatLng(46.023891,16.545732); var marker=createMarker(ATM223,'<b>ATM223</b><br>TRGOVINA VENUS<br><br>TRG J.J. STROSSMAYERA 27<br>KRIŽEVCI',Icon); map.addOverlay(marker);
+var ATM224 =new GLatLng(45.339325,14.414449); var marker=createMarker(ATM224,'<b>ATM224</b><br>TRGOVAČKI CENTAR ANDREA<br><br>FRANJE ČANDEKA BB<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM225 =new GLatLng(45.155743,18.014402); var marker=createMarker(ATM225,'<b>ATM225</b><br>POSLOVNICA<br><br>MATIJE GUPCA 3<br>SLAVONSKI BROD',Icon); map.addOverlay(marker);
+var ATM226 =new GLatLng(45.852215,15.949906); var marker=createMarker(ATM226,'<b>ATM226</b><br>DVD ŠESTINE<br><br>ŠESTINSKI VIJENAC 2<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM227 =new GLatLng(45.806316,15.904448); var marker=createMarker(ATM227,'<b>ATM227</b><br>OPTIMUM 1990<br><br>IVANE BRLIĆ MAŽURANIĆ 15<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM228 =new GLatLng(45.794312,15.996737); var marker=createMarker(ATM228,'<b>ATM228</b><br>FOTO STUDIO SAVICA<br><br>LASTOVSKA 2A<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM229 =new GLatLng(44.867664,13.845831); var marker=createMarker(ATM229,'<b>ATM229</b><br>POSLOVNICA<br><br>ANTICOVA 9<br>PULA',Icon); map.addOverlay(marker);
+var ATM230 =new GLatLng(45.812946,15.965238); var marker=createMarker(ATM230,'<b>ATM230</b><br>POSLOVNICA<br><br>BRITANSKI TRG 12<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM231 =new GLatLng(45.813015,15.965248); var marker=createMarker(ATM231,'<b>ATM231</b><br>POSLOVNICA<br><br>BRITANSKI TRG 12<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM232 =new GLatLng(42.656689,18.076715); var marker=createMarker(ATM232,'<b>ATM232</b><br>POŠTANSKI URED<br><br>ŠETALIŠTE KRALJA ZVONIMIRA 21<br>DUBROVNIK',Icon); map.addOverlay(marker);
+var ATM233 =new GLatLng(45.326534,14.442376); var marker=createMarker(ATM233,'<b>ATM233</b><br>POSLOVNICA<br><br>KORZO 13<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM234 =new GLatLng(44.826393,13.879015); var marker=createMarker(ATM234,'<b>ATM234</b><br>ARCUS DELTA<br><br>KAMNIK 24<br>PULA - BANJOLE',Icon); map.addOverlay(marker);
+var ATM235 =new GLatLng(45.287491,18.802382); var marker=createMarker(ATM235,'<b>ATM235</b><br>POSLOVNICA<br><br>TRG F. TUĐMANA 2<br>VINKOVCI',Icon); map.addOverlay(marker);
+var ATM236 =new GLatLng(45.56163,18.676586); var marker=createMarker(ATM236,'<b>ATM236</b><br>POSLOVNICA<br><br>TRG ANTE STARČEVIĆA 7<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM237 =new GLatLng(45.79636,15.90977); var marker=createMarker(ATM237,'<b>ATM237</b><br>MERCATOR<br><br>ZAGREBAČKA AVENIJA 94<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM238 =new GLatLng(45.484734,15.556211); var marker=createMarker(ATM238,'<b>ATM238</b><br>HRVATSKA LUTRIJA<br><br>IZIDORA KRŠNJAVOGA 1<br>KARLOVAC',Icon); map.addOverlay(marker);
+var ATM239 =new GLatLng(45.862446,15.798361); var marker=createMarker(ATM239,'<b>ATM239</b><br>HRVATSKA LUTRIJA<br><br>TRG MLADOSTI 1<br>ZAPREŠIĆ',Icon); map.addOverlay(marker);
+var ATM240 =new GLatLng(45.834938,17.383139); var marker=createMarker(ATM240,'<b>ATM240</b><br>POSLOVNICA<br><br>TRG K. ZVONIMIRA 3<br>VIROVITICA',Icon); map.addOverlay(marker);
+var ATM241 =new GLatLng(42.657932,18.087358); var marker=createMarker(ATM241,'<b>ATM241</b><br>UDRUGA HVIDRA-E<br><br>OBALA S. RADIĆA 29<br>DUBROVNIK',Icon); map.addOverlay(marker);
+var ATM242 =new GLatLng(46.254539,16.359758); var marker=createMarker(ATM242,'<b>ATM242</b><br>POŠTANSKI URED<br><br>KOLODVORSKA 2C<br>TURČIN',Icon); map.addOverlay(marker);
+var ATM243 =new GLatLng(46.309128,16.339825); var marker=createMarker(ATM243,'<b>ATM243</b><br>TRGOVINA VARTEKS<br><br>KUKULJEVIĆEVA 12<br>VARAŽDIN',Icon); map.addOverlay(marker);
+var ATM244 =new GLatLng(45.351406,14.417431); var marker=createMarker(ATM244,'<b>ATM244</b><br>MERCATOR<br><br>OSJEČKA 71<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM245 =new GLatLng(45.5448,18.680019); var marker=createMarker(ATM245,'<b>ATM245</b><br>MERCATOR<br><br>GACKA 10<br>OSIJEK',Icon); map.addOverlay(marker);
+var ATM246 =new GLatLng(45.331436,14.456935); var marker=createMarker(ATM246,'<b>ATM246</b><br>CVJEĆARNA NONA MIMI<br><br>SLAVKA KRAUTZEKA 1<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM247 =new GLatLng(45.507416,15.546792); var marker=createMarker(ATM247,'<b>ATM247</b><br>MERCATOR<br><br>MIHANOVIĆEVA 9<br>KARLOVAC',Icon); map.addOverlay(marker);
+var ATM248 =new GLatLng(45.815701,15.86885); var marker=createMarker(ATM248,'<b>ATM248</b><br>KONZUM<br><br>HUZJANOVA 2<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM249 =new GLatLng(43.704769,16.638664); var marker=createMarker(ATM249,'<b>ATM249</b><br>POSLOVNICA<br><br>VRLIČKA 50<br>SINJ',Icon); map.addOverlay(marker);
+var ATM250 =new GLatLng(45.802238,16.007296); var marker=createMarker(ATM250,'<b>ATM250</b><br>MERCATOR<br><br>VUKOVARSKA 269B<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM251 =new GLatLng(45.826984,16.111225); var marker=createMarker(ATM251,'<b>ATM251</b><br>POSLOVNICA<br><br>TRG DRAGUTINA DOMJANIĆA 2<br>SESVETE',Icon); map.addOverlay(marker);
+var ATM252 =new GLatLng(43.617352,16.728218); var marker=createMarker(ATM252,'<b>ATM252</b><br>HOTEL SVETI MIHOVIL<br><br>BANA JELAČIĆA 8<br>TRILJ',Icon); map.addOverlay(marker);
+var ATM253 =new GLatLng(44.105755,15.250461); var marker=createMarker(ATM253,'<b>ATM253</b><br>MARKET MAXI TONI<br><br>PUT KOTLARA<br>ZADAR',Icon); map.addOverlay(marker);
+var ATM254 =new GLatLng(45.77734,15.988573); var marker=createMarker(ATM254,'<b>ATM254</b><br>POREZNA UPRAVA<br><br>AVENIJA DUBROVNIK 32<br>ZAGREB',Icon); map.addOverlay(marker);
+var ATM255 =new GLatLng(42.516792,18.377167); var marker=createMarker(ATM255,'<b>ATM255</b><br>POSLOVNICA<br><br>GRUDA 43<br>GRUDA',Icon); map.addOverlay(marker);
+var ATM256 =new GLatLng(42.580894,18.217718); var marker=createMarker(ATM256,'<b>ATM256</b><br>PRIVAT PROSTOR - SUVENIRNICA<br><br>TRUMBIĆEV PUT BB<br>CAVTAT',Icon); map.addOverlay(marker);
+var ATM257 =new GLatLng(45.264889,15.227523); var marker=createMarker(ATM257,'<b>ATM257</b><br>TRGOVAČKO PODUZEĆE OGULIN<br><br>BERNARDINA FRANKOPANA 2<br>OGULIN',Icon); map.addOverlay(marker);
+var ATM258 =new GLatLng(45.327175,14.444135); var marker=createMarker(ATM258,'<b>ATM258</b><br>POSLOVNICA<br><br>ANDRIJE MEDULIĆA 6<br>RIJEKA',Icon); map.addOverlay(marker);
+var ATM259 =new GLatLng(42.974293,17.177938); var marker=createMarker(ATM259,'<b>ATM259</b><br>POŠTANSKI URED<br><br>OBALA POMORACA 30<br>OREBIĆ',Icon); map.addOverlay(marker);
+var ATM260 =new GLatLng(42.928997,16.89208); var marker=createMarker(ATM260,'<b>ATM260</b><br>POŠTANSKI URED<br><br>SMOKVICA BB<br>SMOKVICA',Icon); map.addOverlay(marker);
+var ATM261 =new GLatLng(45.792625,15.974883); var marker=createMarker(ATM261,'<b>ATM261</b><br>HRVATSKA RADIOTELEVIZIJA<br><br>PRISAVLJE 3<br>ZAGREB',Icon); map.addOverlay(marker);
+  }
+
+
+    else {
+      alert("Google Maps API nije kompatibilan sa Vašim internet pretraživaćem");
+    }
+
+    //]]>
+    </script>
+</div>
+</div>
+
+
+﻿<div id="innerRightCol" class="module">
+
+<div id="goodToKnow">
+	<cite>Nešto što možemo raditi, nešto što ćemo voljeti i nešto čemu se možemo nadati, tri su najvažnija sastojka za sretan život.</cite>
+	<strong class="signature">ALLAN K. CHALMERS</strong>
+</div>
+<!--
+<div id="ibankBox" class="step2">
+	<h3>HPB Internet bankarstvo</h3>
+	<ul>
+		<li><a href="https://ibg.hpb.hr/" title="Internet bankarstvo za građanstvo">Građanstvo</a></li>
+		<li><a href="https://ibps.hpb.hr/" title="Internet bankarstvo za poslovne subjekte">Poslovni subjekti</a></li>
+	</ul>
+</div>
+-->
+<div id="serFAQ">
+	<dl id="servisi">
+		<dt><strong>Alati</strong></dt>
+		<dd><a href="javascript:;" onclick="show_cred_calc();">Kreditni kalkulator</a></dd>
+		<dd><a href="javascript:;" onclick="show_sav_calc();">Štedni kalkulator</a></dd>
+		<dd><a href="javascript:;" onclick="show_exch_calc();">Tečajni kalkulator</a></dd>
+		<dd><a href="javascript:;" onclick="show_simple_calc();">Kalkulator</a></dd>
+	</dl>
+
+	<dl id="FAQ">
+		<dt><strong>Pitajte nas</strong></dt>
+		<dd><a href="./?hr=mod.faq">Često postavljana pitanja (FAQ)</a></dd>
+		<dd><a href="./?hr=hpb-kontakt-centar-%28izravno-bankarstvo%29">HPB Kontakt centar</a></dd>
+	</dl>
+	<div class="clr"></div>
+</div>
+
+<div id="popularno" class="inner">
+
+	<h2>Najpopularniji sadržaj</h2>
+	<!>TOP_KEYWORDS
+	
+	<div class="clr"></div>
+
+</div>
+
+</div>
+
+
+        <div class="clr"></div>
+      </div>
+
+     <!>FOOTER_FILE
+
+    </div>
+
+<!>ORBX_MOD_SEND2FRIEND
+
+<div class=" yui-skin-sam" id="dialog1" style="visibility:hidden;">
+	<div class="hd">Tečajni kalkulator</div>
+	<div class="bd"><!>ORBX_MOD_EXCH_CALC</div>
+</div>
+
+<div class=" yui-skin-sam" id="cred_calc" style="visibility:hidden;">
+	<div class="hd">Kreditni kalkulator</div>
+	<div class="bd"><!>ORBX_MOD_CRED_CALC<p class="calc_info">Informacija je isključivo informativna i ničim ne obvezuje Banku.</p></div>
+</div>
+
+<div class=" yui-skin-sam" id="sav_calc" style="visibility:hidden;">
+	<div class="hd">Kalkulator štednje</div>
+	<div class="bd"><!>SAVINGS_CALCULATOR</div>
+</div>
+
+<div class=" yui-skin-sam" id="show_calc" style="visibility:hidden;">
+	<div class="hd">Kalkulator</div>
+	<div class="bd"><!>CALCULATOR</div>
+</div>
+
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	if(!empty($('innerTabs'))) {
+		new YAHOO.widget.TabView('innerContent');
+	}
+
+	write_stylesheet();
+
+//]]></script>
+
+</body>
+</html>

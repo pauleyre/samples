@@ -1,0 +1,938 @@
+			The Guardian: Sapphire Star
+
+Version 1.43 (SoU + HotU 1.65 English version compatible)
+
+
+I would like to thank you for downloading and playing Sapphire Star.
+You can post feedback or vote for Sapphire Star here: 
+
+http://nwvault.ign.com/View.php?view=Modules.Detail&id=2917
+
+Thanks again,
+Yaballa
+
+*******************************
+Patch Details for version 1.43
+*******************************
+16/5/2005
+
+[GENERAL]
+- Updated 2da files and compiled both modules for HotU 1.65 support. 
+- Updated TLK file and 2da files for CEP 1.51 compatibility. This module DOES NOT require CEP to play. This means that any users who want to add CEP on their own are free to do it. Remember that SS_2da.hak HAS to be on top of the HAK files list when you do this.
+- Renamed Interlude to Prelude which is the real purpose of the smaller module :)
+- Added missing description for nyths.
+
+[HAK]
+- Smaller, 2da HAK has been updated.
+
+The list of fixes from the previous versions is on the bottom of this file.
+
+Credits
+-------
+Developed by Pavle Gardijan (Yaballa)
+
+Playtested by Biz'zare
+
+Special thanks to Arntuuri, Biz'zare, Stratovarius, Mislav, Zeres, Pajo, Pavlinek, and to the NWN Lexicon Project team.
+
+Based on a story by Arntuuri (arntuuri@hi.hinet.hr)
+
+Song "A Voice From Afar" copyright Mislav Marohnic (aka Sulien).
+
+Song from the intro movie copyright Matt Uelmen.
+
+HAK Credits: Ice-Child (pig), Lathspell & Wydraz (violet fungus), Jaffbarrow & Scooterpb (pines), Z (katar and fang), Nitocris (cats), Elryn (mouse), Demigog (satyr), Grimothy (flying eyeball), El Magnifico Uno (Helm's flag), and Little Baron (lava placeable). You can download their work as I did from http://nwvault.ign.com/
+
+Custom Sapphire Star Content Credits: Soul Filcher (FR books), 69_Jeremy_69 (werewolf scripts), Dom Queron (powderkegs), and Genji (colored text). You can download their work as I did from http://nwvault.ign.com/
+
+Sapphire Star image copyright Luis Royo.
+
+Contact
+-------
+
+Designer's E-mail: pavle@email.t-com.hr
+
+Designer's ICQ Number: 133-063-083 (Please mention Sapphire Star when asking for my authorization.)
+
+Web Site: None.
+
+Sapphire Star module at Neverwinter Vault: http://nwvault.ign.com/View.php?view=Modules.Detail&id=2917
+
+Sapphire Star HAKs at Neverwinter Vault: http://nwvault.ign.com/View.php?view=Hakpaks.Detail&id=2604
+
+Sapphire Star Intro Movie at Neverwinter Vault: http://nwvault.ign.com/View.php?view=Movies.Detail&id=301
+
+Sapphire Star at Unforgotten Realms: http://unforgottenrealms.net/downloads2/pafiledb.php?action=file&id=1096 (As of this writing, the site is currently down.)
+
+Installing Sapphire Star
+------------------------
+
+Sapphire Star 1.43 requires both SoU and HotU.
+Double-click the file "Sapphire Star###mod.exe" and a question will pop-up, asking you would you like to install the module. Click yes, and wait for it to end the installation.
+Next; double-click the file "Sapphire Star###HAK.exe" and a question will pop-up, asking you would you like to install the HAK file. Click yes, and wait for it to end the installation.
+And last thing to do is to install the HAK file with 2da files. Double-click the file "Sapphire Star###_2da.exe" and a question will pop-up, asking you would you like to install the HAK file. Click yes, and wait for it to end the installation.
+
+Note: ### stands for version number.
+
+Linux users, go here and use this program: http://www.rarlab.com/rar/rarlinux-3.2.0.tar.gz
+
+MacOSX users, go here and use this program: http://www.rarlab.com/rar/rarosx-3.2.0.tar.gz
+
+(If the above links don't work, go to http://www.rarlab.com and find the new ones.)
+
+MANUAL INSTALLATION:
+Although I highly recommend the automatic installation, who knows what problems may occur. Here's how you'll do it.
+
+Install the WinRar (www.rarlab.com) on your computer. (I use WinRar because of its superiority over the zip format - example: 25 Mb packed in 1.9 Mb) Right click the file "Sapphire Star###mod.exe" (or "Sapphire Star###HAK.exe" or "Sapphire Star###_2da.exe") and select "Open with WinRar". Extract the files within separate folders on your desktop (name them as you wish). Then double-click the file "nwcontinst.exe" and it will automatically install all files to the appropriate NWN folders. After that, you can safely delete the Sapphire Star folder(s) from your desktop.
+
+INSTALLATION WITHOUT "NWCONTINST.EXE"
+If you don't want to use "nwcontinst.exe" to install your files, extract each of the following files individually into its target folder as mentioned below.
+
+File				Target Directory in your NWN folder
+----				-----------------------------------
+Sapphire Star.mod		/modules
+Sapphire Star - Prelude.mod	/modules
+mus_voiceafar.bmu		/music
+SSIntro.bik			/movies
+SS_HAK.hak			/hak
+SS_2da.hak			/hak
+ss_dialog.tlk			/tlk
+sapphire star.txt		Wherever you want. It's this very text file.
+
+!!!SPECIAL NOTE!!!
+The installation files have a built-in "recovery record". If they become corrupted during the download, open them with WinRar and just hit the Repair button and follow the on-screen instructions. I apologize if this happens.
+
+Uninstalling Sapphire Star
+--------------------------
+
+Browse to your NWN directory, and first locate the directory named "hak". Inside it will be files called "SS_HAK.hak" and "SS_2da.hak" or just "SS_HAK" and "SS_2da". Delete them.
+Second, locate the directory named "modules". Inside it will be files called "Sapphire Star.mod", "Sapphire Star - Prelude.mod" and "Sapphire Star.txt" or just "Sapphire Star". Delete them.
+Locate the folder named "music". Inside it will be a file named "mus_voiceafar.bmu" or just "mus_voiceafar". Delete it. Find a file named "ss_dialog.tlk" or just "ss_dialog" inside your "tlk" folder and delete it.
+
+Optimizing Sapphire Star
+------------------------
+
+The Sapphire Star was created on a high-end computer when compared to the default "Recommended System" for NWN OC. Because of this, and my inability to test the module on a weaker configuration, I cannot guarantee the full stability. However, don't fear. The NWN already has a built-in *optimizer* to prevent such things from happening as much as possible. So, if you find that your game's slowing down, try adjusting your video or audio settings within NWN.
+Also, be sure you have enough space on your hard drive. Save game files are of notable sizes.
+
+IMPORTANT NOTE:
+"Sapphire Star - Interlude" (in the game) *may* crush your computer because of the processor usage. *Only* if it crashes your game, try lowering down the graphic or sound performance options for just that part of the game. You can safely return to the old settings later.
+
+ISSUES:
+
+One user had problems with Autosaving. If you find that your game's crashing when attempting to Autosave, disable it. You can disable it in the game via custom options dialog (see below) or you can disable it outside of the game. Find the file "nwnplayer.ini" inside your NWN directory and open it. Find the following line "Disable AutoSave=0", under the "[Server Options]". Change its numeric value to 1.
+
+The Sapphire Star
+-----------------
+
+The Sapphire star is the first part of the Forgotten Realms PnP campaign we are still playing, the Guardian. We finished that part, the second one, Shadows of the Past, and are currently making our way through the third one. The work on the sequel has started and I'll be joining forces with Arntuuri, the storywriter.
+
+The Sapphire Star is designed as a single-player experience. Unfortunately, I don't have any possibilities to develop and test it as a multi-player module. However, I believe it could be run with multiple players, but the balance would be surely toppled.
+
+It is *highly* recommend to start the game with a 1st-level character. By the end, you should rise to levels 9 or 10 (or 10 - 11 if you're playing a rogue).
+
+NOTES ON THE IN-GAME CONTENT:
+
+* Intro text with punctuation signs.
+
+A journey
+takes me to
+the Spine of the World.
+
+A shroud of darkness
+falls over it.
+
+Children of evil, unite!
+Mortals, stand against them
+or become dust!
+Freedom is bleeding...
+I have been called.
+
+* Problems with Sapphire Star - Interlude (Battle of Elveldar).
+
+Follow this link and everything should be fine: http://www.terransystem.com/SSMap.JPG
+
+* Custom Options Dialog.
+
+I added the custom options dialog to the game that currently supports two options AutoSave and Extraordinary Battles. To bring it up later in the game stand near Xarsus and type in OPT or opt into your Talk window.
+
+- AutoSave: You can enable or disable autosaving at important locations. I added this because there was some earlier bad experience with fault save games. Default: Enabled.
+
+- Extraordinary Battles: Some fights are modified to be harder on Hardcore or Difficult game modes. You can enable them this way on lower difficulties. Default: Disabled.
+
+* Problems with alignment shifts.
+
+Some players with alignment-dependent characters (druids, paladins, etc.) experienced problems with alignment shifts within the game.
+I was thinking about creating an alignment system through scripting that would be more generous on those characters. But, instead of lowering game's performance with new scripts, I decided to suggest something already in the game.
+You may have noticed this already, but the dialog with one beggar (the one outside the Silver Dragon inn) has numerous alignment shifts in it.
+Although he wasn't created for this purpose, you can easily use him to tweak your alignment.
+
+* Curing lycanthropy.
+
+There are three ways to deal with this disease. In all three ways you will acquire belladonna, a powerful cure and a poison also.
+1 - During nighttime, go to Hluthvar Pass near the entrance to Hluthvar. Speak with Selune's priest and finish his quests.
+2 - Find a pile of stones near the entrance to Cave of Shadows and crush them. You will find belladonna beneath them.
+3 - Donate 1000 gold to Helm's donation pool in Hluthvar's Temple of Helm.
+
+Note that in order to properly use belladonna you must succeed at a Heal check or a Fortitude save vs. DC 20.
+
+* Garrote.
+
+This weapon deals 1d6 points of blunt damage + 1 1/2 of your Strength bonus, plus it stuns the victim for 4 seconds. It won't have any effect on creatures without any flesh or extremely huge creatures. Also, you have to be near the victim to use it.
+It uses the rules for its use as they were presented in "Song and Silence": a successful melee touch attack and a grapple check against the target will strangle the target for one round. Since I wasn't able to add a real grapple, the one that lasts round after round, I added the stun effect. Using it while engaged in active combat is hard since you and your target are constantly moving: there is only 33% chance that you'll succeed in wrapping it around target's neck.
+
+* Sacrifices for Tempus' altar.
+
+Note that in order to have access to the altar you have to join the Temple of Tempus or solve Kandar's quest.
+Also; if the combination doesn't seem to work, try not to stack items, but put them on altar separately (or the other way around).
+Items marked with a "-" before them work only once, and those with a "+" before them work as much as you want.
+
+- Knuckle: Skeleton's knuckle + quartz crystal + 2500 GP
+- Fire Dagger: Dagger + fire beetle belly + 1000 GP
+- Crimson Harp: Red torch + Sapphire gem + 1000 GP
+- Scales of the Battlebringer Armor: Scale mail + 4500 GP
+- Shield of Sacrifice: Large shield + 2000 GP
+- Sprayed with Holy Blood Cloak: Cloak of Protection +1 + 3000 GP
++ Potion of Barkskin: Ironwood
++ Potion of Cure Moderate Wounds: 2 potions of cure light wounds
++ Potion of Cure Serious Wounds: 2 potions of cure moderate wounds
++ Potion of Cure Light Wounds: Goodberry + 2 GP
+
+* Brewing potions.
+
+You can learn how to brew potions from Ander, Silbran's herbalist.
+Note that a small amount of XP is deducted from you as per PHB rules. 
+Here are the combinations of various plants. Sometimes, mixing wrong components together results in unexpected things happening to you :)
+
+- Herbal potion of Cure Light Wounds: Goodberry + empty flask + 10 GP
+- Herbal potion of Cure Moderate Wounds: Witch flower + empty flask + 16 GP
+- Herbal potion of Cure Serious Wounds: Green ear + empty flask + 33 GP
+- Potion of Greater Barkskin: Ancient Ironwood + empty flask + 60 GP
+- Elixir of Owlbear: Blue Varschav + empty flask + 60 GP
+- Elixir of Magic Wall: Red Varschav + empty flask + 450 GP
+- Elixir of Red Wyrm: Fire Root + empty flask + 300 GP
+
+* The Respawn button doesn't work.
+
+Solution: None. The Respawn button was disabled by me. I think that it will harm the game's balance and it will certainly break the plot. (Some hostile persons will become friendly because of it.) I never had any intentions of enabling it in the first place. Sorry.
+
+* Resting in some areas unavailable.
+
+Solution: Rent a room in inn or rest in the wilderness. Don't rest on public places or in other people's homes.
+
+* You can't equip an item because your level is too low.
+
+Solution: Find the file "nwnplayer.ini" inside your NWN directory and open it. Find the following line "Single Player ItemLevelRestrictions=1", under the "[Game Options]". Change its numeric value to "0" (zero).
+
+* Person X doesn't want to talk to you anymore.
+
+Solution: There may be a solution and there may not be one. It all depends on the character that doesn't want to talk with you anymore. The cause of this is your action, which caused the person to ignore you. It was probably angered by something you did.
+
+* The battle X is too hard.
+
+Solution: Combat in this module is challenging. Try different tactics and approach, perhaps some henchman could be of help. If all else fails, you rushed into an area that confronted you with a conflict intended for higher levels of your party. This could easily happen since the module is non-linear. Or, you could be in combat that was never intended to happen or be won by player. Also remember that you can always lower the game's difficulty level.
+
+* The game won't play with my custom (or hacked) character.
+
+Solution: I never supported hacked characters, but it may happen that a non-hacked character is rejected by the game. To fix this, find the file "nwnplayer.ini" inside your NWN directory and open it. Find the following line "Single Player Enforce Legal Characters=1", under the "[Game Options]". Change its numeric value to "0" (zero).
+
+* Some elves in the game have strange skin color.
+
+Answer: They are Fearun's elves: Sun (bronze), Moon (light blue), Wild (dark brown), and Wood (copper).
+
+* I'm not satisfied with the quality of this module.
+
+Answer: This whole module was developed by a single person (me). I'm sorry if I didn't succeed in meeting your expectations, but at least try to understand that it takes a lot of work and time to create something like this. If you would like to see something new added to the module, such as a new response in conversation or else, just send me an e-mail or post it at the website.
+
+* Spoilers and Tips
+
+Solution: Send me an e-mail with the question or post it on Sapphire Star's page.
+
+* I have found an error. Should I fix it or should I inform you?
+
+Solution: First, I apologize if this happens. I tried very hard to avoid any errors. You could fix the error if you knew how, but that choice isn't supported by me. The best thing to do is to send me an e-mail with the description of the error or to post it on Sapphire Star's site. Any suggestions on fixing it are also welcome. I'll fix the error and inform you about the update.
+
+
+			**********************
+************************SAPPHIRE STAR HINTBOOK************************
+			**********************
+
+This hintbook isn't a walkthrough but a collection of useful hints and secrets (mostly) for common problems players are having in this module -- combat and exploration. I'm not going to write to whom you should talk or how to solve a particular quest here... that part of the job is left to you. Sapphire Star's site on NWVault contains lots of useful info for solving any quest. Also, in version 1.31, I updated the info you gain for quests so you should be able to finish any of them without my help here.
+Reading the part named "THINGS TO FIND & DO" will ruin the element of surprise for you. It's a full list (I hope) of things to find or do in Sapphire Star. I warned you... :)
+
+*********************************
+INDEX
+I. Henchman
+II. Combat & Enemies
+III. Quest & things to find & do
+*********************************
+
+************
+I. HENCHMEN
+************
+
+They are:
+
+- Brakk Ma Tok: Male drow barbarian (raised by orcs). Found in the Silver Dragon inn in Silbran.
+If you drop him from your group, he won't follow you again unless your Charisma is 15 or higher.
+There's also a special encounter related to Brakk's story in good/neutral plot course. To access this encounter, talk to Brakk about his story and then talk to the drow woman in Hluthvar's Hall of Order. Let me just add, good luck!
+
+- Niclai: Male human Red Wizard transmuter specialist. Found in Red Wizard enclave. He'll attack you if you say that you'll never return for him once you drop him out of your group.
+
+- Slasher: Male half-winter wolf. Found in Orc Village. He won't join you if you merged with Toth-Draconis. You have to give him some meat if you want him as a henchman.
+
+- Taba: Female dwarf rogue, ex-noble. Found outside the ruined castle.
+
+- Sidoc: Male quasit bard. He's actually an Easter egg and you can find him in one tower-like building in northern Hluthvar. A minimum level of 4 is required to make him travel with you.
+
+*********************
+II. COMBAT & ENEMIES
+*********************
+
+Abishai
+-------
+Location: Nine Hells.
+Best Tactic: Hurt them with electricity attacks. Also, they have a very high regeneration rate. Don't enter Nine Hells until you're at least level 6.
+
+Ankhegs
+-------
+Location: Swamps, around the center.
+Best Tactic: Use ranged weapons. Surviving their tremendous bite attack is hard. Avoid these buggers until you reach at least level 3. Also, there's a tikky mother (a more powerful ankheg) there.
+
+Ayrestat
+--------
+Location: Can't reveal that, sorry.
+Best Tactic: These are Monty Wall's tactics, which he generously allowed me to use here.
+
+a) drink every additive potion in sight in the right order (invisibility, strength, aid, bless, speed).
+b) use the +2 greatsword (or dual wield something appropriate).
+c) bring the dwarf thief (Taba -- Ed.) loaded with bolt's of lightning
+...
+d) just charge. Most Wizards can't take 30+ points a round and get many spells off.
+e) also bring a scroll of breach, just in case :)
+
+I will also add a tip to stay away from his area spells. Also, arcane spellcasters should save any flying eyeballs or spellsword bracers for him.
+
+Bonebats
+--------
+Location: Cave of Shadows.
+Best Tactic: Hurt them with blunt weapons. They have a pretty high AC and they're fast. Also, they're undead beings.
+
+Frigid Beasts
+-------------
+Location: Outside and inside the ruined castle.
+Best Tactic: Use ranged weapons. They have a powerful melee cold attack, but they're slow. Upon their death, they also release a cold blast attack to all in close range, which will deal cold damage and slow you for a few seconds on a failed Reflex save. Of course, they don't love fire.
+Frigid monster is a more powerful frigid beast.
+
+Goblins
+-------
+Location: Reaching Woods and beyond.
+Best Tactic: Calis on NWVault suggested using animal empathy to turn their pets against them. I know that turning a dire wolf against them is very useful. Area spells, such as confusion, fireball, or call lightning are VERY useful. Hit and run tactic should also be considered. Lastly, don't go against them until you're at least level 4 or 5.
+
+King Zumunay
+------------
+Location: Goblin Stronghold.
+Best Tactic: Many times players said to me that he's one of the toughest fights for melee players. Spellcaster will easily turn him to dust with strong offensive spells. Melee players on the other hand have to face the king in close combat... Which has proven to be deadly on many occasions. Potion of speed and a high AC are your ticket to defeating him. Also, a few well-placed powderkegs can hurt him badly. There are two powderkegs inside the goblin stronghold.
+
+Kyeresa
+-------
+Location: Hmm... I would ruin some surprises if I reveal her location.
+Best Tactic: People find her aura of cold to be deadly. kenfragger on NwVault suggested the spell gust of wind which removes her deadly aura. I myself never used that spell. My best tactic was to protect myself and my henchman against her fear and cold damage and try to hurt her with fire while someone keeps her busy in melee.
+
+Malar Panther
+-------------
+Location: Just behind the entrance to Cave of Shadows.
+Best Tactic: Stratovarius suggested using phantasmal killer on it. Henchman Brakk can easily kill it. Also, potion of speed or spell haste is recommended.
+
+Nyth
+------
+Location: Firewisp Bridge, Dryad Tree Roots
+Best Tactic: Attack them with anything but fire or electricity else they will multiply. Also they can turn magic missile against the caster.
+
+Trolls
+------
+Location: Swamps, eastern part.
+Best Tactic: Bring acid- or fire-based weapons or spells with you. Troll berserker will be harder to bring down. I recommend avoiding them until level 7.
+
+Vampiric Wolf
+-------------
+Location: Dryad Tree Roots
+Best Tactic: Holy spells and +1 arrows. A slow spell is also useful.
+
+Wererats
+--------
+Location: Unexplored caverns of the silver mine.
+Best Tactic: They're low on HP but have a very good damage reduction. A +1 weapon or a silver weapon (or ammunition) is needed to defeat them without any problems. Also, be careful when fighting them since they can inflict you with lycanthropy.
+
+Xilla
+-----
+Location: Surprise :P
+Best Tactic: Buff yourself and Brakk, bring lots of healing potions and try to be fast, very fast. Summoning any creatures or dispel magic are also very useful.
+
+*********************************
+III. QUESTS & THINGS TO FIND & DO
+*********************************
+
+Quests:
+- Amwel's Curse: Talk to Tempus' priest, Kandar.
+- Judge Zupilmare: Talk to Lamadrien in Hluthvar, available only to clerics and paladins.
+- Missing cattle: Talk to Burgell and then talk to Allathya (in Silver Dragon), or just talk to Allathya.
+- Mysterious Woman: Available only after you finish the missing cattle quest. Talk to Kizzaf in the Silver Dragon inn.
+- Prisoners: Talk to satyr Fakor in Reaching Woods or rescue prisoners in the goblin stronghold.
+- Removing the Curse of Lycanthropy: If you're a werecreature, go to the last part of Hluthvar pass and talk to Selune's priest there during night time.
+- Searching for the Four: Talk to Loma in Northern Pass.
+- Thieves guild quests: Available only to rogues. Go to Hluthvar and find a trap door on western part of the city.
+- Strange Winter: Find the ruined castle and explore it. Druids propose this quest if enough time had passed.
+- The Mantidrake Hunt: Talk with Dannilo in Firewisp bridge.
+- The Crystal Rose: Talk to a couple in Silbran. Their house is near the herbalist's.
+- Troubles in the Mines: Go to dwarven village and talk to Bafdor in the Forge.
+- Vanya's Sickness: Talk to Vanya, the archdruid.
+
+Things to find & do:
+TONS OF SPOILERS AHEAD!
+*
+*
+*
+*
+*
+*
+*
+- Report the hidden cache from a commoner's house to Malshan, Silbran's jailkeeper.
+- Rest in your house after you storm the ruined castle.
+- Open Tyr's tomb in your basement.
+- Persuade (by violence if necessary) the bounty hunters on Hluthvar Pass that you're not the person they're looking for.
+- Pickpocket people. Lots of cool items can be acquired that way ;)
+- Try to kiss female half-orc Poraol if you're a half-orc. Reaction depends on your Charisma score.
+- Try bashing Rurik's sign.
+- There's a secret gold cache somewhere in or around your house.
+- Acquire a servant or a cat for your house.
+- Talk to Lamadrien, proudly displaying your alliance with the thieves’ guild by wearing their armor.
+- Bring king Zumunay's head to Malshan.
+- Use your bard song in inns.
+- Easter egg: Kill all druids and try to exit the grove.
+- If you fight Maya's Chosen Ones as level 5 or higher, you'll receive a stone king card.
+- Merge with Toth-Draconis and gain one negative level, DR 10/- vs. negative energy, and SR 10 + your Charisma modifier. Refuse to merge with him if you want a +2 greatsword.
+- Buy a falcon from a child in Silbran.
+- Try to drink the red dust with water in Silver Dragon.
+- Marry Allana (males) or Malshan (females).
+- Robb people.
+- Go to orc village, train and survive Gidush's training.
+- If Loma kills Cyrahune, take his bracers from his dog's jaws.
+- If Loma kills Kandar, take his battleaxe.
+- Poison Vanya with a false cure potion and join the druid grove.
+- Become a werewolf by entering the shack in Reaching Woods during nighttime.
+- Easter egg: Find the demon henchman in Hluthvar.
+- Easter egg: Destroy a crate in ruined castle's basement and enter the secret area. Take the key you find there and open the trap door in one commoner's house in Silbran.
+- Join Tempus' temple (Kandar), Red Wizards (Cyrahune), Sewer Rat thieves’ guild (Hluthvar), or Sun Soul monastic order (leatherworker Celor).
+- Find a suspicious-looking diamond in Temple of Tempus and report it to Kandar.
+- Brew potions with Ander's help.
+- Bring winter wolf's pelt to Celor (Silbran's leatherworker).
+- Bring adamantine to Rurik.
+- Bring the "Scimitar of the Battles" to Xarsus' hold.
+- Find a book to summon flying eyeballs in Xarsus' library.
+- Solve the puzzles in Xarsus' hold.
+- Make sacrifices to Tempus's altar.
+- Give donations to Helm's donation pool.
+- Find a way to destroy Bloodfeed without any physical damage.
+- Hurt Galgaroth in thieves guild test by using the phantasm egg near him.
+- Save Tirp in the thieves’ guild test (almost impossible, heh).
+- Loot a statue in attacked Temple of Helm for some scrolls.
+- Steal from sleeping people in Silver Dragon.
+- Acquire powderkegs from Burgell.
+- Find a dying soldier in SE part of the starting area.
+- *Unwill* the Rat Queen with a high Wisdom score.
+- Fight Barlos in Red Wizard enclave and teach him some manners.
+- Use Gem of Clairvoyance to explore any area.
+- Help Sidoc return to the Abyss with Xarsus' help and acquire a nice amulet.
+- Bring Loma's head to Lamadrien.
+- Bring Loma's head to Malshan.
+- Bring Rallts' leg strap to Lamadrien.
+- Speak to Rallts about Hluthvar militia, and when you collect the bounty for him report those militiamen.
+- Use garrote to surprise and temporarily disable your foes.
+- Carry Slasher's fur with yourself to deliberately fail the check for lycanthropy shapechange.
+- Bring white dragon scales to Rurik.
+- Cast Raise Dead on Milo Blackwolf's grave while his brother is not around.
+- Use Black Pearl on dead dryad to trap her soul inside it. Be careful not to loot her before this, or else she will disappear.
+
+I hope everything is here, but it isn't, heh... :)
+
+After this wave of hints from me, I sincerely hope you'll enjoy the game even more. And I also hope things will be more clearer from now on :)
+
+Patch Details
+-------------
+
+
+*******************************
+Version 1.42
+*******************************
+24/5/2004
+
+[GENERAL]
+- Updated TLK file and 2da files for CEP Patch 1.01b compatibility. This module DOES NOT require CEP to play. This means that any users who want to add CEP on their own are free to do it. Remember that SS_2da.hak HAS to be on top of the HAK files list when you do this.
+- Modified some internal functions to work better.
+- I completed one omitted quest for Red Wizard characters. The quest could affect the main story.
+
+[RULES]
+- Made a fix in the lycanthropy system when a wrong feedback was displayed on a critical success or failure.
+- Brakk's spell resistance will now go up with his levels (11 + level) as you level up.
+
+[SPELLS]
+- Removed those "casting..." debug messages from some spells.
+- Fixed the longsword and Divine Sacrifice spell bug where you would gain blunt damage bonus instead of slashing.
+- Added support for CEP weapons in the Divine Sacrifice spell.
+- Sligthly modified the spell descriptions.
+
+[DIALOG]
+- Henchman dialogs missed stealth control topic.
+- Some dialog scripts have been removed and replaced with the default Bioware ones'.
+
+[HAK]
+- Smaller, 2da HAK has been updated.
+
+************
+VERSION 1.41
+************
+24/4/2004
+
+[GENERAL]
+- Made a fix to tell associate scripts that this is a HotU module.
+This caused problems such as a different familiar/animal companion dialog and henchmen recognizing you if you picked them up earlier and then started a new game with the same character.
+- Removed useless *.ndb files from the module. They were leftovers from debugging.
+- Updated TLK file and 2da files for CEP compatibility. This module DOES NOT require CEP to play, I did this at a request of Michael at NWVault. This means that any users who want to add CEP on their own are free to do it. Remember that SS_2da.hak HAS to be on top of the HAK files list when you do this.
+
+[RULES]
+- Made a few fixes in the lycanthropy system such as the game displaying a Control Shape check failure text message even on a success. Also, you will now get an immediate success on a roll of 20 and an immediate failure on a roll of 1 regardless of your modifier.
+
+[HAK]
+- Smaller, 2da HAK has been updated for CEP compatibility (see above.)
+
+************
+VERSION 1.40
+************
+1/4/2004
+
+[This list does not contain all updates from this version.]
+
+[GENERAL]
+- Updated with HotU features.
+- Separated initial area from the original module into its own - "Sapphire Star - Interlude." This will improve its performance. Note that you WILL have to finish this area in order to start playing Sapphire Star or otherwise you'll get the end credits.
+- Improved overall performance.
+- Added some new areas and NPCs.
+- Made a lot of small, cosmetic changes.
+
+[RULES]
+- Reduced catapult's impact damage.
+- Rewritten the lycanthropy system so that it works more accurately regarding the time to shapechange into werecreature.
+- Shapechanging into werecreature will have a chance of destroying your armor only on Core or Difficult game modes from now on.
+- You can have two henchmen if you're playing on Core or Difficult rules.
+- Added extra game options for AutoSave & Extraordinary Battles.
+
+[ITEMS]
+- Updated some items.
+- Removed custom graphics from maces and swordbreaker because they conflicted with HotU.
+- Fixed the bug with Slasher's fur and lycanthropy.
+
+[DIALOG]
+- Fixed blacksmith's dialog regarding dragon scales.
+- Reduced alignment adjustments by 50%.
+
+[NPCs]
+- Ayrestat now has custom graphics.
+- Niclai is now far more useful as a henchman.
+
+[SPELLS]
+- Spells now have proper names and descriptions thanks to custom talk table.
+- Removed custom scroll scribing system. HotU system is supported of course.
+- Removed Infestation of Maggots because it was added with HotU. I also removed Dimension Door because it became extremely buggy with HotU and I found no way to fix it.
+
+[HAK]
+- Updated for HotU. Smaller size.
+
+************
+VERSION 1.36
+************
+
+[GENERAL]
+- Fixed a bug where you would become stuck after being thrown out of judge Zupilmare's mansion.
+- Added some colored text to the game.
+
+[ITEMS]
+- Added garrote to the game. For more details on its use see "NOTES ON THE IN-GAME CONTENT" below.
+- Added an item that will cause a deliberate fail during lycanthropy change. You can get it from Slasher.
+- Added white dragon scales ;)
+
+[SPELLS]
+- Added spell Infestation of Maggots.
+
+[RULES]
+- Lycanthropes are now able to use their natural attacks as a +1 weapon. Also, players with lycanthropy will be more powerful in battles.
+- Fixed a bug where lycanthropy characters would heal 20 hit points every round or so while in combat.
+
+[DIALOG]
+- Made some dialog modifications including the infamous alignment shifts with orc and Red Wizard gate guards.
+
+[HAK]
+- Smaller, 2da, HAK file has been updated.
+
+************
+VERSION 1.35
+************
+
+[GENERAL]
+- Added an optional intro movie for the game. The game will start fine with or without it. Take note that the intro text doesn't have any punctuation characters because it's song-like, so some lines might look like my bad English. You can find the intro text with punctuation characters in this file under "NOTES ON THE IN-GAME CONTENT" below :)
+- Modified the last stage of thieves guild test to be easier.
+- Made a theoretical fix to a non-selectable violet fungi issue on computers with weaker graphic cards.
+
+[SPELLS]
+- Added following spells to the game: Dimension Door, Larloch's Minor Drain, Spirit Worm, Tortoise Shell, and Towering Oak.
+
+[HAK]
+- Smaller, 2da, HAK file has been updated.
+
+************
+VERSION 1.34
+************
+
+[GENERAL]
+- Fixed the issue with joining Tempus' temple through the test of combat after you finish Kandar's quest.
+- Fixed the "no enemies" issue in starting area.
+
+[SPELLS]
+- Added following spells to the game: divine sacrifice (DotF), recitation (DotF), speed of the wind (MotW), regenerate light wounds (MotW), regenerate moderate wounds (MotW), regenerate serious wounds (MotW), and regenerate critical wounds (MotW).
+
+[DIALOG]
+- Added bounty rewards for Loma Blackwolf and Rallts.
+
+[ITEMS]
+- Added a new powerful item you can get by killing or pick pocketing Loma.
+
+[HAK]
+- Smaller, 2da HAK file has been updated.
+- Moved the song to bigger HAK file.
+
+DotF - Defenders of the Faith
+MotW - Masters of the Wild
+
+************
+VERSION 1.33
+************
+
+[GENERAL]
+- Added an original song to the game. Thanks to Pajo and Mislav for making this possible! :D
+- Fixed the issue with the chest in Temple of Tempus where every "Commoner" would attack you.
+
+[NPCs]
+- Fixed a bug where Kizzaf wouldn't use her charming energy drain bite :P
+- Fixed the issue with Rurik working on his anvil.
+
+[SPELLS]
+- Added following spells to the game: Beltyn's burning blood, spiritual hammer, and chromatic orb. Take note that you will permanently lose these spells if you have them memorized and you use your character from Sapphire Star in another module.
+
+[ITEMS]
+- Replaced cracked katar's fire damage with piercing damage to avoid misplaced fire effect.
+
+[RULES]
+- Enabled Bioware's dragon wing buffet attack for Kyeresa :)
+- Regeneration in Xarsus' Hold worked weird. This is fixed now.
+
+[HAK]
+- Smaller, 2da HAK file has been updated.
+
+************
+VERSION 1.32
+************
+
+[GENERAL]
+- Added tracks and animal speaking where it made some sense.
+- Fixed some obscure bugs.
+
+[RULES]
+- Fixed some balance problems I encountered. Also, I slightly toned down Brakk since he can now be way too powerful with inventory access.
+
+[ITEMS]
+- Added a few new items.
+- Fixed elixir of red wyrm.
+
+[NPCs]
+- Fixed a weird bug where Kizzaf would duplicate herself, and be on the road and in her quarters at the same time.
+
+[DIALOG]
+- Minor dialog corrections.
+
+[HAK]
+None.
+
+************
+VERSION 1.31
+************
+
+[GENERAL]
+- Added good/neutral plot course failure ending.
+- Added potion brewing. More info can be found under "NOTES ON THE IN-GAME CONTENT" section below.
+- Removed all autosaves because of a bug in SoU where it wouldn't correctly reload all saved information.
+
+[RULES]
+- You'll earn XP for disarming any disarmable trap. A trap or two probably slipped my notice, so I would be thankful if anyone would inform me.
+
+[ITEMS]
+- Added a few items for arcane spellcasters, and a few ranged weapons.
+
+[DIALOG]
+- Some journal entries lacked clarification info. I hope they will be more helpful now.
+- Fixed Vanya's endless XP loop (abuse of this loop could also break Kandar's quest).
+
+[NPCs]
+- Fixed a script bug in frigid beast's death attack that made that ability work weird.
+- Toth-Draconis won't attack you anymore if you refuse his offer and then accept it.
+
+[HAK]
+None.
+
+************
+VERSION 1.30
+************
+
+[Please note that the following list isn't complete. I will only mention mayor changes in this version. I am sure old players will recognize new additions without me mentioning them here.]
+
+
+[GENERAL]
+- Optimized all scripts and reduced the size of the module to 25 Mb. This should prevent any crashing while saving/loading a game.
+- Enhanced in-game performance.
+- Updated to SoU and revamped the module with new content.
+- You will now receive larger amounts of XP.
+
+[DIALOG]
+- Fixed grammatical errors in all dialogs (please, inform me if I and Arntuuri missed something).
+
+[HAK]
+- Updated 2das for SoU, and removed some quick-patch additions from 2da HAK.
+
+************
+VERSION 1.24
+************
+
+[GENERAL]
+- Tweaked the evil ending to be a bit tougher now. If you find it to be too easy again, try it on a higher difficulty :)
+- On a request, added the option to help Sidoc return home with Xarsus' help.
+- To help move things a bit, I added the complete list of items you may gain by making sacrifices to Tempus' altar (see below).
+- Made some performance improvements.
+- Checks for gaining wererat lycanthropy wouldn't fire sometimes. This is fixed now.
+
+[DIALOG]
+- Fixed a journal entry not being marked as the last one in Kizzaf's quest.
+
+[NPCs]
+- Fixed the bug where whole Red Wizard Enclave would attack you if you would fight Barlos. It's strange how some things just stop working when Bioware updates the game with a new patch.
+
+[HAK]
+- Fixed graphical glitches in katar's and fang's inventory icons. Take note that the fix is in smaller, Sapphire Star124_2da.exe file, not in the bigger one. You just need to download the smaller HAK to fix this.
+
+*************
+VERSION 1.23c
+*************
+
+[GENERAL]
+- Restored back to the XP scale of 15% instead of 14%.
+- Added higher-level arcane scrolls to shops in Silbran and Hluthvar.
+
+[DIALOG]
+- Made sure Fakor's quest is marked as finished once you finish it.
+
+[NPCs]
+- Fixed the bug, which appeared in NWN 1.30 with two immature umber hulks not vanishing after the cut scene in abandoned mines.
+
+**************
+VERSION 1.23b
+**************
+
+[GENERAL]
+- Changed the module back to NWN 1.30 from SoU. It wasn't fair for those who didn't have SoU. This won't stop the SoU players from playing the module, that is, this version is for NWN 1.30 players only.
+
+**************
+VERSION 1.23a
+**************
+
+[DIALOG]
+- Fixed a bug in Kizzaf's quest, which was preventing the player from finishing it.
+
+*************
+VERSION 1.23
+*************
+
+[GENERAL]
+- Added NWN 1.30 support. Apparently, this minor upgrade increased the size of module by 13 Mb!? However, the overall performance has been wonderfully increased as well as the compatibility with SoU players. :)
+- Updated spell scroll creation system. Thanks Brandon!
+- Players (those of 1st level only) will be adequately equipped in the start.
+
+[ITEMS]
+- Removed saps from the game and replaced the Fist of Iron as a club. They were buggy and totally lacked support in terms of feats.
+- Fixed typos in three helms' descriptions.
+
+[DIALOG]
+- Fixed a typo in children's dialogue.
+- Added a new journal entry detailing information about the war in which player participates in the start.
+- Fixed missing links from Juliana's dialog when you would ask her some questions.
+- Fixed broken link in Kandar's dialog when you would ask him about Kelemvor and then continue with the dialog.
+
+[HAK]
+- Separated it into two HAKs; one with the additions and one with the 2da files only. This will be very useful for any future 2da updates.
+
+*************
+VERSION 1.22
+*************
+
+[GENERAL]
+- Fixed wrongly placed pine near Red Wizard's enclave.
+- Fixed the entrance door to Silbran's jail not closing at night on rare occasions.
+- Fixed the exits, which resembled long hallways.
+- Made some visual adjustments to the thieves' guild.
+
+[NPCs]
+- Fixed the rare bug with Maurandyr dying in Dragon's Well; not being there at all, thus breaking the plot. Now there's no chance that the NWN engine will kill him again. Ever :)
+- Healers will now heal your henchman also.
+- Gravedigger won't tell you "Good morning" if it's night anymore.
+- Fixed the female commoner with male voice.
+- Player won't be able to distract Wugwash on his way home.
+
+[ITEMS]
+- Goodberries are now identified by default. It was painful to identify each one by one.
+
+[DIALOG]
+- Fixed two infinite experience loops with Kandar after you join his church through tests of combat or bravery.
+
+[HAK]
+- None.
+
+*************
+VERSION 1.21
+*************
+
+[GENERAL]
+- Made some plot safety-checks for alternative plot courses I overlooked in version 1.20.
+- Separated the module and Hak file into two downloads so that they can be more painlessly downloaded after updates.
+
+[NPCs]
+- Fixed the henchmen bug where you couldn't tell them to stop bashing locked doors or chests.
+- Fixed the typo in Gama's description.
+- Fixed the bug with multiple falcons.
+
+[DIALOG]
+- Fixed some grammatical errors in Sarevok's dialog.
+
+[HAK]
+- None.
+
+******************************
+VERSION 1.20 (Bonus Patch II)
+******************************
+
+[GENERAL]
+- Added two alternative endings and a new plot course for evil players. (Yes, you can now join the villains ::grin::) The module has now a total of 4 alternative endings plus two fate endings.
+- Added spell scrolls creation system. Xarsus will help you with this.
+- A new plot encounter has been added to the game. I can't guarantee everyone will find it.
+- Fixed pillars, friendly dogs, and wrongly placed armoire in Hluthvar's mansion.
+- Fixed possible house bug where player could have become stuck there if he didn't acquired the house previously.
+- Fixed inaccessible barrel in Burgell's home.
+- You can now become a slave.
+- You can now acquire a cat from Juliana.
+
+[ITEMS]
+- Added 60 Forgotten Realms books.
+- Added powderkegs. You can find them within game or purchase them from Burgell.
+
+[NPCs]
+- A new henchman is available. Explore orc village to find him.
+- Spellcasters can now gain the attention of flying eyeballs, which provide them with magic protection.
+- Some creatures lacked their description, but this is fixed now. Please report if there are any I missed.
+- You won't be able to select Vanya's portrait when creating a new character anymore.
+
+[DIALOG]
+- Fixed the rental of room in Silver Dragon Inn. You won't get multiple keys to your room anymore.
+- Fixed every single dialog and journal typo that was found. Please inform me if you find any new.
+
+[HAK]
+- Added new creatures: cats, mouse, flying eyeballs, and satyr model for Fakor.
+- Added new weapons: sap, exotic weapons (katar and fang), swordbreaker, and real-world maces.
+- Added pines and Helm's flag.
+
+*****************************
+VERSION 1.15 (Bonus Patch I)
+*****************************
+
+[GENERAL]
+- Starting area's visuals have been slightly altered.
+- Old House Inn changed its name into Old House Tavern. It wasn't really an inn at all.
+- Elves and half-elves will now *properly* experience the effects of strong drinks and robbery in the Silver Dragon inn.
+- Ruined castle's battles are now slightly more challenging.
+- Optimized code in a few scripts. This should cause much less slowdowns.
+- Source of Winter's fight is now harder.
+- Resting in Silver Dragon inn and player's house has been enhanced with multiple choices (check either the bed roll in Silver Dragon or couch in your house).
+- Added a quest in dwarven village. It's hard, but worth to try.
+- Rogues will now have the opportunity to *visit* two noble houses in Hluthvar.
+- Added a quest for clerics and paladins in Hluthvar.
+- Added wererat and werewolf lycanthropy, some silver weapons, and two unique quests for them. The lycanthropy rules use modified 69_Jeremy_69's werewolf scripts. I included the Control Shape skill -- it uses your ranks in Concentration with Wisdom modifier instead of Constitution modifier.
+- Broken wall around Temple of Helm has been "repaired."
+- Fixed many obscure houses in Hluthvar that didn't have entrance door.
+- Fixed the bridge in Darker Woods reporting invalid names.
+
+[NPCs]
+- Kyeresa will now grant more treasure.
+- Rurik will now work in a more comfortable outfit.
+- Hluthvar militiamen that are moving will no longer be considered statues by PCs :)
+- Some characters didn't have their descriptions. This is fixed now.
+
+[RULES]
+- Bards will now acquire some gold when using "Bard Song" in inns and taverns.
+
+[DIALOG]
+- Minor dialog updates for new dialog options, punctuation characters, and some typo fixes; especially for the word "remeber," that is "remember."
+
+[ITEMS]
+- Added three more combinations for Tempus' altar -- new armor, shield, and cloak.
+- Added a new longsword for paladins available for purchase in the Temple of Helm.
+- Added exotic tea as a drink option in Silver Dragon inn. However, the ingredients are hard to find since it's a rare thing in Faerun.
+
+**************
+VERSION 1.07a
+**************
+
+[NPCs]
+- Fixed a diminutive bug from version 1.07 that caused the game's hardest fight to be impossible.
+
+*************
+VERSION 1.07
+*************
+
+[GENERAL]
+- Added the thieves' guild, including two new areas. (Rogues, sorry for this not happening sooner. I feel ashamed.)
+- Fixed fireballs in Nine Hells reporting invalid names.
+- Added some historical background to the ruined castle.
+
+[DIALOG]
+- Added a safety check for Vanya's dialog. This one is important for the sequel module.
+- Malshan's talk with a wounded player now has a 100% chance of happening under the right circumstances.
+- Fixed Xarsus' end talk. He *will* now leave his hold.
+- Fixed the PC laughing script. PCs will now play the "Talk Laughing" node when laughing. If you're interested to include this script, as well as the one for the NPCs into your own game, you can download them at this URL: http://nwvault.ign.com/Files/scripts/data/1051811748133.shtml
+
+[ITEMS]
+- Fixed the large shield that got stuck on a tree in the starting area.
+
+[NPCs]
+- Lots of characters in an alternative ending weren't updated. This is fixed now.
+- King Zumunay and his lackeys will now enter the scene in a somewhat different way, the one originally planned.
+
+[HAK]
+- I compiled Ice Child's pig MDL file and renamed some names in it to prevent the creation of an error log file in your NWN directory.
+
+Useful Links
+------------
+
+Designers of DnD 3e: www.wizards.com
+Planescape 3e: www.planewalker.com
+Darksun 3e: www.athas.org
+Evil 3e: www.realmsofevil.net
+
+Thanks for taking your time to read through this.
+Enjoy Sapphire Star!
+
+Yaballa

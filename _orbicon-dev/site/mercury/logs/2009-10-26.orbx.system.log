@@ -1,0 +1,148 @@
+- - 127.0.0.1 26/Oct/2009:09:23:05 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:05 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:07 CET+1 ":memory usage: 3.65 MB (3832488 bytes) on line 441" - 3.66 MB(3833720)
+- - 127.0.0.1 26/Oct/2009:09:23:07 CET+1 ":processing time 2.7536861896515/2.75s on line 471" - 3.67 MB(3852000)
+- - 127.0.0.1 26/Oct/2009:09:23:10 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:10 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:13 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:13 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:27 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:27 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:27 CET+1 ":memory usage(c): 2.31 MB (2421080 bytes) on line 441" - 2.31 MB(2422320)
+- - 127.0.0.1 26/Oct/2009:09:23:27 CET+1 ":processing time 0.05674409866333/0.06s on line 471" - 2.33 MB(2440712)
+- - 127.0.0.1 26/Oct/2009:09:23:36 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:36 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:43 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:43 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:23:43 CET+1 ":memory usage: 3.61 MB (3787448 bytes) on line 441" - 3.61 MB(3788680)
+- - 127.0.0.1 26/Oct/2009:09:23:44 CET+1 ":processing time 0.40461111068726/0.4s on line 471" - 3.63 MB(3806960)
+- - 127.0.0.1 26/Oct/2009:09:23:50 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:23:50 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:24:10 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:24:10 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:24:15 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:24:15 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:24:20 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:24:20 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:24:20 CET+1 ":memory usage(c): 2.31 MB (2421312 bytes) on line 441" - 2.31 MB(2422552)
+- - 127.0.0.1 26/Oct/2009:09:24:20 CET+1 ":processing time 0.064775943756104/0.06s on line 471" - 2.33 MB(2440944)
+- - 127.0.0.1 26/Oct/2009:09:24:22 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:24:22 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:24:22 CET+1 ":memory usage(c): 2.31 MB (2422000 bytes) on line 441" - 2.31 MB(2423240)
+- - 127.0.0.1 26/Oct/2009:09:24:22 CET+1 ":processing time 0.060780048370361/0.06s on line 471" - 2.33 MB(2441632)
+- - 127.0.0.1 26/Oct/2009:09:31:33 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:31:33 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:31:33 CET+1 ":memory usage(c): 2.31 MB (2422000 bytes) on line 441" - 2.31 MB(2423240)
+- - 127.0.0.1 26/Oct/2009:09:31:33 CET+1 ":processing time 0.060497999191284/0.06s on line 471" - 2.33 MB(2441632)
+- - 127.0.0.1 26/Oct/2009:09:31:55 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:31:55 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:31:56 CET+1 ":memory usage: 3.58 MB (3750456 bytes) on line 441" - 3.58 MB(3751688)
+- - 127.0.0.1 26/Oct/2009:09:31:56 CET+1 ":processing time 0.73149919509888/0.73s on line 471" - 3.6 MB(3770048)
+- - 127.0.0.1 26/Oct/2009:09:32:05 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:32:05 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:32:05 CET+1 ":memory usage(c): 2.23 MB (2334520 bytes) on line 441" - 2.23 MB(2335760)
+- - 127.0.0.1 26/Oct/2009:09:32:05 CET+1 ":processing time 0.068392038345337/0.07s on line 471" - 2.25 MB(2354240)
+- - 127.0.0.1 26/Oct/2009:09:32:29 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:32:29 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:32:38 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:32:38 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:32:38 CET+1 ":memory usage(c): 2.23 MB (2334520 bytes) on line 441" - 2.23 MB(2335760)
+- - 127.0.0.1 26/Oct/2009:09:32:38 CET+1 ":processing time 0.066920042037964/0.07s on line 471" - 2.25 MB(2354240)
+- - 127.0.0.1 26/Oct/2009:09:32:40 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:32:40 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:32:40 CET+1 ":memory usage(c): 2.23 MB (2334872 bytes) on line 441" - 2.23 MB(2336112)
+- - 127.0.0.1 26/Oct/2009:09:32:40 CET+1 ":processing time 0.082970142364502/0.08s on line 471" - 2.25 MB(2354592)
+- - 127.0.0.1 26/Oct/2009:09:32:56 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:32:56 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:32:56 CET+1 ":memory usage(c): 2.23 MB (2334872 bytes) on line 441" - 2.23 MB(2336112)
+- - 127.0.0.1 26/Oct/2009:09:32:56 CET+1 ":processing time 0.066494941711426/0.07s on line 471" - 2.25 MB(2354592)
+- - 127.0.0.1 26/Oct/2009:09:33:28 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:28 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:33:32 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:32 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:33:37 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:37 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:33:37 CET+1 ":memory usage(c): 2.23 MB (2334520 bytes) on line 441" - 2.23 MB(2335760)
+- - 127.0.0.1 26/Oct/2009:09:33:37 CET+1 ":processing time 0.063199996948242/0.06s on line 471" - 2.25 MB(2354240)
+- - 127.0.0.1 26/Oct/2009:09:33:40 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:40 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:33:40 CET+1 ":memory usage(c): 2.23 MB (2335208 bytes) on line 441" - 2.23 MB(2336448)
+- - 127.0.0.1 26/Oct/2009:09:33:40 CET+1 ":processing time 0.063235998153687/0.06s on line 471" - 2.25 MB(2354928)
+- - 127.0.0.1 26/Oct/2009:09:33:49 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:49 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:33:50 CET+1 ":memory usage: 3.58 MB (3752032 bytes) on line 441" - 3.58 MB(3753264)
+- - 127.0.0.1 26/Oct/2009:09:33:50 CET+1 ":processing time 0.27973508834839/0.28s on line 471" - 3.6 MB(3771624)
+- - 127.0.0.1 26/Oct/2009:09:33:55 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:33:55 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:34:06 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:34:06 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:34:06 CET+1 ":memory usage(c): 2.23 MB (2337032 bytes) on line 441" - 2.23 MB(2338272)
+- - 127.0.0.1 26/Oct/2009:09:34:06 CET+1 ":processing time 0.065665006637573/0.07s on line 471" - 2.25 MB(2356752)
+- - 127.0.0.1 26/Oct/2009:09:34:11 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:34:11 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:34:31 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:34:31 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:01 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:01 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:03 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:03 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:05 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:05 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:06 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:06 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:07 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:07 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:09 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:09 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:10 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:10 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:13 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:13 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:15 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:15 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:19 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:19 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:24 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:24 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:25 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:25 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:26 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:26 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:28 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:28 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:29 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:29 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:36:30 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:36:30 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:14 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:14 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:14 CET+1 ":memory usage(c): 2.23 MB (2334800 bytes) on line 441" - 2.23 MB(2336040)
+- - 127.0.0.1 26/Oct/2009:09:42:14 CET+1 ":processing time 0.072158098220825/0.07s on line 471" - 2.25 MB(2354520)
+- - 127.0.0.1 26/Oct/2009:09:42:27 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:27 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:33 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:33 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:33 CET+1 ":memory usage(c): 2.23 MB (2337032 bytes) on line 441" - 2.23 MB(2338272)
+- - 127.0.0.1 26/Oct/2009:09:42:33 CET+1 ":processing time 0.064316987991333/0.06s on line 471" - 2.25 MB(2356752)
+- - 127.0.0.1 26/Oct/2009:09:42:39 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:39 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:41 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:41 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:44 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:44 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:45 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:45 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:47 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:47 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:48 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:48 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:50 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:50 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:42:51 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:42:51 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:50:21 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:50:21 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:50:31 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 26/Oct/2009:09:50:31 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 26/Oct/2009:09:50:31 CET+1 ":memory usage: 3.58 MB (3752352 bytes) on line 441" - 3.58 MB(3753584)
+- - 127.0.0.1 26/Oct/2009:09:50:31 CET+1 ":processing time 0.21019101142883/0.21s on line 471" - 3.6 MB(3771944)

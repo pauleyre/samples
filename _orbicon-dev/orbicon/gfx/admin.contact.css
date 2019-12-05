@@ -1,0 +1,27 @@
+#contact_address_book .column .controls {
+	margin: 60px 0 0 0;
+}
+
+#contact_address_book .column .controls input {
+	margin: 0 0 20px 0;
+}
+
+#admin_contact_form #form_title {
+	width: 50em; 
+	padding: 3px;
+}
+
+#admin_contact_form table {
+	width: 100%;
+}
+
+#admin_contact_form table td {
+	width: 33%;
+}
+
+#admin_contact_form table td.middle_col {
+	height: 25%;
+	width: 33%; 
+	text-align: center;
+	vertical-align: middle;
+}

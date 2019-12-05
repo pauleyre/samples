@@ -1,0 +1,154 @@
+/* CSS Document */
+
+#rte_container div {
+	background: #FDF9ED;
+}
+
+#rte_container div img {
+	background-color: transparent;
+	border: 1px solid #FDF9ED;
+	cursor: default;
+}
+
+#rte_container div input {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.editing_windowframe {
+	border-style: none;
+	background-color: Window;
+}
+
+#rich_text_editor_color_palette, #rich_text_editor_character_map {
+	visibility: hidden;
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+	background-color: ButtonFace;
+	text-align: center;
+	vertical-align: middle;
+	border: thin solid WindowFrame;
+	padding: 5pt 5pt 5pt 5pt;
+	filter: alpha(opacity="90");
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+	width: 200px;
+}
+
+#rich_text_editor_toggle, #rich_text_editor_plaintext_controls, #rich_text_editor_table, #rich_text_editor_font {
+	text-align: left;
+	vertical-align: bottom;
+	padding-bottom: 0.2em;
+}
+
+#ColorPalette, #CharacterMap {
+	background-color: ButtonFace;
+}
+
+#ColorPalette td {
+	height: 9px;
+	width: 9px;
+	cursor: default;
+}
+
+#CharacterMap {
+	border-collapse: separate !important;
+}
+
+#CharacterMap td {
+	height: 9px;
+	width: 9px;
+	border-width: 1px !important;
+	font: small-caption;
+	vertical-align: middle;
+	text-align: center;
+	cursor: default;
+	color: black !important;
+}
+
+.CharacterMapOnMouseOver {
+	border-bottom: 1px solid ButtonShadow;
+	border-right: 1px solid ButtonShadow;
+	border-left: 1px solid ButtonHighlight;
+	border-top: 1px solid ButtonHighlight;
+}
+
+.CharacterMapOnMouseOut {
+	border-color: ButtonFace;
+}
+
+.ColorPaletteInputTd {
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 5pt;
+}
+
+#rte_container input[type="button"], .IncreaseButton, .DecreaseButton {
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	text-align: center;
+	color: ButtonText;
+}
+
+.spin_button {
+
+}
+
+#rich_text_block_format_collection, #rich_text_system_font_collection {
+	width: 20em;
+	height: 12em;
+	visibility: hidden;
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+	background-color: Window !important;
+	color: WindowText !important;
+	border-left: 1px solid ThreeDLightShadow;
+	border-top: 1px solid ThreeDLightShadow;
+	border-right: 1px solid WindowFrame;
+	border-bottom: 1px solid WindowFrame;
+	overflow: auto;
+}
+
+#rich_text_block_format_collection div, #rich_text_system_font_collection div {
+	background-color: Window;
+	color: WindowText;
+}
+
+.BlockFormatMouseOver, .SystemFontMouseOver {
+	color: HighlightText !important;
+	background-color: Highlight !important;
+	cursor: default !important;
+}
+
+.BlockFormatMouseOut, .SystemFontMouseOut {
+	color: WindowText !important;
+	background-color: Window !important;
+	cursor: default !important;
+}
+
+.CloseDropDown {
+	background-color: ButtonFace !important;
+	color: ButtonText !important;
+	width: 100% !important;
+	border-bottom: 1px solid WindowFrame !important;
+}
+
+.CloseDropDown input {
+	font: small-caption !important;
+}
+
+#autosave_notice {
+	display: none;
+	border-bottom: 1px solid WindowFrame;
+	position: absolute;
+	z-index: 1;
+	top: 5px;
+	left: 5px;
+	width: auto;
+	height: auto;
+	background-color: InfoBackground;
+	color: InfoText;
+}

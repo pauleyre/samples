@@ -1,0 +1,82 @@
+/* INVEST SUMMARY */
+#summary_invest {
+	text-align: center;
+	border: 1px solid #d5d5d5;
+	background: #f4f4f4 url(summary_preview_back.png) top left repeat-x;
+	width: 582px;
+	/*height: 295px;*/
+	height: auto;
+	display: block;
+	margin: 0 0 0 6px;
+	padding: 0 0 10px 0;
+}
+
+#invest_summary {
+	width: 570px !important;
+}
+
+
+#invest_summary ul li {
+	margin: 0;
+}
+	#invest_summary li a:link, #invest_summary li a:visited {
+		padding: 10px 10px 15px 10px;
+		color: #686868;
+		font-weight: bold;
+	}
+	#invest_summary li a:hover, #invest_summary li a:focus, #invest_summary li a:active {
+		color: #cc0000;
+		background: #ededed url(over_state_summary.png) top left repeat-x;
+	}
+
+	#invest_summary .selected {
+		color: #cc0000 !important;
+	}
+
+	#invest_summary .selected a:link, #invest_summary .selected a:visited,
+	#invest_summary .selected a:active {
+		color: #cc0000;
+		background: #ededed url(over_state_summary.png) top left repeat-x;
+	}
+
+
+#invest_summary .yui-content {
+	width: 550px;
+}
+
+#invest_summary .yui-content div {
+	text-align: center;
+	width: 540px;
+	margin: 0 auto 0 auto;
+}
+
+#invest_summary .yui-content div p {
+	width: auto;
+	color: #686868;
+	margin: 0 10px 0 10px;
+	display: inline;
+}
+
+	#invest_summary p a:link, #invest_summary p a:visited {
+		color: #686868;
+		background: transparent url(arrows.png) center right no-repeat;
+		padding: 0 15px 0 0;
+	}
+	#invest_summary p a:hover, #invest_summary p a:active {
+		color: #cc0000;
+	}
+
+#invest_summary .yui-content div p strong {
+	color: #cc0000;
+}
+
+
+#grafovi h2 {
+	margin: 0 0 5px 5px;
+	padding: 0 0 0 10px;
+	background: #cc0000 url(right_col_h2_back.png) top left repeat-x;
+	font-size: 12px;
+	color: #ffffff;
+	width: 575px;
+	height: 17px;
+}

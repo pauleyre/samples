@@ -1,0 +1,30 @@
+
+#cal_calc_table tr td {
+	vertical-align: bottom;
+}
+#exch_calculator {
+	height:152px;
+}
+#exch_table_container table {
+	border-collapse: collapse;
+	
+}
+
+#exch_table_container table tr td {
+	text-align:center;
+}
+
+#exch_table_container table tr th {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#change_graph {
+	text-transform:uppercase;
+}
+
+
+#valin, #rezultat {
+	width: 75px;
+}
+

@@ -1,0 +1,91 @@
+#pr_search p, fieldset, form, input, select, option {
+	margin: 0;
+	padding: 0;
+}
+
+#pr_holder {
+	margin: 25px 0 0 0;
+}
+
+.cleaner {
+	clear: both;
+	line-height: 1%;
+}
+
+.txtFld {
+	width: 90%;
+}
+
+
+/* ADMIN MENU */
+#pr_admin_menu a:link, #pr_admin_menu a:visited {
+	text-decoration: none;
+	color: #666666;
+	padding: 5px;
+	border: 1px solid #c6c6c6;
+	background-color: #e6e6e6;
+}
+#pr_admin_menu a:hover, #pr_admin_menu a:focus, #pr_admin_menu a:active {
+	text-decoration: none;
+	color: #999999;
+	padding: 3px 5px 3px 5px;
+	border: 1px solid #c6c6c6;
+	background-color: white;
+}
+
+/* SEARCH */
+#pr_search #search_input {
+	width: 60%;
+} 
+
+#pr_search #submit_search {
+	width: 25%;
+	margin-left: 9%;
+}
+
+#pr_search #search_other {
+	height: 21px;
+}
+
+.left, .right {
+	float: left;
+	width: 45%;
+}
+
+.right {
+	margin-left: 15px;
+}
+
+#pr_holder fieldset {
+	border: 1px solid #c6c6c6;
+}
+
+/* LISTING TABLE */
+/*#pr_holder table {
+	margin: 15px 0 0 0;
+	width: 100%;
+}
+
+#pr_holder th {
+	border: 1px solid #c6c6c6;
+	padding: 2px;
+	background-color: #e6e6e6;
+}
+
+#pr_holder td {
+	border-bottom: 1px solid #c6c6c6;
+	border-left: 1px solid #c6c6c6;
+	padding: 2px;
+}*/
+
+/* PROFILE */
+#edit_profile span {
+	font-size: 10px;
+}
+
+/* CV */
+
+#edit_cv textarea {
+	width: 90%;
+	height: 150px;
+}

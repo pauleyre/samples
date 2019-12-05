@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="upload">
+			<h1><a name="upload">Uploading</a></h1>
+			<p>You should now be at the stage where you can upload the Orbicon files to your server. Initiate an FTP connection to the server.</p>
+			<p>Now you want to upload the Orbicon files to the directory of your choice, so navigate to that directory in your FTP program and open the folder where you unzipped the Orbicon framework package on your computer. Select all the files and folders and copy them and paste (or drag depending on client) them in your FTP program. The files should now be uploading, and depending on the speed of your internet connection, this may take some time.</p>
+			<p>
+				The directory structure should look like as follows:
+			</p>
+			<p>
+				<code style="white-space:pre;">
+/root_dir/
+   |
+   +--index.php					-- runtime PHP file
+   |  |
+   +--license.php				-- license file
+   |  |
+   |  |-..
+   |
+   +--site					-- site folder
+   |  |
+   |  +--gfx					-- frontend template directory
+   |  |
+   |  +--mercury				-- uploaded documents
+   |  |
+   |  +--venus					-- uploaded images
+   |  |
+   |  |-..
+   |
+   +--orbicon</code>
+			</p>
+			<p>After uploading the files, go to <strong>http://www.yourdomain.tfl</strong> (or the directory name you choose). If the installation step comes up with a dialog requesting FTP information this is because the system was unable to se proper permissions on its own. This problem could occur when the ownership of directory <strong>site</strong> is other than that of web server (usually &quot;nobody.nobody&quot;). At this stage, just enter in your FTP details and the install program will attempt to set permissions on your server accordingly. If, however, you wish to do this manually or this initial step fails simply connect to your server with your FTP client and change the permissions on the following files to 666 and directories to 777. On most client software, this is achieved by right clicking on the files you wish to change, and going to Properties, CHMOD, or Permissions, and then typing in the number.<br /><br />The following files need to be CHMOD&#039;ed to 777 (directories) or 666 (files):</p>
+			<ul>
+				<li>site/mercury</li>
+				<li>site/gfx</li>
+				<li>site/venus</li>
+				<li>site/venus/thumbs</li>
+				<li>site/gfx/box.css</li>
+				<li>site/gfx/site.css</li>
+				<li>site/gfx/site-hacks.css</li>
+				<li>site/gfx/tabs-site.css</li>
+			</ul>
+			<p><strong>Next:</strong> <a href="installing.htm">Installing</a></p>
+		</div>
+</body>
+</html>

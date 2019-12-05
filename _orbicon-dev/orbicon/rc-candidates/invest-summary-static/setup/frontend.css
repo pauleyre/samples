@@ -1,0 +1,43 @@
+/* CSS Document */
+.split_view {
+	float: left;
+	width: 40%;
+	margin-right: 5%;
+	font-size: 11px;
+	margin-top: 5px;
+	color: #686868;
+}
+
+.split_view img {
+	width: 120px;
+}
+
+.graph_row {
+	padding-bottom: 3px;
+	width: 100%;
+	float: left;
+	display: inline;
+	position: relative;	
+}
+
+div[class="graph_row"] { clear: both; }
+
+.graph_box {
+	float: left;
+	text-align: center;
+	vertical-align:middle;
+	height: 100px;
+}
+
+.graph_box h3 {
+	background: #cc0000 url(right_col_h2_back.png) top left repeat-x;
+	color: #ffffff;
+	font-size: 12px;
+	padding: 0 0 0 15px;
+	margin: 0 0 0 0;
+	height: 17px;
+}
+
+#invest_summary h2 {
+	color: #686868;
+}

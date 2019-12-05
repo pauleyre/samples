@@ -1,0 +1,65 @@
+/* CSS Document */
+.split_view {
+	float: left;
+	width: 44%;
+	margin-right: 5%;
+}
+
+#invest_front .error {
+	padding: 7px;
+	border: 1px double #cc0000;
+	color: #cc0000;
+	background-color: #ffffff;
+}
+
+#invest_front form p {
+	margin: 5px 0 5px 0;
+}
+
+#report {
+	margin: 25px 0 0 0;
+}
+
+	#report .info_label {
+		padding: 5px;
+		margin: 20px 0 10px 0;
+		font-size: 12px;
+		color: #ffffff;
+		background-color: #cc0000;
+	}
+
+.report_title {
+	font-weight: bold;
+}
+
+#report_info {
+	margin: 20px 0 0 0;
+	width: 100%;
+}
+
+#report_info .high {
+	background-color: #ececec;
+}
+	#report_info th {
+		padding: 6px;
+		border: 1px solid #cecece;
+	}
+	#report_info td {
+		padding: 3px;
+	}
+#calculator #amount {
+	padding: 5px;
+	width: 120px;
+	border: 1px solid #cccccc;
+	font-size: 14px;
+}
+
+#calculator #fond {	
+	padding: 3px;
+	border: 1px solid #cccccc;
+	font-size: 14px;
+}
+	#calculator #fond option {
+		margin: 3px 0 3px 0;
+	}
+

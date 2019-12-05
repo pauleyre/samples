@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="logs">
+			<h1><a name="logs">Logs</a></h1>
+			<p>
+				Orbicon framework automatically records events in a certain scope in order to provide an audit trail that can be used to diagnose problems.
+			</p>
+			<p>
+				Orbicon can track up to four types of logs. These are Debug, Error, PHP and System logs. System administrators can easily active or deactivate tracking of these logs adjusting the options available in <strong>logs.ini</strong> configuration file. Logs.ini is located in <strong>site/mercury</strong> directory.
+			</p>
+			<p>
+				<strong>Logs.ini options</strong><br />
+				These are the logs.ini configuration file options available to administrators.
+				Comments start with ';'<br />
+				
+				<ul>
+					<li><strong>errors</strong> - enable / disable error logging. Defaults to 1 (true).</li>
+					<li><strong>system</strong> - enable / disable system logging. Defaults to 0 (false).</li>
+					<li><strong>debug</strong> - enable / disable debug logging. Defaults to 0 (false).</li>
+					<li><strong>php</strong> - enable / disable PHP error logging. Defaults to 0 (false).</li>
+					<li><strong>path</strong> - path were log files will be saved. Enclose the value with double quotes (&quot;). Defaults to site/mercury</li>
+					<li><strong>merge</strong> - merge all logs into a single log file or keep them in their separate log files. Defaults to 0 (false).</li>
+					<li><strong>log_rotator</strong> - select the default log archiving method. &quot;size&quot; will archive logs once they reach 16 Mb in size. &quot;date&quot; will archive a separate log for each day. Defaults to date.</li>
+				</ul>
+			</p>
+			<p><strong>Next:</strong> <a href="synchronization.htm">Synchronization</a></p>
+
+		</div>
+</body>
+</html>

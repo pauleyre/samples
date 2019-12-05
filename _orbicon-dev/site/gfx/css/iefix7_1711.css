@@ -1,0 +1,46 @@
+﻿
+ /* naslovnica */
+    ul#topNav { margin-bottom: 30px;  }
+    form#searchBox fieldset { background: white; border: 1px solid #d8d9da; padding: 3px 3px 3px 0; width: 287px; height: 2.1em; }
+    form#searchBox fieldset input.inputSearch { font-size: 110%; color: #646464;  padding: 3px 0 3px 20px; width: 190px; background: url(images/search_icon.gif) no-repeat 0 4px;  }
+    form#searchBox fieldset input.searchButton { position: absolute; width: 60px; font-size: 110%; color: #646464; border: none; background: url(images/button.gif) no-repeat; width: 68px; height: 22px; }
+
+    ul#mainNav li#linkGradjanstvo div       { margin-left: -113px;  }
+    ul#mainNav li#linkPoduzetnistvo div     { margin-left: -158px;  }      
+    ul#mainNav li#linkVelikeTvrtke div      { margin-left: -119px;  } 
+    ul#mainNav li#linkInvBankarstvo div     { margin-left: -186px;  }    
+    ul#mainNav li#linkIzravnoBankarstvo div { margin-left: -499px;  }
+    ul#mainNav li#linkMreza div             { margin-left: -499px;  }    
+    ul#mainNav li#linkOnama div             { margin-left: -499px;  }      
+
+    ul#mainNav #visMiss { padding: 5px 15px 0 15px; }  
+    
+  form#regEntry fieldset.gray { background: #f8f8f8 url(images/fieldset_bg.gif) repeat-x 0 0; }
+  .form_holder { margin-top: 15px;}
+    
+    #tLista td.au,  #tLista td.ca,  #tLista td.cz,  #tLista td.dk,  #tLista td.hu,  #tLista td.jp,  #tLista td.no,  #tLista td.sk,  #tLista td.se,  #tLista td.ch,  #tLista td.gb,  #tLista td.us,  #tLista td.eu,  #tLista td.pl { border: none; }
+    
+    #burza { padding-top: 5px; }
+
+  #tabsWrapper ul#tabs { height: 30px; }  
+  
+  #tlLinks { border-left: none; }
+  
+form#search_ic input#submit_search  { margin: -2px 0 0 3px;  } 
+form#search_ic input#search_string { padding: 2px; border: none; width: 477px; padding: 4px 2px 3px ; font-size: 110%;  }
+.search_form_inline { height: 26px;  }
+
+  ul#hpbGrupa { width: 438px; }
+
+iframe textarea { border: none !important; }
+
+#poll { margin-top: 0 !importnat; position: absolute; margin-top: -4px; }
+
+  .module { margin-top: -59px !important; }
+
+.adv_row input { margin-left: -20px; }
+.adv_row select#countryofbirth { padding: 4px !Important; border: 1px solid #cccccc !Important; }
+.adv_row select { padding: 4px !Important; border: 1px solid #cccccc !Important; }  
+
+.adv_row .input_col.textarea { margin-left: 110px;  }
+.adv_row .input_col.checkbox { margin-left: 240px; }

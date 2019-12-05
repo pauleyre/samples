@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="poll">
+			<h1><a name="poll">Polls</a></h1>
+			<p>	
+				Polls are located under &quot;Dynamic elements&quot; &raquo; &quot;Polls&quot;.
+				A poll requires a title, a few choices users will chose from and a date range.
+				
+				Polls are loaded into template using template mark <strong>&lt;!&gt;POLL</strong>
+			</p>
+			
+			<p>Markup:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+	<!-- polls begin -->
+	<!>POLL
+	<!-- polls end -->
+</textarea>
+
+			<p>Generated HTML:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<!-- polls begin -->
+<!-- POLL #1 -->
+<div>
+	<p class="poll_title">Poll #1 title</p>
+	<form>
+		<input id="poll_option_1" /> <label for="poll_option_1"> poll option 1</label><br />
+		<input id="poll_option_2" /> <label for="poll_option_2"> poll option 2</label><br />
+		<input id="poll_option_3" /> <label for="poll_option_3"> poll option 3</label><br />
+		<a>Vote</a> 
+		<a>View results</a>
+	</form>
+</div>
+<!-- POLL #2 -->
+<div>
+	<p class="poll_title">Poll #2 title</p>
+	<form>
+		<input id="poll_option_1" /> <label for="poll_option_1"> poll option 1</label><br />
+		<input id="poll_option_2" /> <label for="poll_option_2"> poll option 2</label><br />
+		<input id="poll_option_3" /> <label for="poll_option_3"> poll option 3</label><br />
+		<a>Vote</a> 
+		<a>View results</a>
+	</form>
+</div>
+<!-- polls end -->
+</textarea>
+			<p>Note: POLL_ID represents dynamically generated identifier for each poll</p>
+			<p><strong>Next:</strong> <a href="banners.htm">Banners</a></p>
+
+		</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#pring_mail_container {
+	position:absolute;
+	width:330px;
+}
+#pring_mail_container .yui-ac-content {
+	position:absolute;
+	width:100%;
+	border:1px solid #404040;
+	background:#ffffff;
+	overflow:visible;
+	z-index:9050;
+}
+#pring_mail_container .yui-ac-shadow {
+	position:absolute;
+	margin: 0;
+	width:100%;
+	background:#a0a0a0;
+	z-index:9049;
+}
+#pring_mail_container ul {
+	padding: 3px;
+	margin: 0;
+	/*width: 100%; */
+	background: white;
+	list-style: none;
+}
+#pring_mail_container li {
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	white-space: normal;
+}
+#pring_mail_container li.yui-ac-highlight {
+	background:#a0a0a0;
+}

@@ -1,0 +1,122 @@
+.cleaner {
+	clear: both;
+	line-height: 1%;
+}
+
+.quater_view {
+	float: left;
+	width: 25%;
+}
+.half_view {
+	float: left;
+	width: 45%;
+	margin: 0 2% 0 0;
+}
+
+#invest_mod_back * {
+	margin: 0%;
+	padding: 0%;
+}
+
+#toolbar {
+	list-style: none;
+	background-color: #e6e6e6;
+	border: 1px solid #c6c6c6;
+	height: 26px;
+	margin: 10px 0 10px 0;
+}
+#toolbar li {
+	background-color: #e6e6e6;
+	padding: 5px;
+	float: left;
+}
+#toolbar li a:link, #toolbar li a:visited {
+	background-color: #e6e6e6;
+	color: #686868;
+	text-transform: uppercase;
+	padding: 4px;
+	text-decoration: none;
+}
+
+#toolbar li a:hover, #toolbar li a:focus, #toolbar li a:active {
+	background-color: #f1f1f1;
+	color: #cc0000;
+}
+#fond_values, #fond_listing, #currency_list, #todays_stocks {
+	width: 100%;
+}
+
+#fond_values th, #fond_listing th, #currency_list th, #todays_stocks th {
+	border: 1px solid #c6c6c6;
+}
+#fond_values td, #fond_listing td, #currency_list td, #todays_stocks td {
+	background-color: #ebebeb;
+	padding: 2px;
+}
+
+#fond_values .high, #fond_listing .high, #currency_list .high, #todays_stocks .high {
+	background-color: #e1e1e1 !important;
+}
+
+
+#fond_list {
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid #c6c6c6;
+	margin: 0;
+	padding: 0;
+}
+
+.high {
+	background-color: #e6e6e6;
+}
+
+#fond_list li {
+	margin: 1px 0 1px 0;
+	padding: 5px 0 5px 0;
+}
+
+	#fond_list li a:link, #fond_list li a:visited {
+		color: #686868;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 0 10px 0 10px;
+		width: 100%;
+		/*display: block;*/
+	}
+	#fond_list li a:hover, #fond_list li a:active {
+		color: #cc0000;
+	}
+
+#fond_form  p {
+	margin: 0 0 10px 0;
+}
+
+#fond_form .chk_btn {
+	width: auto;
+}
+
+#fond_form input {
+	border: 1px solid #c6c6c6;
+	width: 200px;
+}
+
+#fond_form .short_input {
+	width: 100px;
+}
+
+#fond_form select, #env select, #fvalue_form select {
+	border: 1px solid #c6c6c6;
+	width: 100px;
+}
+
+#env .sql_export {
+	padding: 5px;
+	background-color: white;
+	border: 1px solid #686868;
+}
+
+#env fieldset {
+	border: 1px solid #cecece;
+}
+

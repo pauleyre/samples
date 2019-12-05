@@ -1,0 +1,53 @@
+/*
+	external link css 
+	extracted here because ie can't read it
+*/
+a.link-external {
+	background: url(link_icons/external.png) center right no-repeat;
+	padding-right:13px;
+}
+
+/*
+	external link css 
+	space in "href ^" hides the rule from konqueror
+*/
+a.link-external,
+a[href ^="http://"], 
+a[href ^="gopher://"] {
+	background: url(link_icons/external.png) center right no-repeat;
+	padding-right:13px;
+}
+/*https link*/
+a[href ^="https://"],
+a.link-https {
+	background:url(link_icons/lock_icon.gif) center right no-repeat;
+	padding-right:16px;
+}
+
+/* mail link */
+a[href ^="mailto:"],
+a.link-mailto {
+	background:url(link_icons/mail_icon.gif) center right no-repeat;
+	padding-right:18px;
+}
+
+/*news link*/
+a[href ^="news://"],
+a.link-news {
+	background:url(link_icons/news_icon.png) center right no-repeat;
+	padding-right:18px;
+}
+
+/*ftp link*/
+a[href ^="ftp://"],
+a.link-ftp {
+	background:url(link_icons/file_icon.gif) center right no-repeat;
+	padding-right:18px;
+}
+
+/*irc link*/
+a[href ^="irc://"],
+a.link-irc {
+	background:url(link_icons/discussionitem_icon.gif) center right no-repeat;
+	padding-right:18px;
+}

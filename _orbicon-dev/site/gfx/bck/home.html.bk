@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!>DOMAIN_NAME</title>
+<!>METATAGS
+<!>CPHP
+
+<link href="./site/gfx/css/main.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 6.5]><link href="./site/gfx/css/iefix6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gte IE 7]> <link href="./site/gfx/css/iefix7.css" rel="stylesheet" type="text/css" /><![endif]--> 
+
+<script type="text/javascript">
+	document.write('<style type="text/css">h3.tabTitle a {color:#fff !important}</style>');
+</script>
+
+</head>
+
+<body>
+<!>TOP_INFOBOX
+
+<!>ADMIN
+
+    <div id="container">
+    
+      <!-- login -->
+      
+	<!>HEADER_FILE
+      
+      <!-- header end -->
+      
+     <!>NAVIGATION_FILE
+        
+      <!-- nav end -->
+      <div id="homeTour">
+            
+        <div id="funScreen">
+
+<script type="text/javascript"><!-- // --><![CDATA[
+
+AC_FL_RunContent(
+	'codebase', 
+	'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab',
+	'width',
+	'614',
+	'height',
+	'271',
+	'src',
+	'./site/gfx/hpb-banner',
+	'quality', 
+	'high', 
+	'flashvars', 
+	'path2data=/site/gfx/data.xml?<!>TIMESTAMP',
+	'pluginspage',
+	'http://www.adobe.com/go/getflashplayer',
+	'movie',
+	'./site/gfx/hpb-banner',
+	'wmode',
+	'transparent'
+);	
+	 				
+// ]]></script>
+
+          
+        </div>
+        
+        <div id="sideG">
+          <div id="gradjanstvo">
+            <h3>Građanstvo</h3>
+            <img src="./site/gfx/images/gradjanstvo.jpg" alt="gradjanstvo" />
+            <p><a href="./?hr=građanstvo">Suvremeni bankarski proizvodi i usluge koji pojednostavljuju vaše financijsko poslovanje.</a></p>
+            <div class="clr"></div>
+          </div>
+  
+          <div id="gospodarstvo">
+            <div id="imageBg">
+              <h3>Gospodarstvo</h3>
+              <ul>
+                <li class="border"><a href="./?hr=malo-poduzetništvo">Malo i srednje poduzetništvo</a></li>
+                <li><a href="./?hr=velike-tvrtke">Velike tvrtke</a></li>   
+              </ul>
+              <p>Široka ponuda financijskih proizvoda i usluga kreiranih prema vašim potrebama.</p>
+              <div class="clr"></div>
+            </div>
+          </div> 
+        </div>  
+        
+        <div class="clr"></div>
+              
+      </div>  
+      
+      <!-- homeTour end -->
+        
+      <div id="content"> 
+      
+        <div id="tabsWrapper" class="yui-navset">
+          
+          <ul id="tabs" class="yui-nav">
+            <li class="selected" onclick="mysifr"><a href="#proizvodi" title="Naši proizvodi"><strong>Proizvodi</strong></a></li>
+            <li><a href="#alati" title="Alati"><strong>Alati</strong></a></li>
+            <li><a href="#novosti" title="HPB Novosti"><strong>Novosti</strong></a></li>
+          </ul>
+          
+          
+          <div class="yui-content">
+          
+          <div id="proizvodi" class="tabContainer">
+          
+          <div class="tabContainerBox border">
+                <h3 class="tabTitle"><a href="./?hr=oročena-kunska-štednja-(Štednja)">Najprivlačnija HPB štednja</a></h3>
+                <div class="lead">
+                  <a href="./?hr=oročena-kunska-štednja-(Štednja)"><img src="./site/venus/20090120-djecja-jpg-1bb8.jpg" alt="HPB štednja" /></a> <div class="text">Uz HPB oročenu kunsku štednju do kamatne stope od čak 6,5 posto </div>
+                  <p class="more"><a href="./?hr=oročena-kunska-štednja-(Štednja)">Opširnije</a></p>
+                </div>
+              </div>  
+              
+              <div class="tabContainerBox border">
+                <h3 class="tabTitle"><a href="./?hr=visa-bonus-plus">VISA Bonus plus</a></h3>
+                <div class="lead">
+                  <a href="./?hr=visa-bonus-plus"><img src="./site/venus/20090205-slika2-gif-61ad.gif" alt="Lorem Ipsum" /></a> <div class="text">Najnovija HPB kartica za poslovne subjekte koja otplaćuje sama sebe! </div>
+                  <p class="more"><a href="./?hr=visa-bonus-plus">Opširnije</a></p>
+                </div>
+              </div>
+              
+              <div class="tabContainerBox">
+                <h3 class="tabTitle"><a href="./?hr=hpb-agro-ponuda">HPB Agro ponuda</a></h3>
+                <div class="lead">
+                  <a href="./?hr=hpb-agro-ponuda"><img src="./site/gfx/images/agro.jpg" alt="HPB Agro ponuda" class="border" /></a> <div class="text">Cjelokupna ponuda za poljoprivrednike: kreditne kartice, Internet bankarstvo, kredit do 1,5 milijuna kuna, HPB EU Desk</div>
+                  <p class="more"><a href="./?hr=hpb-agro-ponuda">Opširnije</a></p>
+                </div>
+              </div>
+              
+              <div class="tabContainerBox">
+                <h3 class="tabTitle"><a href="./?hr=hpb-eu-desk">HPB EU Desk</a></h3>
+                <div class="lead">
+	          <a href="/?hr=hpb-eu-desk"><img src="./site/venus/20081121-euro4-jpg-62f0.jpg" alt="HPB EU Desk" class="border" /></a> <div class="text">Jednostavan pristup sredstvima iz pretpristupnih fondova EU uz cjelokupnu savjetodavnu podršku banke.</div>
+	          <p class="more"><a href="./?hr=hpb-eu-desk">Opširnije</a></p>
+                </div>
+              </div>  
+              
+                
+            </div>
+            
+            <!-- proizvodi kraj -->
+            
+            <div id="alati" class="tabContainer">
+
+              <ul id="calculators">
+                <li><a href="javascript:;" onclick="show_cred_calc();"><strong>Kreditni kalkulatori</strong></a></li>
+                <li><a href="javascript:;" onclick="show_sav_calc();"><strong>Štedni kalkulator</strong></a></li>
+                <li><a href="javascript:;" onclick="show_simple_calc();"><strong>Kalkulator</strong></a></li>
+                <li class="none"><a href="http://www.hpb-invest.hr/?hr=mod.invest"><strong>Izračun prinosa fondova</strong></a></li>             
+              </ul>
+              
+              <!>ORBX_MOD_EXCH_CALC
+                          
+            </div>
+            
+            <!-- alati kraj -->
+             
+            <div id="novosti" class="tabContainer">
+              <div id="mainNews">
+              
+              <!>LAST_NEWS_ENTRY
+              
+             
+              </div>
+
+              <div id="newsList">
+
+              	<!>NEWS
+
+                <p class="all"><a href="./?hr=mod.news-index">Pogledajte ostale novosti</a></p>
+              </div>            
+              <div class="clr">            
+            </div>
+            
+            <!-- novosti kraj -->
+          </div>
+        </div>
+      </div>
+
+
+<script type="text/javascript">//<![CDATA[
+
+	
+	function mysifr ()
+	{
+		  var interstate = {
+		      src: './site/gfx/flash/interstate3.swf'
+		    };
+		
+		    sIFR.activate(interstate);
+		
+		    sIFR.replace(interstate, {
+		      selector: 'h3.tabTitle, h3.latest_news_title'
+		      ,css: [
+		      	'a { text-decoration: none; }'
+		        ,'a:link { color: #cc0000; }'
+		        ,'a:hover { color: #58595b; }'
+		      ]
+		      ,wmode: 'transparent'
+		    });
+		
+		    sIFR.replace(interstate, {
+		      selector: 'h2.linkovi, h2.kontakt, h2.tagovi'
+		      ,css: {
+		        '.sIFR-root': { 'color': '#ffffff', 'outline': 'none !important' }
+		      }
+		      ,wmode: 'transparent'
+		    });
+		
+		    sIFR.replace(interstate, {
+		      selector: '#sideG h3'
+		      ,css: {
+		        '.sIFR-root': { 'color': '#cc0000', 'background': 'transparent' }
+		      }
+		      ,wmode: 'transparent'
+		    });
+	}
+
+	mysifr();     
+
+//]]></script>  
+        
+        <!-- tabs end -->
+        
+        <div id="sideSet">
+
+          <div id="ibankBox">
+            <h3>HPB Internet bankarstvo</h3>
+            <ul>
+              <li><a href="https://ibg.hpb.hr">Građanstvo</a></li>
+              <li><a href="https://ibps.hpb.hr">Poslovni subjekti</a></li>
+            </ul>
+          </div>     
+  
+          <div id="tListaAnketa" class="yui-navset">
+            
+            <ul id="tl" class="yui-nav">
+              <li class="selected"><a href="#tLista"><strong>Tečajna lista</strong></a></li> 
+              <li><a href="#poll"><strong>Anketa</strong></a></li>  
+            </ul>
+            <div class="clr"></div>
+          
+            <div class="yui-content clr">
+            
+              <div id="tLista">
+                <div id="exch_summary_container" class="tablica">
+                <!>ORBX_MOD_EXCH_SUMMARY
+                </div>   
+                            
+                <p id="tlLinks">
+                  <span class="choose"><a onclick="sh('chooseCurrency');exch_checkbox_status()" href="javascript:;">Odabir valute</a></span> <span class="link"><a href="./?hr=mod.exchange-rates">Detaljna tečajna lista</a></span>
+                </p>                  
+                  
+
+                <div id="chooseCurrency" class="h">
+                  <p><strong>Valute <span>(maksimalno 5)</span></strong> <span class="close"><a href="javascript:;" onclick="h('chooseCurrency')" title="Zatvori">Zatvori</a></span></p>
+                  <div id="currencyBox">
+                  
+                  <!>ORBX_MOD_EXCH_DIALOG
+                  
+                  </div>
+                  <p id="currencyButtons">
+                    <input onclick="save_exch_rates_dialog()" type="button" class="button save" value="Spremi" name="button" title="Spremi" />
+                    <input onclick="h('chooseCurrency')" type="button" class="button cancel" value="Odustani" name="clear" title="Odustani" />                  
+                  </p>
+                </div> 
+   
+                <div id="burza">
+                  <h2>Vrijednost udjela fondova HPB Investa</h2>
+                  <div id="ticker" style="width:100%"></div>       
+                </div>                
+               </div>
+               
+              <div id="poll">
+		<!>POLL
+              </div>
+             
+            </div> 
+          </div>  
+          
+          <!-- tecajna lista i anketa end -->    
+                            
+          <div class="clr"></div>
+        </div>  
+              
+        <div class="clr"></div>
+           
+      </div>
+      
+      <hr />
+      
+      <!-- content end -->
+      
+      
+      <div id="footer">
+        <div id="linkovi">
+          <h2 class="linkovi">Korisni linkovi</h2>
+          <ul>
+            <li><a href="./?hr=bankarske-usluge-u-po%C5%A1tanskim-uredima-i-fina-i">Bankarske usluge u poštanskim uredima i FINA-i</a></li>
+            <li><a href="./?hr=mod.faq">Često postavljana pitanja</a></li>
+            <li><a href="http://www.hpb-invest.hr/">Informacije o fondovima HPB Investa</a></li>
+            <li><a href="./?hr=hpb-nekretnine">Izdvajamo iz ponude HPB Nekretnina</a></li>
+            <li class="none"><a href="./?hr=hpb-stambena-štedionica">Štednja u HPB Stambenoj štedionici</a></li>
+          </ul>
+        </div>
+        
+        <div id="kontakt">
+          <h2 class="kontakt">HPB Kontakt centar</h2>
+          <p class="tel"><strong>0800 472 472</strong></p>
+          
+          <h2 class="kontakt indent">Informacije o računima</h2>
+          <p class="tel"><strong>062 472 472</strong></p> 
+        </div>
+        
+        <div id="popularno">
+          <h2 class="tagovi">Najpopularniji sadržaj</h2>
+          <!>TOP_KEYWORDS
+        </div>
+        
+        <p id="footerNav"><a href="./">Naslovnica</a> <span>|</span> <a href="./?hr=sitemap">Mapa stranica</a> <span>|</span> <a href="./?hr=zaposlenja">Zaposlenja</a> <span>|</span> <a href="./?hr=op%C4%87i-uvjeti-kori%C5%A1tenja">Opći uvjeti korištenja</a> <span>|</span> <a href="javascript:;" onclick="javascript: orbx_bookmark('Hrvatska poštanska banka', 'http://www.hpb.hr/');">Ubaci u favorite</a> <span>|</span> <a href="./?hr=mod.news-index">Press centar</a> <span>|</span> <a href="./?hr=mod.faq">Komentari</a> <span>|</span> <a href="./?hr=hpb-kontakt-centar">Kontakt</a></p>
+  
+      </div>
+      
+      <p id="footerInfo">Sadržaj stranica je isključivo informativnog karaktera <span>|</span> Hrvatska poštanska banka d.d. © 2008 <span>|</span> Sva prava pridržana</p>
+      
+    </div>
+
+<div class=" yui-skin-sam" id="cred_calc" style="visibility:hidden;">
+	<div class="hd">Kreditni kalkulator</div>
+	<div class="bd"><!>ORBX_MOD_CRED_CALC<p class="calc_info">Informacija je isključivo informativna i ničim ne obvezuje Banku.</p></div>
+</div>
+
+<div class=" yui-skin-sam" id="sav_calc" style="visibility:hidden;">
+	<div class="hd">Kalkulator štednje</div>
+	<div class="bd"><!>SAVINGS_CALCULATOR</div>
+</div>
+
+<div class=" yui-skin-sam" id="show_calc" style="visibility:hidden;">
+	<div class="hd">Kalkulator</div>
+	<div class="bd"><!>CALCULATOR</div>
+</div>
+
+
+<script type="text/javascript">//<![CDATA[
+
+	var ticker_once = false;
+
+	function ticker()
+	{
+		if(!ticker_once) {		
+			__ticker_content = _inv_ticker_content;		
+			startticker();
+			scrollticker();
+			ticker_once = true;
+		}
+	}
+
+    (function() {
+        var tabViewA = new YAHOO.widget.TabView('tabsWrapper');
+        var tabViewB = new YAHOO.widget.TabView('tListaAnketa');
+        
+	var tab0A = tabViewA.getTab(0); 
+	var tab2A = tabViewA.getTab(2); 
+	tab0A.addListener('click', mysifr); 
+	tab2A.addListener('click', mysifr); 
+
+	var tab0B = tabViewB.getTab(0); 
+	tab0B.addListener('click', ticker);
+	
+	//set the active Tab to the cookie value, if present:
+	if(YAHOO.util.Cookie.get("tabsWrapper")) {
+		tabViewA.set("activeTab", tabViewA.getTab(YAHOO.util.Cookie.get("tabsWrapper")));
+	};
+
+	//set the active Tab to the cookie value, if present:
+	if(YAHOO.util.Cookie.get("tListaAnketa")) {
+		tabViewB.set("activeTab", tabViewB.getTab(YAHOO.util.Cookie.get("tListaAnketa")));
+	};
+
+	
+	//when a Tab changes, set the cookie:
+	tabViewA.on("activeTabChange", function(o) {
+		YAHOO.util.Cookie.set("tabsWrapper", this.getTabIndex(o.newValue));
+	});
+	
+	//when a Tab changes, set the cookie:
+	tabViewB.on("activeTabChange", function(o) {
+		YAHOO.util.Cookie.set("tListaAnketa", this.getTabIndex(o.newValue));
+	});
+
+	if((YAHOO.util.Cookie.get("tListaAnketa") == 0) || !YAHOO.util.Cookie.get("tListaAnketa")) {
+		ticker();
+	}
+	
+    })();
+
+
+//]]></script>       
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+#infocentar_search_container {
+position:absolute;
+width:330px;
+}
+
+#infocentar_search_container .yui-ac-content {
+position:absolute;
+width:595px;
+border:1px solid #404040;
+background:#fff;
+overflow:visible;
+z-index:9050;
+}
+
+#infocentar_search_container .yui-ac-shadow {
+position:absolute;
+width:100%;
+background:#a0a0a0;
+z-index:9049;
+margin:0;
+}
+
+#infocentar_search_container ul {
+background:#FFF;
+list-style:none;
+margin:0;
+padding:3px;
+}
+
+#infocentar_search_container li {
+color:#000;
+white-space:normal;
+margin:0;
+padding:0;
+}
+
+#infocentar_search_container li.yui-ac-highlight {
+background:#a0a0a0;
+}

@@ -1,0 +1,129 @@
+/* CSS Document */
+
+#rte_container div {
+	background: #ffffff;
+}
+
+#rte_container div img {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	cursor: default;
+}
+
+#rte_container div input {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.editing_windowframe,
+.rte_source_edit {
+	background-color: Window;
+	width: 99%;
+	height: 400px;
+	overflow:auto;
+	border: 1px solid blue;
+}
+
+#rich_text_editor_toggle, #rich_text_editor_plaintext_controls, #rich_text_editor_table, #rich_text_editor_font {
+	text-align: left;
+	vertical-align: bottom;
+	padding-bottom: 0.2em;
+}
+
+
+#rte_container input[type="button"], .IncreaseButton, .DecreaseButton {
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	text-align: center;
+	color: ButtonText;
+
+}
+
+#rte_container input,
+#rte_container select,
+#rte_container label {
+	font-size:11px;
+}
+
+#rich_text_block_format_collection, #rich_text_system_font_collection {
+	width: 20em;
+	height: 12em;
+	visibility: hidden;
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+	background-color: Window !important;
+	color: WindowText !important;
+	border-left: 1px solid ThreeDLightShadow;
+	border-top: 1px solid ThreeDLightShadow;
+	border-right: 1px solid WindowFrame;
+	border-bottom: 1px solid WindowFrame;
+	overflow: auto;
+}
+
+#rich_text_block_format_collection div, #rich_text_system_font_collection div {
+	background-color: Window;
+	color: WindowText;
+}
+
+.BlockFormatMouseOver, .SystemFontMouseOver {
+	color: HighlightText !important;
+	background-color: Highlight !important;
+	cursor: default !important;
+}
+
+.BlockFormatMouseOut, .SystemFontMouseOut {
+	color: WindowText !important;
+	background-color: Window !important;
+	cursor: default !important;
+}
+
+.CloseDropDown {
+	background-color: ButtonFace !important;
+	color: ButtonText !important;
+	width: 100% !important;
+	border-bottom: 1px solid WindowFrame !important;
+}
+
+.CloseDropDown input {
+	font: small-caption !important;
+}
+
+#rich_text_editor_toggle img,
+#rich_text_editor_plaintext_controls img,
+#rich_text_editor_table img {
+	border: 1px solid #ffffff !important;
+}
+
+#rich_text_editor_toggle img:hover,
+#rich_text_editor_plaintext_controls img:hover,
+#rich_text_editor_table img:hover {
+	cursor: default !important;
+	border-bottom: 1px solid ButtonShadow !important;
+	border-right:1px solid ButtonShadow !important;
+	border-left: 1px solid ButtonHighlight !important;
+	border-top:1px solid ButtonHighlight !important;
+}
+
+#rich_text_editor_toggle img:active,
+#rich_text_editor_plaintext_controls img:active,
+#rich_text_editor_table img:active {
+	cursor: default !important;
+	border-bottom: 1px solid ButtonHighlight !important;
+	border-right:1px solid ButtonHighlight !important;
+	border-left: 1px solid ButtonShadow !important;
+	border-top:1px solid ButtonShadow !important;
+}
+
+#rte_help {
+	background: #ffffff;
+	border: 1px solid #000000;
+	padding: 1em;
+}
+#rte_help sup {
+	float:right;
+}
+#rte_help ul {
+	list-style:none;
+}

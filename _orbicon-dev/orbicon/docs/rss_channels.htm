@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="rss">
+			<h1><a name="rss">RSS channels</a></h1>
+			<p>
+				The system will automatically generate RSS feeds for our news. However, we can also use feeds from other web sites and display them on our own.
+			</p>
+			<p>
+				This can be acomplished in two ways...<br />
+			</p>
+
+			<h3>1. As part of <em>news ticker</em></h3>
+			<p>RSS channel becomes a part of content that is displayed when using template mark <strong>&lt;!&gt;NWS_TICKER</strong></p>
+
+			<p>Markup:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+	<!-- news ticker begins -->
+	<!>NWS_TICKER
+	<!-- news ticker ends -->
+</textarea>
+
+			<p>Generated HTML:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<!-- news ticker begins -->
+<div id="ticker">
+	<div>
+		<div id="mq">
+			<span style="font-size: 90%;" id="tx">
+				<a href="link_to_rss_item_1">RSS item 1</a> |
+				<a href="link_to_rss_item_2">RSS item 2</a> |
+				<a href="link_to_rss_item_3">RSS item 3</a>
+				etc.
+			</span>
+		</div>
+	</div>
+</div>
+<!-- news ticker ends -->
+</textarea>
+
+			<h3>2. As a formatted box</h3>
+
+			<p>RSS channel will be fromatted and displayed in place of its template mark (which system generates from RSS's URL).<br /><br />
+			For example, RSS channel <strong>http://rss.cnn.com/rss/cnn_topstories.rss</strong> will be given the following template mark <strong>&lt;!&gt;MYRSS_HTTP-RSS-CNN-COM-RSS-CNN_TOPSTORIES-RSS</strong><br /><br />
+This marks can be found under <strong>Dynamic elements</strong> &raquo; <strong>RSS</strong></p>
+
+			<p>Markup:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+	<!-- RSS channel begins -->
+	<!>MYRSS_HTTP-RSS-CNN-COM-RSS-CNN_TOPSTORIES-RSS
+	<!-- RSS channel ends -->
+</textarea>
+
+			<p>Generated HTML:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+	<!-- RSS channel begins -->
+	<p><a href="link_to_rss_item_1">RSS item 1</a></p>
+	<p><a href="link_to_rss_item_2">RSS item 2</a></p>
+	<p><a href="link_to_rss_item_3">RSS item 3</a></p>
+	etc.
+	<!-- RSS channel ends -->					
+</textarea>
+			<p><strong>Next:</strong> <a href="zones.htm">Zones</a></p>
+
+		</div>
+</body>
+</html>

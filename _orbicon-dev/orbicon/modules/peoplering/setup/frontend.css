@@ -1,0 +1,54 @@
+.cleaner {
+	clear: both;
+	line-height: 1%;
+}
+
+.left, .right {
+	float: left !important;
+	width: 45% !important;
+}
+
+.right {
+	margin-left: 15px !important;
+}
+
+#peoplering * {
+	margin: 0;
+	padding: 0;
+}
+
+#pr_menu {
+	list-style: none;
+}
+
+#pr_menu li {
+	float: left;
+}
+
+#peoplering a:link, #peoplering a:visited {
+	text-decoration: none;
+	color: #666666;
+	text-transform: uppercase;
+}
+
+#peoplering a:hover, #peoplering a:active {
+	color: #c6c6c6;
+}
+
+#peoplering fieldset {
+	padding: 5px !important;
+}
+
+.txtFld {
+	width: 90% !important;
+	padding: 3px !important;
+}
+
+#peoplering span {
+	font-size: 10px !important;
+}
+
+#peoplering textarea {
+	width: 90% !important;
+	height: 150px !important;
+}

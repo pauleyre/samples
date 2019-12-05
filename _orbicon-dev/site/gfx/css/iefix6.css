@@ -1,0 +1,104 @@
+﻿
+ul#hpbGrupa { width: 432px; }
+
+ul#mainNav { behavior: url(./site/gfx/css/csshover.htc);   }
+
+ /* naslovnica */
+    ul#topNav { margin-bottom: 30px;  }
+    form#searchBox fieldset { background: white; border: 1px solid #d8d9da; padding: 3px 3px 2px 0; width: 287px; height: 2.1em; }
+    form#searchBox fieldset input.inputSearch { font-size: 110%; color: #646464;  padding: 3px 0 3px 20px; width: 190px; background: url(images/search_icon.gif) no-repeat 0 4px;  }
+    form#searchBox fieldset input.searchButton { position: absolute; width: 60px; font-size: 110%; color: #646464; border: none; background: url(images/button.gif) no-repeat; width: 68px; height: 22px; }
+
+/* navigacija */
+
+  ul#mainNav li#linkOnama a { float: none;  }
+  ul#mainNav li div ul { width: 200px;  }
+  ul#mainNav li div ul li ul li { line-height: 1.2em; }
+  ul#mainNav #visMiss { padding: 5px 15px 0 15px; }
+
+  ul#mainNav li div ul { padding: 0 10px 0 5px; width: 180px; float: left;  }
+  ul#mainNav li#linkGradjanstvo div#link1  {  margin-left: -115px; }
+  ul#mainNav li#linkPoduzetnistvo div#link2 {  margin-left: -272px;  }
+  ul#mainNav li#linkVelikeTvrtke div#link3 { margin-left: -391px;  }
+  ul#mainNav li#linkInvBankarstvo div#link4 { margin-left: -577px;  }
+  ul#mainNav li#linkIzravnoBankarstvo div#link5 { margin-left: -733px; }
+  ul#mainNav li#linkMreza div#link6 { margin-left: -843px; }
+  ul#mainNav li#linkOnama div#link7 { margin: 0 0 0 -843px; }
+
+  ul#mainNav li div .listHolder { margin: 0 !important; float: left; width: 615px; }
+  ul#mainNav #regHolder, ul#mainNav #memberHolder { position: static; margin: 10px 0 0 40px !important; color: #565658; width: 230px; float: left; }
+  #loginInfo { margin: 0 !important; }
+
+  form #regEntry fieldset.gray { background: #f8f8f8 url(images/fieldset_bg.gif) repeat-x 0 0; }
+  .form_holder { margin-top: 15px;}
+
+/* sredina */
+.tabContainer .tabContainerBox { color: #58595b; line-height: 1.2em; float: left; padding: 10px 0 0 15px; width: 268px; height: 145px; }
+.tabContainer { width: 596px !important; }
+ #mainNews #newsLead { height: 213px; }
+  #alati, #proizvodi, #novosti { height: 299px !important; overflow: hidden;  }
+  .tabContainerBox .lead .text { height: 80px;}
+
+/* inner */
+
+  #contentWrapper.step2 #innerRightColi { margin-top: -5px; }
+  #contentWrapper.step3 #innerRightCol { margin-top: -49px; }
+  #contentWrapper.step1 #innerRightCol { }
+
+  .yui-navset, ul#innerTabs li a { position: static !important; }
+  ul#innerTabs li  { margin:0 !important;  }
+
+/* zaposlenja */
+.adv_row input { margin-left: -20px; }
+.adv_row select#countryofbirth { padding: 4px !Important; border: 1px solid #cccccc !Important; }
+.adv_row select { padding: 4px !Important; border: 1px solid #cccccc !Important; }
+
+.adv_row .input_col { padding-top: 0px;}
+.adv_row .input_col.text { margin-left: 120px; }
+.adv_row .input_col.textarea { margin-left: 110px;  }
+.adv_row .input_col.checkbox { margin-left: 240px; }
+.adv_row .label_col span.helpIcon a { margin: -7px 0 0 340px;  }
+
+ #showHide input.button { position: absolute; }
+  .module { margin-top: -59px !important; }
+
+  ul#mainNav li div#link1,
+  ul#mainNav li div#link2,
+  ul#mainNav li div#link3,
+  ul#mainNav li div#link4,
+  ul#mainNav li div#link5,
+  ul#mainNav li div#link6,
+  ul#mainNav li div#link7 { background: url(images/sub.gif) no-repeat; }
+
+  #innerContent { width: 561px; }
+  #breadcrumbs { width: 576px; }
+  #innerLeftCol ul#tools { padding-left: 397px;}
+
+#regEntry filedset { padding: 0 10px !important; }
+
+#tLista, #poll { margin-top: 0px !Important; }
+#tLista .tablica {  border: 1px solid #d7d5d5; background: white; margin: 0 0 0 8px; border-bottom: 2px solid #d7d5d5; border-right: none; padding: 0; }
+#tl { margin-top: 5px !Important; position: absolute; z-index: 100;  }
+#tLista td.au,  #tLista td.ca,  #tLista td.cz,  #tLista td.dk,  #tLista td.hu,  #tLista td.jp,  #tLista td.no,  #tLista td.sk,  #tLista td.se,  #tLista td.ch,  #tLista td.gb,  #tLista td.us,  #tLista td.eu,  #tLista td.pl { border: none !important; }
+#tlLinks { border: none !important; margin-left: 9px;  border-left: 1px solid #d7d5d5; }
+#burza { padding-top: 4px; }
+#poll { margin-top: 0 !importnat; position: absolute; }
+#tLista, #poll { margin-top: 34px; }
+#tListaAnketa ul#tl { margin: -28px 0 0 8px !important; }
+#burza h2 { margin: 5px 0 5px 2px; }
+
+#innerContent .productBox {margin-right:4px;}
+
+ #serFAQ { padding: 10px 10px 0 10px;}
+
+   form#regEntry fieldset.gray { background: #f8f8f8 url(images/fieldset_bg.gif) repeat-x 0 0;   }
+
+
+#cred_calc_c { width: 470px; }
+#sav_calc_c { width: 438px; }
+
+#floatingBox {
+	position: absolute;
+	top: expression(80+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+'px');
+	left: expression(350+((e=document.documentElement.scrollLeft)?e:document.body.scrollLeft)+'px');}
+}

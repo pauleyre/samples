@@ -1,0 +1,56 @@
+﻿html, body, td { font: 10pt Arial, Helvetica, sans-serif; line-height: 150%; color: #000; background-color: #fff; margin: 10px; padding: 0; }
+
+html { margin: 0; padding: 0; }
+body { margin: 0; padding: 20px; }
+
+address, caption, cite, code, dfn, th, var { font-style: normal; font-weight: normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+h2 { font: 2.0em/1em Arial, Helvetica, sans-serif; color: #cc0000;  }
+
+a { color: #cc0000; text-decoration: none;  }
+a img { border: 0; }
+
+p { margin-bottom: 1.2em; }
+
+
+/* sIFR
+----------------------------------------------- */
+
+.sIFR-flash{visibility:visible !important; margin:0}
+.sIFR-replaced{visibility:visible !important}
+span.sIFR-alternate{position:absolute; left:0; top:0; width:0; height:0; display:block; overflow:hidden}
+.sIFR-flash+div[adblocktab=true]{ display:none !important}
+/* print title */
+.sIFR-hasFlash h2 { line-height: 1.2em; font-size: 2.3em }
+
+
+#exch_table_container table { font-size: 11px; color: #58595b; width: 100%; border: 1px solid #cccccc; }
+#exch_table_container table tr.gray { background: #f1f1f1 !imprtant; }
+#exch_table_container table tr th { text-align: center; padding: 10px 10px !important; background: #cc0000; color: white; border-bottom: 1px solid #cccccc; text-transform: none !important }
+#exch_table_container table tr td { padding: 8px 30px; border-right: 1px solid #cccccc; border-top: 1px solid #cccccc;  }
+
+   #exch_table_container table td.au { background: url(images/flags_icons.gif) no-repeat 13px    13px; text-align: left; padding: 0 0 0 40px; width: 83px }
+   #exch_table_container table td.ca { background: url(images/flags_icons.gif) no-repeat 13px  -11px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.cz { background: url(images/flags_icons.gif) no-repeat 13px  -33px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.dk { background: url(images/flags_icons.gif) no-repeat 13px  -54px; text-align: left; padding: 0 0 0 40px; }
+   #exch_table_container table td.hu { background: url(images/flags_icons.gif) no-repeat 13px  -77px; text-align: left; padding: 0 0 0 40px;  }  
+   #exch_table_container table td.jp { background: url(images/flags_icons.gif) no-repeat 13px -98px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.no { background: url(images/flags_icons.gif) no-repeat 13px -120px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.sk { background: url(images/flags_icons.gif) no-repeat 13px -142px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.se { background: url(images/flags_icons.gif) no-repeat 13px -164px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.ch { background: url(images/flags_icons.gif) no-repeat 13px -185px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.gb { background: url(images/flags_icons.gif) no-repeat 13px -207px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.us { background: url(images/flags_icons.gif) no-repeat 13px -229px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.eu { background: url(images/flags_icons.gif) no-repeat 13px -251px; text-align: left; padding: 0 0 0 40px;  }
+   #exch_table_container table td.pl { background: url(images/flags_icons.gif) no-repeat 13px -273px; text-align: left; padding: 0 0 0 40px;  }  
+   
+    .proizvodTable { font-size: 90%; border: 1px solid #E5E5E5; background: white; line-height: 1em; }
+    .proizvodTable th { padding: 10px 4px 10px 10px; background: #cc0000; color: white; }
+    .proizvodTable td { padding: 15px 4px 15px 10px; border-bottom: 1px solid #d3d3d3; border-right: 1px solid #E5E5E5; }
+    .proizvodTable th.width { width: 25%; }
+    .proizvodTable th.main { width: 25%; }
+    .proizvodTable tr.gray { background: #f1f1f1; }
+    .proizvodTable td.white { background: #fff; }   
+   
+.print-logo { border-bottom: 1px solid #cccccc; padding-bottom: 20px; }   

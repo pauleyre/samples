@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rotator isRandom="false">
+  <bannerTime>5</bannerTime>
+  <numberOfBanners>3</numberOfBanners>
+  <banners showHeader="false">
+    <banner>
+      <name>cc&#352;džpopCCŠÐŽ</name>
+      <body>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </body>
+      <imagePath>http://wwwtest.hpb.local/site/gfx/flash/img/01.jpg</imagePath>
+      <link>http://www.hpb.hr</link>
+    </banner>
+    <banner>
+      <name>Nova kampanja Hrvatske poštanske banke</name>
+      <body>Lorem Ipsum</body>
+      <imagePath>http://wwwtest.hpb.local/site/gfx/flash/img/02.jpg</imagePath>
+      <link>http://www.hpb.hr</link>
+    </banner>
+    <banner>
+      <name>Transfer godine - nova akcija HPB Stambene štedionice</name>
+      <body>Lorem Ipsum</body>
+      <imagePath>http://wwwtest.hpb.local/site/gfx/flash/img/03.jpg</imagePath>
+      <link>http://www.hpb.hr</link>
+    </banner>
+  </banners>
+</rotator>

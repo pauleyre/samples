@@ -1,0 +1,65 @@
+.cleaner {
+	clear: both;
+	line-height: 1%;
+}
+#invest_mod_back * {
+	margin: 0%;
+	padding: 0%;
+}
+
+#toolbar {
+	list-style: none;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+#toolbar li {
+	padding: 3px 10px 3px 10px;
+	background-color: #ffffcc;
+	border: 1px solid #c6c6c6;
+	display: inline;
+	margin: 0 6px 0 0;
+}
+
+#fond_values {
+	width: 70%;
+	float: left;
+}
+
+#fond_values th {
+	border: 1px solid #c6c6c6;
+	background-color: white;
+}
+#fond_values td {
+	border-bottom: 1px solid #c6c6c6;
+	background-color: white;
+}
+
+#fond_list {
+	list-style: none;
+	background-color: #ffff00;
+	float: left;
+	width: 20%;
+	margin: 0 0 0 5%;
+}
+
+#fond_list li {
+	padding: 5px;
+}
+
+#fond_form  p {
+	margin: 0 0 10px 0;
+}
+
+#fond_form .chk_btn {
+	width: auto;
+}
+
+#fond_form input {
+	border: 1px solid #c6c6c6;
+	width: 200px;
+}
+
+#fond_form select {
+	border: 1px solid #c6c6c6;
+	width: 100px;
+}

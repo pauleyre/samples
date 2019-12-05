@@ -1,0 +1,21 @@
+#adbook_left  {
+	float: left;
+	width: auto;
+	margin: 0 50px 0 0;
+}
+
+#adbook_middle  {
+	float: left;
+	width: auto;
+	padding: 60px 0 0 0;
+	text-align: center;
+	margin: 0 50px 0 0;
+}
+	#adbook_middle p {
+		margin: 0 0 30px 0;
+	}
+
+#adbook_right  {
+	float: left;
+	width: 300px;
+}

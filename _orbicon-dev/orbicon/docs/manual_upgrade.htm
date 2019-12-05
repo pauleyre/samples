@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="manual_upg">
+			<h1><a name="manual_upg">Beginning the manual upgrade</a></h1>
+			<p>You should now be at the stage where you can upload the Orbicon framework files to your server. Initiate an FTP connection to the server and navigate to the directory of the Orbicon framework you wish to upgrade.</p>
+
+			<p>
+				<strong>Step-by-step upgrade</strong>
+				<ol>
+					<li>Create backup directory, for example <strong>20070606</strong></li>
+					<li>Create temporary directory, for example <strong>new</strong></li>
+					<li>Unpack files from compressed archive into temporary directory <strong>new</strong></li>
+					<li>Move <strong>orbicon</strong> directory and <strong>index.php</strong> from root to backup directory <strong>20070606</strong></li>
+					<li>Move <strong>orbicon</strong> directory and <strong>index.php</strong> from temporary directory <strong>new</strong> to root</li>
+					<li>Validate upgrade</li>
+					<li>If the update succeded, archive backup directory to <strong>20070606.tar.gz</strong> and remove temporary directory <strong>new</strong></li>
+					<li>If the update failed, perform rollback from backup folder <strong>20070606</strong></li>
+				</ol>
+			</p>
+
+			<!-- <p>Now you want to upload the Orbicon framework files over the old files so open up the folder that you unzipped the Orbicon framework package to in Windows Explorer. Select all the files and folders and copy them (go to Edit &gt; Copy) and in your FTP program paste them. Your FTP program will prompt you to overwrite, resume, or skip the upload on files that already exist; you should choose to overwrite them and not to resume. The files should now be uploading and, depending on the speed of your internet connection, this may take some time.</p> -->
+			<p>Once all the files are uploaded, you should verify that everything went fine by logging in into the system.</p>
+			<p><strong>Next:</strong> <a href="finishing_up.htm">Finishing up</a></p>
+		</div>
+</body>
+</html>

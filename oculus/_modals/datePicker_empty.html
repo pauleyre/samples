@@ -1,0 +1,128 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kalendar</title>
+<style type="text/css">
+<!--
+
+a {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bolder;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.txt {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+.txt2 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.ned {
+	color: #AA0505;
+}
+
+-->
+</style>
+</head>
+<script type="text/javascript" src="datePicker_empty.js"></script>
+
+<body bgcolor="#CCCCCC" onload="javascript: initialization();">
+<table width="100%"  border="1" cellpadding="1" cellspacing="0" bgcolor="#999999" class="txt">
+  <tr bgcolor="#666666">
+    <td colspan="7" align="center" class="txt">
+      <table width="100%" border="1" cellpadding="0" cellspacing="0" class="txt2">
+        <tr>
+          <td align="center"><a href="javascript: void(0);" onclick="javascript: chgMonth(less);">&lt;</a></td>
+          <td id="idMonth" align="center">siječanj</td>
+          <td align="center"><a href="javascript: void(0);" onclick="javascript: chgMonth(more);">&gt;</a></td>
+          <td align="center"><a href="javascript: void(0);" onclick="javascript: chgYear(less);">&lt;</a></td>
+          <td id="idYear" align="center">0000</td>
+          <td align="center"><a href="javascript: void(0);" onclick="javascript: chgYear(more);">&gt;</a></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr class="txt">
+    <td width="14,29%"><div align="center"><strong>pon</strong></div></td>
+    <td width="14,29%"><div align="center"><strong>uto</strong></div></td>
+    <td width="14,29%"><div align="center"><strong>sri</strong></div></td>
+    <td width="14,29%"><div align="center"><strong>čet</strong></div></td>
+    <td width="14,29%"><div align="center"><strong>pet</strong></div></td>
+    <td width="14,29%"><div align="center"><strong>sub</strong></div></td>
+    <td width="14,29%" class="ned"><div align="center"><strong>ned</strong></div></td>
+  </tr>
+  <tr>
+    <td id="0_0">&nbsp;</td>
+    <td id="0_1">&nbsp;</td>
+    <td id="0_2">&nbsp;</td>
+    <td id="0_3">&nbsp;</td>
+    <td id="0_4">&nbsp;</td>
+    <td id="0_5">&nbsp;</td>
+    <td id="0_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="1_0">&nbsp;</td>
+    <td id="1_1">&nbsp;</td>
+    <td id="1_2">&nbsp;</td>
+    <td id="1_3">&nbsp;</td>
+    <td id="1_4">&nbsp;</td>
+    <td id="1_5">&nbsp;</td>
+    <td id="1_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="2_0">&nbsp;</td>
+    <td id="2_1">&nbsp;</td>
+    <td id="2_2">&nbsp;</td>
+    <td id="2_3">&nbsp;</td>
+    <td id="2_4">&nbsp;</td>
+    <td id="2_5">&nbsp;</td>
+    <td id="2_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="3_0">&nbsp;</td>
+    <td id="3_1">&nbsp;</td>
+    <td id="3_2">&nbsp;</td>
+    <td id="3_3">&nbsp;</td>
+    <td id="3_4">&nbsp;</td>
+    <td id="3_5">&nbsp;</td>
+    <td id="3_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="4_0">&nbsp;</td>
+    <td id="4_1">&nbsp;</td>
+    <td id="4_2">&nbsp;</td>
+    <td id="4_3">&nbsp;</td>
+    <td id="4_4">&nbsp;</td>
+    <td id="4_5">&nbsp;</td>
+    <td id="4_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="5_0">&nbsp;</td>
+    <td id="5_1">&nbsp;</td>
+    <td id="5_2">&nbsp;</td>
+    <td id="5_3">&nbsp;</td>
+    <td id="5_4">&nbsp;</td>
+    <td id="5_5">&nbsp;</td>
+    <td id="5_6" class="ned">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="7" align="center"><a href="javascript: void(0);" onclick="javascript: finish();">non-stop</a></td>
+  </tr>
+</table>
+</body>
+</html>

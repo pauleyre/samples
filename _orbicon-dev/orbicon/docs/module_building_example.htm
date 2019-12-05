@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="mod_example">
+			<h1><a name="mod_example">Module building example</a></h1>
+
+			<p>In this example, we'll create a very simple module that displays &quot;Hello world!&quot; in a stylized box. We'll also allow the user to use Javascript to change that text into something more interesting.</p>
+			
+			<p>First we create a directory for our module - <strong>hello-world</strong> in the modules directory. Once we have done that, we should create the neccessary <strong>mod.ini</strong> file and directory <strong>languages</strong>.</p>
+
+			<p>We'll add English language translation immediately as seen in the example below.</p>
+
+			<p>en.php</p>
+			<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	$mod['hello-world'] = 'Hello world! module';
+?>
+</textarea>
+
+			<p>
+				Once we are done, the file should be saved under module's <strong>languages</strong> directory with name <strong>en.php</strong>.<br /><br />
+				Next, we'll create our <strong>mod.ini</strong> file as seen below.
+			</p>
+
+		<p>mod.ini</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name="Hello World box"
+frontend="hello.world.php"
+runtime=box
+template_mark=HELLO_WORLD
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.00"
+date="1/07/2006"
+updated="N/A"
+</textarea>
+
+		<p>Next we'll write our module's content into <strong>hello.world.php</strong> (This is the file we configured in our mod.ini)</p><br />
+
+
+<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+return <<<MY_MODULE
+
+<!-- JAVASCRIPT FOR CHANGING TEXT CONTENT -->
+<script type="text/javascript">
+
+	function change_box_text()
+	{
+		// get box element
+		var box = document.getElementById('hello_world_container');
+		// get new text element
+		var new_txt = document.getElementById('new_text');
+		// change text
+		box.innerHTML = new_txt.value;
+	}
+
+</script>
+
+<!-- HELLO WORLD BOX -->
+<div style="border: 1px solid blue; background: #999999;">
+
+	<h2 id="hello_world_container">Hello World!</h2>
+	
+	<input type="text" name="new_text" id="new_text" value="Hello World!" /> <input type="button" onclick="javascript: change_box_text();" value="Submit" />
+
+</div>
+
+MY_MODULE;
+
+?>
+
+</textarea>
+
+			<p><strong>hello.world.php</strong>'s content will be displayed as a box in place of &lt;!&gt;HELLO_WORLD template mark as we configured it in <strong>mod.ini</strong></p>
+
+			<p><strong>Next:</strong> <a href="mod_ini.htm">mod.ini</a></p>
+		</div>
+</body>
+</html>

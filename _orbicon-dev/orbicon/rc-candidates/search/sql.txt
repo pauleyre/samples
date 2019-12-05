@@ -1,0 +1,4 @@
+SELECT DISTINCT *  FROM `orbx_mod_estate` 
+WHERE `location` LIKE CONVERT(_utf8 'osijek' USING latin2) COLLATE latin2_general_ci 
+AND `type` LIKE CONVERT(_utf8 'stan' USING latin2) COLLATE latin2_general_ci 
+AND `price` < 120 < 126 AND `msquare` > 23 < 30 

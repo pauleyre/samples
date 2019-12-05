@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="install">
+			<h1><a name="install">Installing</a></h1>
+			<p>Assuming the previous step went well, you should now have the Orbicon framework files on your server with their appropriate permissions set. All that is needed now is to configure your MySQL database and admin account.</p>
+			<p>
+				<ul>
+					<li><strong>MySQL server name:</strong> This is where we specify the location of the MySQL database.. 99% of the time this will be <em>localhost</em>.</li><li> <b>MySQL username:</b> This is the Username for your MySQL database. Often you will have to set this up in your web host&#039;s control panel. If in doubt, consult your host.</li>
+					<li><strong>MySQL password:</strong> This is the password for your MySQL database. Often you will have to set this up in your webhost&#039;s control panel. If in doubt, consult your host.</li>
+					<li><strong>MySQL Database name:</strong> This is the name of your MySQL database. Often you will have to set this up in your webhost&#039;s control panel. If in doubt, consult your host.</li>
+				</ul>
+				<p>Once you have filled in all of the settings, you can proceed and fill in the details of your admin account; this will create your username on the site. Once you have filled in all the data, click on <em>proceed</em>.</p>
+				<p>Your Orbicon framework is now installed and you can browse to it.</p>
+				<p><strong>Next:</strong> <a href="introduction_to_upgrading.htm">Introduction to Upgrading</a></p>
+		</div>
+</body>
+</html>

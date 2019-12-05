@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="install_intro">
+			<h1><a name="install_intro">Introduction to Installing</a></h1>
+			<p>Before you decide to install Orbicon framework, you must take the following into account:</p>
+			<p>
+				<ul>
+					<li>Select the version that is suitable for your needs and level of experience. Beta versions are not suitable for production environments, while stable versions have been tested extensively in several environments.</li>
+					<li>Check the minimum requirements. To save any headaches down the line, you should ensure that the server you intend to install Orbicon framework on meets the requirements.</li>
+				</ul>
+			</p>
+			<p>
+				<strong>Next:</strong> <a href="client_requirements.htm">Client Requirements</a>
+			</p>
+		</div>
+</body>
+</html>

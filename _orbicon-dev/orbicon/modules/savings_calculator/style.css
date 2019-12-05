@@ -1,0 +1,25 @@
+/**
+ * css stylesheet of savings calculator module
+ * @author Dario Benšić <dario.bensic@orbitum.net>
+ * @copyright Copyright (c) 2007, Orbitum internet komunikacije d.o.o., Josipa Prikrila 6, 10000 Zagreb, Croatia
+ * @package OrbiconMOD
+ * @version 2.04
+ * @link http://orbitum.net
+ * @license http://orbitum.net Commercial
+ * @since 2007-06-27
+ */
+
+a:hover {
+    cursor:pointer;
+}
+#container_ajax_results {
+    margin-top:0px;
+    font-weight:bold;
+    border:0px solid #cccccc;
+    width: 250px !important;
+    height:auto;
+    font-size:11px;
+    /*padding: 4px 5px 5px 5px;*/
+    padding: 0px 0px 0px 0px;;
+    color: #585858;
+}

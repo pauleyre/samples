@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tornado/
+
+/////////////
+<a href="tornado/index.php"><img src="tornado/tornado.gif" style="width: 1px; height: 1px;" /></a>

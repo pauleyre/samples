@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="tpl_marks">
+			<h1><a name="tpl_marks">Template marks</a></h1>
+			<p>Template marks are special text tags that serve as identifiers for various system rendering tasks. They are exclusively used in HTML templates and outside of them have no use or power.</p>
+			
+			<p>Example template marks usage</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<title><!>DOMAIN_NAME</title>
+<link type="text/css" rel="stylesheet" href="<!>ORBX_SITE_URL/site/gfx/template.css" media="screen" />
+</textarea>
+
+			<p>The system will render template marks into the following</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<title>My site</title>
+<link type="text/css" rel="stylesheet" href="http://domain.com/site/gfx/template.css" media="screen" />
+</textarea>
+			<p>As you can see template marks &lt;!&gt;DOMAIN_NAME and &lt;!&gt;ORBX_SITE_URL have special meaning to the system and will be replaced by appropriate data during layout rendering. Some template marks are always available to end-users, some are part of their modules and some are user-generated (such as boxes). Below is a comprehensive list of available template marks.</p><br />
+
+			<table class="table">
+				<tr>
+					<th>Template mark</th>
+					<th>Description</th>
+					<th>Availability</th>
+					<th>Example</th>
+
+				</tr>
+				<tr>
+					<td>&lt;!&gt;ORBX_SITE_URL</td>
+					<td>Site's base URL</td>
+					<td>All</td>
+					<td><em>http://www.orbitum.net</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;SCHEME</td>
+					<td>Site's scheme</td>
+					<td>All</td>
+					<td><em>http</em> or <em>https</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;DOMAIN</td>
+					<td>Site's domain name</td>
+					<td>All</td>
+					<td><em>orbitum.net</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;ORBX_LN</td>
+					<td>Current language</td>
+					<td>All</td>
+					<td><em>en</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;ADMIN</td>
+					<td>Displays admin menu for frontend</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>			
+				<tr>
+					<td>&lt;!&gt;METATAGS</td>
+					<td>Generates system-related metatags</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;TOP_INFOBOX</td>
+					<td>Generates animated box with form submission information</td>
+					<td>home.html</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;NWS_TICKER</td>
+					<td>Generates animated scroller with RSS content</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;DOMAIN_OWNER</td>
+					<td>Web site's owner</td>
+					<td>All</td>
+					<td><em>Orbitum ICT</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;DOMAIN_NAME</td>
+					<td>Web site's name</td>
+					<td>All</td>
+					<td><em>Orbitum internet communications, Orbitum ICT</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;NAVIGATION_V</td>
+					<td>Vertical navigation menu</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;NAVIGATION_H</td>
+					<td>Horizontal navigation menu</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>
+				
+				<tr>
+					<td colspan="4" class="gray_row">Available only for <strong>column.html</strong></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;BREADCRUMBS</td>
+					<td>Generates breadcrumbs</td>
+					<td>column.html</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;COLUMN_TITLE</td>
+					<td>Column's title</td>
+					<td>column.html</td>
+					<td><em>Contact Us</em></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;COLUMN_CONTENT</td>
+					<td>Column's content</td>
+					<td>column.html</td>
+					<td>Example Not Available</td>
+				</tr>
+
+				<tr>
+					<td>&lt;!&gt;COLUMN_DATE</td>
+					<td>Last modification date of column's content</td>
+					<td>column.html</td>
+					<td><em>03.16.2007</em></td>
+				</tr>
+
+				<tr>
+					<td>&lt;!&gt;COLUMN_PRINT_LINK</td>
+					<td>URL address to column's print content</td>
+					<td>column.html</td>
+					<td><em>http://www.orbitum.net/en/about-us/html</em></td>
+				</tr>
+
+				<tr>
+					<td>&lt;!&gt;ALT_CONTENT_FORMATS</td>
+					<td>A box with links to content's alternate formats</td>
+					<td>column.html</td>
+					<td>Example Not Available</td>
+				</tr>
+
+				<tr>
+					<td>&lt;!&gt;RELATED_CONTENT</td>
+					<td>A box with links to search results similar to currently opened column content</td>
+					<td>column.html</td>
+					<td>Example Not Available</td>
+				</tr>
+
+				<tr>
+					<td>&lt;!&gt;LINKED_CONTENT</td>
+					<td>A box with links to column's subcolumns</td>
+					<td>column.html</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray_row">Available as part of a specific modules</td>
+				</tr>
+				
+				<tr>
+					<td>&lt;!&gt;BANNER</td>
+					<td>Displays Flash or image banner</td>
+					<td>All (requires module <strong>banners</strong>)</td>
+					<td>See <span onclick="javascript: getPage('banner');"><a href="banners.htm">Banners</a></span></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;NEWS</td>
+					<td>Displays news categories and their news</td>
+					<td>All (requires module <strong>news</strong>)</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;NWS_ARCHIVE_SUMMARY</td>
+					<td>Displays excerpt from news archive</td>
+					<td>All (requires module <strong>news-archive-summary</strong>)</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;LAST_NEWS_ENTRY</td>
+					<td>Displays latest news entry</td>
+					<td>All (requires module <strong>news-last-entry</strong>)</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;POLL</td>
+					<td>Displays polls for current site's zone</td>
+					<td>All (requires module <strong>polls</strong>)</td>
+					<td>See <span onclick="javascript: getPage('poll');"><a href="poll.htm">Polls</a></span></td>
+				</tr>
+				<tr>
+					<td>&lt;!&gt;CPHP</td>
+					<td>Displays results of Custom PHP</td>
+					<td>All (requires module <strong>cphp</strong>)</td>
+					<td>Example Not Available</td>
+				</tr>
+				
+				<tr>
+					<td colspan="4" class="gray_row">User-generated boxes</td>
+				</tr>
+				<tr>
+					<td>Depends on user input (for example: &lt;!&gt;MY_RED_BOX)</td>
+					<td>Displays a user generated-content</td>
+					<td>All</td>
+					<td>Example Not Available</td>
+				</tr>
+				<tr>
+					<td colspan="4" class="gray_row">Custom RSS boxes</td>
+				</tr>
+				<tr>
+					<td>Depends on user input (for example: &lt;!&gt;MYRSS_HTTP-RSS-CNN-COM-RSS-CNN_TECH-RSS)</td>
+					<td>Displays a box with simply formatted RSS content</td>
+					<td>All</td>
+					<td>See <span onclick="javascript: getPage('rss');"><a href="rss_channels.htm">RSS channels</a></span></td>
+				</tr>
+
+			</table>
+
+			<p>Template marks are case-sensitive. Typing <strong>&lt;!&gt;poll</strong> will not work.</p>
+
+			<p><strong>Next:</strong> <a href="implementing_attila_search.htm">Implementing Attila search</a></p>
+
+		</div>
+</body>
+</html>

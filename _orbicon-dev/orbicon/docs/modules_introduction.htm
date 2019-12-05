@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="mod_intro">
+			<h1><a name="mod_intro">Module introduction</a></h1>
+
+			<p>A module is a software entity that groups a set of (typically cohesive) subprograms and data structures. Modules are units that can be compiled separately, which makes them reusable and allows multiple programmers to work on different modules simultaneously. Modules also promote modularity which can make complex programs easier to understand.</p>
+
+			<p>Modules provide a separation between interface and implementation. A module interface expresses the elements that are provided and required by the module. The elements defined in the interface are visible to other modules. The implementation contains the working code that corresponds to the elements declared in the interface.</p>
+
+			<p><strong>Next:</strong> <a href="capabilities.htm">Capabilities</a></p>
+		</div>
+
+
+</body>
+</html>

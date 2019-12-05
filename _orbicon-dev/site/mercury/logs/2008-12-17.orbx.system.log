@@ -1,0 +1,88 @@
+- - 127.0.0.1 17/Dec/2008:14:35:49 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:35:49 CET+1 ":session fixation check done on line 287" - -
+- - 127.0.0.1 17/Dec/2008:14:35:50 CET+1 ":memory usage: 3.97 MB (4164176 bytes) on line 440" - 3.97 MB(4165600)
+- - 127.0.0.1 17/Dec/2008:14:35:50 CET+1 ":processing time 1.39726877213/1.4s on line 465" - 3.95 MB(4142776)
+- - 127.0.0.1 17/Dec/2008:14:35:50 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:35:50 CET+1 ":memory usage(c): 2.13 MB (2236864 bytes) on line 440" - 2.13 MB(2238288)
+- - 127.0.0.1 17/Dec/2008:14:35:50 CET+1 ":processing time 0.0599689483643/0.06s on line 465" - 2.11 MB(2216368)
+- - 127.0.0.1 17/Dec/2008:14:37:06 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:06 CET+1 ":memory usage(c): 2.13 MB (2236680 bytes) on line 440" - 2.13 MB(2238104)
+- - 127.0.0.1 17/Dec/2008:14:37:06 CET+1 ":processing time 0.06396484375/0.06s on line 465" - 2.11 MB(2216184)
+- - 127.0.0.1 17/Dec/2008:14:37:06 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":memory usage(c): 2.13 MB (2236680 bytes) on line 440" - 2.13 MB(2238104)
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":processing time 0.0591099262238/0.06s on line 465" - 2.11 MB(2216184)
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":memory usage(c): 2.13 MB (2236680 bytes) on line 440" - 2.13 MB(2238104)
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":processing time 0.0591759681702/0.06s on line 465" - 2.11 MB(2216184)
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":memory usage(c): 2.13 MB (2236680 bytes) on line 440" - 2.13 MB(2238104)
+- - 127.0.0.1 17/Dec/2008:14:37:07 CET+1 ":processing time 0.0584461688995/0.06s on line 465" - 2.11 MB(2216184)
+- - 127.0.0.1 17/Dec/2008:14:37:17 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:17 CET+1 ":memory usage: 3.52 MB (3691176 bytes) on line 440" - 3.52 MB(3692512)
+- - 127.0.0.1 17/Dec/2008:14:37:17 CET+1 ":processing time 0.170346021652/0.17s on line 465" - 3.5 MB(3669416)
+- - 127.0.0.1 17/Dec/2008:14:37:18 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:18 CET+1 ":memory usage(c): 2.13 MB (2234664 bytes) on line 440" - 2.13 MB(2236088)
+- - 127.0.0.1 17/Dec/2008:14:37:18 CET+1 ":processing time 0.0643029212952/0.06s on line 465" - 2.11 MB(2214176)
+- - 127.0.0.1 17/Dec/2008:14:37:19 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:22 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:22 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:14:37:22 CET+1 ":memory usage: 2.65 MB (2777728 bytes) on line 440" - 2.65 MB(2778936)
+1 - 127.0.0.1 17/Dec/2008:14:37:22 CET+1 ":processing time 0.322542905807/0.32s on line 465" - 2.63 MB(2755928)
+- - 127.0.0.1 17/Dec/2008:14:37:22 CET+1 ":starting session on line 269" - -
+- - 127.0.0.1 17/Dec/2008:14:37:24 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:14:37:24 CET+1 ":memory usage: 3.68 MB (3860472 bytes) on line 440" - 3.68 MB(3861896)
+1 - 127.0.0.1 17/Dec/2008:14:37:24 CET+1 ":processing time 0.148550033569/0.15s on line 465" - 3.65 MB(3828608)
+- - 127.0.0.1 17/Dec/2008:14:37:32 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:14:37:33 CET+1 ":memory usage: 4.13 MB (4325528 bytes) on line 440" - 4.13 MB(4326952)
+1 - 127.0.0.1 17/Dec/2008:14:37:33 CET+1 ":processing time 0.165868997574/0.17s on line 465" - 4.1 MB(4303760)
+- - 127.0.0.1 17/Dec/2008:14:37:35 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:14:37:35 CET+1 ":memory usage: 4.13 MB (4326032 bytes) on line 440" - 4.13 MB(4327456)
+1 - 127.0.0.1 17/Dec/2008:14:37:35 CET+1 ":processing time 0.171602010727/0.17s on line 465" - 4.1 MB(4304264)
+- - 127.0.0.1 17/Dec/2008:14:54:32 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:14:54:32 CET+1 ":memory usage: 4.13 MB (4326032 bytes) on line 440" - 4.13 MB(4327456)
+1 - 127.0.0.1 17/Dec/2008:14:54:32 CET+1 ":processing time 0.179921865463/0.18s on line 465" - 4.1 MB(4304264)
+- - 127.0.0.1 17/Dec/2008:15:00:36 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:00:36 CET+1 ":memory usage: 4.13 MB (4325984 bytes) on line 440" - 4.13 MB(4327408)
+1 - 127.0.0.1 17/Dec/2008:15:00:36 CET+1 ":processing time 0.171756982803/0.17s on line 465" - 4.1 MB(4304304)
+- - 127.0.0.1 17/Dec/2008:15:08:34 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:08:34 CET+1 ":memory usage: 4.13 MB (4325984 bytes) on line 440" - 4.13 MB(4327320)
+1 - 127.0.0.1 17/Dec/2008:15:08:34 CET+1 ":processing time 0.166253089905/0.17s on line 465" - 4.1 MB(4304216)
+- - 127.0.0.1 17/Dec/2008:15:08:44 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:08:44 CET+1 ":memory usage: 4.13 MB (4326032 bytes) on line 440" - 4.13 MB(4327456)
+1 - 127.0.0.1 17/Dec/2008:15:08:44 CET+1 ":processing time 0.167414903641/0.17s on line 465" - 4.1 MB(4304264)
+- - 127.0.0.1 17/Dec/2008:15:09:45 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:09:46 CET+1 ":memory usage: 4.13 MB (4325952 bytes) on line 440" - 4.13 MB(4327376)
+1 - 127.0.0.1 17/Dec/2008:15:09:46 CET+1 ":processing time 0.199049949646/0.2s on line 465" - 4.1 MB(4304288)
+- - 127.0.0.1 17/Dec/2008:15:09:56 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:09:56 CET+1 ":memory usage: 4.13 MB (4325960 bytes) on line 440" - 4.13 MB(4327384)
+1 - 127.0.0.1 17/Dec/2008:15:09:56 CET+1 ":processing time 0.167862176895/0.17s on line 465" - 4.1 MB(4304296)
+- - 127.0.0.1 17/Dec/2008:15:10:56 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:10:56 CET+1 ":memory usage: 4.13 MB (4325944 bytes) on line 440" - 4.13 MB(4327368)
+1 - 127.0.0.1 17/Dec/2008:15:10:56 CET+1 ":processing time 0.167922019958/0.17s on line 465" - 4.1 MB(4304280)
+- - 127.0.0.1 17/Dec/2008:15:26:50 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:26:50 CET+1 ":memory usage: 4.13 MB (4325952 bytes) on line 440" - 4.13 MB(4327376)
+1 - 127.0.0.1 17/Dec/2008:15:26:50 CET+1 ":processing time 0.210908889771/0.21s on line 465" - 4.1 MB(4304288)
+- - 127.0.0.1 17/Dec/2008:15:28:16 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:28:16 CET+1 ":memory usage: 4.13 MB (4325960 bytes) on line 440" - 4.13 MB(4327384)
+1 - 127.0.0.1 17/Dec/2008:15:28:16 CET+1 ":processing time 0.167015075684/0.17s on line 465" - 4.1 MB(4304192)
+- - 127.0.0.1 17/Dec/2008:15:28:27 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:28:28 CET+1 ":memory usage: 4.13 MB (4325960 bytes) on line 440" - 4.13 MB(4327384)
+1 - 127.0.0.1 17/Dec/2008:15:28:28 CET+1 ":processing time 0.167793989182/0.17s on line 465" - 4.1 MB(4304192)
+- - 127.0.0.1 17/Dec/2008:15:29:54 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:29:54 CET+1 ":memory usage: 4.13 MB (4325960 bytes) on line 440" - 4.13 MB(4327384)
+1 - 127.0.0.1 17/Dec/2008:15:29:54 CET+1 ":processing time 0.168236970901/0.17s on line 465" - 4.1 MB(4304192)
+- - 127.0.0.1 17/Dec/2008:15:31:04 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:31:04 CET+1 ":memory usage: 4.13 MB (4326008 bytes) on line 440" - 4.13 MB(4327432)
+1 - 127.0.0.1 17/Dec/2008:15:31:04 CET+1 ":processing time 0.168585062027/0.17s on line 465" - 4.1 MB(4304248)
+- - 127.0.0.1 17/Dec/2008:15:33:08 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:33:09 CET+1 ":memory usage: 4.13 MB (4325952 bytes) on line 440" - 4.13 MB(4327376)
+1 - 127.0.0.1 17/Dec/2008:15:33:09 CET+1 ":processing time 0.16602396965/0.17s on line 465" - 4.1 MB(4304184)
+- - 127.0.0.1 17/Dec/2008:15:33:35 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:33:35 CET+1 ":memory usage: 4.13 MB (4326072 bytes) on line 440" - 4.13 MB(4327496)
+1 - 127.0.0.1 17/Dec/2008:15:33:35 CET+1 ":processing time 0.166651010513/0.17s on line 465" - 4.1 MB(4304304)
+- - 127.0.0.1 17/Dec/2008:15:33:52 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:33:52 CET+1 ":memory usage: 4.13 MB (4325976 bytes) on line 440" - 4.13 MB(4327400)
+1 - 127.0.0.1 17/Dec/2008:15:33:52 CET+1 ":processing time 0.166970968246/0.17s on line 465" - 4.1 MB(4304208)
+- - 127.0.0.1 17/Dec/2008:15:34:26 CET+1 ":starting session on line 269" - -
+1 - 127.0.0.1 17/Dec/2008:15:34:26 CET+1 ":memory usage: 4.13 MB (4325984 bytes) on line 440" - 4.13 MB(4327408)
+1 - 127.0.0.1 17/Dec/2008:15:34:26 CET+1 ":processing time 0.169113874435/0.17s on line 465" - 4.1 MB(4304128)

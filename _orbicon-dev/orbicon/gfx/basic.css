@@ -1,0 +1,239 @@
+/*
+	DO NOT EDIT THIS DOCUMENT
+	contact pavle.gardijan@gmail.com for more information regarding this document
+*/
+
+/* hides image border */
+a img { color: #ffffff; }		/* hide the border in Netscape 4 */
+@media all {					/* hide from Netscape 4 */
+	a img {
+		color: inherit;     	/* undo the rule above */
+		border: none;			/* hide from Netscape 4 */
+	}
+}
+
+/* reset sizes */
+h1, h2, h3, h4, h5, h6{
+	font-size:100%;
+}
+
+/*default acronym and abbr styling */
+acronym, abbr{
+	cursor:help;
+	border-bottom-width:1px;
+	border-bottom-style:dotted;
+}
+
+/* obsolete css ?!!*/
+body, div, td, th, h2, h3, h4 { /* redundant rules for bad browsers  */
+	voice-family: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+p { line-height: 140%; }
+
+/* restyle h1 and h2 tags for cross-browser compatibility*/
+h1,h2 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 180%;
+	margin: 0;
+}
+
+h2 {
+	font-size: 140%;
+	padding-bottom: 2px;
+	margin: 0;
+}
+
+/* ******************  news  ************** */
+
+.news_box {
+	padding-bottom: 3px;
+	width: 100%;
+	float: left;
+	display: inline;
+	position: relative;
+}
+
+div[class="news_box"] { clear: both; }
+
+.news_box_preview {
+	float: left;
+}
+
+.s, .h {
+	height:100%;
+}
+
+.s {
+	display: block;
+}
+
+.h {
+	display:none;
+	speak:none;
+}
+
+.news_cat_box {
+	padding-bottom: 3px;
+	width: 100%;
+	float: left;
+	display: inline;
+	position: relative;
+}
+
+div[class="news_cat_box"] { clear: both; }
+
+.news_cat_box_preview {
+	float: left;
+}
+
+/* ******************  horizontal menu  ************** */
+
+ul.horizontal_menu {
+	width: 100%;
+	float: left;
+	display: inline;
+	position: relative;
+}
+
+li.h_menu_tab {
+	float: left;
+}
+
+li.h_menu_tab a {
+	float: left;
+	display:block;
+}
+
+/* ******************  breadcrumbs  ************** */
+
+.breadcrumbs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* ******************  attila  ************** */
+
+.attila_p1 {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+
+}
+.attila_p2 {
+	margin: 0;
+	padding: 0;
+	font-size:90%;
+}
+.attila_p3 {
+	margin: 0;
+	padding: 0 0 1em 0;
+	font-size:90%;
+}
+
+/* ******************  colors  ************** */
+.red {
+	color:red;
+}
+
+.green {
+	color:green;
+}
+
+.blue {
+	color:blue;
+}
+
+.yellow {
+	color:yellow;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+/* ******************  poll   ************** */
+
+.orbx_poll_item_title {
+	font-size: 85%;
+	margin: 0;
+	padding: 0;
+}
+
+.orbx_poll_item_bar {
+	font-size: 85%;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+.orbx_poll_item_bar img {
+	height:10px;
+	max-width:100px;
+	max-width:60%;
+	margin:0;
+	padding:0;
+	margin-right:3px;
+	vertical-align:middle;
+}
+
+/* ******************  autocomplete  ************** */
+
+#orbx_search_container {position:absolute;width:150px;}
+#orbx_search_container .yui-ac-content {position:absolute;width:100%;border:1px solid #404040;background:#ffffff;overflow:hidden;z-index:9050;}
+#orbx_search_container .yui-ac-shadow {position:absolute;margin:.3em;width:100%;background:#a0a0a0;z-index:9049;}
+#orbx_search_container ul {padding:5px 0 5px 0;width:100%; background:white;}
+#orbx_search_container li {padding:0 5px 0 5px;cursor:default;white-space:nowrap;}
+#orbx_search_container li.yui-ac-highlight {background:#a0a0a0;}
+
+/* ******************  print  ************** */
+
+@media print {
+   h1, h2, h3,
+   h4, h5, h6    { page-break-after: avoid; page-break-inside: avoid; }
+   blockquote,
+   pre           { page-break-inside: avoid; }
+   ul, ol, dl    { page-break-before: avoid; }
+}
+
+/* ******************  speech  ************** */
+
+@media aural {
+   h1, h2, h3,
+   h4, h5, h6    { voice-family: paul, male; stress: 20; richness: 90; }
+   h1            { pitch: x-low; pitch-range: 90; }
+   h2            { pitch: x-low; pitch-range: 80; }
+   h3            { pitch: low; pitch-range: 70; }
+   h4            { pitch: medium; pitch-range: 60; }
+   h5            { pitch: medium; pitch-range: 50; }
+   h6            { pitch: medium; pitch-range: 40; }
+   li, dt, dd    { pitch: medium; richness: 60; }
+   dt            { stress: 80; }
+   pre, code, tt { pitch: medium; pitch-range: 0; stress: 0; richness: 80; }
+   em            { pitch: medium; pitch-range: 60; stress: 60; richness: 50; }
+   strong        { pitch: medium; pitch-range: 60; stress: 90; richness: 90; }
+   dfn           { pitch: high; pitch-range: 60; stress: 60; }
+   s, strike     { richness: 0; }
+   i             { pitch: medium; pitch-range: 60; stress: 60; richness: 50; }
+   b             { pitch: medium; pitch-range: 60; stress: 90; richness: 90; }
+   u             { richness: 0; }
+   a:link        { voice-family: harry, male; }
+   a:visited     { voice-family: betty, female; }
+   a:active      { voice-family: betty, female; pitch-range: 80; pitch: x-high; }
+}

@@ -1,0 +1,14 @@
+.slq_table_container {
+	overflow:auto;
+}
+
+.sql_table {
+	border-collapse:collapse; 
+	border: 1px solid black; 
+	font-size: 11px;
+}
+
+.sql_table tr td, .sql_table tr th {
+	border: 1px solid black;
+	vertical-align: top;
+}

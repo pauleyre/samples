@@ -1,0 +1,26 @@
+<!-- yui calendar -->
+<script type="text/javascript" src="./orbicon/3rdParty/yui/build/calendar/calendar-min.js?{$orbx_build}"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+var orbx_calendar = null;
+
+function init() {
+	orbx_calendar = new YAHOO.widget.Calendar("YAHOO.orbicon.calendar.cal1", "cal1Container", { MULTI_SELECT: {$multiselect} });
+
+	if(__orbicon_ln == 'hr') {
+		orbx_calendar.cfg.setProperty("MONTHS_SHORT",   ["Sij", "Velj", "Ožu", "Tra", "Svi", "Lip", "Srp", "Kol", "Ruj", "List", "Stu", "Pro"]);
+		orbx_calendar.cfg.setProperty("MONTHS_LONG",    ["Siječanj", "Veljača", "Ožujak", "Travanj", "Svibanj", "Lipanj", "Srpanj", "Kolovoz", "Rujan", "Listopad", "Studeni", "Prosinac"]);
+		orbx_calendar.cfg.setProperty("WEEKDAYS_1CHAR", ["N", "P", "U", "S", "Č", "P", "S"]);
+		orbx_calendar.cfg.setProperty("WEEKDAYS_SHORT", ["Ne", "Po", "Ut", "Sr", "Če", "Pe", "Su"]);
+		orbx_calendar.cfg.setProperty("WEEKDAYS_MEDIUM",["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub"]);
+		orbx_calendar.cfg.setProperty("WEEKDAYS_LONG",  ["Nedjelja", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota"]);
+		orbx_calendar.cfg.setProperty("START_WEEKDAY",  1);
+	}
+	orbx_calendar.cfg.setProperty("NAV_ARROW_LEFT",  '{$orbx_site_url}/orbicon/3rdParty/yui/build/calendar/assets/callt.gif');
+	orbx_calendar.cfg.setProperty("NAV_ARROW_RIGHT",  '{$orbx_site_url}/orbicon/3rdParty/yui/build/calendar/assets/calrt.gif');
+
+	orbx_calendar.render();
+}
+	YAHOO.util.Event.addListener(window,"load",init);
+// ]]></script>
+<!-- yui calendar -->

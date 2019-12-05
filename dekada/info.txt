@@ -1,0 +1,4 @@
+# Contact info submission
+url: dekada.org
+site_name: Dekada
+site_description: Baza pitanja i odgovora nasih posjetitelja

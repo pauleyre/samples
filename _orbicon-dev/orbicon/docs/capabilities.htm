@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="capa">
+			<h1><a name="capa">Capabilities</a></h1>
+			
+			<p>All modules in Orbicon framework are designed as Plug-n-Play entities. They are physically separated and can exist either on their own or depend upon another module. For example; module &quot;Last news entry&quot; depends on &quot;News&quot; module.</p>
+
+			<p>A module has configurable behaviour. Orbicon framework can execute it as a template mark (News, Last news entry, Polls, etc.), full page (Last polls, News archive, etc.) or neither of those two - making it accessible only as a useful backend tool (CSS editor, Synchronization, etc.).<br />With these three capabilities, module builders have nearly unlimited freedom to build and implement their own modules which are ready to work as out-of-the-box solutions.</p>
+			
+			<p>Every module has access to four global variables that should interest every module builder. These are: 
+				<ul>
+					<li>$orbicon_x</li>
+					<li>$dbc</li>
+					<li>$orbx_log</li>
+					<li>$orbx_mod</li>
+				</ul>				
+			</p>
+
+			<p>
+				<strong>$orbicon_x</strong> is the main Orbicon framework object. It handles, connects and manages every other aspects of the system in order to make it work properly. <strong>$orbicon_x->ptr</strong> holds the current language pointer value (en, de, etc.)<br />
+			</p>
+
+
+			<p>
+				<strong>$dbc</strong> is Orbicon framework's database connector object.
+				<strong>$dbc->_db</strong> holds the configured database object.<br />
+			</p>
+
+
+			<p>
+				<strong>$orbx_log</strong> is Orbicon framework's logging object used to log various messages.
+			</p>
+
+
+			<p>
+				<strong>$orbx_mod</strong> is Orbicon framework's module object used to access module properties.<br />
+			</p>
+			
+			<p>
+				For more information regarding these object please read <span onclick="javascript: getPage('mod_global');"><a href="global_php_objects.htm">Global PHP objects</a></span> chapter.
+			</p>
+
+			<p><strong>Next:</strong> <a href="module_building.htm">Module building</a></p>
+		</div>
+</body>
+</html>

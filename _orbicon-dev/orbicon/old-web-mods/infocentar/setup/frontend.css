@@ -1,0 +1,50 @@
+.hidenitem {
+display:none;
+}
+
+#summary_table td {
+height:30px;
+border:1px solid #cecece;
+vertical-align:middle;
+padding:0 5px;
+}
+
+#summary_table td img {
+vertical-align:text-bottom;
+}
+
+#form_holder {
+border:1px solid #cecece;
+overflow:hidden;
+width:80%;
+margin:5px;
+}
+
+#tag_cloud {
+width:200px;
+border:1px solid #cecece;
+float:right;
+margin:5px;
+}
+
+#tag_cloud p a:link,#tag_cloud p a:visited {
+color:#000;
+text-decoration:none;
+padding:3px;
+}
+
+#tag_cloud p a:hover,#tag_cloud p a:active {
+color:#FFF;
+background-color:#000;
+}
+
+#send_friend,#watch_quest,#flag_quest {
+float:left;
+width:auto;
+display:inline;
+border:1px solid red;
+}
+
+#search_holder,#ask_holder,#tag_cloud p {
+margin:5px;
+}

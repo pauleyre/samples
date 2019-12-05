@@ -1,0 +1,5 @@
+<?php
+	
+	$mod['newsletter'] = 'Newsletter';
+
+?>

@@ -1,0 +1,1 @@
+1 18 * * * php -f /PATH_TO_DOCUMENT_ROOT/orbicon/modules/synchronization/cron.sync.php

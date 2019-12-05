@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="mod_build">
+			<h1><a name="mod_build">Module building</a></h1>
+
+			<p>Every module must meet system's minimum requirements. These are at least one executable PHP file, translation file(s), and a valid mod.ini configuration file. Optionally, setup files, icons and help files can be included.</p>
+
+			<p>
+				The module directory structure should look like as follows:
+			</p>
+			<p>
+				<code style="white-space:pre;">
+/root_dir/orbicon/modules/my-module
+   |
+   +--languages					-- translation directory
+   |  |
+   |  |-en.php						-- English language translation
+   |  |
+   |  |-de.php						-- German language translation
+   |  |
+   |  |-..
+   |
+   +--gfx						-- graphic resources
+   |  |
+   |  +--small_icon.gif				-- 16x16 icon for drop-down menu for use in backend
+   |  |
+   |  +--medium_icon.gif			-- 37x37 icon for use on the module page
+   |  |
+   |  +--big_icon.gif				-- 80x80 icon for use on the desktop
+   |  |
+   |  |-..
+   |
+   |--mod.ini					-- module configuration file
+   |
+   |--render.my-module.php			-- PHP file that will be executed in the frontend	
+   |
+   |--admin.my-module.php			-- PHP file that will be accessible through the backend
+   |   
+   |--class.my-module.php			-- a PHP class used by the module PHP files
+   |
+   |--include.my-module.php			-- a set of common functions used by the module PHP files
+   </code>
+			</p>
+
+			<p><strong>Translating a module</strong></p>
+
+			<p>Each module must be at least translated in English language. Translations are to be stored in modules <strong>languages</strong> directory. Here is an example of minimum translation.</p>
+
+			<p>en.php</p>
+			<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	$mod['my-module'] = 'My module';
+?>
+</textarea>
+
+			<p>The above example demonstrates the use of our module's directory name, <strong>my-module</strong>, as an identifier for the module's localized name. That is the only translation requirement the framework imposes upon builders. From there you can add custom translation keys to the <strong>$mod</strong> array. For example:</p>
+
+			<p>en.php</p>
+			<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	$mod['my-module'] = 'My module';
+	$mod['save'] = 'Save data';
+	$mod['cancel'] = 'Cancel';
+	$mod['edit-tip'] = 'You can save your work by clicking the Save data button';
+?>
+</textarea>
+
+			<p>Now that the translation is ready, we must implement it in our PHP file. This is an example of how we could use the translation displayed above in (for example) our <strong>admin.my-module.php</strong> file. Note that the translation is globally accessible to all module files, no variable manipulation and declaration is needed.</p>
+			
+			<p>Notice: Translations are available for use with <strong>_L()</strong> function. _L function returns a localized string. This function behaves in the same way as <a href="http://www.php.net/manual/en/function.gettext.php">gettext</a>.</p>
+			
+			<p>admin.my-module.php</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<p>
+	<input value="<?php echo _L('save'); ?>" type="submit" title="<?php echo _L('edit-tip'); ?>" />
+</p>
+</textarea>
+			
+			<p><strong>Connecting the module to system's frontend (web site)</strong></p>
+
+			<p>Orbicon framework will load module's frontend file (configured as such in mod.ini) as an <a href="http://www.php.net/include">included</a> PHP file. That means everything your frontend displays should be <a href="http://www.php.net/return">returned</a> back as a single variable and not an <a href="http://www.php.net/echo">echoed</a> one. Using <a href="http://www.php.net/echo">echo</a> function will display data <em>above</em> the frontend's HTML template. This requirement only applies to frontend files which the system loads dynamically during its runtime. Below is an example.</p>
+
+			<p>render.my-module.php</p>
+			<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	$data = fetch_my_data();
+	$footer = get_footer();
+	
+	// incorrect way, the data is echoed
+	/*
+		echo '<p>' . $data . '</p>' . $footer;
+	*/
+
+	// correct way, the data is returned
+	return '<p>' . $data . '</p>' . $footer;
+?>
+</textarea>
+
+			<p>Depending on how the module builder configured his module, the above data will be displayed either as a template mark or as a full page.</p>
+			
+			<p>If it is displayed as a template mark it will appear at the exact point where the system locates its template mark. For example; News module has a template mark NEWS configured in its mod.ini file which will be replaced by its HTML layout at the runtime.</p>
+
+			<p>If the builder opted for a full page display, the module will be made available at the <strong>mod.my-module</strong> page. For example, module past-polls is made available at http://domain.com/en/<strong>mod.past-polls</strong> (or http://domain.com/?en=<strong>mod.past-polls</strong>) address.</p>
+
+			<p><strong>Creating backend sidebar</strong></p>
+			
+			<p>If you want to build a sidebar for your module's backend, then you must create it in <strong>sb.mod.php</strong> file. This file should be stored in module's root directory.</p>
+			
+			<p><strong>Writing help files</strong></p>
+			
+			<p>Help files are located in <strong>help</strong> directory which is in module's root directory. All help files follow the same naming pattern - <strong>xx</strong>.hlp.mod.php where <strong>xx</strong> is replaced by language's <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639 code</a>. For example; English help file is named <strong>en.hlp.mod.php</strong> and Masai help file is named <strong>mas.hlp.mod.php</strong></p>
+
+
+			<p><strong>Creating module's setup files</strong></p>
+			
+			<p>If your module utilizes a completely new SQL table or you have some frontend CSS styles ready for customization through Layout editor, you should consider creating a setup package to ease the integration process during Orbicon's installation.</p>
+			<p>Setup files are located in <strong>setup</strong> directory which is in module's root directory. SQL files should have a <strong>sql</strong> file extension and CSS files should have a <strong>css</strong> file extenstion. Installation will execute any queries it locates in SQL files and CSS files will be appended to frontend's default CSS file - <strong>site.css</strong></p>
+
+			
+			<p><strong>Next:</strong> <a href="module_building_example.htm">Module building example</a></p>
+		</div>
+</body>
+</html>

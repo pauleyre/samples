@@ -1,0 +1,14 @@
+[30-Sep-2009 16:05:48] PHP Deprecated:  Function set_magic_quotes_runtime() is deprecated in D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php on line 49
+[30-Sep-2009 16:05:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php:49) in D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php on line 270
+[30-Sep-2009 16:05:48] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php:49) in D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php on line 270
+[30-Sep-2009 16:05:48] PHP Warning:  session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php on line 285
+[30-Sep-2009 16:05:48] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php:49) in D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php on line 311
+[30-Sep-2009 16:05:49] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php:49) in D:\xampp\htdocs\orbicon-dev\index.php on line 162
+[30-Sep-2009 16:05:49] PHP Warning:  syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in D:\xampp\htdocs\orbicon-dev/orbicon/modules/credit-calculator/mod.ini on line 17
+ in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 135
+[30-Sep-2009 16:05:50] PHP Warning:  mod.ini for module house-savings-calc (D:\xampp\htdocs\orbicon-dev/orbicon/modules/house-savings-calc/mod.ini) is not a file in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 138
+[30-Sep-2009 16:05:50] PHP Warning:  syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in D:\xampp\htdocs\orbicon-dev/orbicon/modules/invest/mod.ini on line 16
+ in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 135
+[30-Sep-2009 16:05:50] PHP Warning:  mod.ini for module orbitum-finalbuilder (D:\xampp\htdocs\orbicon-dev/orbicon/modules/orbitum-finalbuilder/mod.ini) is not a file in D:\xampp\htdocs\orbicon-dev\orbicon\class\class.module.php on line 138
+[30-Sep-2009 16:05:50] PHP Notice:  Current website zone is not set in D:\xampp\htdocs\orbicon-dev\orbicon\modules\polls\class.polls.php on line 138
+[30-Sep-2009 16:05:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\orbicon-dev\orbicon\class\settings.php:49) in D:\xampp\htdocs\orbicon-dev\index.php on line 456

@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HPB - Hrvatska poštanska banka - Registracija</title>
+
+
+<link href="./site/gfx/css/main.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 6.5]><link href="./site/gfx/css/iefix6.css" rel="stylesheet" type="text/css"/><![endif]-->
+<!--[if gte IE 7]><link href="./site/gfx/css/iefix7.css" rel="stylesheet" type="text/css"/><![endif]-->
+
+<!>METATAGS
+
+</head>
+
+<body>
+
+<!>TOP_INFOBOX
+<!>ADMIN
+
+<div id="container"><!-- login -->
+<!>HEADER_FILE <!-- header end -->
+
+<!>NAVIGATION_FILE <!-- nav end -->
+
+
+<div id="contentWrapper">
+
+<div id="noCol">
+
+<h2 class="buster">Registracija</h2>
+
+<ul id="steps">
+	<li id="tab1_label" class="active"><strong>Podaci za prijavu</strong></li>
+	<li id="tab2_label"><strong>Kontakt podaci</strong></li>
+	<li id="tab3_label"><strong>Provjera i slanje</strong></li>
+</ul>
+<div class="clr"></div>
+
+<div id="floatingBox">
+<p></p>
+</div>
+
+
+<form id="regEntry" action="" method="post">
+<input type="hidden" name="hr" value="mod.hpb.form" />
+<input type="hidden" id="form" name="form" value="registracija" />
+<input type="hidden" id="fin" name="fin" value="1" />
+
+<script type="text/javascript"><!-- // --><![CDATA[
+	document.write('<input type="hidden" id="as_clear" name="as_clear" value="1" />');
+// ]]></script>
+
+
+<div id="tab1">
+
+<fieldset><legend>Osnovni podaci</legend>
+
+<table class="form_holder">
+	<tbody>
+		<tr>
+			<td class="name"><label for="email">E-mail adresa</label></td>
+			<td class="value"><input type="text" id="email" name="email"
+				size="20" value="" title="E-mail adresa je obvezna"
+				class="input_text required validate-email" /></td>
+		</tr>
+
+		<tr>
+			<td class="name"><label for="password">Lozinka</label></td>
+			<td class="value"><input type="password" id="password" name="password"
+				size="20" value=""
+				title="Lozinka je obvezna"
+				class="input_text required" /></td>
+		</tr>
+
+		<tr>
+			<td class="name"><label for="password2">Potvrda lozinke</label></td>
+			<td class="value"><input type="password" id="password2" name="password2"
+				size="20" value=""
+				title="Potvrda lozinke je obvezna"
+				class="input_text required" /></td>
+		</tr>
+
+		<tr class="space">
+			<td class="name status" style="vertical-align:top"><label>Status</label></td>
+			<td class="value status">
+				<label><input type="radio" name="status" size="20" value="posl_m" class="input_radio" onclick="s('company'); addreq('c')" /> Poslovni subjekt - Mali poduzetnik</label><br/>
+				<label><input type="radio" name="status" size="20" value="posl_v" class="input_radio" onclick="s('company'); addreq('c')" /> Poslovni subjekt - Velike tvrtke</label><br/>
+				<label><input type="radio" name="status" size="20" value="gradj" class="input_radio" checked="checked" onclick="h('company'); addreq('g')" /> Građanin</label>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+</fieldset>
+
+<p class="note">Sva polja su obavezna</p>
+<p class="buttons" id="buttons_1"><input type="button"
+	class="button cancel" onclick="history.back()" value="Odustani" title="Odustani" name="clear" />
+<input type="button" class="button next" value="Dalje;" title="Dalje"
+	name="submit" onclick="posl_kredit_2();" /></p>
+
+</div>
+
+<div id="tab2" class="h">
+
+
+<fieldset>
+              <legend>Podaci za korespodenciju</legend>
+
+              <table class="form_holder">
+                <tbody>
+
+ 	               <tr>
+                    <td class="name"><label for="ime">Ime</label></td>
+                    <td colspan="2" class="value"><input id="ime" name="ime" size="20" value="" class="input_text required" type="text"/></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="prezime">Prezime</label></td>
+                    <td colspan="2" class="value"><input id="prezime" name="prezime" size="20" value="" class="input_text required" type="text"/></td>
+                  </tr>
+
+                   <tr>
+                    <td class="name"><label for="ulica_ko">Adresa</label></td>
+                    <td colspan="2" class="value"><input id="ulica_ko" name="ulica_ko" size="20" value="" class="input_text required" type="text"/></td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="name"><label for="mjesto_ko">Mjesto</label></td>
+                    <td colspan="2" class="value"><input id="mjesto_ko" name="mjesto_ko" size="20" value="" class="input_text required" type="text"/></td>
+                  </tr>
+
+                 <tr>
+                    <td class="name"><label for="zip_ko">Poštanski broj</label></td>
+                    <td colspan="2" class="value"><input id="zip_ko" name="zip_ko" size="20" value="" class="input_text small required" type="text"/></td>
+                  </tr>
+
+                  <tr>
+                    <td class="name"><label for="tel">Telefon</label></td>
+                    <td colspan="2" class="value"><input id="tel" name="tel" size="20" value="" class="input_text required" type="text"/></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </fieldset>
+
+<fieldset class="h" id="company">
+  <legend>Podaci o poslovnom subjektu</legend>
+
+  <table class="form_holder">
+    <tbody>
+
+           <tr>
+        <td class="name"><label for="c_ime">Tvrtka / Naziv poduzeća</label></td>
+        <td colspan="2" class="value"><input id="c_ime" name="c_ime" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+      <tr>
+        <td class="name"><label for="c_mb">Matični broj</label></td>
+        <td colspan="2" class="value"><input id="c_mb" name="c_mb" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+       <tr>
+        <td class="name"><label for="c_ulica_ko">Adresa</label></td>
+        <td colspan="2" class="value"><input id="c_ulica_ko" name="c_ulica_ko" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+            <tr>
+        <td class="name"><label for="c_mjesto_ko">Mjesto</label></td>
+        <td colspan="2" class="value"><input id="c_mjesto_ko" name="c_mjesto_ko" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+     <tr>
+        <td class="name"><label for="c_zip_ko">Poštanski broj</label></td>
+        <td colspan="2" class="value"><input id="c_zip_ko" name="c_zip_ko" size="20" value="" class="input_text small c" type="text"/></td>
+      </tr>
+
+
+      <tr>
+        <td class="name"><label for="c_tel">Telefon</label></td>
+        <td colspan="2" class="value"><input id="c_tel" name="c_tel" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+      <tr>
+        <td class="name"><label for="c_fax">Telefaks</label></td>
+        <td colspan="2" class="value"><input id="c_fax" name="c_fax" size="20" value="" class="input_text c" type="text"/></td>
+      </tr>
+
+    </tbody>
+  </table>
+</fieldset>
+
+
+<fieldset class="h terms">
+              <legend>Opći uvjeti</legend>
+
+<ul class="required_doc">
+
+                <li><a target="_blank" href="./?hr=op%C4%87i-uvjeti-kori%C5%A1tenja">Opći uvjeti korištenja</a></li>
+              </ul>
+
+</fieldset>
+<p class="note">Sva polja su obavezna</p>
+<p class="buttons" id="buttons_2"><input type="button"
+	class="button back" value="Povratak" title="Povratak" name="clear"
+	onclick="posl_kredit_1();" /> <input type="button" class="button next"
+	value="Dalje;" title="Dalje" name="submit" onclick="posl_kredit_3();" /></p>
+
+<p class="buttons h" id="buttons_3"><input type="button"
+	class="button edit" value="Promjeni podatke" title="Promjeni podatke" name="clear"
+	onclick="posl_kredit_2_back();" /> <input type="submit"
+	class="button save" title="Potvrđujem ispravnost podataka"
+	value="Potvrđujem ispravnost podataka" name="submit" /></p>
+
+
+
+</div>
+</form>
+
+
+<div class="clr"></div>
+
+</div>
+</div>
+
+<!>FOOTER_FILE
+
+<script type="text/javascript" src="./orbicon/3rdParty/yui/build/get/get-min.js"></script>
+<script	type="text/javascript" src="./orbicon/modules/hpb.form/hpbform.js"></script>
+
+
+<script type="text/javascript">
+
+	var disable_tt = false;
+
+	append_tt();
+
+	var tIds = {};
+
+	var onSuccess = function(o) {
+		tIds[o.data] = o;
+	}
+
+	function posl_kredit_2()
+	{
+		disable_tt = false;
+
+		// tabs
+		$('tab1').style.display = 'none';
+		$('tab2').style.display = 'block';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab2_label', 'active');
+		YAHOO.util.Dom.removeClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab3_label', 'active');
+	}
+
+	function posl_kredit_3()
+	{
+		disable_tt = true;
+
+		// css
+		YAHOO.util.Get.css(orbx_site_url + '/orbicon/modules/hpb.form/gfx/hpbform_print.css', {data:'print', onSuccess: onSuccess});
+
+		// buttons
+		$('buttons_1').style.display = 'none';
+		$('buttons_2').style.display = 'none';
+		$('buttons_3').style.display = 'block';
+
+		// tabs
+		$('tab1').style.display = 'block';
+		$('tab2').style.display = 'block';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab3_label', 'active');
+		YAHOO.util.Dom.removeClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab2_label', 'active');
+	}
+
+	function posl_kredit_1()
+	{
+		disable_tt = false;
+
+		// tabs
+		$('tab1').style.display = 'block';
+		$('tab2').style.display = 'none';
+
+		// labels
+		YAHOO.util.Dom.addClass('tab1_label', 'active');
+		YAHOO.util.Dom.removeClass('tab2_label', 'active');
+		YAHOO.util.Dom.removeClass('tab3_label', 'active');
+	}
+
+	function posl_kredit_2_back()
+	{
+		posl_kredit_2();
+
+		// buttons
+		$('buttons_1').style.display = 'block';
+		$('buttons_2').style.display = 'block';
+		$('buttons_3').style.display = 'none';
+
+		// css
+		tIds['print'].purge();
+	}
+
+	addreq('g');
+
+	function addreq(type)
+	{
+		var c = YAHOO.util.Dom.getElementsByClassName('c', 'input');
+
+		var n = 0;
+		for(n = 0; n < c.length; n++) {
+
+			if(type == 'c') {
+				YAHOO.util.Dom.addClass(c[n], 'required');
+			}
+			if(type == 'g') {
+				YAHOO.util.Dom.removeClass(c[n], 'required');
+			}
+		}
+	}
+
+	sIFR.replaceElement(named({sSelector:"h2.buster", sFlashSrc:"./site/gfx/flash/interstate.swf", sColor:"#cc0000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#CCCCCC", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textsize=12&leading=0", sWmode: "transparent"}));
+
+
+    </script> <script type="text/javascript" src="./orbicon/modules/hpb.form/jsvalidate.js"></script></div>
+
+
+
+</body>
+</html>

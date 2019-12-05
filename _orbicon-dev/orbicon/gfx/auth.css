@@ -1,0 +1,170 @@
+a {
+	/* optional
+	border-bottom: 1px solid #6699cc;
+	*/
+	color: #00019b;
+	text-decoration: none;
+}
+
+a.edit, a.edit:hover {
+	border-bottom: none;
+	display: block;
+	padding: 5px 0;
+	text-align: center;
+}
+
+a.edit:hover {
+	background: #cccccc;
+	color: #003366;
+}
+
+a:visited {
+	color: #f55000;
+}
+
+a:hover {
+/* optional
+	border-bottom: 1px solid #3a75ae;
+	*/
+	color: #000000;
+}
+
+body {
+	background: #F2F2F2;
+	color: #585858;
+	margin: 0;
+	padding: 0;
+}
+
+body, td {
+	font: 10pt Tahoma, Verdana, Arial, Helvetica, sans-serif;;
+}
+
+fieldset {
+
+	border: 1px solid #dddddd;
+	-moz-border-radius: 5px;
+	padding: 3px;
+}
+
+form, label input {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	border-bottom: 2px solid #69c;
+	color: #333333;
+	font: normal 22px/18px serif;
+	margin: 5px 10px;
+}
+
+img {
+	border: 0;
+}
+
+input:focus, textarea:focus, label:focus {
+	background: #ffffff;
+	border: 1px solid #686868;
+}
+
+li, dd {
+	margin-bottom: 6px;
+}
+
+p, li, dl, dd, dt {
+	line-height: 130%;
+}
+
+textarea, input, select {
+	background: #f4f4f4;
+	border: 1px solid #b2b2b2;
+	color: #000000;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;;
+	margin: 1px;
+	padding: 3px;
+}
+
+.anchors {
+	margin: 5px 20px 10px 20px;
+}
+
+.checkbox {
+	background: #ffffff;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.submit input, .submit input:focus, .button {
+	background: url(fade-butt.png);
+	border: 3px double #999999;
+	border-left-color: #cccccc;
+	border-top-color: #cccccc;
+	color: #333333;
+	padding: 0.2em;
+}
+
+.submit input:active, .button:active {
+	background: #f4f4f4;
+	border: 3px double #cccccc;
+	border-left-color: #999999;
+	border-top-color: #999999;
+}
+
+.submit, #quicktags, .editform th, #postcustomsubmit {
+	text-align: right;
+}
+
+#login {
+	border: 2px solid #a2a2a2;
+	margin: 3em auto;
+	padding: 0 1.4em 0 1.5em;
+	width: 25em;
+	background: #ffffff;
+	height: 420px;
+}
+
+#login #login_error {
+	background: #cc0000;
+	border: 1px solid #a40000;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+	padding: .4em;
+	text-align: center;
+}
+
+#login h1 {
+	background: url(login.gif) no-repeat;
+	margin-top: 0;
+	height: 120px;
+}
+
+#login h1 a {
+	display: block;
+	text-indent: -1000px;
+	height: 110px;
+}
+
+#login input {
+	padding: 3px;
+}
+
+#login ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#login ul li {
+	display: inline;
+	margin-left: 1.2em;
+	text-align: center;
+}
+#submit, #log, #pwd, #user_login, #email, #submit {
+		font-size: 1.6em;
+}
+.u {
+	text-decoration: underline;
+}

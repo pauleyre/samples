@@ -1,0 +1,6 @@
+[05-Jan-2012 10:01:07] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/dekadaor/public_html/data/mysql.php on line 135
+[05-Jan-2012 10:01:07] PHP Warning:  mysql_close(): 11 is not a valid MySQL-Link resource in /home/dekadaor/public_html/data/mysql.php on line 113
+[05-Jan-2012 10:10:26] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/dekadaor/public_html/data/mysql.php on line 135
+[05-Jan-2012 10:10:26] PHP Warning:  mysql_close(): 11 is not a valid MySQL-Link resource in /home/dekadaor/public_html/data/mysql.php on line 113
+[05-Jan-2012 10:11:08] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/dekadaor/public_html/data/mysql.php on line 135
+[05-Jan-2012 10:11:08] PHP Warning:  mysql_close(): 11 is not a valid MySQL-Link resource in /home/dekadaor/public_html/data/mysql.php on line 113

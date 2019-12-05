@@ -1,0 +1,8 @@
+<banner>
+	<settings secondsPerSlide="3" showHeadlines="true" />
+	<slides>
+		<slide link="./?hr=visa-bonus-plus" title="Kartica koja radi za vas!" subtitle="po mjeri modernog hrvatskog poduzetnika" image="site/venus/20081119-visa_velika-jpg-1e9d.jpg" thumbnail="site/venus/20090116-visa_mali-gif-cb09.gif" />
+		<slide link="http://www.hpb.hr" title="Najviši skok" subtitle="Moja banka" image="site/venus/20081119-blanka_velika-jpg-cb86.jpg" thumbnail="site/venus/20090116-blanka_mali-gif-8bc9.gif" />
+		<slide link="http://wwwtest/?hr=dje%C4%8Dja-%C5%A1tednja-(%C5%A0tednja)" title="HPB štednja" subtitle="Još bolja štednja." image="site/venus/20081113-20081111-stednja-jpg-07e0-jpg-b051.jpg" thumbnail="site/venus/20090116-stednja_mali-gif-83b4.gif" />
+	</slides>
+</banner>

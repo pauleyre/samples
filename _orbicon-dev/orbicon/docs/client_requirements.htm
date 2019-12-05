@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="client_req">
+			<h1><a name="client_req">Client Requirements</a></h1>
+			<p><strong>Minimum Browser Requirements:</strong></p>
+			<p>
+				<ul>
+					<li>Microsoft Internet Explorer 6.0 for Windows</li>
+					<li>Opera 9</li>
+					<li>Mozilla 1.3</li>
+					<li>Firefox 1.0</li>
+					<li>Netscape 7.0</li>
+					<!-- <li>Safari 1.3</li> -->
+					<li>SeaMonkey 1.1</li>
+					<!-- <li>Camino 1.0.3</li> -->
+				</ul>
+			</p>
+			<p>These versions of browsers support both AJAX and Rich-Text editing. While the system may load with other or older browsers, functionality cannot be guaranteed</p>
+			<p><strong>Browser Settings Requirements:</strong></p>
+			<p>
+				<ul>
+					<li>Javascript enabled for many functions</li>
+					<li><a href="http://www.java.com/getjava/">Java Software (Java Runtime Environment)</a> enabled for Drag and Drop Upload functionality</li>
+				</ul>
+			</p>
+			<p><strong>Next:</strong> <a href="server_requirements.htm">Server Requirements</a></p>
+		</div>	
+</body>
+</html>

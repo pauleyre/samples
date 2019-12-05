@@ -1,0 +1,7 @@
+#admin_css_form textarea,
+#admin_xml_form textarea {
+	width: 99%;
+	height: 500px;
+	font-family: monospace;
+	font-size: 110%;
+}

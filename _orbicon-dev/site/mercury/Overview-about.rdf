@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF PUBLIC "-//DUBLIN CORE//DCMES DTD 2002/07/31//EN"
+	"http://dublincore.org/documents/2002/07/31/dcmes-xml/dcmes-xml-dtd.dtd">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<rdf:Description rdf:about="http://localhost/orbicon-dev/">
+		<dc:subject></dc:subject>
+		<dc:description></dc:description>
+		<dc:title></dc:title>
+		<dc:date>2008-08-19</dc:date>
+		<dc:format>text/html</dc:format>
+		<dc:language>hr</dc:language>
+		<dc:creator></dc:creator>
+		<dc:publisher> - http://localhost/orbicon-dev/</dc:publisher>
+		<dc:rights rdf:resource="http://www.w3.org/Consortium/Legal/copyright-documents"/>
+		<dc:type>Text</dc:type>
+		<dc:identifier>http://localhost/orbicon-dev/</dc:identifier>
+		<rdfs:seeAlso rdf:resource="http://localhost/orbicon-dev/site/mercury/rss.xml"/>
+	</rdf:Description>
+</rdf:RDF>

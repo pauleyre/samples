@@ -1,0 +1,5 @@
+[23/04/2007] - v1.1
+Added sql and debug log for reading
+
+[17/04/2007] - v1.00
+Created baseic reader of php log file

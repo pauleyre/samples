@@ -1,0 +1,589 @@
+*******************************
+Quick install instructions
+*******************************
+
+Backup current installation.
+Extract contents from "orbicon-2.2.3.zip" and overwrite existing files.
+
+
+**********************************
+Update Details for version 2.2.3
+**********************************
+25/03/2009
+
+- added support for subdirectory synchronization
+- fixed problem with db dump not being deleted on remote host after synchronization
+- added pagination to database viewer
+
+-- SQL for 2.2.3 ------------------------------------------------------------------------------
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('sync_dirs', '');
+
+**********************************
+Update Details for version 2.2.2
+**********************************
+25/03/2009
+
+- fixed exchange rates calculator XHR
+- new savings calculator
+
+**********************************
+Update Details for version 2.2.1
+**********************************
+10/03/2009
+
+- fixed typo in Send2Friend
+- PHP 5 incompatibility fixes
+- CSV format for exchange rates
+- PDF preview in document database
+- fixed 101 or 99 percent totals in poll results
+- upgraded TinyMCE
+
+-- SQL for 2.2.1 ------------------------------------------------------------------------------
+ALTER TABLE `orbicon_banners` CHANGE `permalink` `permalink` VARCHAR( 255 ) NULL DEFAULT NULL
+ALTER TABLE `orbicon_banners` ADD INDEX ( `permalink` )
+ALTER TABLE `magister_answers` CHANGE `question_permalink` `question_permalink` VARCHAR( 255 ) NULL DEFAULT NULL
+ALTER TABLE `magister_answers` ADD INDEX ( `question_permalink` )
+ALTER TABLE `magister_answers` ADD INDEX ( `language` )
+ALTER TABLE `orbicon_column` ADD `desc` TEXT NOT NULL ;
+
+**********************************
+Update Details for version 2.2.0
+**********************************
+13/02/2009
+
+- fixed duplicate e-mails from showing in address book
+- moved SQL cache files into separate folders
+- moved backups into separate folders
+- moved logs into separate folders
+- added new template marks for header, footer and navigation
+- fixed cache bug
+- new module for editing XML documents
+- new modules for HPB d.d.
+
+-- SQL for 2.2.0 ------------------------------------------------------------------------------
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('flood_guard', '1');
+
+**********************************
+Update Details for version 2.1.13
+**********************************
+25/08/2008
+
+- fixed all editors in infocentar module
+- fixed wrong number of texts in unsorted category
+- added Croatian translation to TinyMCE
+
+**********************************
+Update Details for version 2.1.12
+**********************************
+21/08/2008
+
+- fixed long drop down menu overflow
+- upgraded TCPDF to 4.0.020
+
+**********************************
+Update Details for version 2.1.11
+**********************************
+19/08/2008
+
+- text database categories now use Ajax
+- connected columns with texts in database
+- fixed images always being overwritten while using image tools
+
+**********************************
+Update Details for version 2.1.10
+**********************************
+18/08/2008
+
+- SQL updates
+- admin logo change
+
+**********************************
+Update Details for version 2.1.9
+**********************************
+08/08/2008
+
+- new administration GUI
+- new rich-text editor, TinyMCE
+- fixed news posted in future dates
+- HTML cache will now be stored in a DB
+- Infocenter search will now be statistically tracked
+- Fixed a bug with Croatian IRIs and parentheses
+- ZSE ticker in plain text format
+- Upgraded EditArea, Adobe's Flash Detection Kit, Scriptaculous, PHPMailer, TCPDF to new versions
+- SQL key optimizations
+- reduced number of SQL queries
+
+-- SQL for 2.1.9 ------------------------------------------------------------------------------
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('searcheng_filter', '1');
+
+
+**********************************
+Update Details for version 2.1.8
+**********************************
+20/06/2008
+
+- fixed Croatian IRIs for news module and zones
+- page titles now change in majority of administration system in order to improve usability
+- fixed a bug with synchronization cache list not being read properly
+
+-- SQL for 2.1.8 ------------------------------------------------------------------------------
+ALTER TABLE `orbicon_zone` ADD `column_list_ascii` text default NULL;
+ALTER TABLE `orbicon_column` ADD `parent_ascii` text default NULL ;
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('use_cache', '1');
+
+
+**********************************
+Update Details for version 2.1.7
+**********************************
+27/05/2008
+
+- added custom templates support for modules, columns and news
+- fixed open session in ZSE cron job
+- fixed wrong language from appearing in database browser
+- banners can now be explicitly embedded
+- improvements in all Social Networking modules
+- improvements in PeopleRing
+- improvements in Estate RSS and Keyword Search
+- added new features for Estate modules
+- Translated all Estate modules
+- Changed way autocomplete works with Statistics module
+- Fixed problem with cookies and polls with foreign titles
+- fixed issue with intro text not being saved when first entered into news dashboard
+- added option to replace Croatian IRI with URI
+- rewritten module for new ZSE ticker
+- added optional JavaScript anti-spam method
+
+-- SQL for 2.1.7 ------------------------------------------------------------------------------
+ALTER TABLE `orbicon_column` ADD `template` varchar(255) NOT NULL default 'column.html';
+ALTER TABLE `orbicon_news` ADD `template` varchar(255) NOT NULL default 'column.html';
+ALTER TABLE `venus_images` ADD `views` bigint(20) NOT NULL default '0';
+ALTER TABLE `venus_images` ADD `description` text NOT NULL ;
+ALTER TABLE `orbicon_news` ADD `views` int(11) NOT NULL default '0';
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('log_slow_sql', '0');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('us_ascii_uris', '0');
+ALTER TABLE `orbicon_column` ADD `permalink_ascii` text default NULL ;
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('antispam_check', '0');
+ALTER TABLE `orbicon_news` ADD `permalink_ascii` text default NULL ;
+
+**********************************
+Update Details for version 2.1.6
+**********************************
+23/01/2008
+
+- 11 new Social Networking modules
+- fixed pagination and SQL caching bug in Attila
+- fixed wrong maximum search results feedback in Attila
+- news bug fix, variable $keyword missing inside INSERT query
+- added Flash player download link for no-flash preview
+- fixed broken HTML in invest summary
+- added support for Flash in image gallery and news module
+- added new module Estate We Search
+- added new module Login Infobox
+- fixed wrong link in Send2Friend
+- bugfixes and improvements in all Estate modules
+- form feedback display position can now be adjusted through system settings
+- fixed PNG-24 transparency when used as a watermark
+- added system log to log viewer
+- added slow SQL queries tracker
+- improved RSS validation
+- fixed wrong CV title
+- added banner types
+- registered users can now be banned
+- support for English language fund titles
+
+-- SQL for 2.1.6 ------------------------------------------------------------------------------
+ALTER TABLE `pring_industry` ADD `intro_text` text NOT NULL;
+ALTER TABLE `pring_company` ADD `intro_text` text NOT NULL;
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('form_feedback_position', 'inside');
+ALTER TABLE `orbicon_forms` ADD `redirect` text NOT NULL;
+ALTER TABLE `pring_contact` ADD `contact_phone_a` varchar(30) NOT NULL default '';
+ALTER TABLE `pring_contact` ADD `contact_phone_b` varchar(30) NOT NULL default '';
+ALTER TABLE `pring_company` ADD `phone_a` varchar(30) NOT NULL default '';
+ALTER TABLE `pring_company` ADD `phone_b` varchar(30) NOT NULL default '';
+ALTER TABLE `pring_contact` ADD `credits` decimal(20,2) NOT NULL;
+ALTER TABLE `pring_contact` ADD `contact_region` int(11) NOT NULL default '0';
+ALTER TABLE `pring_contact` ADD `contact_country` int(11) NOT NULL default '0';
+ALTER TABLE `pring_contact` ADD `contact_town_text` text NOT NULL;
+ALTER TABLE `orbicon_reg_members` ADD `banned` tinyint(1) NOT NULL default '0';
+ALTER TABLE `pring_contact` CHANGE `contact_dob` `contact_dob` INT( 11 ) NOT NULL DEFAULT '0'
+
+**********************************
+Update Details for version 2.1.5
+**********************************
+25/10/2007
+
+- added option in settings for date listing in Video gallery
+- 6 new modules for Estates
+- new module Top Search Keywords
+- IRI implementation
+- speed optimizations
+- added failsafe SQL for ISO-8859-1 URLs that will work in most situations
+- added watermark_image() method to Venus
+- replaced build_url() method with url() function which assumes properly set mod_rewrite rules
+- Mercury and Venus classes are more modular now
+- improvements to image gallery
+- fixed installed languages not being available in translation import list
+- fixed date format setting not being included into database for newly installed languages
+- cleanup process starts up more often now and reports size of obsolete files removed
+- altering default language in database will now consider installed modules
+- fixed identical video titles
+- Peoplering search now uses GET instead of POST method
+- fixed Peoplering search pagination
+- fixed Peoplering promotional messages
+- empty names for categories in databases are no longer possible
+- fixed uploading files from text database into images and documents
+- fixed duplicate categories in text, image and document databases
+- new column names will be stripped of extra whitespace
+- fixed permalink conflict check when columns were overriden with module content
+- Who's here won't remember logged out users
+- statistics and site settings changes should be visible immediately
+- removed column redirection which caused an infinite loop
+- fixed custom titles saved by sessions
+
+-- SQL for 2.1.5 ------------------------------------------------------------------------------
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('video_gallery_show_date', '1');
+ALTER TABLE `pring_promo` ADD `contact_id` int(11) NOT NULL default '0';
+ALTER TABLE `mercury_categories` ADD `owner_id` int(11) NOT NULL default '0';
+ALTER TABLE `venus_categories` ADD `owner_id` int(11) NOT NULL default '0';
+
+**********************************
+Update Details for version 2.1.4
+**********************************
+15/10/2007
+
+- forms, video, image and document galleries can now be previewed in column administration
+- added company listings to PeopleRing
+- added Forum module (requires PeopleRing module)
+- added Who's Here feature to backend
+- Mercury and Venus classes are more modular now
+- inserting images or documents into non-existent categories will now create them
+- fixed non-standard file extensions in MagpieRSS
+- better installation feedback
+- fixed pagination in galleries
+- improved video gallery module
+- fixed problem with all images uploaded after the first one being put into unsorted category
+- fixed redirection problem in Rich Text Editor
+- JavaScript size improvements
+- added YUI lightbox to 3rd-party resources and made it available in image gallery
+
+-- SQL for 2.1.4 ------------------------------------------------------------------------------
+
+ALTER TABLE `orbicon_banners` ADD `banner_type` tinyint(4) NOT NULL default '0' ;
+ALTER TABLE `pring_company` ADD `logo` text NOT NULL;
+ALTER TABLE `pring_company` ADD `industry_a` text NOT NULL;
+ALTER TABLE `pring_company` ADD `industry_b` text NOT NULL;
+ALTER TABLE `pring_company` ADD `industry_c` text NOT NULL;
+ALTER TABLE `orbicon_editors` ADD `last_location` text NOT NULL;
+
+**********************************
+Update Details for version 2.1.3
+**********************************
+10/10/2007
+
+- inword search algorithm is now optional
+- added internal search engine statistics and proper settings
+- major updates to Estate, Peoplering and Infocenter modules
+- column contents can now be overridden with module content
+- fixed full screen player mode not working in video gallery
+- directories won't be listed in Layout editor any more
+- updated YUI to version 2.3.1
+- added global helper JavaScript functions: $() for getting elements and redirect() for redirecting
+- modules without menu icon will display default application icon
+- effects library in orbicon.effects.js is now globally accessible and is not restricted only for backend
+- backend GUI improvements
+- banner management improvements
+- added now() and current_timestamp() methods to $dbc
+- documentation update
+- new method add_feed_link() for adding custom RSS / RDF feeds to column pages
+- JavaScript size improvements
+- fixed search not working in Documents and Images database pickers
+- added checker for unanswered question, so that user can't send mail without answer
+- fixed broken layout on columns
+- changed mail body look
+
+-- SQL for 2.1.3 ------------------------------------------------------------------------------
+
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('override_module', '');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_attila', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('inword_search', '1');
+ALTER TABLE `orbx_mod_ic_stat` ADD `vid` BIGINT(20) NOT NULL ;
+
+**********************************
+Update Details for version 2.1.2
+**********************************
+02/10/2007
+
+- Attila search engine now supports searching through contents of PDF, DOC, RDF, XML, LOG, RTF, C, CPP, H, CS, CFM, PHPS and TXT files
+- new FLV and MP3 Flash players
+- images and files can now be replaced with Java uploader
+- added new statistics type - hourly activity
+- introduced new module Column inspector which identifies common errors in column administration
+- introduced new module Backup for cron
+- fixed JavaScript problem with IE and get_permalink_exists
+- fixed Infobox close button not showing up on IE
+- fixed problems with registration form logic
+- remove_utf8bom() now supports all UTF BOMS (UTF-8, UTF-16 Big Endian, UTF-16 Little Endian, UTF-32 Big Endian, UTF-32 Little Endian, SCSU, UTF-7 (38 2D), UTF-7 (38), UTF-7 (39), UTF-7 (2B), UTF-7 (2F), UTF-EBCDIC, BOCU-1)
+- fixed SQL limitations in statistics
+- fixed typo in Send2Friend module
+- SEO improvements
+- test_form() method rewritten to more modular form
+- written better MySQL algorithm for fetching chart data [HPBInvest]
+- fixed double date entry bug
+- modified data type of table orbx_mod_invest_stock
+- redesigned concept of chart layout
+- added client side chart switching
+- send notification bug fix, added trim whitespace to mail addresses
+- added date column to backend of Infocentar question overview
+- added trim whitespace to forms in email fields
+- news and columns will redirect properly if forcefully loaded
+- implemented support for X-LIGHTTPD-send-file header
+- CAPTCHA verification is now optional
+- fixed icons not showing in backend
+- implemented database connection error screen
+- fixed column type being ignored during column creation
+- HTML minification is now optional
+- fixed display order for image, video and download gallery
+- all statistics are now optional
+- set mode 'optional' for send to friend, watch question and flag question
+- added language check in WHERE clause in Infocentar
+- added flag question
+- added send to friend
+- added watch question
+- added answer type
+- added un-answered questions
+- applied backward compatibility for MySQL function CURRENT_TIMESTAMP()
+
+-- SQL for 2.1.2 ------------------------------------------------------------------------------
+
+ALTER TABLE `orbx_mod_invest_stock` CHANGE date date DATE NOT NULL;
+ALTER TABLE `mercury_files` ADD search_index LONGTEXT;
+ALTER TABLE `mercury_files` ADD FULLTEXT (`search_index`);
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_sess', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_ip', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_content', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_refer', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_country', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_keyword', '1');
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('stats_hourly', '1');
+
+-- watch / flag / send2f
+-- ---------------------
+ALTER TABLE `orbx_mod_ic_settings` ADD `watch_question` TINYINT( 1 ) NOT NULL DEFAULT '0', ADD `flag_question` TINYINT( 1 ) NOT NULL DEFAULT '0', ADD `send_friend` TINYINT( 1 ) NOT NULL DEFAULT '0';
+
+-- answer type
+-- -----------
+ ALTER TABLE `orbx_mod_ic_settings` ADD `answer_type` TINYINT( 1 ) NOT NULL DEFAULT '0';
+
+-- un-answered questions
+-- ----------------------
+ ALTER TABLE `orbx_mod_ic_settings` ADD `unanswered ` TINYINT( 1 ) NOT NULL DEFAULT '0';
+
+-----------------------------------------------------------------------------------------------
+
+**********************************
+Update Details for version 2.1.1
+**********************************
+06/09/2007
+
+- fixed HTML entities in FROM and SUBJECT e-mail headers
+- implemented support for permanent database connections
+- disabled deletion of deep path subcolumns
+
+**********************************
+Update Details for version 2.1
+**********************************
+06/09/2007
+
+- filesystem improvements
+- improved memory and speed performance for SQL requests
+- updated YUI to version 2.3.0
+- implemented PHPMailer to handle all emails
+- fixed double forward slashes for some rare cases in synchronization
+- fixed polls display logic
+- cached pages should now return proper server status codes instead of always returning "200 OK"
+- date format from settings now has a global, language-dependent, effect
+- statistics will ignore users from local network coming into production environment
+- added option to select all categories or a single one as a source for latest news entry module
+- added full screen mode to Rich-Text editor. Keyboard shortcut CTRL+F
+- fixed RegEx for Rich-Text editor character count in Internet Explorer
+- HTML templates will now be scanned and updated for local links during synchronization
+- parent columns will now be visible in Zone list
+- added DB shortcut key to frontend box menus
+- fixed subcolumns in second and on deeper levels not being removed when their parent columns were deleted
+- fixed wrong redirection in File Uploader when requested from outside
+- added input size restrictions for some settings
+- tag cloud better algorithm
+- added security check for zero value in invest
+- translated labels inside forms
+- added category sorting in infocenter
+- pinging the system returns "200 OK" message
+
+-- SQL for 2.1 ------------------------------------------------------------------------------
+ALTER TABLE `orbx_mod_ic_category` ADD `sortnum` INT( 4 ) NOT NULL DEFAULT '0';
+ALTER TABLE `orbicon_forms` ADD `msg_type` TINYINT(1) NOT NULL DEFAULT '0';
+INSERT INTO `orbicon_settings` (`setting`, `value`) VALUES ('show_last_news_from', '');
+---------------------------------------------------------------------------------------------
+
+************************************
+Update Details for version 2.0.18.1
+************************************
+03/09/2007
+
+- visual corrections
+
+**********************************
+Update Details for version 2.0.18
+**********************************
+03/09/2007
+
+- resized title field (Infocentar)
+- added client-side email & title verifications (Infocentar)
+- added prevention of resending notification to users on mail (Infocentar)
+- added query for six month graph results (Invest)
+- added optional parameters (Forms)
+
+- better logic for JavaScript's empty function
+- improved compatibility with older versions of PHP (4.1.2)
+- exchange rates now support data set in future
+- new exchange rates flash graph
+- fixed a dozen of PHP notices
+- fixed another SQL error in permalink checking
+- fixed problem with poll and survey results in production environment
+- infocenter corrections
+- support for synchronization of Google sitemaps files
+- autocomplete containers are now automatically resized to their input's width
+- polls can now function without specified end date which means they will expire when the next one comes
+- fixed XHTML validation problem with invest stock graphs
+- added support for blacklist, whitelist and rule editing for TornadoGuard
+
+
+**********************************
+Update Details for version 2.0.17
+**********************************
+28/08/2007
+
+- infocentar corrections
+
+
+**********************************
+Update Details for version 2.0.16
+**********************************
+27/08/2007
+
+- infocentar corrections
+
+**********************************
+Update Details for version 2.0.15
+**********************************
+24/08/2007
+
+- infocentar corrections
+
+**********************************
+Update Details for version 2.0.14
+**********************************
+17/08/2007
+
+- mail problem solved
+- logging corrections
+- infocentar corrections
+
+**********************************
+Update Details for version 2.0.13
+**********************************
+17/08/2007
+
+- infocentar corrections
+
+**********************************
+Update Details for version 2.0.12
+**********************************
+10/08/2007
+
+- system improvements
+- infocentar corrections
+
+
+**********************************
+Update Details for version 2.0.11
+**********************************
+09/08/2007
+
+- system corrections
+
+
+**********************************
+Update Details for version 2.0.10
+**********************************
+09/08/2007
+
+- invest corrections
+- added new features to invest administration
+
+
+**********************************
+Update Details for version 2.0.9
+**********************************
+26/07/2007
+
+- infocenter corrections
+- download gallery corrections
+
+**********************************
+Update Details for version 2.0.8
+**********************************
+25/07/2007
+
+- added pagination to News index module
+- infocenter fixes
+- permalinks have now properly removed dot or minus end characters in their names
+- added new infocenter functionalities (multiple answers, answering privileges, etc.)
+- improved compatibility with older versions of PHP (4.1.2)
+
+
+**********************************
+Update Details for version 2.0.7
+**********************************
+23/07/2007
+
+- improved performance
+- new infocenter module and design
+- added missing calendar-min.js.gz file
+- added check for all modules' SQL tables in synchronization
+- fixed SQL error in permalink checking
+- fixed found value entry
+- fixed message for calculation
+- added functions for administrating entry fee's and minimum entry payments
+- fixed bug on adding new currency
+- make-up for some sections of administration
+- added some user fail-safe functionalities
+- security fixes
+
+**********************************
+Update Details for version 2.0.6
+**********************************
+16/07/2007
+
+- fixed files edited in system editor not being included in synchronization list
+- fixed Savings Calculator module not being added to synchronization list
+- added new modules News Index, Download Gallery and News Alerts
+- fixed HTML entities in Document Database titles
+- added cleaning up of temporary syncm_* directories in PHP4
+- fixed wrong date format in newsboard
+- security fixes
+- improved compatibility with older versions of PHP (4.1.2)
+
+**********************************
+Update Details for version 2.0.5
+**********************************
+11/07/2007
+
+- implemented gzip compression optimizations for faster performance
+- better control over SQL synchronization dataset
+- integrated sitemap pinging towards Ask search service
+- faster installation
+- more detailed fond charts with range control
+- fixed wrong results in poll when there was no votes
+- fixed closed poll controls from showing up
+- added new modules Flash calculator and Savings Calculator
+- stronger license verification model

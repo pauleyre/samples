@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="news">
+			<h1><a name="news">Using news dashboard</a></h1>
+			<p>After adding documents to the system, we can use them in our news entries. Under menu &quot;Content&quot; we select submenu &quot;News dashboard&quot;. On the left panel, we can see the list of news from all categories. To add a new entry we must click &quot;Add new&quot; (located on the bottom).</p>
+			<p>The newly opened window, entitled &quot;News&quot;, is ready to create new news entry. A news entry is composed of various properties but the most important ones are title, lead text, full text entry, publish date, and published status. To use an article previously created in Texts database, we must navigate to that text using &quot;Database browser&quot; on the right sidebar.</p>
+			<p>We can also select our lead text image this way.</p>
+			<p>After selecting texts and optionally, an image for news, we must select publish date and set published status to &quot;Yes&quot;</p>
+			<p><strong>Note:</strong> News can be published with dates set in future.</p>
+			<p><strong>Next:</strong> <a href="poll.htm">Polls</a></p>
+
+		</div>
+</body>
+</html>

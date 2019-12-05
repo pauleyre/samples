@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="banner">
+			<h1><a name="banner">Banners</a></h1>
+			<p>
+				Banners are added to the system through &quot;Databases&quot; menu. Depending on the format of the banner itself, it could be submitted either to Images or Documents database. Once the banner is added to the system we should flag it as a banner. Flagging the resource as a banner is simple and straightforward - click the checkbox next to your banner, from file actions menu select &quot;Insert into banners&quot; and confirm your action by clicking the button.
+			</p>
+			
+			<p>
+				Banners are loaded into template using template mark <strong>&lt;!&gt;BANNER</strong>. (Multiple banners can be loaded this way)
+			</p>
+			
+			<p>Markup:</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+	<!-- banner begins -->
+	<!>BANNER
+	<!-- banner ends -->
+</textarea>
+
+			<p>Generated HTML (image banner):</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<!-- banner begins -->
+<a href="link_to_banner_target">
+	<img src="banner_source" />
+</a>		
+<!-- banner ends -->
+</textarea>
+
+			<p>Generated HTML (flash banner):</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+<!-- banner begins -->
+<object>
+	<param value="banner_source" name="movie" />
+	<param value="high" name="quality" />
+	<param value="0" name="menu" />
+</object>	
+<!-- banner ends -->
+</textarea>
+			<p><strong>Next:</strong> <a href="rss_channels.htm">RSS channels</a></p>
+
+		</div>
+
+</body>
+</html>

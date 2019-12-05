@@ -1,0 +1,38 @@
+{$domain_custom_meta}
+
+<script type="text/javascript"><!-- // --><![CDATA[
+var __orbicon_base_url = '{$domain}';
+var __orbicon_ln = '{$orbx_ln}';
+var __ticker_content = '{$newsticker_content}';
+var __orbicon_get_q = '{$get_request}';
+var orbx_site_url = '{$orbx_site_url}';
+var orbx_frontend = {$orbx_frontend};
+var user_admin = {$user_admin};
+var user_member = {$user_member};
+
+
+try {
+	var _user_name = {$user_name};
+	var _user_surname = {$user_surname};
+	var _user_email = {$user_email};
+	var _user_tel = {$user_tel};
+	var _user_mob = {$user_mob};
+	var _user_address = {$user_address};
+	var _user_zip = {$user_zip};
+	var _user_city = {$user_city};
+}catch(e){}
+
+// ]]></script>
+<script type="text/javascript" src="./orbicon/javascript/orbiconx.final.js?{$orbx_build}"></script>
+{$zoom_text_js}
+
+<!--[if IE]>
+<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+<meta http-equiv="imagetoolbar" content="no" />
+<![endif]-->
+
+
+<style type="text/css">/*<![CDATA[*/
+	@import url("./orbicon/gfx/orbiconx.final.css?{$orbx_build}");
+	{$site_css}
+/*]]>*/</style>

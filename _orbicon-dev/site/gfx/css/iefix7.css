@@ -1,0 +1,76 @@
+﻿
+ /* naslovnica */
+    ul#topNav { margin-bottom: 30px;  }
+    form#searchBox fieldset { background: white; border: 1px solid #d8d9da; padding: 3px 3px 3px 0; width: 287px; height: 2.1em; }
+    form#searchBox fieldset input.inputSearch { font-size: 110%; color: #646464;  padding: 3px 0 3px 20px; width: 190px; background: url(images/search_icon.gif) no-repeat 0 4px;  }
+    form#searchBox fieldset input.searchButton { position: absolute; width: 60px; font-size: 110%; color: #646464; border: none; background: url(images/button.gif) no-repeat; width: 68px; height: 22px; }
+
+  ul#mainNav li div ul { padding: 0 10px 0 5px; width: 180px; float: left;  }
+  ul#mainNav li#linkGradjanstvo div#link1  {  margin-left: -115px; }
+  ul#mainNav li#linkPoduzetnistvo div#link2 {  margin-left: -272px;  }
+  ul#mainNav li#linkVelikeTvrtke div#link3 { margin-left: -391px;  }
+  ul#mainNav li#linkInvBankarstvo div#link4 { margin-left: -577px;  }
+  ul#mainNav li#linkIzravnoBankarstvo div#link5 { margin-left: -733px; }
+  ul#mainNav li#linkMreza div#link6 { margin-left: -843px; }
+  ul#mainNav li#linkOnama div#link7 { margin: 0 0 0 -843px; }
+  ul#mainNav li#linkOnama a { float: none;  }
+
+  ul#mainNav li div .listHolder { margin: 0 !important; float: left; width: 615px; }
+  ul#mainNav #regHolder, ul#mainNav #memberHolder { position: static; margin: 10px 0 0 40px !important; color: #565658; width: 230px; float: left; }
+  #loginInfo { margin: 0 !important; }
+
+  ul#mainNav #visMiss { padding: 61px 15px 0; }
+
+  form#regEntry fieldset.gray { background: #f8f8f8 url(images/fieldset_bg.gif) repeat-x 0 0;   }
+  .form_holder { margin-top: 15px;}
+
+/* tecajna lista */
+    #tlLinks { border: none !important; margin-left: 9px; border-left: none; }
+    #tLista, #poll { margin-top: 0px; }
+    #tl { margin-top: 5px !Important; position: absolute; z-index: 100;  }
+    #tLista .tablica {  border: 1px solid #d7d5d5; background: white; margin: 0 0 0 8px; border-bottom: 2px solid #cccccc; border-right: none; padding: 0; }
+    #tLista td.au,  #tLista td.ca,  #tLista td.cz,  #tLista td.dk,  #tLista td.hu,  #tLista td.jp,  #tLista td.no,  #tLista td.sk,  #tLista td.se,  #tLista td.ch,  #tLista td.gb,  #tLista td.us,  #tLista td.eu,  #tLista td.pl { border: none !important; }
+    #burza { padding-top: 5px; }
+    #tabsWrapper ul#tabs { height: 30px; }
+    #tListaAnketa ul#tl { margin: -28px 0 0 8px !important; }
+    #poll { height: 214px; }
+
+form#search_ic input#submit_search  { margin: -2px 0 0 3px;  }
+form#search_ic input#search_string { padding: 2px; border: none !important; boroder-color: #fff;  width: 476px; padding: 4px 2px 3px ; font-size: 110%;  }
+.search_form_inline { height: 26px;  }
+
+#search_ic  input { border: none;  }
+ul#hpbGrupa { width: 438px; }
+iframe textarea { border: none !important; }
+.module { margin-top: -59px !important; }
+
+.adv_row input { margin-left: -20px; }
+.adv_row select#countryofbirth { padding: 4px !Important; border: 1px solid #cccccc !Important; }
+.adv_row select { padding: 4px !Important; border: 1px solid #cccccc !Important; }
+
+.adv_row .input_col { padding-top: 0px;}
+.adv_row .input_col.text { margin-left: 120px; }
+.adv_row .input_col.textarea { margin-left: 110px;  }
+.adv_row .input_col.checkbox { margin-left: 240px; }
+.adv_row .label_col span.helpIcon a { margin: -7px 0 0 340px;  }
+#contentWrapper { padding: 11px 11px 2px; }
+
+#innerFooterNav { padding: 4px 0 10px 20px;  }
+
+.tabContainerBox .lead .text { padding-top: 2px; }
+.tabContainerBox .lead { padding-top: 5px; }
+
+  .tabContainerBox .more { text-align: right; margin: 0; }
+
+  form#search_ic input#search_string { width: 480px; margin: 0;  }
+  form#search_ic input#submit_search  { margin: 2px 0  0 0; position: absolute; }
+
+  form#regEntry input.button { padding-top: 50px; }
+
+  fieldset.terms p { padding-left: 20px; }
+  #regEntry fieldset { padding-bottom: 0;}
+  #regEntry .value.status { padding-bottom: 0px; }
+
+ #serFAQ { padding: 10px 10px 0 10px;}
+ 
+   .smallInfo strong { border: none !Important;  }

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="example_use_orbx_mod">
+			<h1><a name="example_use_orbx_mod">Example usage for $orbx_mod</a></h1>
+			<p><strong>$orbx_log</strong> methods example</p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// load mod.ini into $mod_params array
+	$mod_params = $orbx_mod->load_info('video-gallery');
+
+	// declare variables for usage in video player generating
+	$autoplay = $mod_params['video']['autoplay'];
+	$player_height = $mod_params['video']['height'];
+	$player_width = $mod_params['video']['width'];
+
+	// do we have news module?
+	if($orbx_mod->validate_module('news')) {
+		$news_available = true;
+	}
+	else {
+		$news_available = false;
+	}
+
+?>
+</textarea>
+
+<p>Initiating new Module object</p>
+<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	require_once DOC_ROOT . '/orbicon/class/class.module.php';
+	global $orbx_mod;
+	$orbx_mod = new Module;
+
+?>
+</textarea>
+
+<p><strong>Next:</strong> <a href="known_issues.htm">Known issues</a></p>
+
+		</div>
+</body>
+</html>

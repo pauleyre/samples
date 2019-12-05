@@ -1,0 +1,8 @@
+﻿<banner>
+	<settings secondsPerSlide="3" showHeadlines="true" />
+	<slides>
+		<slide link="http://www.hpb.hr" title="HPB krediti šđčjjggqqćžŠĐČĆŽ" subtitle="mali krediti šđčćžŠĐČĆŽ" image="images/v1.jpg" thumbnail="images/m1.jpg" />
+		<slide link="http://www.hpb.hr" title="Novi site" subtitle="Novi banner" image="images/v2.jpg" thumbnail="images/m2.jpg" />
+		<slide link="http://www.hpb.hrr" title="Uskoro" subtitle="i na vašem malom ekranu" image="images/v3.jpg" thumbnail="images/m3.jpg" />
+	</slides>
+</banner>

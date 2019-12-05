@@ -1,0 +1,59 @@
+/* CSS Document */
+
+.MessageDisplay, .MessageDisplay div, .MessageDisplay span {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 8pt !important;
+	text-align: left;
+	clear: both;
+	background-color: Window;
+}
+
+.MessageDisplay {
+	border-left: 1px solid ButtonShadow;
+	border-top: 1px solid ButtonShadow;
+	border-bottom: 1px solid ButtonHighlight;
+	border-right: 1px solid ButtonHighlight;
+	height: 100%;
+	width: 245px;
+}
+
+.communicator_message {
+	text-align: left;
+	vertical-align: bottom;
+	padding: 1pt 1pt 1pt 1pt;
+	width: 245px;
+	clear: both;
+	color: WindowText !important;
+}
+
+.communicator_message_entry {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 8pt;
+	width: 245px;
+	height: 75px;
+	cursor: text;
+	color: WindowText !important;
+}
+
+.communicator_user_list {
+	width: 10em !important;
+	vertical-align: bottom !important;
+}
+
+.Title {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+}
+
+div {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: small;
+}
+
+.r {
+	color: red;
+}
+
+.b {
+	color: blue;
+}

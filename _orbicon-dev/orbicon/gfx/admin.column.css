@@ -1,0 +1,33 @@
+#column_form #column_url_preview {
+	margin: 0; 
+	padding: 0px 3px 0px 3px; 
+	overflow:auto;
+	width:50em; 
+	border: 1px solid black;
+}
+
+#column_form table {
+	width: 100%;
+}
+
+#column_form table .high_row {
+	height: 500px;
+}
+
+#column_form #news_content {
+	overflow: auto;
+	padding: 1em; 
+	height: 500px; 
+	width: auto;
+	background: #ffffff;
+	border: 1px solid #cecece;
+}
+#column_form #column_title {
+	width: 50em;
+}
+
+#column_form #news_content {
+	text-align: left; 
+	padding-left: 1em; 
+	font-size: 95%;
+}

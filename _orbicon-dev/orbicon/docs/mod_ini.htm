@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="mod_ini">
+			<h1><a name="mod_ini">mod.ini</a></h1>
+
+			<p>mod.ini is module's main configuration file. Without one, the module is considered invalid and will be ignored by the system. Below is an example of mod.ini's syntax. Two sections, <strong>module</strong> and <strong>about</strong> are required - a module builder could add additional module-specific sections.</p>
+
+			<p>Example mod.ini</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name="HTML Editor"
+small_icon="html.png"
+medium_icon="html37px.gif"
+big_icon="13-html.gif"
+backend="admin.html.php"
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.00"
+date="1/07/2006"
+</textarea><br />
+
+
+		<table class="table">
+			<tr>
+				<th>Property</th>
+				<th>Description</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>module</strong> section</td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td>Module's name / title</td>
+				<td>&quot;Weather report&quot;</td>
+			</tr>
+			<tr>
+				<td>small_icon</td>
+				<td>Optional small icon for drop-down backend menu. The image must be stored in module's gfx folder and sized around 16&times;16px</td>
+				<td>weather_s.png</td>
+			</tr>
+			<tr>
+				<td>medium_icon</td>
+				<td>Optional medium icon for module's backend administration page. The image must be stored in module's gfx folder and sized around 37&times;37px</td>
+				<td>weather_m.png</td>
+			</tr>
+			<tr>
+				<td>big_icon</td>
+				<td>Optional big icon for drop-down backend menu. The image must be stored in module's gfx folder and sized around 80&times;80px</td>
+				<td>weather_b.png</td>
+			</tr>
+			<tr>
+				<td>backend</td>
+				<td>Main file loaded for backend administration. This PHP file's contents will be <a href="http://www.php.net/include/">included</a> into system's GUI.</td>
+				<td>admin.weather.php</td>
+			</tr>
+			<tr>
+				<td>tab</td>
+				<td>Backend menu section under which the module will be displayed. Not configuring this option means that the module will be accessed directy with a hyperlink - for example - <em>http://server/?en=orbicon/mod/weather-report</em>. Numeric values depend on section:<br />
+					<ul>
+						<li><strong>1</strong> - Content</li>
+						<li><strong>2</strong> - Databases</li>
+						<li><strong>4</strong> - Dynamic elements</li>
+						<li><strong>8</strong> - Tools</li>
+						<li><strong>16</strong> - CRM</li>
+						<li><strong>32</strong> - Setting</li>
+						<li><strong>64</strong> - System</li>
+					</ul>
+				</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>frontend</td>
+				<td>Main file that will be loaded in the frontend.</td>
+				<td>render.weather.php</td>
+			</tr>
+			<tr>
+				<td>runtime</td>
+				<td>Type of frontend implementation. Value <em>box</em> will display frontend file's contents in a box (whose template mark is specified under <strong>template_mark</strong> option). Value <em>page</em> will display frontend file's contents as a full page.</td>
+				<td>box</td>
+			</tr>
+			<tr>
+				<td>template_mark</td>
+				<td>Template mark under which the module will be loaded. Required if the <strong>runtime</strong> value is set to <em>box</em>.</td>
+				<td>WEATHER_REPORT</td>
+			</tr>
+			<tr>
+				<td>sync</td>
+				<td>A list of module's SQL tables that will be synchronized with production servers during synchronization. Separate multiple tables with coma.</td>
+				<td>orbx_mod_user_access, orbx_mod_user_data</td>
+			</tr>
+			<tr>
+				<th>Property</th>
+				<th>Description</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>about</strong> section</td>
+			</tr>
+
+			<tr>
+				<td>author</td>
+				<td>Module's author(s)</td>
+				<td>&quot;Pavle Gardijan (pavle.gardijan@orbitum.net)&quot;</td>
+			</tr>
+			<tr>
+				<td>company</td>
+				<td>Company that developed the module (if applicable)</td>
+				<td>Orbitum ICT</td>
+			</tr>
+			<tr>
+				<td>version</td>
+				<td>Module's software version</td>
+				<td>1.02b</td>
+			</tr>
+			<tr>
+				<td>date</td>
+				<td>Date of module's creation</td>
+				<td>1/07/2006</td>
+			</tr>
+			<tr>
+				<td>updated</td>
+				<td>Date of module's last update</td>
+				<td>06/04/2007</td>
+			</tr>
+		</table>
+
+		<h2>Example configurations</h2>
+
+			<p>Module accessed only through a backend hyperlink (<strong>http://my.domain.com/?en=orbicon/mod/html</strong>)</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name="HTML Editor"
+small_icon="html.png"
+medium_icon="html37px.gif"
+big_icon="13-html.gif"
+backend="admin.html.php"
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.00"
+date="1/07/2006"
+</textarea><br />
+
+			<p>Module with backend administration and frontend box implementation</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name=News
+small_icon="page.png"
+medium_icon="news37px.gif"
+big_icon="33-news.gif"
+backend="admin.news.php"
+frontend="render.news.php"
+runtime=box
+template_mark=NEWS
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.00"
+date="1/07/2006"
+</textarea><br />
+
+
+			<p>Module without backend administration and with full page frontend implementation</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name="Past polls"
+frontend="render.past-polls.php"
+runtime=page
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.00"
+date="1/07/2006"
+</textarea><br />
+
+			<p>Module with custom section</p>
+			<textarea name="code" class="HTML" cols="60" rows="1">
+[module]
+name="Video Gallery"
+
+[video]
+player="site/gfx/player.swf"
+width=0
+height=0
+autoplay=0
+
+[about]
+author="Pavle Gardijan (pavle.gardijan@orbitum.net)"
+company="Orbitum ICT"
+version="1.05"
+date="13/03/2007"
+updated="02/04/2007"
+</textarea><br />
+
+<p><strong>Next:</strong> <a href="global_php_objects.htm">Global PHP objects</a></p>
+
+		</div>
+</body>
+</html>

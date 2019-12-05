@@ -1,0 +1,9 @@
+#admin_about span {
+	font-weight: bold;
+}
+
+#server_info {
+	display:none;
+	white-space: pre; 
+	font: small monospace;
+}

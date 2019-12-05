@@ -1,0 +1,30 @@
+#orbx_editors { 
+	padding: 10px; 
+}
+
+#orbx_editors label { 
+	padding: 4px;
+}
+
+#orbx_editors div { 
+	margin: 15px 0 0 0;
+}
+
+#orbx_editors .main_left { 
+	float: left; 
+	width: 50%;
+}
+
+#orbx_editors .main_right { 
+	float: left; 
+	margin: 0 0 0 15px;
+}
+
+#orbx_editors p { 
+	padding: 0; 
+	margin: 0;
+}
+
+#orbx_editors input { 
+	width: 300px;
+}

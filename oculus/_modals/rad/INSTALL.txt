@@ -1,0 +1,38 @@
+Installation guide for Rad Upload Plus.
+=======================================
+
+First make sure that your server is correctly configured to accept file
+uploads. With sites that use PHP you can make use of the included 
+test.html and upload.php files to test your server configuration.
+
+Move dndplus.jar and the radupload.properties file onto your web space
+along with the included php files. Next open applet.php in your
+favourite text editor and change the 'url' parameter to match your 
+server-side upload handler. That's it!
+
+The upload.php is a sample PHP script provided to get you started on 
+drag and drop file upload. You may need to modify upload.php to suite
+the needs of your website or web application. 
+
+If you prefer to use perl as your server side handler please copy 
+upload.cgi to your /cgi-bin/ directory and change permissions to 755.
+Perl upload handling can be tested with test-perl.html
+
+Each licence of Rad Upload Lite, Rad Upload and Rad Upload Plus allows
+you to install the applet on exactly one website.
+
+Additional details about the product may be obtained from the website:
+http://www.radinks.com/upload/ you can also contact Rad Inks by email
+on support@radinks.com
+
+
+Thank you
+The Rad Inks Team
+http://www.radinks.com/
+
+
+
+Foot Notes:
+	If you do not make use of PHP on your website, use applet.html
+	or applet-js.html instead of applet.php. Scripts in other
+	languages are available on our website.

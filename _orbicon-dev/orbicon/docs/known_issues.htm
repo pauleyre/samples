@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="known">
+			<h1><a name="known">Known issues</a></h1>
+			<p>This is a compilation of known issues and their workarounds.</p>
+			<p>
+				<strong>Issue:</strong> Rich-Text Editor does not respond to keyboard input in Firefox.<br />
+				<strong>Solution:</strong> Press Spacebar on your keyboard. This will enable keyboard input for Firefox.
+			</p>
+			
+			<p>
+				<strong>Issue:</strong> Interaction with active content (Flash, etc.) is disabled in Internet Explorer.<br />
+				<strong>Solution:</strong> This is a known issue for users of latest Internet Explorer 6 or better. Orbicon comes packaged with <a href="http://www.adobe.com/products/flashplayer/download/detection_kit/">Adobe's Flash Player Detection Kit</a> which offers solution for this issue. Refer to their documentation for help on implementing. The Detection Kit is located in <strong>orbicon/3rdParty/ac</strong> directory.
+			</p>
+
+			<p>
+				<strong>Issue:</strong> Executing SQL query with foreign characters through mysql shell, corrupts those same characters.<br />
+				<strong>Solution:</strong> Execute the following SQL query <code>SET NAMES utf8;</code>. For more information, visit <a href="http://dev.mysql.com/doc/refman/4.1/en/charset-connection.html">http://dev.mysql.com/doc/refman/4.1/en/charset-connection.html</a>
+			</p>
+			
+			<p>
+				<strong>Issue:</strong> Double and single quotes inside my data becomes escaped. For example &quot; is saved as \&quot;<br />
+				<strong>Solution:</strong> If your web server is Apache, you can create .htaccess file with the following content: <code>php_flag magic_quotes_gpc off</code>
+			</p>
+						
+			<p><strong>Next:</strong> <a href="design_implementation.htm">Design implementation</a></p>	
+
+				
+		</div>		
+</body>
+</html>

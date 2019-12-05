@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="example_use_orbicon_x">
+			<h1><a name="example_use_orbicon_x">Example usage for $orbicon_x</a></h1>
+			<p>
+			
+				<p><strong>ptr</strong> property example in SQL</p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	// build a SQL query but only for our current language
+	$q = sprintf('	SELECT 	* 
+					FROM 	'.TABLE_COLUMNS.' 
+					WHERE 	(language = %s)', 
+	$dbc->_db->quote($orbicon_x->ptr));
+
+	// execute our query
+	$r = $dbc->_db->query($q);
+?>
+</textarea><br />
+			
+			</p>
+
+			<p><strong>ptr</strong> property example in link building</p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+	// build an url that will work on any domain and with any language
+	$url_to_sitemap = ORBX_SITE_URL . '/?' . $orbicon_x->ptr . '=sitemap';
+?>
+</textarea><br />
+			
+			</p>
+
+<p><strong>Next:</strong> <a href="example_usage_for_dbc.htm">Example usage for $dbc</a></p>			
+			
+		</div>
+</body>
+</html>

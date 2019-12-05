@@ -1,0 +1,59 @@
+﻿
+
+ul#hpbGrupa { width: 432px; }
+
+ul#mainNav { behavior: url(./site/gfx/css/csshover.htc); position: relative;   }
+
+ /* naslovnica */
+    ul#topNav { margin-bottom: 30px;  }
+    form#searchBox fieldset { background: white; border: 1px solid #d8d9da; padding: 3px 3px 2px 0; width: 287px; height: 2.1em; }
+    form#searchBox fieldset input.inputSearch { font-size: 110%; color: #646464;  padding: 3px 0 3px 20px; width: 190px; background: url(images/search_icon.gif) no-repeat 0 4px;  }
+    form#searchBox fieldset input.searchButton { position: absolute; width: 60px; font-size: 110%; color: #646464; border: none; background: url(images/button.gif) no-repeat; width: 68px; height: 22px; }
+
+
+  	#tLista, #poll { position: relative; margin-top: -4px; }
+
+/* navigacija */
+
+    ul#mainNav li#linkOnama div { margin-left: -498px;  }      
+    ul#mainNav li#linkMreza div { margin-left: -503px;  }
+    ul#mainNav li#linkIzravnoBankarstvo div { margin-left: -503px;  }
+    ul#mainNav li#linkInvBankarstvo div { margin-left: -178px; }
+    ul#mainNav li#linkVelikeTvrtke div { margin-left: -111px;  } 
+    ul#mainNav li#linkGradjanstvo div  {  margin-left: -108px;  }
+    ul#mainNav li#linkPoduzetnistvo div {  margin-left: -150px;  }         
+
+  ul#mainNav li div ul { width: 200px;  } 
+  ul#mainNav li div ul li ul li { line-height: 1.2em; }
+
+  form #regEntry fieldset.gray { background: #f8f8f8 url(images/fieldset_bg.gif) repeat-x 0 0; }
+  .form_holder { margin-top: 15px;}
+    
+  .tabContainer {  padding: 5px 15px 0 15px;  }
+  .tabContainerBox .more { margin: 0;  }
+
+  #mainNews #newsLead { height: 213px; }
+  #alati, #proizvodi, #novosti { height: 320px !important; overflow: hidden;  }    
+    
+  #tLista td.au,  #tLista td.ca,  #tLista td.cz,  #tLista td.dk,  #tLista td.hu,  #tLista td.jp,  #tLista td.no,  #tLista td.sk,  #tLista td.se,  #tLista td.ch,  #tLista td.gb,  #tLista td.us,  #tLista td.eu,  #tLista td.pl { border: none !important; }
+  #tlLinks { border: none !important; border-left: 1px solid #d7d5d5; } 
+    
+    #burza { padding-top: 4px; }
+        #poll .poll_vote_option label { padding-top: 4px    }
+        #poll .poll_ft { margin-top: 43px; }
+        #poll .poll_ft a#poll_past_polls { margin: -29px 0 0 175px !important; }
+                
+/* inner */
+
+  #contentWrapper.step2 #innerRightColi { margin-top: -5px; }
+  #contentWrapper.step3 #innerRightCol { margin-top: -49px; }  
+  #contentWrapper.step1 #innerRightCol { }   
+
+.yui-navset, ul#innerTabs li a { position: static !important; }
+ul#innerTabs li  { margin:0 !important;  }
+
+/* zaposlenja */
+.adv_row .label_col span.helpIcon a { margin: 3px 0 0 344px;  }
+.adv_row .input_col.text { margin: -22px 0 0 120px !important; }
+
+  .module { margin-top: -59px !important; }

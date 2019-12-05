@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="sync">
+			<h1><a name="sync">Synchronization</a></h1>
+			<p>File and database synchronization is the process of making sure that two or more hosts contain the same up-to-date files and database information. If you add, change, or delete a file from local host, the synchronization process will add, change, or delete the same file at the remote host(s). The same applies for any database changes.</p>
+			<p>In a one-way sync as it is implemented in Orbicon Xtreme and Enterprise, also called <em>mirroring</em>, files are copied only from a &quot;source&quot; host to a &quot;target&quot; host, or hosts, but no files are copied back to the source host.</p>
+			<p>Although it is possible to synchronize contents manually, using Orbicon is both faster and less error prone. To start synchronization between single or multiple FTP/SSH2 servers (depending on your license) access System -&gt; Synchronization</p>
+			<p><strong>Next:</strong> <a href="3rdparty_resources.htm">3rd party resources</a></p>
+		</div>
+
+
+</body>
+</html>

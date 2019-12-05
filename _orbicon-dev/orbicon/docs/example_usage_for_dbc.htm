@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="example_use_dbc">
+			<h1><a name="example_use_dbc">Example usage for $dbc</a></h1>
+			<p><strong>$dbc</strong> methods example</p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// build a query, escape values
+	$q = sprintf('	SELECT 	title 
+					FROM 	'.TABLE_COLUMNS.' 
+					WHERE 	(language = %s)', 
+	$dbc->_db->quote($orbicon_x->ptr));
+
+	// send query
+	$r = $dbc->_db->query($q);
+	// get results as an array
+	$a = $dbc->_db->fetch_array($r);
+
+	// foreach result echo out title text
+	while($a) {
+		echo $a['title'] . '<br />';
+		// get another result in an array
+		$a = $dbc->_db->fetch_array($r);
+	}
+
+	// free memory
+	$dbc->_db->free_result($r);
+
+?>
+</textarea><br />
+			
+			<p>SQL result caching and retrieving with <strong>$dbc</strong></p>
+				<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// build a query, escape values
+	$q = sprintf('	SELECT 	title 
+					FROM 	'.TABLE_COLUMNS.' 
+					WHERE 	(language = %s)', 
+	$dbc->_db->quote($orbicon_x->ptr));
+
+	// check if we have a cached result for our query. if we have one, return it
+	$a = $dbc->_db->get_cache($q);
+	if($a !== NULL) {
+		return $a;
+	}
+
+	// send query
+	$r = $dbc->_db->query($q);
+	// get results as an array
+	$a = $dbc->_db->fetch_array($r);
+	// free memory
+	$dbc->_db->free_result($r);
+
+	// cache results $a for query $q for later usage
+	$a = $dbc->_db->get_cache($a, $q);
+	
+	// return 
+	return $a;
+?>
+</textarea><br />
+
+			</p>
+<p><strong>Next:</strong> <a href="example_usage_for_orbx_log.htm">Example usage for $orbx_log</a></p>				
+			
+		</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1) Troškovi web hostinga			200 kn
+2) Troškovi flash statistika (Fusion charts)	(69 USD) *410 kn
+3) Zend guard (godišnja licenca)			(995 USD) *5.900 kn
+4) Raèunalo					*6.500 (s pdvom) kn
+
+Ukupno = *13.010

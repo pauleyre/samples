@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+<div id="php_constants">
+			<h1><a name="php_constants">Predefined constants</a></h1>
+			<p>A number of predefined constants is available for use within system's scope. Developers should use these instead of failing back to general PHP constants were possible
+<table class="table">
+					<tr>
+						<th>Constant</th>	
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>DOC_ROOT</td>	
+						<td>Path to Orbicon framework's root directory. Use this instead of $_SERVER['DOCUMENT_ROOT']</td>
+					</tr>					
+					<tr>
+						<td>ORBX_CLIENT_IP</td>	
+						<td>Client's IP address. Use this instead of $_SERVER['REMOTE_ADDR']</td>
+					</tr>
+					<tr>
+						<td>ORBX_USER_AGENT</td>	
+						<td>Client's User Agent. Use this insted of $_SERVER['HTTP_USER_AGENT']</td>
+					</tr>					
+					<tr>
+						<td>DOC_3RD_PARTY</td>	
+						<td>Path to Orbicon framework's 3rd party root directory</td>
+					</tr>
+					<tr>
+						<td>SCHEME</td>	
+						<td>Scheme for current site (<strong>http</strong> or <strong>https</strong>)</td>
+					</tr>
+					<tr>
+						<td>DOMAIN</td>	
+						<td>Domain name for current site</td>
+					</tr>
+					<tr>
+						<td>DOMAIN_NO_WWW</td>	
+						<td>Same as DOMAIN but stripped of any <strong>www</strong> prefix</td>
+					</tr>					
+					<tr>
+						<td>ORBX_SITE_URL</td>	
+						<td>Full URL to Orbicon framework's base address</td>
+					</tr>
+				</table>			
+			</p>
+
+			
+<p><strong>Next:</strong> <a href="example_usage_for_orbicon_x.htm">Example usage for $orbicon_x</a></p>				
+			
+		</div>		
+</body>
+</html>

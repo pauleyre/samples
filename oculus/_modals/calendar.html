@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+	<title>Yahoo! Calendar Control - Multi-Select Implementation</title>
+	
+	<script type="text/javascript" src="yui/build/yahoo/yahoo-min.js"></script>
+	<script type="text/javascript" src="yui/build/event/event-min.js"></script>
+	<script type="text/javascript" src="yui/build/dom/dom-min.js"></script>
+	<script type="text/javascript" src="yui/build/calendar/calendar-min.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="yui/build/calendar/assets/calendar.css">
+
+	<script language="javascript">
+		YAHOO.namespace("orbitum.calendar");
+
+		function init() {
+			YAHOO.orbitum.calendar.cal1 = new YAHOO.widget.Calendar("YAHOO.orbitum.calendar.cal1", "cal1Container");
+			YAHOO.orbitum.calendar.cal1.customConfig = function() { 
+					this.Config.Locale.MONTHS_SHORT = ["Sij", "Velj", "O¾u", "Tra", "Svi", "Lip", "Srp", "Kol", "Ruj", "List", "Stu", "Pro"]; 
+					this.Config.Locale.MONTHS_LONG = ["Sijeèanj", "Veljaèa", "O¾ujak", "Travanj", "Svibanj", "Lipanj", "Srpanj", "Kolovoz", "Rujan", "Listopad", "Studeni", "Prosinac"]; 
+					this.Config.Locale.WEEKDAYS_1CHAR = ["N", "P", "U", "S", "È", "P", "S"]; 
+					this.Config.Locale.WEEKDAYS_SHORT = ["Ne", "Po", "Ut", "Sr", "Èe", "Pe", "Su"]; 
+					this.Config.Locale.WEEKDAYS_MEDIUM = ["Ned", "Pon", "Uto", "Sri", "Èet", "Pet", "Sub"]; 
+					this.Config.Locale.WEEKDAYS_LONG = ["Nedjelja", "Ponedjeljak", "Utorak", "Srijeda", "Èetvrtak", "Petak", "Subota"]; 
+
+					this.Config.Options.START_WEEKDAY = 1; 
+				}
+
+			YAHOO.orbitum.calendar.cal1.setupConfig();
+			YAHOO.orbitum.calendar.cal1.Options.MULTI_SELECT = true;
+			YAHOO.orbitum.calendar.cal1.render();
+		}
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+</head>
+
+<body onload="init()">
+	<div class="column right">
+		<div style="margin-left:auto;margin-right:auto;width:150px">
+			<div id="cal1Container"></div>
+		</div>
+		<div style="margin-left:auto;margin-right:auto;text-align:center;width:150px;clear:both">
+			<a href="javascript:YAHOO.orbitum.calendar.cal1.reset()" class="navLink" style="font-size:12px;text-decoration:underline">reset</a>|
+			<a href="javascript:alert(YAHOO.orbitum.calendar.cal1.getSelectedDates())" class="navLink" style="font-size:12px;text-decoration:underline">¹to je selektirano?</a>
+		</div>
+	</div>
+</body>
+</html>

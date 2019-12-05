@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		/*
+		closeAllPages('uvod');
+		sh('intro_grp');
+		*/
+		dp.SyntaxHighlighter.HighlightAll('code');	
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+		<div id="design">
+			<h1><a name="design">Design implementation</a></h1>
+			<p>
+				<strong>Issue:</strong> Where should I upload my website's favicon?<br />
+				<strong>Solution:</strong> Favicon should be located in <strong>site/gfx</strong> directory.
+			</p>
+
+			<p>
+				<strong>Issue:</strong> How can I switch between different languages?<br />
+				<strong>Solution:</strong> Links such as <strong>www.mywebsite.com/?ln=en</strong> or <strong>www.mywebsite.com/?ln=de</strong> will switch between English and German language. For a full list of ISO codes please refer to <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639 code list</a>. Remember that the language must first be installed in the system. Below is an example.
+				
+				<p>Language links example</p>
+					<textarea name="code" class="HTML" cols="60" rows="1">
+<a href="<!>ORBX_SITE_URL/?ln=en">English</a> | 
+<a href="<!>ORBX_SITE_URL/?ln=de">German</a> | 
+<a href="<!>ORBX_SITE_URL/?ln=hr">Croatian</a>
+</textarea>
+			</p>
+			
+		</div>		
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbicon framework Manual - v1.0a</title>
+<link type="text/css" rel="stylesheet" href="manual.css" media="screen" />
+<script type="text/javascript" src="js/manual.js"></script>
+<script type="text/javascript" src="js/dpSyntaxHighlighter.js"></script>
+<script type="text/javascript"><!-- // --><![CDATA[
+
+	function load_manual()
+	{
+		dp.SyntaxHighlighter.HighlightAll('code');
+	}
+
+	// * Initiate events
+	if(window.addEventListener) {
+		window.addEventListener("load", load_manual, true);
+	}
+	else if(window.attachEvent) {
+		window.attachEvent("onload", load_manual);
+	}
+
+// ]]></script>
+<link type="text/css" rel="stylesheet" href="js/dpSyntaxHighlighter.css">
+</head>
+
+<body>
+			<div id="mod_global">
+			<h1><a name="mod_global">Global PHP objects</a></h1>
+
+			<p>Orbicon framework provides access to four global PHP objects. These are <strong>$orbicon_x, $dbc, $orbx_log</strong> and <strong>$orbx_mod</strong>. They are useful for module builders.</p>
+
+				<h3>$orbicon_x</h3>
+				<p>
+					<strong>$orbicon_x</strong> object handles Orbicon framework's engine. It doesn't provide any public methods.
+					<strong>_db</strong> object has the following public properties available for use.
+					<ul>
+						<li><strong>ptr</strong>  Get current language pointer (en, de, etc.)</li>
+					</ul>
+				</p>
+
+				<h3>$dbc ($dbc->_db)</h3>
+				<p><strong>$dbc</strong> object is a container for other objects that interact with database. Currently it only contains <strong>_db</strong> object.<br />
+
+			<strong>_db</strong> object has the following public methods available for use.
+			<ul>
+				<li><strong>affected_rows</strong>  Get number of affected rows in previous database operation. See <a href="http://www.php.net/mysql_affected_rows">http://www.php.net/mysql_affected_rows</a> for more information</li>
+				<li><strong>connect</strong>  Open a connection to a database server. Initiated at startup</li>
+				<li><strong>disconnect</strong>  Close database connection. Initiated at shutdown</li>
+				<li><strong>quote</strong>  Escapes a string for use in a query</li>
+				<li><strong>fetch_array</strong>  Fetch a result row as an associative array, a numeric array, or both. See <a href="http://www.php.net/mysql_fetch_array">http://www.php.net/mysql_fetch_array</a> for more information</li>
+				<li><strong>free_result</strong>  Free result memory. See <a href="http://www.php.net/mysql_free_result">http://www.php.net/mysql_free_result</a> for more information</li>
+				<li><strong>insert_id</strong>  Get the ID generated from the previous INSERT operation. See <a href="http://www.php.net/mysql_insert_id">http://www.php.net/mysql_insert_id</a> for more information</li>
+				<li><strong>num_rows</strong>  Get number of rows in result. See <a href="http://www.php.net/mysql_num_rows">http://www.php.net/mysql_num_rows</a> for more information</li>
+				<li><strong>query</strong>  Send a database query. See <a href="http://www.php.net/mysql_query">http://www.php.net/mysql_query</a> for more information</li>
+				<li><strong>put_cache</strong>  Cache query results</li>
+				<li><strong>get_cache</strong>  Retreive cached query results</li>
+				<li><strong>error</strong>  Returns the text of the error message from previous operation</li>
+				<li><strong>fetch_assoc</strong>  Fetch a result row as an associative array</li>
+				<li><strong>errno</strong>  Returns the numerical value of the error message from previous operation</li>
+				<li><strong>set_link</strong>  Set link identifier</li>
+				<li><strong>get_link</strong>  Get link identifier</li>
+				<li><strong>table_exists</strong>  Checks if given table exists</li>
+				<li><strong>fetch_object</strong>  Fetch a result row as an object</li>
+				<li><strong>now</strong>  Alias for current_timestamp()</li>
+				<li><strong>current_timestamp</strong>  Converts UNIX timestamp to SQL timestamp</li>
+			</ul>
+		</p>
+
+			<h3>$orbx_log</h3>
+			<p>
+				<strong>$orbx_log</strong> object logs various messages to four logs. See chapter <span onclick="javascript: getPage('logs');"><a href="logs.htm">Logs</a></span> for more information.
+				<strong>$orbx_log</strong> object has the following public methods available for use.
+				<ul>
+					<li><strong>dwrite</strong>  Adds a line to the debug log</li>
+					<li><strong>ewrite</strong>  Adds a line to the error log</li>
+					<li><strong>swrite</strong>  Adds a line to the system log</li>
+				</ul>
+			</p>
+
+			<h3>$orbx_mod</h3>
+			<p>
+				<strong>$orbx_mod</strong> object handles all modules and their implementation.
+				<strong>$orbx_mod</strong> object has the following public methods available for use.
+				<ul>
+					<li><strong>validate_module</strong>  Validates module</li>
+					<li><strong>load_info</strong>  Returns module's properties defined in mod.ini</li>
+				</ul>
+			</p>
+
+<p>These four objects (along with Orbicon's <span onclick="javascript: getPage('php_constants');"><a href="predefiend_constants.htm">predefined constants</a></span>) are Orbicon's core resources. They are easily available by including <strong>inc.core.php</strong> file into your code.</p>
+<p><strong>inc.core.php</strong> implementation example</p>
+<textarea name="code" class="PHP" cols="60" rows="1">
+<?php
+
+	// include core resources
+	require_once 'orbicon/class/inc.core.php';
+
+	// we have new constants for use
+	print_r(get_defined_constants());
+
+	//also, all objects are ready for use
+	var_dump($orbicon_x->ptr);
+
+?>
+</textarea>
+
+			<p><strong>Next:</strong> <a href="predefiend_constants.htm">Predefined constants</a></p>
+
+		</div>
+</body>
+</html>
