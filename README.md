@@ -38,7 +38,7 @@ Written in Javascript/Angular.
 Award winning, 13h video game I made in Neverwinter Nights engine.
 Written in C.
 
-#Van Buren: A Fallout Adventure
+#Van Buren: A Fallout RPG Adventure
 
 A video game written in C and C++.
 Due to 12GB size, hosted on another repository.
