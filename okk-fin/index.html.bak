@@ -1,0 +1,4461 @@
+<!DOCTYPE html>
+<html ng-app="wizard-sample">
+
+  <head>
+
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCW7CR');</script> -->
+<!-- End Google Tag Manager -->
+
+<!--
+<script>
+(function(h,e,a,t,m,p) {
+m=e.createElement(a);m.async=!0;m.src=t;
+p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+})(window,document,'script','https://u.heatmap.it/log.js');
+</script>  
+-->  
+  
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="google-site-verification" content="EIEC9oyVWs6L6ok1m9K5uZK_eP2fbMvYoA7A9jFLsMY" />  
+
+	<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css" />	
+	<link rel="stylesheet" type="text/css" href="angular-wizard.css" />
+	<link href="//fonts.googleapis.com/css?family=Roboto%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i&subset=latin-ext&ver=6d8fe90df14911419bdb567fce42ee78" rel="stylesheet" /> 
+	
+	
+	
+	
+    <title>Online kartični zahtjev - HPB - Hrvatska poštanska banka d.d.</title>
+		
+<style type="text/css" >
+	
+	body {
+		background-color: #eee;
+	}
+	
+	.button:hover {
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.15), 0 0 1px 0 rgba(0,0,0,.08);
+}
+
+.button--next {
+    color: #D51F1E;
+}
+
+.button {
+    font-size: 16px;
+    font-weight: 500;
+    width: 370px;
+    min-height: 48px;
+    padding: 13px;
+    cursor: pointer;
+    -webkit-transition: background-color .2s,box-shadow .2s;
+    transition: background-color .2s,box-shadow .2s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .5px;
+    color: #58595B;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
+}
+
+.button, .card {
+    background-color: #FFF;
+	color: #cc0000;
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+	
+	
+.footer-container__logo--dark {
+    background-image: url(logo-dark.svg);
+}
+
+.footer-container__logo {
+    display: block;
+    padding: 10px 0 10px 40px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: 72px 23px;
+
+}
+.card--forms {
+    padding: 50px 30px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+	background: #fff;
+	min-height: 570px;
+}
+
+	
+.header {
+    background-image: url(background-img.jpg);
+    background-repeat: no-repeat;
+}	
+	
+.button--main {
+    background-color: #888;
+    color: #fff;
+}
+
+.button--main[disabled],
+.button[disabled] {
+    background-color: #ccc;
+    color: #fff;
+	cursor: not-allowed !important;
+}
+	
+.form-input-box,
+.w95pct input	{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border-color: currentcolor currentcolor #ccc;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    color: #58595b;
+    max-width: 100%;
+    outline: 0 none;
+    padding: 7px 0;
+    resize: none;
+    width: 100%;
+	/*text-transform: capitalize;*/
+}
+	.w95pct	{
+	    width: 95%;
+	}
+	
+	#pitalica md-select,
+	#pitalica md-select md-option	{
+		color:#cc0000;
+		margin-bottom: 6px;
+		/*font-weight: bold;*/
+	}
+	
+	#pitalica md-select:not([disabled]):focus 
+	#pitalica .md-select-value {
+		border-bottom-color: #cc0000;
+		color: #cc0000;
+	}
+	
+	#pitalica md-select-menu.md-default-theme md-content md-option[selected], 
+	#pitalica md-select-menu md-content md-option[selected] {
+		color: #cc0000;
+	}
+	
+	md-checkbox.md-default-theme.md-checked .md-ink-ripple, 
+	md-checkbox.md-checked .md-ink-ripple,
+	md-checkbox.md-default-theme.md-checked .md-icon, 
+	md-checkbox.md-checked .md-icon	{
+		background-color: rgba(204, 0, 0, 0.87) !important;
+	}
+	
+	md-checkbox.md-checked.red .md-icon {
+	background-color: rgba(204, 0, 0, 0.87) !important;
+}
+
+md-card-content ol {
+
+	margin:0;
+	padding:0 0 0 10px;
+
+}
+
+md-card-content ol li {
+	margin:0;
+	padding:0 0 15px 0;
+	border-bottom: 1px solid #ccc;
+	
+}
+
+md-card-content img {
+margin: 0 auto;
+}
+
+md-card {
+	height:650px;
+	width:222px
+}
+
+.button-card {
+	width: 100% !important;
+}
+
+md-input-container {
+    margin: 12px 0 18px !important;
+}
+
+.md-button {
+	margin: 0;
+	border-radius: 0;
+	line-height: 18px;
+	text-transform: none;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), 
+md-toolbar:not(.md-menu-toolbar) {
+    background-color: #cc0000;
+}
+
+.md-button.md-default-theme.md-raised, 
+.md-button.md-raised {
+	
+	background-color: #bf1c1b;
+    font-weight: bold;
+	color: white;
+	
+}
+
+.md-button.md-default-theme.md-raised:hover:not([disabled]),
+.md-button.md-raised:hover:not([disabled]) {
+	background-color: #cc0000;
+}
+
+.normalfont {
+    font-weight: normal !important;
+}
+
+.hpbred_btn {
+    background-color: #bf1c1b;
+	color: white;
+}
+
+.hpbgray_btn {
+    background-color: #ccc !important;
+	color: black !important;
+}
+
+ol li {
+height: 70px;
+margin-bottom:10px !important;
+}
+
+.step md-input-container {
+    margin: 8px 0 !important;
+	 height: 55px;
+}
+
+#pitalica md-input-container {
+    margin: 10px 0 !important;
+	padding: 8px 0 0;
+}
+
+
+/*
+@media only screen and (max-width: 1000px) {
+
+	.steps-indicator {
+		display:none
+	}
+
+}
+*/
+
+.footer {
+    padding-bottom: 41px;
+    padding-top: 41px;
+    background-color: #58595b;
+	margin-top: 90px;
+}
+
+.footer-container .footer-container__back {
+    background-image: url(arrow-left.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 0 10px 40px;
+    text-decoration: none;
+    transition: opacity 0.2s ease 0s;
+}
+
+.footer-container .footer-container__logo {
+    background-image: url(logo.svg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 72px 23px;
+    display: block;
+    padding: 10px 0 10px 40px;
+    text-indent: -9999px;
+}
+
+.footer-container .footer-container__column-big {
+    float: left;
+    margin-right: 1.69492%;
+    width: 66.1017%;
+}
+
+.footer-container .footer-container__column-small {
+    float: right;
+    margin-right: 0;
+    width: 32.2034%;
+}
+
+.credit-info-box {
+    float: left;
+    width: 32.2034%;
+}
+.credit-info-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.credit-info-box .credit-info-box__icon {
+    height: 80px;
+}
+
+.credit-info .credit-info__title {
+    font-size: 24px;
+    margin: 50px 0 30px;
+    text-align: center;
+	padding-top:50px;
+}
+
+.card::after, 
+.credit-info::after, 
+.credit-request-modal .credit-request-modal__title::after, 
+.footer-container::after, 
+.form-buttons-container::after, 
+.header .header-logo::after, 
+.tabs-container::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.card, 
+.credit-info, 
+.credit-request-modal .credit-request-modal__title, 
+.form-buttons-container, 
+.tabs-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 750px;
+}
+
+
+md-select-menu.md-default-theme md-content md-option[selected], 
+md-select-menu md-content md-option[selected] {
+    color: #cc0000 !important;
+}
+
+html.md-default-theme, 
+html, 
+body.md-default-theme, 
+body {
+    color: #58595b;
+}
+
+md-select .md-default-theme:focus:not([disabled]) .md-select-value,
+md-select:focus:not([disabled]) .md-select-value {
+	border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+	color: #cc0000 !important;
+}
+
+
+.footer-container, .header .header-logo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.footer-container {
+    padding: 0 46px;
+}
+
+.footer-container, .header .header-logo {
+    max-width: 1170px;
+}
+
+.steps-indicator .default a {
+	font-weight:normal;
+}
+
+.steps-indicator .done a {
+	color: #cc0000;
+}
+
+.steps-indicator .current a {
+	color: #cc0000;
+}
+
+.steps-indicator .editing a {
+	color: #cc0000;
+}
+
+md-input-container.md-default-theme label, 
+md-input-container label, 
+md-input-container.md-default-theme .md-placeholder, 
+md-input-container .md-placeholder {
+    color: #58595b;
+}
+
+
+md-input-container.md-input-focused:not(.md-input-invalid) .md-input,
+md-input-container.md-input-focused:not(.md-input-invalid) .md-input,
+md-input-container.md-default-theme.md-input-resized:not(.md-input-invalid) .md-input,
+md-input-container.md-input-resized:not(.md-input-invalid) .md-input {
+
+	border-color: #58595b;
+
+}
+
+md-input-container.md-default-theme.md-input-focused:not(.md-input-invalid) label,
+md-input-container.md-input-focused:not(.md-input-invalid) label,
+md-input-container.md-default-theme.md-input-focused:not(.md-input-invalid) md-icon,
+md-input-container.md-input-focused:not(.md-input-invalid) md-icon {
+
+	color:#58595b;
+
+}
+
+
+md-input-container:not(.md-input-focused):not(.md-input-invalid) md-select.md-default-theme .md-select-value span:first-child::after, md-input-container:not(.md-input-focused):not(.md-input-invalid) md-select .md-select-value span:first-child::after {
+    color: #58595b;
+}
+
+md-select.md-default-theme .md-select-value.md-select-placeholder, 
+md-select .md-select-value.md-select-placeholder {
+    color:#58595b;
+}
+
+md-card {
+    margin: 0 auto;
+}
+
+.md-default-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, 
+.md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, 
+.md-default-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator, 
+.md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {
+    background: #cc0000 none repeat scroll 0 0;
+
+}
+
+.md-default-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator, 
+.md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {
+    border: 1px solid #cc0000;
+}
+
+@media (min-width: 1200px){
+
+	.header-logo {
+		max-width: 1170px;
+	}
+
+}
+
+.header-logo {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__img {
+    display: inline-block;
+    height: 23px;
+    margin: 46px 0 46px 46px;
+}
+
+.header__img--svg {
+    width: 249px;
+    height: 23px;
+}
+
+#pitalica .md-select-value {
+	border-bottom: none;
+}
+
+md-card-content img {
+	text-align:center !important;
+	margin: 0 auto;
+	display:block;
+}
+
+md-card-content p {
+	min-height: 60px;
+}
+
+.progress {
+	height:2px; 
+	background-color:#cc0000; 
+	margin-top: 20px;
+	margin-bottom: 50px;
+}	
+
+md-tab-content {
+font-size: 16px;
+}
+
+md-tab-content ul {
+margin:0;
+list-style-type: none;
+}
+
+md-tab-content ul li::before {
+	content: "\25AA"; 
+	color: #cc0000;
+	display: inline-block; 
+	width: 1em;
+	margin-left: -1em;
+}
+
+.md-button.md-default-theme.md-raised.md-focused:not([disabled]),
+.md-button.md-raised.md-focused:not([disabled]) {
+	background-color:#cc0000; 
+
+}
+
+
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color: #cc0000; 
+}
+
+
+md-tabs.md-default-theme .md-tab .md-ripple-container, md-tabs .md-tab .md-ripple-container,
+md-tab-content ul li a {
+    color: #cc0000 !important;
+}
+
+md-tab-content ul li a {
+    color: #cc0000 !important;
+	text-decoration: none;
+}
+
+
+md-input-container.md-input-focused label:not(.md-no-float), 
+md-input-container.md-input-has-placeholder label:not(.md-no-float), 
+md-input-container.md-input-has-value label:not(.md-no-float) {
+    transform: translate3d(0px, 6px, 0px) scale(0.9);
+}
+
+
+
+.thank-you__description{
+	text-align:left
+}
+
+.thank-you__link{
+	text-decoration:none;
+	color:#D51F1E
+}
+
+.thank-you__image {
+    background-image: url(thank-you-waiting.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 220px 220px;
+    height: 220px;
+}
+
+.thank-you__image--completed{
+	background-image:url(thank-you-completed.gif);
+	background-size:220px 220px;
+	background-position: center center;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.thank-you__title {
+    font-size: 24px;
+    margin-bottom: 18px;
+	font-weight: bold;
+    text-align: center;
+	
+}
+
+.credit-info {
+	background-color: rgb(250, 250, 250);
+}
+
+
+md-input-container label.md-required:not(.md-container-ignore)::after {
+    color: #cc0000 !important;
+    font-size: 18px !important;
+}
+
+
+#leave_modal {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#leave_modal .modal {
+    animation: 0.3s ease 0s normal none 1 running popin;
+    background-color: #f0f1f2;
+    border-radius: 4px;
+    bottom: 0;
+    height: 500px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 600px;
+    z-index: 1;
+}
+
+#leave_modal .underlay {
+    animation: 0.5s ease 0s normal none 1 running fadein;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#leave_modal .modal-title {
+	font-size: 20px;
+    background-color: #cc0000;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+	font-family: Roboto,sans-serif;
+}
+
+
+
+#leave_modal .modal-body {
+    font-size: 0.9em;
+    padding: 20px 35px;
+}
+
+
+
+#leave_modal .modal-footer {
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+
+#leave_modal .modal {
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+
+.md-whiteframe-1dp, .md-whiteframe-z1 {
+    box-shadow: none;
+}
+
+input.ng-invalid-required,
+md-select.ng-invalid-required,
+md-select.ng-valid-required[aria-label*="- odaberite -"],
+md-select.ng-valid-required[aria-label*="- odaberite - *"],
+md-select.ng-untouched.ng-invalid-notdefault,
+input[name="email"],
+input[name="emailHELP"],
+input.ng-untouched[name="iznos_zadnj_mj"],
+md-datepicker-custom.ng-invalid-required
+ {
+	background: rgba(255, 255, 0, 0.15);
+}
+
+input.ng-invalid-required.ng-touched,
+md-select.ng-invalid-required.ng-touched,
+md-select.ng-valid-required.ng-touched[aria-label*="- odaberite -"],
+md-select.ng-valid-required.ng-touched[aria-label*="- odaberite - *"],
+md-select.ng-touched.ng-invalid-notdefault,
+input.ng-touched[name="email"],
+input.ng-touched[name="emailHELP"],
+input.ng-touched[name="iznos_zadnj_mj"],
+md-datepicker-custom.ng-invalid-required.ng-touched
+ {
+	background: rgba(255, 255, 255, 0);
+}
+
+
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #cc0000;
+    background: #cc0000;
+}
+
+md-input-container .md-input {
+	height: 33px;
+}
+
+md-option {
+height:25px
+}
+
+#select_container_8 md-option,
+#select_container_13 md-option,
+#select_container_17 md-option,
+#select_container_21 md-option {
+height:48px !important;
+}
+
+#datumrodjenja_label::after {
+    content: " *";
+    font-size: 13px;
+    vertical-align: top;
+	color: #cc0000 !important;
+    font-size: 18px !important;
+}
+
+md-select.ng-valid-required.ng-touched[aria-label*="- odaberite -"],
+md-select.ng-valid-required.ng-touched[aria-label*="- odaberite - *"]
+
+ {
+color:#cc0000;
+}
+    
+.md-select-menu-container.md-active md-select-menu>*{opacity:1;-webkit-transition:all .3s cubic-bezier(.55,0,.55,.2);transition:all .3s cubic-bezier(.55,0,.55,.2);-webkit-transition-duration:.15s;transition-duration:.15s;-webkit-transition-delay:.1s;transition-delay:.1s}
+
+@media only screen and (max-width: 41.250em) { 
+  
+	.layout-row {
+    flex-direction: column !important;
+	}
+  
+  
+}
+    
+
+</style>
+	
+  </head>
+
+  <body  ng-cloak style="font-family: Roboto,sans-serif;" class="header"  >
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> 
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ngMask/3.0.16/ngMask.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.0-beta.5/angular-moment.js"></script>	
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> 
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+	
+	<script src="angular-wizard.js"></script>  
+	<script src="datepicker.js"></script>  
+	<script src="angular-validator.min.js"></script>
+	<script src="ouibounce.min.js"></script>
+	
+	
+	
+	<script src="zip_db.js"></script>
+	<script src="poslovnice_db.js"></script>
+	
+  
+   <div class="header-logo"><div class="header__img">
+ <a href="//www.hpb.hr" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}" >
+  
+  <svg class="header__img--svg" viewBox="0 0 249 23" xmlns="http://www.w3.org/2000/svg"><g fill="#cc0000" fill-rule="evenodd" transform="translate(0-1)"><path d="m81 1h1v23h-1z"></path><text font-family="Roboto-Regular, Roboto" font-size="16"><tspan x="92.18" y="18.25">Online kartični zahtjev</tspan></text><g transform="translate(0 .332)"><path d="m3.826 18.668v-3c4.458.197 8.04-4.815 7.652-11h5.739c-.008 7.733-5.984 14-13.391 14m-3.826-18h22v22h-22v-22"></path><path d="m41.22 20.04v-14.756h-2.692v5.965h-8.238v-5.965h-2.692v14.756h2.692v-6.62h8.238v6.62z"></path><path d="m53.664 9.9c0 1.581-.947 2.551-2.839 2.551h-4.449v-5.08h4.449c1.727 0 2.839.907 2.839 2.53m2.532 0c0-3.056-2.272-4.616-5.323-4.616h-6.933v14.755h2.437v-5.502h4.33c3.217 0 5.489-1.602 5.489-4.637"></path><path d="m68.33 15.57c0 1.454-.805 2.445-3.01 2.445h-4.424v-4.89h4.495c1.87 0 2.934.928 2.934 2.445m-.686-6.323c0 .97-.663 1.876-2.296 1.876h-4.448v-3.815h4.448c1.657 0 2.296.843 2.296 1.939m3.17 6.26c0-2.045-1.49-3.12-2.792-3.436 1.207-.527 2.106-1.454 2.106-2.951 0-2.487-1.87-3.836-4.757-3.836h-6.814v14.755h6.578c3.62 0 5.678-1.538 5.678-4.532"></path></g></g></svg>
+  </a>
+  </div></div>
+  
+  
+
+  
+	   <br/>
+	   <br/>
+
+  
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        
+    </div>
+	
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer" style="max-width:770px; margin:0 auto">
+		
+      <section id="main_content" class="inner main-inner " ng-controller="WizardCtrl">
+	   
+	  <md-button class="button button--main button-card md-raised" ng-click="finished()" ng-show="false">test</md-button>
+	  
+        <div class="card--forms">
+		
+			<header id="header" class="inner" style="font-size: 48px; font-weight: 300; color:#58595b; font-family: Roboto-Regular, Roboto, sans-serif; text-align:center">Odaberite svoju karticu</header>		
+			
+		    <form name="okzForm" id="okzForm">
+		<wizard on-finish="finished()" indicators-position="top" >
+          <wz-step wz-title="1. Odabir kartice">
+       
+	   <div class="progress" style="width:25%;"></div>
+	   
+	   <p style="font-size:24px; margin: 0 0 75px 0;text-align:left" id="pitalica">
+ <md-input-container flex-gt-sm>
+            <md-select ng-model="okz.selectedImamnemam" ng-change="myFunc()" id="slctImamNemam" >
+
+				<md-option value="imam" ng-selected="true">Imam</md-option>
+				<md-option value="nemam">Nemam</md-option>
+
+            </md-select>
+          </md-input-container>
+
+	   tekući račun u HPB-u, 
+	   
+ <md-input-container flex-gt-sm>
+            <md-select ng-model="okz.selectedPosao" ng-change="myFunc()" id="slctSelectedPosao"  >
+			
+				<md-option value="zaposlen/a" ng-selected="true">zaposlen/a</md-option>
+				<md-option value="nezaposlen/a">nezaposlen/a</md-option>
+				<md-option value="umirovljenik/ica">umirovljenik/ica</md-option>
+				<md-option value="student/ica">student/ica</md-option>
+	
+            </md-select>
+          </md-input-container>
+
+	   sam i želim karticu čije troškove planiram otplatiti	
+	   
+<md-input-container  flex-gt-sm>
+            <md-select ng-model="okz.selectedOtplata" ng-change="myFunc()" id="slctSelectedOtplata" >
+			
+              <md-option value="odjednom, uz odgodu"  ng-disabled="okz.selectedPosao == 'nezaposlen/a' || (okz.selectedPosao == 'student/ica' && okz.selectedImamnemam == 'nemam')">odjednom, uz odgodu</md-option>
+				<md-option value="obrocno" ng-disabled="okz.selectedPosao == 'nezaposlen/a' || (okz.selectedPosao == 'student/ica' && okz.selectedImamnemam == 'nemam') ">obročno</md-option>
+				<md-option value="odmah" >odmah</md-option>
+            </md-select>
+          </md-input-container>	   
+	   
+	   .
+Karticu planiram koristiti u svrhu 	
+
+<md-input-container  flex-gt-sm>
+            <md-select ng-model="okz.selectedKupnja" ng-change="myFunc()" id="slctSelectedKupnja" >
+              <md-option value="kupnje na prodajnim mjestima" ng-selected="true">kupnje na prodajnim mjestima</md-option>
+				<md-option value="kupnje putem interneta">kupnje putem interneta</md-option>
+				<md-option value="podizanja gotovine">podizanja gotovine</md-option>
+            </md-select>
+          </md-input-container>	
+
+
+.	</p>
+	   
+
+	   <div style="width:100%; text-align:center; margin-top:25px">
+		
+		<md-button style="width: 60%" class="button button--main md-raised" onclick="showStepA(); document.getElementById('cards_txt').scrollIntoView(); myFunc(); ">Prikaži opcije</md-button>
+		
+		<br/><br/><br/>
+</div>
+	   
+<p style="font-size:24px;visibility:hidden;display:none" id="cards_txt">Odaberite karticu koju želite</p><br/>
+
+
+<div flex layout="row" layout-sm="column" id="cards_row" style="visibility:hidden; text-align:left; max-width:690px; margin:0 auto; display:none;">
+
+
+<div flex id="hp_hpb" >
+
+	 <md-card>
+        <md-card-content>
+
+				<img src="cards/Posta_hpb_clear.jpg" class="md-card-image" alt="Pošta & HPB Mastercard kartica" style="max-width:150px;max-height:95px;" />
+			
+				<p><strong>Pošta &amp; HPB Mastercard kartica<br/><br/></strong></p>
+	
+<ol>
+	<li> Otplata troškova kupovine u cijelosti ili obročnom otplatom</li>
+	<li >Modeli otplate na 3, 6 ili 12 rata</li>
+	<li >Prisloni i plati!</li>
+</ol>
+				
+			
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'Pošta & HPB Mastercard kartica', 'cards/Posta_hpb_clear.jpg', 'hp_hpb')">Više informacija</md-button><br/><br/>
+			
+			<md-button ng-model="okz.cb_hp_hpb" onclick="showCardDetails('hp_hpb_box'); hp_hpb_picked = true;" class="button button--main button-card md-raised" wz-next ng-click="changeTitle('Pošta & HPB Mastercard kartica', 'Posta_hpb_clear.jpg'); showStepA(); myFunc(); setProgress(2)">Odaberite</md-button>
+			
+			
+		</md-card-content>
+		
+
+		
+      </md-card> 
+	  
+</div>	
+
+<div flex id="prepaid">
+	  
+	  <md-card>
+        <md-card-content>
+
+				<img src="cards/Visa prepaid obradena.jpg" class="md-card-image" alt="VISA Prepaid kartica s nadoplatom" style="max-width:150px;max-height:95px" >
+			
+				<p><strong>VISA Prepaid kartica s nadoplatom<br/><br/></strong></p>
+				<ol>
+<li>Sigurna kupnja putem interneta</li>
+<li>Bez članarine i mjesečne naknade</li>
+<li>Kontrola osobnih troškova limitiranjem visine sredstava na računu</li>
+</ol>
+
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'VISA Prepaid kartica s nadoplatom', 'cards/Visa prepaid obradena.jpg', 'prepaid')">Više informacija</md-button><br/><br/>
+			
+			<md-button class="button button--main button-card md-raised" onclick="showCardDetails('prepaid_box'); prepaid_picked = true; " wz-next ng-click="changeTitle('VISA Prepaid kartica s nadoplatom', 'Visa prepaid obradena.jpg'); showStepA(); myFunc()">Odaberite</md-button>
+			
+		</md-card-content>
+      </md-card>
+	  
+</div>	
+
+<div flex id="visa_rate">
+
+	  <md-card>
+        <md-card-content>
+
+				<img src="cards/Visa rate obradena.jpg" class="md-card-image" alt="VISA kartica na rate" style="max-width:150px;max-height:95px" >
+			
+				<p><strong>VISA kartica na rate<br><br></strong></p>
+				<ol>
+<li>Modeli otplate na 3, 6 ili 12 rata uz mogućnost promjene</li>
+<li>Kupovina na rate bez kamata u zemlji i inozemstvu</li>
+<li>Gotovinu s bankomata i internetsku kupovinu otplaćujete na rate	</li>
+</ol>
+
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'VISA kartica na rate', 'cards/Visa rate obradena.jpg', 'visa_rate')">Više informacija</md-button><br/><br/>
+			
+			<md-button class="button button--main button-card md-raised" onclick="showCardDetails('visa_rate_box'); visa_rate_picked = true;   " wz-next ng-click="changeTitle('VISA  kartica na rate', 'Visa rate obradena.jpg'); showStepA(); myFunc()">Odaberite</md-button>
+			
+		</md-card-content>
+      </md-card>
+	  
+</div>	
+
+<div flex id="mc_revolv">
+
+	<md-card>
+        <md-card-content>
+
+				<img src="cards/MASTERCARDrevolving.jpg" class="md-card-image" alt="Mastercard kreditna kartica (revolving)" style="max-width:150px;max-height:95px" >
+			
+				<p><strong>Mastercard kreditna kartica (revolving)<br/><br/></strong></p>
+				<ol style="margin:0;padding:0 0 0 10px;">
+				
+<li>Odabir postotka mjesečne otplate ukupnih troškova </li>
+<li>Postotak otplate - 5, 10 ili 20 posto mjesečno	</li>
+<li>Odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+</ol>
+
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'Mastercard kreditna kartica (revolving)', 'cards/MASTERCARDrevolving.jpg', 'mc_revolv')">Više informacija</md-button><br/><br/>
+			
+		
+			
+			<md-button class="button button--main button-card md-raised" onclick="showCardDetails('mc_revolv_box'); mc_revolv_picked = true; " wz-next ng-click="changeTitle('Mastercard kreditna kartica (revolving)', 'MASTERCARDrevolving.jpg'); showStepA(); myFunc()">Odaberite</md-button>
+			
+		</md-card-content>
+      </md-card>
+	  
+</div>	
+
+<div flex id="mc_charge">
+	  
+	<md-card>
+        <md-card-content>
+
+				<img src="cards/MASTERCARDcharge.jpg" class="md-card-image" alt="Mastercard kartica s odgodom plaćanja (charge)" style="max-width:150px;max-height:95px" >
+			
+				<p><strong>Mastercard kartica s odgodom plaćanja (charge)</strong></p>
+				<ol>
+<li>Odgoda uz plaćanje troškova jednom mjesečno u cijelosti</li>
+<li>Odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+<li>Podizanje gotovine na bankomatima i isplatnim mjestima</li>
+</ol>
+
+
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'Mastercard kartica s odgodom plaćanja (charge)', 'cards/MASTERCARDcharge.jpg', 'mc_charge')">Više informacija</md-button><br/><br/>
+			
+			<md-button class="button button--main button-card md-raised" onclick="showCardDetails('mc_charge_box'); mc_charge_picked = true; " wz-next ng-click="changeTitle('Mastercard kartica s odgodom plaćanja (charge)', 'MASTERCARDcharge.jpg'); showStepA(); myFunc()">Odaberite</md-button>
+			
+		 </md-card-content>
+      </md-card>  
+	  
+</div>	
+
+<div flex id="mc_gold">
+	  
+	  <md-card>
+        <md-card-content>
+
+				<img src="cards/MASTERCARD GOLD.jpg" class="md-card-image" alt="Zlatna Mastercard kartica" style="max-width:150px;max-height:95px" >
+			
+				<p><strong>Zlatna Mastercard kartica<br/><br/></strong></p>
+				<ol>
+
+<li>Odgoda uz plaćanje troškova jednom mjesečno u cijelosti</li>
+<li>Visoki limiti potrošnje</li>
+<li>Osiguranje korisnika od posljedica nezgode</li>
+</ol>
+
+			<md-button class="button button--main button-card md-raised normalfont hpbgray_btn" ng-controller="CardDetailsCtrl" ng-click="showAdvanced($event, 'Zlatna Mastercard kartica', 'cards/MASTERCARD GOLD.jpg', 'mc_gold')">Više informacija</md-button><br/><br/>
+		
+			<md-button class="button button--main button-card md-raised hpbred_btn" onclick="showCardDetails('mc_gold_box'); mc_gold_picked = true; " wz-next ng-click="changeTitle('Zlatna Mastercard kartica', 'MASTERCARD GOLD.jpg'); showStepA(); myFunc()">Odaberite</md-button>
+			
+		</md-card-content>
+      </md-card>  
+	  
+</div>	
+
+<div flex style="display:none" id="supersmart">
+
+<md-card>
+        <md-card-content>
+		
+		<img src="/wp-content/uploads/2017/12/26990765dd6a5ff7160a25ec763fad8f.png" class="md-card-image" alt="SuperSmart HPB račun" style="max-width:150px;max-height: 95px;" >
+		
+		<p style="height:156px"><strong>SuperSmart HPB račun<br/><br/></strong>
+		
+ 		 Otvorite besplatan račun u 10 minuta putem mobitela.<br> Uz račun dobivate:</p>
+
+<ol>
+	<li>beskontaktnu Mastercard karticu</li>
+	<li>mobilno bankarstvo mHPB</li>
+</ol>
+			
+			<md-button ng-href="//play.google.com/store/apps/details?id=co.infinum.hpb" class="button button--main button-card md-raised hpbred_btn" >Preuzmi za Android</md-button><br/><br/>
+			<md-button ng-href="http://appstore.com/mHPB" class="button button--main button-card md-raised hpbred_btn" >Preuzmi za iPhone</md-button>
+
+</md-card-content>
+      </md-card>  
+</div>
+
+
+</div>	    
+	  
+	   
+           
+          </wz-step>
+          <wz-step wz-title="2. Osobni podaci" canexit="exitValidation()" >
+		  
+		  	   <div class="progress" style="width:50%;"></div>
+
+		  
+            <h1>2. Osobni podaci</h1>			
+			
+	
+	
+	
+      <md-input-container class="w95pct">
+        <label>Ime</label>
+        <input required ng-model="okz.ime" name="ime" class="form-input-box" md-minlength="2" md-maxlength="100" minlength="2" maxlength="100" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict trim />
+		<div ng-messages="okzForm.ime.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+          </div>
+
+      </md-input-container><br/>
+
+	       <md-input-container class="w95pct">
+        <label>Prezime</label>
+        <input required ng-model="okz.prezime" name="prezime" md-minlength="2" md-maxlength="100" minlength="2" maxlength="100" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict  trim />
+		<div ng-messages="okzForm.prezime.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>				
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+
+          </div>
+      </md-input-container>
+
+	        <md-input-container class="w95pct">
+        <label>OIB</label>
+        <input required oibvalidate ng-model="okz.oib" name="oib" md-minlength="11" md-maxlength="11" minlength="11" maxlength="11" ng-pattern="/^[0-9]{11}$/" trim />
+		<div ng-messages="okzForm.oib.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak. Saznajte svoj OIB: <a href="http://oib.oib.hr/SaznajOibWeb/fizickaOsoba.html" target="_blank" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}" >http://oib.oib.hr/SaznajOibWeb/fizickaOsoba.html</a></div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 11.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 11.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 11.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 11.</div>	
+			<div ng-message="pattern,oibvalidate"> Provjerite ispravnost OIB-a. Saznajte svoj OIB: <a href="http://oib.oib.hr/SaznajOibWeb/fizickaOsoba.html" target="_blank" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}"  >http://oib.oib.hr/SaznajOibWeb/fizickaOsoba.html</a> </div>			
+			
+          </div>
+      </md-input-container>
+
+	  
+	  <div style="margin: 0 0 5px 0; padding-left: 3px; ">
+            <label id="datumrodjenja_label">Datum rođenja</label>
+			 
+			 <md-datepicker-custom required name="datumrodjenja" 
+                     ng-model="okz.datumrodjenja" 
+                        
+                     md-custom-required="true" 
+                     md-custom-mask="39/19/2999" 
+                     md-custom-clean-mask="false" 
+                     md-custom-restrict="reject"
+					 md-hide-icons="triangle"
+					 
+					 md-min-date="okz.minDate" 
+					 md-max-date="okz.maxDate"
+					 
+					 validage
+					 
+					 
+					 >
+      </md-datepicker-custom>
+	  
+			<div ng-messages="okzForm.datumrodjenja.$error" ng-if="okzForm.datumrodjenja.$touched">
+				<div ng-message="required" style="color:#cc0000; font-size: 12px; line-height: 14px;">Obavezno ispunite ovaj podatak.</div>
+				<div ng-message="validage" style="color:#cc0000; font-size: 12px; line-height: 14px;">Morate biti punoljetni kako bi predali zahtjev za ovu karticu ili zatražite <a href="/gradanstvo/kartice/prepaid-kartice/" target="_blank" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}"  >VISA Prepaid karticu za mlade</a> zajedno s vašim zakonskim skrbnikom.</div> 
+
+			</div>
+			
+     </div>
+	  
+	  <md-input-container class="w95pct">
+        <label>Mjesto rođenja</label>
+        <input required="isRequired()" ng-model="okz.mjestorodjenja" name="mjestorodjenja" md-minlength="2" md-maxlength="100" minlength="2" maxlength="100" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict trim />
+		<div ng-messages="okzForm.mjestorodjenja.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>	
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+			
+			
+          </div>
+      </md-input-container>
+	  
+
+	  
+	   <md-input-container class="w95pct">
+        <label>Spol</label>		
+		
+            <md-select notdefault required ng-model="okz.spol" name="spol">
+<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+			
+				<md-option value="Muško"  >Muško</md-option>
+				<md-option value="Žensko" >Žensko</md-option>
+            </md-select>
+
+<div ng-messages="okzForm.spol.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>
+	  
+	  
+	  	   <md-input-container class="w95pct">
+        <label>Država rođenja</label>
+       <input required ng-model="okz.drzavarodjenja" name="drzavarodjenja" minlength="3" maxlength="100" md-minlength="3" md-maxlength="100" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict ng-init="okz.drzavarodjenja='Hrvatska'" trim />
+	   <div ng-messages="okzForm.drzavarodjenja.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 3.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 3.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>	
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+			
+          </div>
+      </md-input-container>
+	  
+	  	   <md-input-container class="w95pct">
+        <label>Državljanstvo</label>
+        <input required ng-model="okz.drzavljanstvo" name="drzavljanstvo" minlength="3" maxlength="100" md-minlength="3" md-maxlength="100" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict ng-init="okz.drzavljanstvo='hrvatsko'" trim />
+		<div ng-messages="okzForm.drzavljanstvo.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 3.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 3.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>				
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+
+          </div>
+      </md-input-container>
+	  
+	  	   <md-input-container class="w95pct">
+        <label>Telefon / mobitel</label>
+        <input required ng-model="okz.telefon" name="telefon" minlength="6" maxlength="15" md-minlength="6" md-maxlength="15" pattern="[0-9\s-()\\/]+" trim />
+		<div ng-messages="okzForm.telefon.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 15.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 15.</div>	
+			<div ng-message="pattern">Telefon / mobitel može sadržavati samo brojke, razmak i sljedeće znakove: ( ) - \ /</div>			
+          </div>
+      </md-input-container>
+	  
+	  
+	  	   <md-input-container class="w95pct">
+        <label>Telefon (dodatno)</label>
+        <input ng-model="okz.mobitel" name="mobitel" minlength="9" maxlength="15" md-minlength="9" md-maxlength="15" pattern="[0-9\s-()\\/]+" trim />
+		<div ng-messages="okzForm.mobitel.$error">
+			<div ng-message="md-minlength">Minimalni broj znakova je 9.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 15.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 9.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 15.</div>	
+			<div ng-message="pattern">Telefon (dodatno) može sadržavati samo brojke, razmak i sljedeće znakove: ( ) - \ /</div>			
+			
+          </div>
+      </md-input-container>
+	  
+	  <!--
+	  	   <md-input-container class="w95pct">
+        <label>E-mail</label>
+        <input checkemail required ng-model="okz.email" name="email" minlength="5" maxlength="40" md-minlength="5" md-maxlength="40" />
+		<div ng-messages="okzForm.email.$error">
+			
+			<div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 40.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 40.</div>				
+			<div ng-message="checkemail">E-mail adresa mora biti odgovarajućeg formata.</div>
+			
+          </div>
+      </md-input-container>
+	  -->
+	  
+	   <md-input-container class="w95pct">
+        <label>E-mail</label>
+        <input required ng-model="okz.email" name="email" minlength="5" maxlength="40" md-minlength="5" md-maxlength="40" ng-pattern="/^.+@.+\..+$/" trim >
+		<div ng-messages="okzForm.email.$error">
+			
+			<div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>				
+			<div ng-message="pattern">E-mail adresa mora biti odgovarajućeg formata.</div>
+			
+          </div>
+      </md-input-container>
+	  
+	  	   <md-input-container class="w95pct">
+        <label>Adresa (ulica i broj)</label>
+        <input required ng-model="okz.adresaid" name="adresaid" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" trim />
+		<div ng-messages="okzForm.adresaid.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>
+	  
+	  <div  layout="column" ng-cloak>
+	   <md-input-container class="w95pct" >
+        <label>Poštanski broj i Mjesto</label>
+		        <input required ng-model="okz.adresa_mjesto" name="adresa_mjesto" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" trim />
+		<div ng-messages="okzForm.adresa_mjesto.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+		
+		
+	 
+	  </md-input-container>
+	  
+	  
+	  <div ng-messages="okzForm.adresa_mjesto.$error" ng-if="okzForm.adresa_mjesto.$touched">
+            <div ng-message="required, notdefault" style="color:#cc0000;font-size:12px">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-require-match,md-has-not-found" style="color:#cc0000;font-size:12px">Obavezno odaberite jednu stavku iz liste.</div>
+			
+          </div>
+	  
+	  </div>
+	  <br>
+	  
+			
+			 <md-input-container class="w95pct">
+        <label>Stručna sprema</label>
+		
+		<md-select notdefault required ng-model="okz.ss" name="ss">
+<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+				<md-option value="NKV">NKV</md-option>
+				<md-option value="SSS, VKV">SSS, VKV</md-option>
+				<md-option value="VŠS">VŠS</md-option>
+				<md-option value="VSS">VSS</md-option>
+				<md-option value="Magisterij, Doktorat">Magisterij, Doktorat</md-option>
+		
+            </md-select>
+		
+		<div ng-messages="okzForm.ss.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+			
+			
+			
+						 <md-input-container class="w95pct">
+        <label>Zvanje</label>
+        <input trim  ng-model="okz.zvanje" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" name="zvanje" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" ng-pattern-restrict />
+		<div ng-messages="okzForm.zvanje.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+
+			
+          </div>
+		
+      </md-input-container>	
+			
+			
+
+						 <md-input-container class="w95pct">
+        <label>Bračni status</label>
+		
+		<md-select ng-model="okz.bracni_status" name="bracni_status">
+
+				<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+				<md-option value="udana/oženjen (u reg. partnerstvu)">udana/oženjen (u reg. partnerstvu)</md-option>
+				<md-option value="neudana/neoženjen">neudana/neoženjen</md-option>
+				<md-option value="udovica/udovac">udovica/udovac</md-option>
+				<md-option value="razveden/a">razveden/a</md-option>
+		
+            </md-select>		
+
+
+      </md-input-container>	
+
+			
+
+						 <md-input-container class="w95pct">
+        <label>Upišite broj članova kućanstva</label>
+        <input trim type="number" min="1" max="20" ng-model="okz.br_cl_kucanstva" name="br_cl_kucanstva"  ng-pattern="/^[0-9]*$/" />
+		<div ng-messages="okzForm.br_cl_kucanstva.$error">
+						
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>			
+			<div ng-message="min">Minimalna vrijednost je 1.</div>
+			<div ng-message="max">Maksimalna vrijednost je 20.</div>
+
+			
+          </div>
+      </md-input-container>	
+
+			
+
+			 <md-input-container class="w95pct">
+        <label>Upišite broj uzdržavanih članova kućanstva</label>
+        <input trim ng-model="okz.br_uzd_cl_kucanstva" name="br_uzd_cl_kucanstva" minlength="1" maxlength="2" md-minlength="1" md-maxlength="2" ng-pattern="/^[0-9]*$/" />
+		<div ng-messages="okzForm.br_uzd_cl_kucanstva.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 2.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 2.</div>
+									<div ng-message="pattern"> Molimo koristite samo brojeve. </div>			
+
+          </div>
+      </md-input-container>				
+			
+			
+
+						 <md-input-container class="w95pct">
+        <label>Stanovanje</label>
+		
+
+		<md-select ng-model="okz.stanovanje" name="stanovanje" >
+<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+				<md-option value="vlastiti stan/kuća" >vlastiti stan/kuća</md-option>
+				<md-option value="kod supružnika/partnera">kod supružnika/partnera</md-option>
+				<md-option value="podstanar">podstanar</md-option>
+				<md-option value="kod roditelja/obitelji">kod roditelja</md-option>
+				<md-option value="ostalo">ostalo</md-option>
+		
+            </md-select>		
+
+      </md-input-container>	
+
+			
+			<md-input-container class="w95pct" ng-show="okz.stanovanje == 'ostalo'">
+        <label>Stanovanje (ostalo)</label>
+        <input trim required ng-model="okz.stanovanje_ostalo" name="stanovanje_ostalo" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" />
+		<div ng-messages="okzForm.stanovanje_ostalo.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>
+			
+
+			 <md-input-container class="w95pct">
+        <label>Broj godina stanovanja na trenutnoj adresi</label>
+		
+				<md-select ng-model="okz.br_god_tr_adresa"  name="br_god_tr_adresa">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="do 3" >do 3</md-option>
+<md-option value="od 3-5">od 3-5</md-option>
+<md-option value="5 i više">5 i više</md-option>
+
+            </md-select>		
+		
+      </md-input-container>	
+
+			
+
+<b>Odaberite starost pokretnine u vlasništvu</b><br><br>
+
+
+ <md-input-container class="w95pct">
+        <label>automobil</label>
+		
+				<md-select ng-model="okz.auto" name="auto" >
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+      </md-input-container>	
+
+
+		 
+         <md-input-container class="w95pct" ng-repeat="extra_auto in okz.extra_auto">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_auto.splice($index,1)">×</a> <label>automobil {{$index+2}}.</label> 
+		
+		
+		<md-select ng-model="extra_auto.automobil" >
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+		
+         
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_auto[okz.extra_auto.length] = {}">Dodaj novi automobil +</a><br><br><br>
+	  
+ <md-input-container class="w95pct">
+        <label>motor</label>
+		
+				<md-select ng-model="okz.motor" name="motor" >
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+      </md-input-container>	
+			
+<md-input-container class="w95pct" ng-repeat="extra_motor in okz.extra_motor">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_motor.splice($index,1)">×</a> <label>motor {{$index+2}}.</label> 
+		
+		
+		<md-select ng-model="extra_motor.motor" >
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+		
+         
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_motor[okz.extra_motor.length] = {}">Dodaj novi motor +</a><br><br><br>
+
+			
+
+ <md-input-container class="w95pct">
+        <label>plovilo</label>
+		
+				<md-select ng-model="okz.plovilo" name="plovilo" >
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+      </md-input-container>				
+			
+
+<md-input-container class="w95pct" ng-repeat="extra_plovilo in okz.extra_plovilo">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_plovilo.splice($index,1)">×</a> <label>plovilo {{$index+2}}.</label> 
+		
+		
+		<md-select ng-model="extra_plovilo.plovilo" >
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-5">1-5</md-option>
+<md-option value="5-10">5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>		
+		
+		
+         
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_plovilo[okz.extra_plovilo.length] = {}">Dodaj novo plovilo +</a><br><br><br>
+
+						
+			
+			
+<b>Upišite godinu izgradnje/adaptacije nekretnine u vlasništvu</b><br><br>
+
+		
+			 <md-input-container class="w95pct">
+        <label>kuća</label>
+        <input trim ng-model="okz.kuca" name="kuca" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/"  />
+		
+			<div ng-messages="okzForm.kuca.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>		
+			
+          </div>
+		
+      </md-input-container>	
+			 
+
+<md-input-container class="w95pct" ng-repeat="extra_kuca in okz.extra_kuca">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_kuca.splice($index,1)">×</a> <label>kuća {{$index+2}}.</label> 
+		
+		
+<input trim ng-model="extra_kuca.kuca" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/"  />		
+
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_kuca[okz.extra_kuca.length] = {}">Dodaj novu kuću +</a><br><br><br>
+			 
+			 
+			 
+ <md-input-container class="w95pct">
+        <label>stan</label>
+        <input trim ng-model="okz.stan" name="stan" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/" />
+		<div ng-messages="okzForm.stan.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>		
+			
+          </div>
+      </md-input-container>	
+
+	  <md-input-container class="w95pct" ng-repeat="extra_stan in okz.extra_stan">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_stan.splice($index,1)">×</a> <label>stan {{$index+2}}.</label> 
+		
+		
+<input trim ng-model="extra_stan.stan" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/"  />		
+
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_stan[okz.extra_stan.length] = {}">Dodaj novi stan +</a><br><br><br>
+	  
+ <md-input-container class="w95pct">
+        <label>vikendica</label>
+        <input trim ng-model="okz.vikendica" name="vikendica" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/" />
+		<div ng-messages="okzForm.vikendica.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>		
+			
+          </div>
+      </md-input-container>	
+
+	  <md-input-container class="w95pct" ng-repeat="extra_vikendica in okz.extra_vikendica">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_vikendica.splice($index,1)">×</a> <label>vikendica {{$index+2}}.</label> 
+		
+		
+<input trim ng-model="extra_vikendica.vikendica" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/"  />		
+
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_vikendica[okz.extra_vikendica.length] = {}">Dodaj novu vikendicu +</a><br><br><br>
+	  
+ <md-input-container class="w95pct">
+        <label>zemljište</label>
+        <input trim ng-model="okz.zemljiste" name="zemljiste" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/" />
+		<div ng-messages="okzForm.zemljiste.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>		
+			
+			
+          </div>
+      </md-input-container>	
+
+	  <md-input-container class="w95pct" ng-repeat="extra_zemljiste in okz.extra_zemljiste">
+		<a style="color: #cc0000; text-decoration:none" href="" ng-click="okz.extra_zemljiste.splice($index,1)">×</a> <label>zemljište {{$index+2}}.</label> 
+		
+		
+<input trim ng-model="extra_zemljiste.zemljiste" minlength="4" maxlength="4" ng-pattern="/^[0-9]*$/"  />		
+
+		 </md-input-container>	
+
+			<a style="color: #cc0000; text-decoration:none;font-size: 14px;" href="" ng-click="okz.extra_zemljiste[okz.extra_zemljiste.length] = {}">Dodaj novo zemljište +</a><br><br><br>
+	  
+ <md-input-container class="w95pct">
+        <label>ostalo</label>
+        
+		<input trim ng-model="okz.nekr_ostalo" name="nekr_ostalo" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" />
+		<div ng-messages="okzForm.nekr_ostalo.$error">
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+		
+      </md-input-container>		  
+			 
+
+			 <b>Broj kreditnih kartica u drugim kreditnim institucijama</b><br><br>
+		
+		
+			 <md-input-container class="w95pct">
+        <label>American Express</label>
+        
+		
+						<md-select ng-model="okz.amex" name="amex">
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-3">1-3</md-option>
+<md-option value="3-5">3-5</md-option>
+<md-option value="5+">&gt; 5</md-option>
+
+            </md-select>	
+		
+      </md-input-container>	
+			 
+ <md-input-container class="w95pct">
+        <label>Diners club</label>
+        
+						<md-select ng-model="okz.diners" name="diners">
+
+<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+						
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-3">1-3</md-option>
+<md-option value="3-5">3-5</md-option>
+<md-option value="5+">&gt; 5</md-option>
+
+            </md-select>	
+		
+		
+      </md-input-container>	
+
+ <md-input-container class="w95pct">
+        <label>Mastercard</label>
+        
+						<md-select ng-model="okz.mc" name="mc">
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-3">1-3</md-option>
+<md-option value="3-5">3-5</md-option>
+<md-option value="5+">&gt; 5</md-option>
+
+            </md-select>	
+		
+		
+      </md-input-container>	
+
+ <md-input-container class="w95pct">
+        <label>Visa</label>
+      
+	  				<md-select ng-model="okz.visa" name="visa">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="manje od 1" >< 1</md-option>
+<md-option value="1-3">1-3</md-option>
+<md-option value="3-5">3-5</md-option>
+<md-option value="5+">&gt; 5</md-option>
+
+            </md-select>	
+	  
+	  
+      </md-input-container>	
+
+ <md-input-container class="w95pct">
+        <label>ostale kartice</label>
+        
+
+		       <input trim ng-model="okz.kartice_ostale" name="kartice_ostale" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100"  />
+		
+<div ng-messages="okzForm.kartice_ostale.$error">
+			
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>
+			
+          </div>
+		
+		
+		
+      </md-input-container>		  
+			 			 
+		
+			
+
+<md-button onclick="showStepA(); document.getElementById('header').innerHTML = 'Odaberi svoju karticu'; location.reload();" class="button button--main button-card md-raised" wz-previous style="width:48% !important; margin-right: 5px" >&larr; Natrag</md-button>
+
+<md-button class="button button--main button-card md-raised" wz-next style="width:48% !important" 
+ng-disabled="!okz.ime || !okz.prezime || !okz.oib || !okz.datumrodjenja || !okz.mjestorodjenja || okz.spol == 0 || !okz.spol || !okz.drzavarodjenja || !okz.drzavljanstvo || !okz.telefon || !okz.email || !okz.adresaid || !okz.adresa_mjesto || okz.ss == 0 || !okz.ss || (!okz.stanovanje_ostalo && okz.stanovanje == 'ostalo') " 
+
+ >Dalje &rarr;</md-button>
+		
+			
+          </wz-step>
+          <wz-step wz-title="3. Zaposlenje i prihodi" wz-disabled="{{step_three_disabled}}">
+		  
+		  	   <div class="progress" style="width:75%;"></div>
+
+		  
+            <h1>3. Zaposlenje i prihodi</h1>
+			
+			<md-input-container class="w95pct">
+        <label>Naziv poslodavca</label>
+        <input trim required ng-model="okz.poslodavca" name="poslodavca" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100"/>
+		<div ng-messages="okzForm.poslodavca.$error">
+		            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>				
+          </div>
+      </md-input-container>	
+
+	<md-input-container class="w95pct">
+        <label>OIB poslodavca</label>
+        <input trim required oibvalidate ng-model="okz.oib2" name="oib2" minlength="11" maxlength="11" md-minlength="11" md-maxlength="11"  ng-pattern="/^[0-9]{11}$/" />
+		<div ng-messages="okzForm.oib2.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak. Saznajte OIB poslodavca: <a href="http://oib.oib.hr/SaznajOibWeb/pravnaOsoba.html" target="_blank" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}"  >http://oib.oib.hr/SaznajOibWeb/pravnaOsoba.html</a></div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 11.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 11.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 11.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 11.</div>				
+			<div ng-message="pattern,oibvalidate"> Molimo provjerite ispravnost OIB-a . Saznajte OIB poslodavca: <a href="http://oib.oib.hr/SaznajOibWeb/pravnaOsoba.html" target="_blank"  onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}"   >http://oib.oib.hr/SaznajOibWeb/pravnaOsoba.html</a></div>			
+			
+          </div>
+      </md-input-container>	
+	  
+	<md-input-container class="w95pct">
+        <label>Matični broj (MB)</label>
+        <input trim ng-model="okz.mb" name="mb" minlength="8" maxlength="8" md-minlength="8" md-maxlength="8" ng-pattern="/^[0-9]*$/"/>
+		<div ng-messages="okzForm.mb.$error">
+<div ng-message="md-minlength">Minimalni broj znakova je 8.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 8.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 8.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 8.</div>							
+			<div ng-message="pattern"> Molimo koristite samo brojeve. </div>			
+
+          </div>
+      </md-input-container>	
+
+	  <md-input-container class="w95pct">
+        <label>Vrsta poslodavca</label>		
+		
+		
+            <md-select ng-model="okz.vrsta_poslodavca" name="vrsta_poslodavca">
+<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="javno poduzeće" >javno poduzeće</md-option>
+<md-option value="privatno poduzeće - veliko">privatno poduzeće - veliko</md-option>
+<md-option value="privatno poduzeće - srednje">privatno poduzeće - srednje</md-option>
+<md-option value="privatno poduzeće - malo">privatno poduzeće - malo</md-option>  
+<md-option value="obrt">obrt</md-option>
+<md-option value="honorarni radnik">honorarni radnik</md-option>
+<md-option value="ostalo">ostalo</md-option>
+
+            </md-select>
+		
+      </md-input-container>	
+	  
+		<md-input-container class="w95pct" ng-show="okz.vrsta_poslodavca == 'ostalo'">
+        <label>Vrsta poslodavca (ostalo)</label>
+        <input trim required ng-model="okz.vrsta_poslodavca_ostalo" name="vrsta_poslodavca_ostalo" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" />
+		<div ng-messages="okzForm.vrsta_poslodavca_ostalo.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>
+	  
+
+	  <md-input-container class="w95pct">
+        <label>Adresa poslodavca (ulica i broj)</label>
+        <input trim ng-model="okz.pb_mjesto" name="pb_mjesto" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100"/>
+		<div ng-messages="okzForm.pb_mjesto.$error">
+			<div ng-message="md-minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>		  
+	  
+	  
+	  <md-input-container class="w95pct">
+        <label>Adresa poslodavca (poštanski broj i mjesto)</label>
+        <input ng-model="okz.adresa_poslodavca" name="adresa_poslodavca" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100"/> 
+		
+		
+		
+		<div ng-messages="okzForm.adresa_poslodavca.$error">
+<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>	
+	  
+
+	  
+	  <md-input-container class="w95pct">
+        <label>Telefon / mobitel na poslu</label>
+		
+        <input trim ng-model="okz.tel_posao" name="tel_posao" minlength="6" maxlength="15" md-minlength="6" md-maxlength="15" pattern="[0-9\s-()\\/]+" ng-pattern-restrict/>
+		
+		<div ng-messages="okzForm.tel_posao.$error">
+			<div ng-message="md-minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 15.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 15.</div>		
+			<div ng-message="pattern">Telefon može sadržavati samo brojke, razmak i sljedeće znakove: ( ) - \ /</div>			
+			
+          </div>		
+		
+      </md-input-container>	
+	  
+	   <md-input-container class="w95pct">
+        <label>Vrsta radnog odnosa</label>
+		
+		            <md-select notdefault required ng-model="okz.vrsta_ro" name="vrsta_ro">
+					<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="na određeno do" >na određeno do</md-option>
+<md-option value="neodređeno">neodređeno</md-option>
+<md-option value="sezonski/povremeno">sezonski/povremeno</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.vrsta_ro.$error">
+
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+    
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	  <br ng-show="okz.vrsta_ro == 'na određeno do'" />
+        <label ng-show="okz.vrsta_ro == 'na određeno do'" >Na određeno do</label>
+		
+		<md-datepicker-custom name="odredjenodo" 
+                     ng-model="okz.odredjenodo" ng-show="okz.vrsta_ro == 'na određeno do'"
+                        
+                     md-custom-required="okz.vrsta_ro == 'na određeno do'" 
+                     md-custom-mask="39/19/2999" 
+                     md-custom-clean-mask="false" 
+                     md-custom-restrict="reject"
+					 md-hide-icons="triangle"
+					 
+					 notinpast
+					 
+					 
+					 >
+      </md-datepicker-custom>
+	  
+		
+		<div ng-messages="okzForm.odredjenodo.$error" ng-show="okz.vrsta_ro == 'na određeno do'">
+			<div ng-message="required" style="color:#cc0000; font-size:12px">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="notinpast" style="color:#cc0000; font-size:12px">Ovaj datum ne može biti prazan ili u prošlosti.</div>
+
+			</div>		
+		<br ng-show="okz.vrsta_ro == 'na određeno do'" />
+	  
+	  
+	   <md-input-container class="w95pct">
+        <label>Pozicija zaposlenja</label>
+		
+		<md-select notdefault required ng-model="okz.poz_zaposlenja" name="poz_zaposlenja">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="direktor" >direktor</md-option>
+<md-option value="rukovoditelj">rukovoditelj</md-option>
+<md-option value="zaposlenik" >zaposlenik</md-option>
+<md-option value="umirovljenik">umirovljenik</md-option>
+<md-option value="slobodna profesija">slobodna profesija </md-option>
+<md-option value="ostalo">ostalo</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.poz_zaposlenja.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	  
+	  <md-input-container class="w95pct" ng-show="okz.poz_zaposlenja == 'ostalo'">
+        <label>Pozicija zaposlenja (ostalo)</label>
+        <input trim required ng-model="okz.poz_zaposlenja_ostalo" name="poz_zaposlenja_ostalo" minlength="2" maxlength="100" md-minlength="2" md-maxlength="100" />
+		<div ng-messages="okzForm.poz_zaposlenja_ostalo.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 2.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>							
+          </div>
+      </md-input-container>
+	  
+	  
+	   <md-input-container class="w95pct">
+        <label>Broj godina staža kod trenutnog poslodavca </label>
+		
+		<md-select notdefault required ng-model="okz.broj_god_staza" name="broj_god_staza">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="do 1" >do 1</md-option>
+<md-option value="od 1-3">od 1-3</md-option>
+<md-option value="od 3-7">od 3-7</md-option>
+<md-option value="7 i više">7 i više</md-option>
+
+            </md-select>		
+		
+		<div ng-messages="okzForm.broj_god_staza.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	   <md-input-container class="w95pct">
+        <label>Broj godina ukupnog radnog staža</label>
+		
+				<md-select notdefault required ng-model="okz.broj_god_uk_staza" name="broj_god_uk_staza">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="manje od 1" ng-disabled="okz.broj_god_staza != 'do 1'" >< 1</md-option>
+<md-option value="1-5" ng-disabled="okz.broj_god_staza == '7 i više' " >1-5</md-option>
+<md-option value="5-10" >5-10</md-option>
+<md-option value="10+">&gt; 10</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.broj_god_uk_staza.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	   <md-input-container class="w95pct">
+        <label>Prosječni mjesečni prihod u posljednja 3 mj. prije tekućeg mjeseca od nesamostalnog rada (HRK)</label>
+        <input trim inputcurrency ng-model="okz.prosj_mjesecni_nesamos"  name="prosj_mjesecni_nesamos" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+
+		<div ng-messages="okzForm.prosj_mjesecni_nesamos.$error">
+			
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>			
+			<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>		
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	  
+	  
+	   <md-input-container class="w95pct">
+        <label> Prosječni mjesečni prihod u posljednja 3 mj. prije tekućeg mjeseca od samostalnog rada (HRK)</label>
+        <input trim inputcurrency ng-model="okz.prosj_mjesecni_samos" name="prosj_mjesecni_samos" pattern="[0-9.]+"  minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.prosj_mjesecni_samos.$error">
+						
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>			
+			<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>		
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	 
+	  
+	   <md-input-container class="w95pct">
+        <label>Iznos zadnjeg mjesečnog prihoda (HRK)</label>
+        <input notdefaultmoney trim required inputcurrency ng-model="okz.iznos_zadnj_mj" name="iznos_zadnj_mj" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.iznos_zadnj_mj.$error">
+				    <div ng-message="required, notdefaultmoney">Obavezno ispunite ovaj podatak.</div>
+
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>			
+
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>		
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	  
+
+ <md-input-container class="w95pct">
+        <label>Iznos zadnjeg mjesečnog prihoda supružnika (HRK)</label>
+        <input trim inputcurrency ng-model="okz.iznos_zadnj_mj_supr" name="iznos_zadnj_mj_supr" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+
+		<div ng-messages="okzForm.iznos_zadnj_mj_supr.$error">
+			
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>		
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>	
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	  
+
+ <md-input-container class="w95pct">
+        <label> Mjesečne obveze u drugim bankama kao dužnik (HRK)</label>
+        <input trim inputcurrency ng-model="okz.mj_obv_dr_bank_duznik" name="mj_obv_dr_bank_duznik" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.mj_obv_dr_bank_duznik.$error">
+							
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>		
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>	
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	 
+
+	   <md-input-container class="w95pct">
+        <label> Mjesečne obveze u drugim bankama kao sudužnik (HRK)</label>
+        <input trim inputcurrency ng-model="okz.mj_obv_dr_bank_suduznik" name="mj_obv_dr_bank_suduznik" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.mj_obv_dr_bank_suduznik.$error">
+
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>	
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>	
+			
+          </div>	
+		
+      </md-input-container>	
+	  
+	 
+
+ <md-input-container class="w95pct">
+        <label>  Mjesečne obveze u drugim bankama kao jamac (HRK)</label>
+        <input trim inputcurrency ng-model="okz.mj_obv_dr_bank_jamac" name="mj_obv_dr_bank_jamac" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.mj_obv_dr_bank_jamac.$error">
+						
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>	
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>	
+			
+          </div>	
+		
+      </md-input-container>		  
+	  
+	
+
+	  
+ <md-input-container class="w95pct">
+        <label>Ostale obveze u drugim bankama (HRK)</label>
+        <input trim inputcurrency ng-model="okz.obv_dr_bank" name="obv_dr_bank" pattern="[0-9.]+" minlength="1" maxlength="10" md-minlength="1" md-maxlength="10" />
+		
+		<div ng-messages="okzForm.obv_dr_bank.$error">
+						
+			<div ng-message="pattern">Koristite samo brojke i točke.</div>		
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 10.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 10.</div>	
+			
+          </div>	
+		
+      </md-input-container>		  
+	  
+	  
+	  <md-button class="button button--main button-card md-raised" wz-previous style="width:48% !important; margin-right: 5px" >&larr; Natrag</md-button>
+
+<md-button class="button button--main button-card md-raised" wz-next style="width:48% !important" 
+
+ng-disabled="!okz.poslodavca || !okz.oib2 || !okz.vrsta_ro || !okz.poz_zaposlenja || !okz.broj_god_staza || !okz.broj_god_uk_staza || !okz.iznos_zadnj_mj || (!okz.odredjenodo && okz.vrsta_ro == 'na određeno do') || (!okz.poz_zaposlenja_ostalo && okz.poz_zaposlenja == 'ostalo') || (!okz.vrsta_poslodavca_ostalo && okz.vrsta_poslodavca == 'ostalo') " ng-click="unlockAll()" 
+
+ >Dalje &rarr;</md-button>
+	  
+
+          </wz-step>
+		  
+		  
+
+          <wz-step wz-title="{{total_steps}}. Podaci o kartici i predaja zahtjeva">
+		  
+		  	<div class="progress" style="width:100%;"></div>
+
+		  
+		  <div id="step4">
+		  
+            <h1>{{total_steps}}. Podaci o kartici i predaja zahtjeva</h1>
+			
+			
+			  <md-input-container class="w95pct">
+        <label>Poslovnica u kojoj želite predati dokumentaciju</label>
+		
+		
+		
+		
+				<md-select notdefault required ng-model="okz.poslovnica" name="poslovnica">
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="Beli Manastir, Trg Slobode 38">Beli Manastir, Trg Slobode 38</md-option>
+<md-option value="Bjelovar, Eugena Kvaternika 1">Bjelovar, Eugena Kvaternika 1</md-option>
+<md-option value="Cavtat, Trumbićeva 10">Cavtat, Trumbićeva 10</md-option>
+<md-option value="Čakovec, Masarykova 28">Čakovec, Masarykova 28</md-option>
+<md-option value="Donji Miholjac, Vukovarska 4">Donji Miholjac, Vukovarska 4</md-option>
+<md-option value="Dubrovnik, Dr. Ante Starčevića 24">Dubrovnik, Dr. Ante Starčevića 24</md-option>
+<md-option value="Đakovo, Bana Josipa Jelačića 8">Đakovo, Bana Josipa Jelačića 8</md-option>
+<md-option value="Gospić, Trg S. Radića bb">Gospić, Trg S. Radića bb</md-option>
+<md-option value="Gruda, Gruda 43">Gruda, Gruda 43</md-option>
+<md-option value="Imotski, Šetalište Stjepana Radića 19">Imotski, Šetalište Stjepana Radića 19</md-option>
+<md-option value="Karlovac, Ivana Gorana Kovačića 4">Karlovac, Ivana Gorana Kovačića 4</md-option>
+<md-option value="Kaštel Stari, Ivana Danila 12">Kaštel Stari, Ivana Danila 12</md-option>
+<md-option value="Knin, Zvonimirova 9">Knin, Zvonimirova 9</md-option>
+<md-option value="Koprivnica, Florijanski trg 13">Koprivnica, Florijanski trg 13</md-option>
+<md-option value="Makarska, Trg 4. svibnja 533. 1">Makarska, Trg 4. svibnja 533. 1</md-option>
+<md-option value="Našice, J. J. Strossmayera 2">Našice, J. J. Strossmayera 2</md-option>
+<md-option value="Osijek, Prolaz J. Benešića 2">Osijek, Prolaz J. Benešića 2</md-option>
+<md-option value="Osijek, Trg A. Starčevića 7">Osijek, Trg A. Starčevića 7</md-option>
+<md-option value="Poreč, Trg Slobode 14">Poreč, Trg Slobode 14</md-option>
+<md-option value="Požega, Cehovska 8">Požega, Cehovska 8</md-option>
+<md-option value="Pula, Anticova 9">Pula, Anticova 9</md-option>
+<md-option value="Pula, Banjole, Kamik 24">Pula, Banjole, Kamik 24</md-option>
+<md-option value="Rijeka, Trpimirova 3b">Rijeka, Trpimirova 3b</md-option>
+<md-option value="Rijeka, Uljarska 4a">Rijeka, Uljarska 4a</md-option>
+<md-option value="Sinj, Trg Kralja Tomislava 1">Sinj, Trg Kralja Tomislava 1</md-option>
+<md-option value="Sisak, Stjepana i Antuna Radića 34">Sisak, Stjepana i Antuna Radića 34</md-option>
+<md-option value="Slavonski Brod, Kralja Petra Krešimira IV br. 3">Slavonski Brod, Kralja Petra Krešimira IV br. 3</md-option>
+<md-option value="Solin, Kralja Zvonimira 87a">Solin, Kralja Zvonimira 87a</md-option>
+<md-option value="Split, Bihaćka 2">Split, Bihaćka 2</md-option>
+<md-option value="Split, Dubrovačka 31">Split, Dubrovačka 31</md-option>
+<md-option value="Split, Ruđera Boškovića 18a">Split, Ruđera Boškovića 18a</md-option>
+<md-option value="Strmec, Hoto-Centar, Ulica dr. Franje Tuđmana 4">Strmec, Hoto-Centar, Ulica dr. Franje Tuđmana 4</md-option>
+<md-option value="Šibenik, Fra Jerolima Milete 6">Šibenik, Fra Jerolima Milete 6</md-option>
+<md-option value="Trilj, Bana Josipa Jelačića 8">Trilj, Bana Josipa Jelačića 8</md-option>
+<md-option value="Trogir, Ulica Kardinala Alojzija Stepinca 42">Trogir, Ulica Kardinala Alojzija Stepinca 42</md-option>
+<md-option value="Valpovo, Trg Kralja Tomislava 17">Valpovo, Trg Kralja Tomislava 17</md-option>
+<md-option value="Varaždin, Ivana Kukuljevića 9a">Varaždin, Ivana Kukuljevića 9a</md-option>
+<md-option value="Velika Gorica, Trg kralja Petra Krešimira IV br. 1">Velika Gorica, Trg kralja Petra Krešimira IV br. 1</md-option>
+<md-option value="Vinkovci, Trg dr. Franje Tuđmana 2">Vinkovci, Trg dr. Franje Tuđmana 2</md-option>
+<md-option value="Virovitica, Trg Kralja Zvonimira 3">Virovitica, Trg Kralja Zvonimira 3</md-option>
+<md-option value="Vukovar, J. J. Strossmayera 16">Vukovar, J. J. Strossmayera 16</md-option>
+<md-option value="Zadar, Zrinsko-Frankopanska 8">Zadar, Zrinsko-Frankopanska 8</md-option>
+<md-option value="Zagreb, Britanski Trg, Ilica 81">Zagreb, Britanski Trg, Ilica 81</md-option>
+<md-option value="Zagreb, Dubrava, Avenija Dubrava 47">Zagreb, Dubrava, Avenija Dubrava 47</md-option>
+<md-option value="Zagreb, Gajnice, Argentinska 4">Zagreb, Gajnice, Huzjanova 2</md-option>
+<md-option value="Zagreb, Jurišićeva, Jurišićeva 4">Zagreb, Jurišićeva, Jurišićeva 4</md-option>
+<md-option value="Zagreb, Maksimirska, Maksimirska 105">Zagreb, Maksimirska, Maksimirska 105</md-option>
+<md-option value="Zagreb, Savska 58">Zagreb, Savska 58</md-option>
+<md-option value="Zagreb, Sesvete, Trg D. Domjanića 8">Zagreb, Sesvete, Trg D. Domjanića 8</md-option>
+<md-option value="Zagreb, Središće, Ivana Šibla 15">Zagreb, Središće, Ivana Šibla 15</md-option>
+<md-option value="Zagreb, Špansko, Trg Ivana Kukuljevića 5">Zagreb, Špansko, Trg Ivana Kukuljevića 5</md-option>
+<md-option value="Zagreb, VMD, Strojarska cesta 16">Zagreb, VMD, Strojarska cesta 16</md-option>
+<md-option value="Zaprešić, Drage Švajcara 5">Zaprešić, Drage Švajcara 5</md-option>
+
+
+
+            </md-select>
+		
+		
+		<div ng-messages="okzForm.poslovnica.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+		
+		
+		
+
+      </md-input-container>	
+			
+			
+			<div style="display:none" id="mc_charge_box">
+
+			
+			
+			
+			
+			<md-input-container class="w95pct">
+        <label>Datum podmirenja troškova</label>
+		
+						<md-select notdefault required ng-model="okz.mcc_datum" name="mcc_datum">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="5. u mjesecu" >5. u mjesecu</md-option>
+<md-option value="15. u mjesecu">15. u mjesecu</md-option>
+<md-option value="25. u mjesecu">25. u mjesecu</md-option>
+
+            </md-select>
+		
+<div ng-messages="okzForm.mcc_datum.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+		<md-select notdefault required ng-model="okz.mcc_nacin_zapr_obavijesti"  name="mcc_nacin_zapr_obavijesti">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="E-mail">E-mail</md-option>
+<md-option value="pošta">Pošta</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.mcc_nacin_zapr_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 21 znak)</label>
+        <input trim required ng-model="okz.mcc_ime_prez" name="mcc_ime_prez" minlength="1" maxlength="21" md-minlength="1" md-maxlength="21" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+" ng-change="okzForm.mcc_ime_prez.$validate()" />
+		<div ng-messages="okzForm.mcc_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+						<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>	
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, točku, razmak i crticu.</div>
+			
+          </div>
+      </md-input-container>	
+
+	  <md-input-container class="w95pct">
+        <label>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</label>
+        <input trim capitalize required ng-model="okz.mcc_tr_hpb" name="mcc_tr_hpb" minlength="21" maxlength="21" md-minlength="21" md-maxlength="21" pattern="(H)(R)([0-9])\w+" />
+		<div ng-messages="okzForm.mcc_tr_hpb.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+						<div ng-message="md-minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>			
+			<div ng-message="pattern">IBAN mora sadržavati slova HR i 19 brojki.</div>			
+			
+          </div>
+      </md-input-container>	
+			
+</div>
+
+
+<div style="display:none" id="mc_gold_box">
+
+
+
+
+
+
+
+			<md-input-container class="w95pct">
+        <label>Datum podmirenja troškova</label>
+		
+								<md-select notdefault required ng-model="okz.mcg_datum" name="mcg_datum">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="5. u mjesecu" >5. u mjesecu</md-option>
+<md-option value="15. u mjesecu">15. u mjesecu</md-option>
+<md-option value="25. u mjesecu">25. u mjesecu</md-option>
+
+            </md-select>
+        
+		<div ng-messages="okzForm.mcg_datum.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+				<md-select notdefault required ng-model="okz.mcg_nacin_zapr_obavijesti"  name="mcg_nacin_zapr_obavijesti">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="E-mail">E-mail</md-option>
+<md-option value="pošta">Pošta</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.mcg_nacin_zapr_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 21 znak)</label>
+        <input trim required ng-model="okz.mcg_ime_prez" name="mcg_ime_prez" minlength="1" maxlength="21" md-minlength="1" md-maxlength="21" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+"  >
+		<div ng-messages="okzForm.mcg_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>		
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, točku, razmak i crticu.</div>			
+			
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</label>
+        <input trim capitalize required ng-model="okz.mcg_tr_hpb" name="mcg_tr_hpb" minlength="21" maxlength="21" md-minlength="21" md-maxlength="21" pattern="(H)(R)([0-9])\w+" >
+		<div ng-messages="okzForm.mcg_tr_hpb.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+						<div ng-message="md-minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>				
+			<div ng-message="pattern">IBAN mora sadržavati slova HR i 19 brojki.</div>			
+			
+          </div>
+      </md-input-container>	
+</div>
+
+
+	  <div style="display:none" id="mc_revolv_box">
+
+
+
+
+
+
+			<md-input-container class="w95pct">
+        <label>Datum podmirenja troškova</label>
+		
+		<md-select notdefault required ng-model="okz.mcr_datum" name="mcr_datum">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="5. u mjesecu" >5. u mjesecu</md-option>
+<md-option value="15. u mjesecu">15. u mjesecu</md-option>
+<md-option value="25. u mjesecu">25. u mjesecu</md-option>
+
+            </md-select>
+		
+		
+		<div ng-messages="okzForm.mcr_datum.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Minimalni iznos otplate troškova revolving kartice</label>
+		
+		<md-select notdefault required ng-model="okz.mcr_min_iznos" name="mcr_min_iznos">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="5%" >5%</md-option>
+<md-option value="10%">10%</md-option>
+<md-option value="20%">20%</md-option>
+
+            </md-select>
+		
+		
+		<div ng-messages="okzForm.mcr_min_iznos.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+						<md-select notdefault required ng-model="okz.mcr_obavijesti"  name="mcr_obavijesti">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="E-mail">E-mail</md-option>
+<md-option value="pošta">Pošta</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.mcr_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 21 znak)</label>
+        <input trim required ng-model="okz.mcr_ime_prez" name="mcr_ime_prez" minlength="1" maxlength="21" md-minlength="1" md-maxlength="21" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+"  >
+		<div ng-messages="okzForm.mcr_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>		
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, razmak i crticu.</div>			
+          </div>
+      </md-input-container>	
+
+	  	  <md-input-container class="w95pct">
+        <label>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</label>
+        <input trim capitalize required ng-model="okz.mcr_tr_hpb" name="mcr_tr_hpb" minlength="21" maxlength="21" md-minlength="21" md-maxlength="21" pattern="(H)(R)([0-9])\w+" >
+		<div ng-messages="okzForm.mcr_tr_hpb.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>	
+			<div ng-message="pattern">IBAN mora sadržavati slova HR i 19 brojki.</div>			
+			
+          </div>
+      </md-input-container>	
+</div>
+	  
+	  <div style="display:none" id="visa_rate_box">
+
+
+
+
+
+
+			<md-input-container class="w95pct">
+        <label>Model otplate</label>
+		
+		<md-select notdefault required ng-model="okz.visa_model"  name="visa_model">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="Model 1: (3 rate)">Model 1 (3 rate)</md-option>
+<md-option value="Model 2: (6 rata)">Model 2 (6 rata)</md-option>
+<md-option value="Model 3: (12 rata)">Model 3 (12 rata)</md-option>
+
+            </md-select>
+				
+		<div ng-messages="okzForm.visa_model.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  
+	  
+
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+		<md-select notdefault required ng-model="okz.visa_obavijesti"  name="visa_obavijesti">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="E-mail">E-mail</md-option>
+<md-option value="Pošta">Pošta</md-option>
+
+            </md-select>
+		
+		
+		<div ng-messages="okzForm.visa_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 21 znak)</label>
+        <input trim required ng-model="okz.visa_ime_prez" name="visa_ime_prez" minlength="1" maxlength="21" md-minlength="1" md-maxlength="21" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+"  >
+		<div ng-messages="okzForm.visa_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, točku, razmak i crticu.</div>			
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</label>
+        <input capitalize trim required ng-model="okz.visa_tr_hpb" name="visa_tr_hpb" minlength="21" maxlength="21" md-minlength="21" md-maxlength="21" pattern="(H)(R)([0-9])\w+" >
+		<div ng-messages="okzForm.visa_tr_hpb.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern">IBAN mora sadržavati slova HR i 19 brojki.</div>			
+			
+          </div>
+      </md-input-container>	
+</div>
+
+	  <div style="display:none" id="hp_hpb_box">
+
+
+			<md-input-container class="w95pct">
+        <label>Model otplate</label>
+		
+				<md-select notdefault required ng-model="okz.hp_hpb_model"  name="hp_hpb_model">
+	<md-option value="0" ng-selected="true" >- odaberite -</md-option>
+
+<md-option value="Model 1: (3 rate)">Model 1 (3 rate)</md-option>
+<md-option value="Model 2: (6 rata)">Model 2 (6 rata)</md-option>
+<md-option value="Model 3: (12 rata)">Model 3 (12 rata)</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.hp_hpb_model.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Datum podmirenja troškova</label>
+		
+				<md-select notdefault required ng-model="okz.hp_hpb_datum" name="hp_hpb_datum">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="5. u mjesecu" >5. u mjesecu</md-option>
+<md-option value="15. u mjesecu">15. u mjesecu</md-option>
+<md-option value="25. u mjesecu">25. u mjesecu</md-option>
+
+            </md-select>
+		
+
+		<div ng-messages="okzForm.hp_hpb_datum.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+			
+          </div>
+		
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Način podmirenja troškova</label>		
+		
+				<md-select notdefault required ng-model="okz.hp_hpb_podmirenje"  name="hp_hpb_podmirenje">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="Direktnom uplatom na račun kartice">Direktnom uplatom na račun kartice</md-option>
+<md-option value="S transakcijskog računa otvorenog u HPB-u">S transakcijskog računa otvorenog u HPB-u</md-option>
+
+            </md-select>
+		
+		
+		<div ng-messages="okzForm.hp_hpb_podmirenje.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+
+ <md-input-container class="w95pct" ng-show="okz.hp_hpb_podmirenje == 'S transakcijskog računa otvorenog u HPB-u'">
+        <label>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</label>
+        <input trim capitalize required ng-model="okz.hp_hpb_tr_hpb" name="hp_hpb_tr_hpb" minlength="21" maxlength="21" md-minlength="21" md-maxlength="21" pattern="(H)(R)([0-9])\w+" />
+		<div ng-messages="okzForm.hp_hpb_tr_hpb.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+						<div ng-message="md-minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 21.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 21.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 21.</div>			
+			<div ng-message="pattern">IBAN mora sadržavati slova HR i 19 brojki.</div>			
+			
+          </div>
+      </md-input-container>	
+
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+		<md-select notdefault required ng-model="okz.hp_hpb_obavijesti"  name="hp_hpb_obavijesti">
+	<md-option value="0" ng-selected="true"  >- odaberite -</md-option>
+
+<md-option value="E-mail">E-mail</md-option>
+<md-option value="HPB internetsko bankarstvo za građanstvo">HPB internetsko bankarstvo za građanstvo</md-option>
+<md-option value="Pošta">Pošta</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.hp_hpb_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>	
+	  
+	  			<md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 20 znakova)</label>
+        <input trim required ng-model="okz.hp_hpb_ime_prez" name="hp_hpb_ime_prez" minlength="1" maxlength="20" md-minlength="1" md-maxlength="20" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+"  >
+		<div ng-messages="okzForm.hp_hpb_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, točku, razmak i crticu.</div>		
+
+			<div ng-message="md-minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 20.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 1.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 20.</div>			
+
+			
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Korisnički identifikacijski kod za aktivaciju</label>
+        <input trim required ng-model="okz.hp_hpb_lozinka" name="hp_hpb_lozinka" minlength="4" maxlength="4" md-minlength="4" md-maxlength="4" ng-pattern="/^[0-9]{4}$/" >
+		<div ng-messages="okzForm.hp_hpb_lozinka.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern">Korisnički identifikacijski kod sadrži samo brojke.</div>		
+
+<div ng-message="md-minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 4.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 4.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 4.</div>				
+			
+          </div>
+      </md-input-container>	
+</div>
+
+	  <div style="display:none" id="prepaid_box">
+
+	  <md-input-container class="w95pct" ng-show="showPrepaidLegal()" >
+        <label>Ime i prezime zakonskog zastupnika (za maloljetne osobe)</label>
+        <input trim required ng-model="okz.prepaid_ime_prez" name="prepaid_ime_prez" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.,;]+" >
+		<div ng-messages="okzForm.prepaid_ime_prez.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern"> Molimo koristite samo slova, razmak, crticu, točku, zarez i točku-zarez.</div>			
+			
+          </div>
+      </md-input-container>		  
+	  
+
+	  <md-input-container class="w95pct">
+        <label>Ime i prezime na kartici (do 21 znak)</label>
+        <input trim required ng-model="okz.prepaid_ime_prez_kart" name="prepaid_ime_prez_kart" minlength="1" maxlength="21" md-minlength="1" md-maxlength="21" pattern="[a-zA-ZčćžšđČĆŽŠĐ\s-.]+" >
+		<div ng-messages="okzForm.prepaid_ime_prez_kart.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="pattern">Ime i prezime na kartici može sadržavati slova, točku, razmak i crticu.</div>			
+          </div>
+      </md-input-container>	
+	  
+	  <md-input-container class="w95pct">
+        <label>Način zaprimanja obavijesti i izvoda</label>
+		
+				<md-select notdefault required ng-model="okz.prepaid_obavijesti"  name="prepaid_obavijesti">
+
+<md-option value="E-mail" ng-selected="true">E-mail</md-option>
+
+            </md-select>
+		
+		<div ng-messages="okzForm.prepaid_obavijesti.$error">
+            <div ng-message="required, notdefault">Obavezno ispunite ovaj podatak.</div>
+          </div>
+      </md-input-container>		  
+</div>
+
+
+			
+			
+
+<br/>
+			<div style="width:100%; text-align:center; margin-top:25px">
+				
+				<md-button ng-disabled="!okz.poslovnica || lastButtonValidation()" class="button button--main button-card md-raised" wz-next style="width:48% !important" onclick="lastStep()"
+
+ >Pošalji &#10004;</md-button>
+				
+				</div>
+			</div>
+	  
+	  
+
+	  			<div style="display:none" id="zaprimanje">
+
+		<div class="thank-you__image"></div>			
+			
+            <h1 class="thank-you__title" style="margin-top: 30px;">Preuzimanje zahtjeva u tijeku...</h1>
+				<br/>
+				</div>
+
+	  
+	  
+			<div style="display:none" id="potvrda">
+
+		<div class="thank-you__image--completed"></div>			
+			
+            <h1 class="thank-you__title" style="margin-top: 30px;">Zahtjev zaprimljen</h1>
+
+			<p class="thank-you__description" >Poštovani,<br><br>vaš online kartični zahtjev je zaprimljen.<br>Kontaktirat ćemo vas u roku od jednog radnog dana kako bismo dogovorili daljnje korake u realizaciji kartice.<br><br>U slučaju potrebe za dodatnim informacijama kontaktirajte nas na e-mail <a href="mailto:hpb@hpb.hr" class="thank-you__link" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}"   >hpb@hpb.hr</a> ili na besplatni telefon <a   onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}" href="tel:0800472472" class="thank-you__link">0800 472 472</a>.<br><br>Hvala vam na ukazanom povjerenju.<br><br>S poštovanjem,<br>vaš HPB</p>
+			
+	
+			<div style="width:100%; text-align:center; margin-top:25px">
+				
+				<md-button class="button button--main button-card md-raised" ng-href="//www.hpb.hr" style="width:48% !important" 
+
+ >Povratak na www.hpb.hr </md-button>
+				
+				</div>
+				
+				</div>
+			
+			</wz-step>
+
+			
+
+
+        </wizard>
+		
+					    <div style="display:none;z-index:1;" id="leave_modal">
+      <div class="underlay"></div>
+      <div class="modal">
+        <div class="modal-title">
+          <span>Možemo li vam pomoći?</span>
+		  
+		  <button class="md-icon-button md-button md-ink-ripple" type="button" style="float:right; margin:0; height:36px;padding:0 6px" onclick="document.getElementById('leave_modal').style.display='none'" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" focusable="false" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+		  
+        </div>
+
+        <div class="modal-body">
+          <p>Poštovani, <br><br>ukoliko trebate pomoć u ispunjavanju zahtjeva, mi vam možemo pomoći.<br>Ostavite nam e-mail i broj telefona / mobitela kako bi vam se obratili i pomogli.<br><br>vaš HPB</p>
+          <br>
+		  
+		  <md-input-container class="w95pct">
+        <label>Telefon / mobitel</label>
+        <input trim required ng-model="okz.telefonHELP" name="telefonHELP" minlength="6" maxlength="15" md-minlength="6" md-maxlength="15" pattern="[0-9\s-()\\/]+"  />
+		<div ng-messages="okzForm.telefonHELP.$error">
+            <div ng-message="required">Obavezno ispunite ovaj podatak.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 15.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 6.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 15.</div>	
+			<div ng-message="pattern">Telefon / mobitel može sadržavati samo brojke, razmak i sljedeće znakove: ( ) - \ /</div>			
+          </div>
+      </md-input-container>
+	  
+	 
+	  
+	   <md-input-container class="w95pct">
+        <label>E-mail</label>
+        <input trim required ng-model="okz.emailHELP" name="emailHELP" minlength="5" maxlength="40" md-minlength="5" md-maxlength="40" ng-pattern="/^.+@.+\..+$/">
+		<div ng-messages="okzForm.emailHELP.$error">
+			
+			<div ng-message="required">Obavezno ispunite ovo polje.</div>
+			<div ng-message="md-minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="md-maxlength">Maksimalni broj znakova je 100.</div>
+			<div ng-message="minlength">Minimalni broj znakova je 5.</div>
+			<div ng-message="maxlength">Maksimalni broj znakova je 100.</div>				
+			<div ng-message="pattern">E-mail adresa mora biti odgovarajućeg formata.</div>
+			
+          </div>
+      </md-input-container>
+
+	  <div style="width:100%; text-align:center; margin-top:25px">
+		
+		<md-button ng-disabled="!okz.emailHELP || !okz.telefonHELP" style="width: 60%" class="button button--main md-raised" ng-click="finished()" onclick="document.getElementById('leave_modal').style.display='none'">Kontaktirajte me</md-button>
+		
+		<br/><br/><br/>
+</div>
+	  
+         
+        </div>
+
+        
+      </div>
+    </div>
+		    </form>
+			
+		</div>
+      </section>
+    </div>    
+
+<section class="credit-info"><h1 class="credit-info__title">Do kartice u samo nekoliko koraka</h1><div class="credit-info-box-container"><div class="credit-info-box"><img src="step-icon-time.svg" class="credit-info-box__icon"><p class="credit-info-box__subtitle">1. Ispunite zahtjev za karticu online</p></div><div class="credit-info-box"><img src="step-icon-mobile.svg" class="credit-info-box__icon"><p class="credit-info-box__subtitle">2. Kontaktirat će vas naši djelatnici i ugovoriti sastanak u najbližoj poslovnici</p></div><div class="credit-info-box"><img src="step-icon-meeting.svg" class="credit-info-box__icon"><p class="credit-info-box__subtitle">3. Dolazak u poslovnicu radi potpisivanja ugovora</p></div></div></section>	
+
+
+	
+
+<footer class="footer"><div class="footer-container"><div class="footer-container__column-big"><a href="//www.hpb.hr" class="footer-container__back" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}" >Natrag na naslovnicu</a></div><div class="footer-container__column-small"><a href="//www.hpb.hr" class="footer-container__logo" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}" >HPB</a></div></div></footer>	
+	
+	<script>
+	
+		var hp_hpb_picked = false;
+		var prepaid_picked = false; 
+		var visa_rate_picked = false; 
+		var mc_revolv_picked = false; 
+		var mc_charge_picked = false; 
+		var mc_gold_picked = false;
+
+		function replacer(key,value)
+{
+    if (key=="$$hashKey") return undefined;
+    else return value;
+}
+		
+function objToString (obj) {
+    
+	var s = JSON.stringify(obj, replacer);
+	
+	
+	s = s.replace(/[{"|"}|{"|"}]|"|[|]/gi, "");
+	s=s.replace(/[\[\]']+/g,''); 
+	s=s.replace(/:/g,': '); 
+	s=s.replace(/,/g,', '); 
+	
+return  s;
+
+
+}		
+		
+function HRdate(datestr) {
+
+	date = new Date(datestr);
+	year = date.getFullYear();
+	month = date.getMonth()+1;
+	dt = date.getDate();
+
+	if (dt < 10) {
+		dt = '0' + dt;
+	}
+
+	if (month < 10) {
+		month = '0' + month;
+	}
+
+	var newdate = dt + '.' + month + '.' + year + '.';
+
+	return newdate;
+
+}		
+		
+		
+function CheckOIB(oib) {
+
+	if(!oib) {
+		return false;
+	}
+
+    oib = oib.toString();
+    if (oib.length != 11) return false;
+
+    var b = parseInt(oib, 10);
+    if (isNaN(b)) return false;
+
+    var a = 10;
+    for (var i = 0; i < 10; i++) {
+        a = a + parseInt(oib.substr(i, 1), 10);
+        a = a % 10;
+        if (a == 0) a = 10;
+        a *= 2;
+        a = a % 11;
+    }
+    var kontrolni = 11 - a;
+    if (kontrolni == 10) kontrolni = 0;
+
+    return kontrolni == parseInt(oib.substr(10, 1));
+}
+		
+		
+		
+function getAge(dateString) {
+
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+		
+function showCardDetails(card_div_id) {
+
+	document.getElementById('hp_hpb_box').style.display='none';
+	document.getElementById('prepaid_box').style.display='none';
+	document.getElementById('visa_rate_box').style.display='none';
+	document.getElementById('mc_revolv_box').style.display='none';
+	document.getElementById('mc_charge_box').style.display='none';
+	document.getElementById('mc_gold_box').style.display='none';
+
+	document.getElementById(card_div_id).style.display='block';
+}		
+
+	
+		
+function returnTitle()
+{
+
+	if(hp_hpb_picked) {
+			return "Pošta &amp; HPB Mastercard kartica";
+		}
+		
+		if(prepaid_picked) {
+			return "VISA Prepaid kartica s nadoplatom";
+		}
+		
+		if(visa_rate_picked) {
+			return "VISA kartica na rate";
+		}
+		
+		if(mc_revolv_picked) {
+			return "Mastercard kreditna kartica (revolving)";
+		}
+		
+		if(mc_charge_picked) {
+			return "Mastercard kartica s odgodom plaćanja (charge)";
+		} 
+		
+		if(mc_gold_picked) {
+			return "Zlatna Mastercard kartica";		
+		}
+
+}
+
+
+function setProgress(step) {
+
+
+var progress = document.getElementById('progress').style;
+
+	if(step == 1) {
+		progress.width = "25%";
+	}
+	else if(step == 2) {
+		progress.width = "50%";
+	}
+	else if(step == 3) {
+		progress.width = "75%";
+	}
+	else if(step == 4) {
+		progress.width = "100%";
+	}
+	
+
+
+}		
+	
+		function showStepA() {
+		
+			document.getElementById('cards_row').style.visibility='visible';
+			document.getElementById('cards_txt').style.visibility='visible';
+		
+			document.getElementById('cards_row').style.display='flex';
+			document.getElementById('cards_txt').style.display='flex';
+		}
+		
+		function lastStep() {
+			document.getElementById('step4').style.display='none';
+		
+			document.getElementById('zaprimanje').style.display='block';
+		}
+	
+
+	
+		
+var myOKZ =	angular.module('wizard-sample', ['mgo-angular-wizard', "ngMaterial", 'ngMessages', 'angularMoment', 'angularValidator', 'ngMask', 'ngAnimate'])
+	
+	.config(function ($mdDateLocaleProvider, moment) {
+  
+    $mdDateLocaleProvider.formatDate = function(date) {
+      return moment(date).format('DD/MM/YYYY');
+    };
+  
+    $mdDateLocaleProvider.parseDate = function(dateString) {
+      if (dateString == null || dateString.length == 0) {
+        return null;
+      }
+      
+      var m = moment(dateString, 'DD/MM/YYYY', true);
+      return m.isValid() ? m.toDate() : new Date(NaN);
+    }
+    
+  })
+	
+    .controller('WizardCtrl', ['$scope', '$http', function($scope, $http, WizardHandler) {
+	
+	$scope.total_steps = 4;
+	$scope.step_three_disabled = "false";
+	
+	$scope.unlockAll = function() {
+		$scope.setEditMode(true)
+	}
+	
+	$scope.myDate = new Date();
+
+  $scope.minDate = new Date(
+    $scope.myDate.getFullYear(),
+    $scope.myDate.getMonth() - 2,
+    $scope.myDate.getDate()
+  );
+
+  $scope.maxDate = new Date(
+    $scope.myDate.getFullYear(),
+    $scope.myDate.getMonth() + 2,
+    $scope.myDate.getDate()
+  );
+	
+	
+	
+		$scope.okz = {
+		
+		  selectedImamnemam:  "nemam",
+		  selectedPosao: "zaposlen/a", 
+		  selectedOtplata: "odjednom, uz odgodu",
+		  extra_auto: [],	  
+			extra_motor: [],
+			extra_plovilo: [],
+			extra_kuca: [],
+			extra_stan: [],
+			extra_vikendica: [],
+			extra_zemljiste: []
+								  
+		}
+			
+			$scope.changeTitle = function(title, img) {
+			document.getElementById('header').innerHTML = "<table><tr><td><img src='cards/"+img+"' class='md-card-image' alt='Pošta &amp; HPB Mastercard kartica' style='max-height:150px;'></td><td>Zahtjev: " + title + "</td></tr></table>";
+		}
+			
+			$scope.cardChange = function() {
+				document.getElementById("cb_prepaid").ngDisabled = true;
+			}
+			
+			
+		$scope.showPrepaidLegal = function() {
+				return (getAge($scope.okz.datumrodjenja) < 18);
+			}
+			
+			
+			
+			$scope.myFunc = function() {
+				
+				if($scope.okz.selectedPosao == 'nezaposlen/a' ||
+				$scope.okz.selectedPosao == 'umirovljenik/ica' ||
+				$scope.okz.selectedPosao == 'student/ica') {
+					$scope.step_three_disabled = "true";
+					$scope.total_steps = 3;
+				}
+				else {
+				
+					if(prepaid_picked) {
+						$scope.step_three_disabled = "true";
+						$scope.total_steps = 3;
+					}
+					else {				
+						$scope.step_three_disabled = "false";
+						$scope.total_steps = 4;
+					}
+					
+				}
+				
+				document.getElementById('cards_row').style.visibility='hidden';
+				document.getElementById('cards_txt').style.visibility='hidden';
+				
+				document.getElementById('cards_row').style.display='none';
+				document.getElementById('cards_txt').style.display='none';
+				
+				hp_hpb = document.getElementById("hp_hpb").style;
+				prepaid = document.getElementById("prepaid").style;
+				visa_rate = document.getElementById("visa_rate").style;
+				mc_revolv = document.getElementById("mc_revolv").style;
+				mc_charge = document.getElementById("mc_charge").style;
+				mc_gold = document.getElementById("mc_gold").style;
+				
+				supersmart = document.getElementById("supersmart").style;
+				
+				hp_hpb.display = "none";
+				prepaid.display = "none";
+				visa_rate.display = "none";
+				mc_revolv.display = "none";
+				mc_charge.display = "none";
+				mc_gold.display = "none";
+
+				supersmart.display = "none";				
+				
+				if($scope.okz.selectedPosao == 'nezaposlen/a' || 
+				($scope.okz.selectedPosao == 'student/ica' && $scope.okz.selectedImamnemam == 'nemam')) { 
+					$scope.okz.selectedOtplata = 'odmah'; 
+				}
+				
+				if($scope.okz.selectedImamnemam == "nemam")  {
+					
+					supersmart.display = "block";		
+					
+					if($scope.okz.selectedPosao == "zaposlen/a") {
+					
+						//2 & 3
+						if($scope.okz.selectedOtplata == "odjednom, uz odgodu" ||
+						$scope.okz.selectedOtplata == "obrocno") {
+							hp_hpb.display = "block";
+						}
+												
+						//4
+						else if($scope.okz.selectedOtplata == "odmah") {
+							prepaid.display = "block";
+						}
+					
+					}
+					
+					//7
+					else if(
+					$scope.okz.selectedPosao == "nezaposlen/a" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+					//8
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "odjednom, uz odgodu" 
+					) {
+						hp_hpb.display = "block";
+					}
+					
+					//9
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "obrocno" 
+					) {
+						hp_hpb.display = "block";
+					}
+					
+					//10
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+					//13
+					else if(
+					$scope.okz.selectedPosao == "student/ica" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+				}
+				else if($scope.okz.selectedImamnemam == "imam")
+				{
+					
+					supersmart.display = "none";
+					
+					//14
+					if(
+					$scope.okz.selectedPosao == "zaposlen/a" &&
+					$scope.okz.selectedOtplata == "odjednom, uz odgodu" 
+					) {
+						hp_hpb.display = "block";
+						mc_charge.display = "block";
+						mc_gold.display = "block";			
+					}
+					
+					//15
+					else if(
+					$scope.okz.selectedPosao == "zaposlen/a" &&
+					$scope.okz.selectedOtplata == "obrocno" 
+					) {
+						hp_hpb.display = "block";
+						mc_revolv.display = "block";
+						visa_rate.display = "block";			
+					}
+					
+					//16
+					else if(
+					$scope.okz.selectedPosao == "zaposlen/a" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+					//17
+					else if(
+					$scope.okz.selectedPosao == "nezaposlen/a" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+					//18
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "odjednom, uz odgodu" 
+					) {
+						hp_hpb.display = "block";
+						mc_charge.display = "block";
+						mc_gold.display = "block";	
+					}
+					
+					//19
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "obrocno" 
+					) {
+						visa_rate.display = "block";
+						mc_revolv.display = "block";
+						hp_hpb.display = "block";
+					}
+					
+					//20
+					else if(
+					$scope.okz.selectedPosao == "umirovljenik/ica" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+					//21
+					else if(
+					$scope.okz.selectedPosao == "student/ica" &&
+					$scope.okz.selectedOtplata == "odjednom, uz odgodu" 
+					) {
+						mc_charge.display = "block";
+						hp_hpb.display = "block";
+					}
+					
+					//22
+					else if(
+					$scope.okz.selectedPosao == "student/ica" &&
+					$scope.okz.selectedOtplata == "obrocno" 
+					) {
+						hp_hpb.display = "block";
+						visa_rate.display = "block";
+						mc_revolv.display = "block";
+					}
+					
+					//23
+					else if(
+					$scope.okz.selectedPosao == "student/ica" &&
+					$scope.okz.selectedOtplata == "odmah" 
+					) {
+						prepaid.display = "block";
+					}
+					
+				}
+
+				
+			};		
+				
+				
+				$scope.exitValidation = function(){
+					
+					if(
+					
+					!$scope.okz.ime || 
+					!$scope.okz.prezime || 
+					!$scope.okz.oib || 
+					!$scope.okz.datumrodjenja || 
+					!$scope.okz.mjestorodjenja || 
+					($scope.okz.spol == 0) || 
+					!$scope.okz.spol || 
+					!$scope.okz.drzavarodjenja || 
+					!$scope.okz.drzavljanstvo || 
+					!$scope.okz.telefon || 
+					!$scope.okz.email || 
+					!$scope.okz.adresaid || 
+					!$scope.okz.adresa_mjesto || 
+					($scope.okz.ss == 0) ||
+					!$scope.okz.ss 
+					
+					) {
+					
+						return false;
+					}
+				
+					return true;
+				};
+				
+				
+		$scope.lastButtonValidation = function(){
+		
+			if(mc_charge_picked) {
+
+				if(!$scope.okz.mcc_datum || !$scope.okz.mcc_nacin_zapr_obavijesti || !$scope.okz.mcc_tr_hpb) {
+					return true;
+				}
+			}
+
+			if(mc_gold_picked) {
+
+				if(!$scope.okz.mcg_datum || !$scope.okz.mcg_nacin_zapr_obavijesti || !$scope.okz.mcg_tr_hpb) {
+					return true;
+				}
+			}
+
+			if(mc_revolv_picked) {
+
+				if(!$scope.okz.mcr_datum || !$scope.okz.mcr_min_iznos || !$scope.okz.mcr_obavijesti || !$scope.okz.mcr_tr_hpb) {
+					return true;
+				}
+
+			}
+
+			if(visa_rate_picked) {
+
+				if(!$scope.okz.visa_model || /*!$scope.okz.visa_rate_datum ||*/ !$scope.okz.visa_obavijesti || !$scope.okz.visa_tr_hpb) {
+					return true;
+				}
+
+			}
+
+			if(hp_hpb_picked) {
+
+				if(!$scope.okz.hp_hpb_model || !$scope.okz.hp_hpb_datum || !$scope.okz.hp_hpb_podmirenje || !$scope.okz.hp_hpb_ime_prez
+				|| !$scope.okz.hp_hpb_obavijesti || !$scope.okz.hp_hpb_lozinka) {
+				
+					if(!$scope.okz.hp_hpb_podmirenje == 'S transakcijskog računa otvorenog u HPB-u' && !$scope.okz.hp_hpb_tr_hpb) {
+						return false;
+					}
+				
+					return true;
+				}
+				
+			}
+
+			if(prepaid_picked) {
+			
+				if(
+				(!$scope.okz.prepaid_ime_prez && (getAge($scope.okz.datumrodjenja) < 18)) || 
+				!$scope.okz.prepaid_ime_prez_kart || 
+				!$scope.okz.prepaid_obavijesti
+				) {
+					return true;
+				}
+				
+			}
+
+			return false;			
+		
+		};		
+				
+        $scope.finished = function() {
+		
+		var html = 
+		
+		'<style type="text/css">p { font-family:Arial,sans-serif; color: #58595b;} body{ font-family:Arial,sans-serif; color: #58595b; } a {color: #cc0000}</style>' +
+		
+		'<p>Poštovani,<br><br>vaš online kartični zahtjev je zaprimljen.<br>Kontaktirat ćemo vas u roku od jednog radnog dana kako bismo dogovorili daljnje korake u realizaciji kartice.<br><br>U slučaju potrebe za dodatnim informacijama kontaktirajte nas na email <a href="mailto:hpb@hpb.hr" style="color: #cc0000;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: bold;text-decoration: none;">hpb@hpb.hr</a> ili na besplatni telefon <a href="tel:0800472472" style="color: #cc0000;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-weight: bold;text-decoration: none;">0800 472 472</a>.<br><br>Hvala vam na ukazanom povjerenju.<br><br>S poštovanjem,<br>vaš HPB</p><br><br><br>';
+		
+		if($scope.okz.telefonHELP) {
+		
+			$scope.okz.ime = 'Nepoznat';
+			$scope.okz.prezime = 'Netko';
+			$scope.okz.oib = "87939104217";
+			$scope.okz.telefon = $scope.okz.telefonHELP;
+		
+		}
+		
+		if($scope.okz.emailHELP) {
+		
+			$scope.okz.email = $scope.okz.emailHELP;
+			
+		}
+		
+		if(hp_hpb_picked) {
+			html += "<p><b>Kartica</b>: Pošta &amp; HPB Mastercard kartica<br>\n";
+		}
+		
+		if(prepaid_picked) {
+			html += "<p><b>Kartica</b>: VISA Prepaid kartica s nadoplatom<br>\n";
+		}
+		
+		if(visa_rate_picked) {
+			html += "<p><b>Kartica</b>: VISA kartica na rate<br>\n";
+		}
+		
+		if(mc_revolv_picked) {
+			html += "<p><b>Kartica</b>: Mastercard kreditna kartica (revolving)<br>\n";
+		}
+		
+		if(mc_charge_picked) {
+			html += "<p><b>Kartica</b>: Mastercard kartica s odgodom plaćanja (charge)<br>\n";
+		} 
+		
+		if(mc_gold_picked) {
+			html += "<p><b>Kartica</b>: Zlatna Mastercard kartica<br><br><br>\n";		
+		}
+
+		html += "<p><b>Opis</b>: " + $scope.okz.selectedImamnemam + " tekući račun u HPB-u, " + $scope.okz.selectedPosao + " sam i želim karticu čije troškove planiram otplatiti " + $scope.okz.selectedOtplata + ". Karticu planiram koristiti u svrhu " + $scope.okz.selectedKupnja + ".</p>";
+
+		if($scope.okz.ime != undefined) {
+			html += '<p><b>Ime</b>: ' + $scope.okz.ime + "<br>\n";
+		}
+		
+		if($scope.okz.prezime != undefined) {
+			html += '<b>Prezime</b>: ' + $scope.okz.prezime + "<br>\n";
+		}
+		
+		if($scope.okz.oib != undefined) {
+			html += '<b>OIB</b>: ' + $scope.okz.oib + "<br>\n";
+		}
+		
+		if($scope.okz.datumrodjenja != undefined) {
+			html += '<b>Datum rođenja</b>: ' + HRdate($scope.okz.datumrodjenja) + "<br>\n";
+		}
+		
+		if($scope.okz.mjestorodjenja != undefined) {
+			html += '<b>Mjesto rođenja</b>: ' + $scope.okz.mjestorodjenja + "<br>\n";
+		}
+		
+		if($scope.okz.spol != 0 && $scope.okz.spol != undefined) {
+			html += '<b>Spol</b>: ' + $scope.okz.spol + "<br>\n";
+		}
+		
+		if($scope.okz.drzavarodjenja != undefined) {
+			html += '<b>Država rođenja</b>: ' + $scope.okz.drzavarodjenja + "<br>\n";
+		}
+		
+		if($scope.okz.drzavljanstvo != undefined) {
+			html += '<b>Državljanstvo</b>: ' + $scope.okz.drzavljanstvo + "<br>\n";
+		}
+		
+		if($scope.okz.telefon != undefined) {
+			html += '<b>Telefon / mobitel</b>: ' + $scope.okz.telefon + "<br>\n";
+		}
+		
+		if($scope.okz.mobitel != undefined) {
+			html += '<b>Telefon (dodatno)</b>: ' + $scope.okz.mobitel + "<br>\n";
+		}
+		
+		if($scope.okz.email != undefined) {
+			html += '<b>E-mail</b>: ' + $scope.okz.email + "<br>\n";
+		}
+		
+		if($scope.okz.adresaid != undefined) {
+			html += '<b>Adresa (ulica i broj)</b>: ' + $scope.okz.adresaid + "<br>\n";
+		}
+		
+		if($scope.okz.adresa_mjesto != undefined) {
+			html += '<b>Poštanski broj, Mjesto</b>: ' + $scope.okz.adresa_mjesto/*.display*/ + "<br>\n";
+		}
+		
+		if($scope.okz.ss != 0 && $scope.okz.ss != undefined) {
+			html += '<b>Stručna sprema</b>: ' + $scope.okz.ss + "<br>\n";
+		}
+		
+		if($scope.okz.zvanje != undefined) {
+			html += '<b>Zvanje</b>: ' + $scope.okz.zvanje + "<br>\n";
+		}
+		
+		if($scope.okz.bracni_status != 0 && $scope.okz.bracni_status != undefined) {
+			html += '<b>Bračni status</b>: ' + $scope.okz.bracni_status + "<br>\n";
+		}
+		
+		if($scope.okz.br_cl_kucanstva != undefined) {
+			html += '<b>Broj članova kućanstva</b>: ' + $scope.okz.br_cl_kucanstva + "<br>\n";
+		}
+		
+		if($scope.okz.br_uzd_cl_kucanstva != undefined) {
+			html += '<b>Broj uzdržavanih članova kućanstva</b>: ' + $scope.okz.br_uzd_cl_kucanstva + "<br>\n";
+		}
+		
+		if($scope.okz.stanovanje != 0 && $scope.okz.stanovanje != undefined) {
+			html += '<b>Stanovanje</b>: ' + $scope.okz.stanovanje + "<br>\n";
+		}
+		
+		if($scope.okz.stanovanje_ostalo != undefined) {
+			html += '<b>Stanovanje (ostalo)</b>: ' + $scope.okz.stanovanje_ostalo + "<br>\n";
+		}
+		
+		if($scope.okz.br_god_tr_adresa != 0 && $scope.okz.br_god_tr_adresa != undefined) {
+			html += '<b>Broj godina stanovanja na trenutnoj adresi</b>: ' + $scope.okz.br_god_tr_adresa + "<br>\n";
+		}
+		
+		if($scope.okz.auto != 0 && $scope.okz.auto != undefined) {
+			html += '<b>Automobili</b>: ' + $scope.okz.auto + "<br>\n";
+		}
+		
+		if($scope.okz.extra_auto != '') {
+			html += '<b>Extra automobili</b>: ' + objToString($scope.okz.extra_auto) + "<br>\n";
+		}
+		
+		if($scope.okz.motor != 0 && $scope.okz.motor != undefined) {
+			html += '<b>Motor</b>: ' + $scope.okz.motor + "<br>\n";
+		}
+		
+		if($scope.okz.extra_motor != '') {
+			html += '<b>Extra motori</b>: ' + objToString($scope.okz.extra_motor) + "<br>\n";
+		}
+		
+		if($scope.okz.plovilo != 0 && $scope.okz.plovilo != undefined) {
+			html += '<b>Plovilo</b>: ' + $scope.okz.plovilo + "<br>\n";
+		}
+		
+		if($scope.okz.extra_plovilo != '') {
+			html += '<b>Extra plovila</b>: ' + objToString($scope.okz.extra_plovilo) + "<br>\n";
+		}
+		
+		if($scope.okz.kuca != undefined) {
+			html += '<b>Kuća</b>: ' + $scope.okz.kuca + "<br>\n";
+		}
+		
+		if($scope.okz.extra_kuca != '') {
+			html += '<b>Extra kuće</b>: ' + objToString($scope.okz.extra_kuca) + "<br>\n";
+		}
+		
+		if($scope.okz.stan != undefined) {
+			html += '<b>Stan</b>: ' + $scope.okz.stan + "<br>\n";
+		}
+		
+		if($scope.okz.extra_stan != '') {
+			html += '<b>Extra stanovi</b>: ' + objToString($scope.okz.extra_stan) + "<br>\n";
+		}
+		
+		if($scope.okz.vikendica != undefined) {
+			html += '<b>Vikendica</b>: ' + $scope.okz.vikendica + "<br>\n";
+		}
+		
+		if($scope.okz.extra_vikendica != '') {
+			html += '<b>Extra vikendice</b>: ' + objToString($scope.okz.extra_vikendica) + "<br>\n";
+		}
+		
+		if($scope.okz.zemljiste != undefined) {
+			html += '<b>Zemljište</b>: ' + $scope.okz.zemljiste + "<br>\n";
+		}
+		
+		if($scope.okz.extra_zemljiste != '') {
+			html += '<b>Extra zemljišta</b>: ' + objToString($scope.okz.extra_zemljiste) + "<br>\n";
+		}
+
+		if($scope.okz.nekr_ostalo != undefined) {
+			html += '<b>Nekretnine ostalo</b>: ' + $scope.okz.nekr_ostalo + "<br>\n";
+		}
+		
+		if($scope.okz.amex != 0 && $scope.okz.amex != undefined) {
+			html += '<b>Broj American Express kartica</b>: ' + $scope.okz.amex + "<br>\n";
+		}
+		
+		if($scope.okz.diners != 0 && $scope.okz.diners != undefined) {
+			html += '<b>Broj Diners kartica</b>: ' + $scope.okz.diners + "<br>\n";
+		}
+		
+		if($scope.okz.mc != 0 && $scope.okz.mc != undefined) {
+			html += '<b>Broj Mastercard kartica</b>: ' + $scope.okz.mc + "<br>\n";
+		}
+
+		if($scope.okz.visa != 0 && $scope.okz.visa != undefined) {
+			html += '<b>Broj Visa kartica</b>: ' + $scope.okz.visa + "<br>\n";
+		}
+
+		if($scope.okz.kartice_ostale != undefined) {
+			html += '<b>Ostale kartice</b>: ' + $scope.okz.kartice_ostale + "<br>\n";
+		}
+
+		if($scope.okz.poslodavca != undefined) {
+			html += '<b>Naziv poslodavca</b>: ' + $scope.okz.poslodavca + "<br>\n";
+		}
+
+		if($scope.okz.oib2 != undefined) {
+			html += '<b>OIB poslodavca</b>: ' + $scope.okz.oib2 + "<br>\n";
+		}
+
+		if($scope.okz.mb != undefined) {
+			html += '<b>Matični broj (MB)</b>: ' + $scope.okz.mb + "<br>\n";
+		}
+
+		if($scope.okz.vrsta_poslodavca != 0 && $scope.okz.vrsta_poslodavca != undefined) {
+			html += '<b>Vrsta poslodavca</b>: ' + $scope.okz.vrsta_poslodavca + "<br>\n";
+		}
+
+		if($scope.okz.vrsta_poslodavca_ostalo != undefined) {
+			html += '<b>Vrsta poslodavca (ostalo)</b>: ' + $scope.okz.vrsta_poslodavca_ostalo + "<br>\n";
+		}
+		
+		if($scope.okz.pb_mjesto != undefined) {
+			html += '<b>Adresa poslodavca (ulica i broj)</b>: ' + $scope.okz.pb_mjesto + "<br>\n";
+		}
+		
+		if($scope.okz.adresa_poslodavca != undefined) {
+			html += '<b>Adresa poslodavca (poštanski broj i mjesto)</b>: ' + $scope.okz.adresa_poslodavca + "<br>\n";
+		}
+
+		if($scope.okz.tel_posao != undefined) {
+			html += '<b>Telefon (posao)</b>: ' + $scope.okz.tel_posao + "<br>\n";
+		}
+
+		if($scope.okz.vrsta_ro != 0 && $scope.okz.vrsta_ro != undefined) {
+			html += '<b>Vrsta radnog odnosa</b>: ' + $scope.okz.vrsta_ro + "<br>\n";
+		}
+
+		if($scope.okz.odredjenodo != undefined) {
+			html += '<b>Na određeno do</b>: ' + HRdate($scope.okz.odredjenodo) + "<br>\n";
+		}
+
+		if($scope.okz.poz_zaposlenja != 0 && $scope.okz.poz_zaposlenja != undefined) {
+			html += '<b>Pozicija zaposlenja</b>: ' + $scope.okz.poz_zaposlenja + "<br>\n";
+		}
+
+		if($scope.okz.poz_zaposlenja_ostalo != undefined) {
+			html += '<b>Pozicija zaposlenja (ostalo)</b>: ' + $scope.okz.poz_zaposlenja_ostalo + "<br>\n";
+		}
+		
+		if($scope.okz.broj_god_staza != 0 && $scope.okz.broj_god_staza != undefined) {
+			html += '<b>Broj godina staža kod trenutnog poslodavca</b>: ' + $scope.okz.broj_god_staza + "<br>\n";
+		}
+
+		if($scope.okz.broj_god_uk_staza != 0 && $scope.okz.broj_god_uk_staza != undefined) {
+			html += '<b>Broj godina ukupnog radnog staža</b>: ' + $scope.okz.broj_god_uk_staza + "<br>\n";
+		}
+
+		if($scope.okz.prosj_mjesecni_nesamos != undefined) {
+			html += '<b>Prosječni mjesečni prihod u posljednja 3 mjeseca prije tekućeg mjeseca - Od nesamostalnog rada</b>: ' + $scope.okz.prosj_mjesecni_nesamos + "<br>\n";
+		}
+
+		if($scope.okz.prosj_mjesecni_samos != undefined) {
+			html += '<b>Prosječni mjesečni prihod u posljednja 3 mjeseca prije tekućeg mjeseca - Od samostalnog rada</b>: ' + $scope.okz.prosj_mjesecni_samos + "<br>\n";
+		}
+
+		if($scope.okz.iznos_zadnj_mj != undefined) {
+			html += '<b>Iznos zadnjeg mjesečnog prihoda</b>: ' + $scope.okz.iznos_zadnj_mj + "<br>\n";
+		}
+
+		if($scope.okz.iznos_zadnj_mj_supr != undefined) {
+			html += '<b>Iznos zadnjeg mjesečnog prihoda supružnika</b>: ' + $scope.okz.iznos_zadnj_mj_supr + "<br>\n";
+		}
+
+		if($scope.okz.mj_obv_dr_bank_duznik != undefined) {
+			html += '<b>Mjesečne obveze u drugim bankama kao dužnik</b>: ' + $scope.okz.mj_obv_dr_bank_duznik + "<br>\n";
+		}
+
+		if($scope.okz.mj_obv_dr_bank_suduznik != undefined) {
+			html += '<b>Mjesečne obveze u drugim bankama kao sudužnik</b>: ' + $scope.okz.mj_obv_dr_bank_suduznik + "<br>\n";
+		}
+
+		if($scope.okz.mj_obv_dr_bank_jamac != undefined) {
+			html += '<b>Mjesečne obveze u drugim bankama kao jamac</b>: ' + $scope.okz.mj_obv_dr_bank_jamac + "<br>\n";
+		}
+
+		if($scope.okz.obv_dr_bank != undefined) {
+			html += '<b>Ostale obveze u drugim bankama</b>: ' + $scope.okz.obv_dr_bank + "<br>\n";
+		}
+		
+		if($scope.okz.poslovnica != undefined) {
+			html += '<b>Poslovnica u kojoj želite predati dokumentaciju</b>: ' + $scope.okz.poslovnica + "<br>\n";
+		}
+		
+
+		
+
+		if(mc_charge_picked) {
+
+			if($scope.okz.mcc_datum != 0 && $scope.okz.mcc_datum != undefined) {
+				html += '<b>Datum podmirenja troškova</b>: ' + $scope.okz.mcc_datum +  "<br>\n";
+			}
+			
+			if($scope.okz.mcc_nacin_zapr_obavijesti != 0 && $scope.okz.mcc_nacin_zapr_obavijesti != undefined) {
+				html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.mcc_nacin_zapr_obavijesti + "<br>\n";
+			}
+			
+			if($scope.okz.mcc_ime_prez != undefined) {
+				html += '<b>Ime i prezime na kartici (do 21 znak)</b>: ' + $scope.okz.mcc_ime_prez + "<br>\n";
+			}
+			
+			if($scope.okz.mcc_tr_hpb != undefined) {
+				html += '<b>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</b>: ' + $scope.okz.mcc_tr_hpb + "<br>\n";
+			}
+
+		}
+
+if(mc_gold_picked) {
+
+	if($scope.okz.mcg_datum != 0 && $scope.okz.mcg_datum != undefined) {
+		html += '<b>Datum podmirenja troškova</b>: ' + $scope.okz.mcg_datum + "<br>\n";
+	}
+	
+	if($scope.okz.mcg_nacin_zapr_obavijesti != 0 && $scope.okz.mcg_nacin_zapr_obavijesti != undefined) {
+		html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.mcg_nacin_zapr_obavijesti + "<br>\n";
+	}
+	
+	if($scope.okz.mcg_ime_prez != undefined) {
+		html += '<b>Ime i prezime na kartici (do 21 znak)</b>: ' + $scope.okz.mcg_ime_prez + "<br>\n";
+	}
+	
+	if($scope.okz.mcg_tr_hpb != undefined) {
+		html += '<b>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</b>: ' + $scope.okz.mcg_tr_hpb + "<br>\n";
+	}
+}
+
+
+if(mc_revolv_picked) {
+
+	if($scope.okz.mcr_datum != 0 && $scope.okz.mcr_datum != undefined) {
+		html += '<b>Datum podmirenja troškova</b>: ' + $scope.okz.mcr_datum + "<br>\n";
+	}
+	
+	if($scope.okz.mcr_min_iznos != undefined) {
+		html += '<b>Minimalni iznos otplate troškova revolving kartice</b>: ' + $scope.okz.mcr_min_iznos + "<br>\n";
+	}
+	
+	if($scope.okz.mcr_obavijesti != 0 && $scope.okz.mcr_obavijesti != undefined) {
+		html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.mcr_obavijesti + "<br>\n";
+	}
+	
+	if($scope.okz.mcr_ime_prez != undefined) {
+		html += '<b>Ime i prezime na kartici (do 21 znak)</b>: ' + $scope.okz.mcr_ime_prez + "<br>\n";
+	}
+	
+	if($scope.okz.mcr_tr_hpb != undefined) {
+		html += '<b>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</b>: ' + $scope.okz.mcr_tr_hpb + "<br>\n";
+	}
+}
+
+if(visa_rate_picked) {
+
+	if($scope.okz.visa_model != 0 && $scope.okz.visa_model != undefined) {
+		html += '<b>Model otplate</b>: ' + $scope.okz.visa_model + "<br>\n";
+	}
+	
+	if($scope.okz.visa_obavijesti != 0 && $scope.okz.visa_obavijesti != undefined) {
+		html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.visa_obavijesti + "<br>\n";
+	}
+	
+	if($scope.okz.visa_ime_prez != undefined) {
+		html += '<b>Ime i prezime na kartici (do 21 znak)</b>: ' + $scope.okz.visa_ime_prez + "<br>\n";
+	}
+	
+	if($scope.okz.visa_tr_hpb != undefined) {
+		html += '<b>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</b>: ' + $scope.okz.visa_tr_hpb + "<br>\n";
+	}
+}
+
+
+if(hp_hpb_picked) {
+
+	if($scope.okz.hp_hpb_model != 0 && $scope.okz.hp_hpb_model != undefined) {
+		html += '<b>Model otplate</b>: ' + $scope.okz.hp_hpb_model + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_datum != 0 && $scope.okz.hp_hpb_datum != undefined) {
+		html += '<b>Datum podmirenja troškova</b>: ' + $scope.okz.hp_hpb_datum + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_podmirenje != 0 && $scope.okz.hp_hpb_podmirenje != undefined) {
+		html += '<b>Način podmirenja troškova</b>: ' + $scope.okz.hp_hpb_podmirenje + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_tr_hpb != undefined) {
+		html += '<b>Transakcijski račun u HPB-u za podmirenje troškova (IBAN)</b>: ' + $scope.okz.hp_hpb_tr_hpb + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_obavijesti != 0 && $scope.okz.hp_hpb_obavijesti != undefined) {
+		html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.hp_hpb_obavijesti + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_ime_prez != undefined) {
+		html += '<b>Ime i prezime na kartici (do 20 znakova)</b>: ' + $scope.okz.hp_hpb_ime_prez + "<br>\n";
+	}
+	
+	if($scope.okz.hp_hpb_lozinka != undefined) {
+		html += '<b>Korisnički identifikacijski kod za aktivaciju</b>: ' + $scope.okz.hp_hpb_lozinka + "<br>\n";
+	}
+	
+}
+
+
+if(prepaid_picked) {
+
+	if($scope.okz.prepaid_ime_prez != undefined) {
+		html += '<b>Ime i prezime zakonskog zastupnika (za maloljetne osobe)</b>: ' + $scope.okz.prepaid_ime_prez + "<br>\n";
+	}
+	
+	if($scope.okz.prepaid_ime_prez_kart != undefined) {
+		html += '<b>Ime i prezime na kartici (do 21 znak)</b>: ' + $scope.okz.prepaid_ime_prez_kart + "<br>\n";
+	}
+	
+	if($scope.okz.prepaid_obavijesti != 0 && $scope.okz.prepaid_obavijesti != undefined) {
+		html += '<b>Način zaprimanja obavijesti i izvoda</b>: ' + $scope.okz.prepaid_obavijesti;
+	}
+}
+
+
+html += '</p>';
+
+
+// get email template
+   var emltpl = $http({method: 'GET', url: 'email.html', headers: {'Content-Type': 'text/html', 'Accept': 'text/html'}}). 
+    //var emltpl = $http.post('email.html'). 
+    success(function(data, status, headers, config) {}).
+    error(function(data, status, headers, config) {});
+			
+			
+					  emltpl.then(function(result) {
+			
+			 
+			
+			 var tmpl = result.data;
+			 
+			 
+		tmpl = tmpl.replace(/___MOJZAHTJEV___/gi, html);
+
+		html = tmpl;
+			 
+			 
+			 var parameter = JSON.stringify(
+			{credit_card:
+			{
+				email:$scope.okz.email, 
+				full_name:$scope.okz.ime + " " + $scope.okz.prezime,
+				oib:$scope.okz.oib,
+				html:html
+			}});
+			 
+			     $http.post('https://ibg.hpb.hr/api/credit_cards', parameter).
+    success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+		
+		document.getElementById('zaprimanje').style.display='none';
+		document.getElementById('potvrda').style.display='block';
+
+		
+      }).
+      error(function(data, status, headers, config) {});
+	  
+	  })
+			
+			 setTimeout(function(){ document.addEventListener("click", function(){location.reload()});  }, 1000);
+		
+			
+        }
+
+        $scope.logStep = function() {
+        }
+
+        $scope.goBack = function() {
+            WizardHandler.wizard().goTo(0);
+        }
+		
+		
+		
+		$scope.$on('wizard:stepChanged',function(event, args) {
+			document.getElementById("header").scrollIntoView();
+		});
+		
+    // list of `state` value/display objects
+    $scope.okz.states = loadAll();
+	$scope.okz.poslovnicePopis = loadAllPopisPoslovnice();
+	
+    $scope.okz.querySearch = querySearch;
+	$scope.okz.querySearchPoslovnice = querySearchPoslovnice;
+	
+    $scope.okz.selectedItemChange = selectedItemChange;
+    $scope.okz.searchTextChange = searchTextChange;
+	
+    $scope.okz.selectedItemChangePoslovnice = selectedItemChangePoslovnice;
+    $scope.okz.searchTextChangePoslovnice = searchTextChangePoslovnice;
+
+	$scope.okz.selectedItemChangeAdresaPoslodavca = selectedItemChangeAdresaPoslodavca;
+    $scope.okz.searchTextChangeAdresaPoslodavca = searchTextChangeAdresaPoslodavca;
+	
+    // ******************************
+    // Internal methods
+    // ******************************
+
+    /**
+     * Search for states... use $timeout to simulate
+     * remote dataservice call.
+     */
+    function querySearch (query) {
+	
+	if(query.trim() == '') {
+		return null;
+	}
+	
+      var results = query ? $scope.okz.states.filter( createFilterFor(query) ) : $scope.okz.states,
+          deferred;
+        return results;
+      
+    }
+	
+	function querySearchPoslovnice (query) {
+	
+	if(query.trim() == '') {
+		return null;
+	}
+	
+      var results = query ? $scope.okz.poslovnicePopis.filter( createFilterFor(query) ) : $scope.okz.poslovnicePopis,
+          deferred;
+      
+        return results;
+      
+    }
+
+    function searchTextChange(text) {
+	  
+	  var zips = window.zip_db;
+	  
+	  
+	  
+	  if(zips.indexOf(text) !== -1) {	  
+		$scope.okz.adresa_mjesto = text;
+	 }
+	 else {
+		$scope.okz.adresa_mjesto = undefined;
+		$scope.okz.searchText = undefined;
+	 }
+
+    }
+
+    function selectedItemChange(item) {
+	 
+	 $scope.okz.adresa_mjesto = item.display;
+    }
+	
+	function searchTextChangePoslovnice(text) {
+	  $scope.okz.poslovnica = text;
+    }
+
+    function selectedItemChangePoslovnice(item) {
+	 $scope.okz.poslovnica = item.display;
+    }
+	
+	function searchTextChangeAdresaPoslodavca(text) {
+	  $scope.okz.adresa_poslodavca = text;
+    }
+
+    function selectedItemChangeAdresaPoslodavca(item) {
+	 $scope.okz.adresa_poslodavca = item.display;
+    }
+
+    /**
+     * Build `states` list of key/value pairs
+     */
+    function loadAll() {
+
+		var allStates ="" ;
+
+      return allStates.split(/, +/g).map( function (state) {
+        return {
+          value: state,
+          display: state
+        };
+      });
+    }
+
+	function loadAllPopisPoslovnice() {
+
+		var allPopisPoslovnice = window.poslovnice_db;
+
+      return allPopisPoslovnice.split(/, +/g).map( function (state) {
+        return {
+          value: state,
+          display: state
+        };
+      });
+    }
+	
+    /**
+     * Create filter function for a query string
+     */
+    function createFilterFor(query) {
+      var lowercaseQuery = angular.lowercase(query);
+
+      return function filterFn(state) {
+        return (state.value.indexOf(lowercaseQuery) !== -1);
+      };
+
+    }
+		
+		$scope.isRequired = function () {
+			
+		}
+
+		
+		$scope.copyImePrezime = function () {
+		
+			$scope.okz.mcc_ime_prez = ($scope.okz.ime + ' ' + $scope.okz.prezime);
+			
+			$scope.okz.mcg_ime_prez = ($scope.okz.ime + ' ' + $scope.okz.prezime); 
+			
+			$scope.okz.mcr_ime_prez = ($scope.okz.ime + ' ' + $scope.okz.prezime); 
+			
+			$scope.okz.visa_ime_prez = ($scope.okz.ime + ' ' + $scope.okz.prezime); 
+
+			
+			$scope.okz.hp_hpb_ime_prez = ($scope.okz.ime + ' ' + $scope.okz.prezime);
+
+			
+			$scope.okz.prepaid_ime_prez_kart = ($scope.okz.ime + ' ' + $scope.okz.prezime); 	
+
+			
+		}
+		
+		
+		
+    }])
+	
+	
+	
+	  // popup for book details
+  .controller('CardDetailsCtrl', function($scope, $mdDialog, $mdMedia) {
+  $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+  
+  $scope.showAdvanced = function(ev, card_title, card_image, card_info) {
+    var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'card_details.html',
+	  resolve: {
+           title: function(){return card_title},
+		   image: function(){return card_image},
+		   info: function(){return card_info}
+         },
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: useFullScreen
+    })
+    .then(function(answer) {
+    }, function() {
+    });
+    $scope.$watch(function() {
+      return $mdMedia('xs') || $mdMedia('sm');
+    }, function(wantsFullScreen) {
+      $scope.customFullscreen = (wantsFullScreen === true);
+    });
+  };
+
+})
+
+  
+	;
+	
+
+	
+	
+	// for fetching parent variables from book popup child
+function DialogController($scope, $mdDialog, title, image, info) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+  
+  $scope.title = title;
+  $scope.image = image;
+  $scope.info = info;
+
+}
+	
+	
+myOKZ.directive('oibvalidate', function (){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+             var valid = CheckOIB(value);
+             ngModel.$setValidity('oibvalidate', valid);
+             return valid ? value : undefined;
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+             ngModel.$setValidity('oibvalidate', CheckOIB(value));
+             return value;
+          });
+      }
+   };
+});
+
+myOKZ.directive('validage', function (){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+             var valid = (getAge(value) >= 18);
+			 if(prepaid_picked) {
+				valid = true;
+			 }
+             ngModel.$setValidity('validage', valid);
+             return valid ? value : undefined;
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+			var valid = (getAge(value) >= 18);
+			 if(prepaid_picked) {
+				valid = true;
+			 }
+             ngModel.$setValidity('validage', valid);
+             return value;
+          });
+      }
+   };
+});
+
+
+myOKZ.directive('notinpast', function (){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+             var valid = getAge(value) < 0;
+             ngModel.$setValidity('notinpast', valid);
+             return valid ? value : undefined;
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+             ngModel.$setValidity('notinpast', getAge(value) < 0);
+             return value;
+          });
+      }
+   };
+});	
+		
+	
+myOKZ.directive('capitalize', function() {
+    return {
+      require: 'ngModel',
+      link: function(scope, element, attrs, modelCtrl) {
+        var capitalize = function(inputValue) {
+          if (inputValue == undefined) inputValue = '';
+          var capitalized = inputValue.toUpperCase();
+          if (capitalized !== inputValue) {
+            modelCtrl.$setViewValue(capitalized);
+            modelCtrl.$render();
+          }
+          return capitalized;
+        }
+        modelCtrl.$parsers.push(capitalize);
+        capitalize(scope[attrs.ngModel]); // capitalize initial value
+      }
+    };
+  });
+
+  
+myOKZ.directive('capitalizefirst', function() {
+    return {
+      require: 'ngModel',
+      link: function(scope, element, attrs, modelCtrl) {
+        var capitalize = function(inputValue) {
+          if (inputValue == undefined) inputValue = '';
+          var capitalized = inputValue.toUpperCase();
+          if (capitalized !== inputValue) {
+            modelCtrl.$setViewValue(capitalized);
+            modelCtrl.$render();
+          }
+          return capitalized;
+        }
+        modelCtrl.$parsers.push(capitalize);
+        capitalize(scope[attrs.ngModel]); // capitalize initial value
+      }
+    };
+  });  
+  
+/*
+myOKZ.directive('input', function($compile){
+    // Runs during compile
+    return {
+      link(scope, iElement, iAttrs) {
+        if (iElement.attr('type') === 'text') {
+          iAttrs.$set('ngTrim', "true");
+        }
+      }
+    };
+});  
+  */
+
+myOKZ.directive('trim', function() {
+return {
+    restrict: "A",
+    require: "?ngModel",
+    link: function(scope, element, attrs, ngModel) {
+
+        //This part of the code manipulates the model
+        ngModel.$parsers.push(function(input) {
+		
+		if(input == ' ') {
+		
+			ngModel.$setViewValue(input.trim());
+			ngModel.$render();
+
+            return input ? input.trim() : "";
+		
+		}
+		
+		return input;
+		
+			
+        });
+		
+
+    }
+};
+});  
+  
+  
+  
+  myOKZ.directive('notdefault', function (){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+             var valid = (value != 0);
+			 
+             ngModel.$setValidity('notdefault', valid);
+             return valid ? value : undefined;
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+             ngModel.$setValidity('notdefault', (value != 0));
+             return value;
+          });
+      }
+   };
+});	
+  
+  
+
+   
+  
+  
+  myOKZ.directive('notdefaultmoney', function (){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+             var valid = (value != '');
+			 
+             ngModel.$setValidity('notdefaultmoney', valid);
+             return valid ? value : undefined;
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+             ngModel.$setValidity('notdefaultmoney', (value != ''));
+             return value;
+          });
+      }
+   };
+});	  
+  
+
+Number.prototype.formatMoney = function(c, d, t){
+var n = this, 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };  
+  
+  
+    // Directive
+  myOKZ.directive('inputcurrency', ['$locale', '$filter', function($locale, $filter) {
+
+    // For input validation
+    var isValid = function(val) {
+	
+		if(val == '') {
+			return false;
+		}
+      return angular.isNumber(val) && !isNaN(val);
+    };
+
+    // Helper for creating RegExp's
+    var toRegExp = function(val) {
+      var escaped = val.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      return new RegExp(escaped, 'g');
+    };
+
+    // Saved to your $scope/model
+    var toModel = function(val) {
+
+      // Locale currency support
+      var decimal = toRegExp($locale.NUMBER_FORMATS.DECIMAL_SEP);
+      var group = toRegExp($locale.NUMBER_FORMATS.GROUP_SEP);
+      var currency = toRegExp($locale.NUMBER_FORMATS.CURRENCY_SYM);
+
+      // Strip currency related characters from string
+      val = val.replace(decimal, '').replace(group, '').replace(currency, '').trim();
+
+      return parseInt(val, 10);
+    };
+
+    // Displayed in the input to users
+    var toView = function(val) {
+	  return val.formatMoney(0, ',', '.');
+    };
+
+    // Link to DOM
+    var link = function($scope, $element, $attrs, $ngModel) {
+      $ngModel.$formatters.push(toView);
+      $ngModel.$parsers.push(toModel);
+      $ngModel.$validators.inputcurrency = isValid;
+
+      $element.on('keyup', function() {
+        $ngModel.$viewValue = toView($ngModel.$modelValue);
+        $ngModel.$render();
+      });
+    };
+
+	// Deep-watching model so that validations will trigger on updates of properties
+      $scope.$watch('model', function() {
+	  
+        $ngModel.$validate();
+      }, true);
+	
+    return {
+      restrict: 'A',
+      require: 'ngModel',
+      link: link
+    };
+  }]);
+  
+  
+myOKZ.directive('checkemail', ['$http', function ($http){ 
+   return {
+      require: 'ngModel',
+      link: function(scope, elem, attr, ngModel) {
+
+	  var oknok = false;
+	  
+	  var check_email_fn = function(inputValue) {
+	 
+
+    var myreq = $http.post('isemail-master/checkemail.php?email=' + inputValue).
+    success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+
+
+		
+      }).
+      error(function(data, status, headers, config) {
+		return false;
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+	  
+	  
+	  
+
+		  
+		  myreq.then(function(result) {
+			  if(result.data == "NOK") {
+			  oknok = false;
+				return false;
+			  }
+			  else {
+			  oknok = true;
+				return true;
+			  }
+			 
+		  })
+		  
+        }
+	  
+	  
+          //For DOM -> model validation
+          ngModel.$parsers.unshift(function(value) {
+			 var valid = check_email_fn(value);
+			 valid = oknok;
+			 ngModel.$setValidity('checkemail', valid);
+			return valid ? value : undefined;
+			 
+             
+          });
+
+          //For model -> DOM validation
+          ngModel.$formatters.unshift(function(value) {
+x = 		 check_email_fn(value);
+
+		 x.then(function(){
+			ngModel.$setValidity('checkemail', oknok);
+			return value; 
+			})
+          });
+      }
+   };
+}]);  
+
+
+	//setTimeout(function(){ ouibounce(document.getElementById('leave_modal'), { aggressive: true, timer: 0 }); }, 1000);
+    
+	WizardHandler.myFunc();		
+	
+
+	</script>
+	
+	
+	
+  </body>
+</html>

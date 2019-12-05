@@ -1,0 +1,371 @@
+<md-dialog aria-label="{{title}}" >
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="ic_close_24px.svg" aria-label="Zatvori"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content >
+      <div class="md-dialog-content" >
+		
+		<img style="margin: auto; width:200px" alt="{{title}}" src="{{image}}" />	
+		<div style="width:600px"></div>
+
+		
+		
+		<md-tabs md-align-tabs="top" md-stretch-tabs="always" >
+		
+      <md-tab>
+        <md-tab-label>Opis</md-tab-label>
+        <md-tab-body flex>
+
+		<div ng-show="{{info == 'hp_hpb'}}" flex>
+		
+<br/>
+Pošta &amp; HPB Mastercard kartica prvi je zajednički proizvod Hrvatske poštanske banke i Hrvatske pošte.<br/><br/>
+
+<b>Prednosti:</b><br/><br/>
+<ul>
+	<li>mogućnost odabira otplate troškova kupovine u cijelosti ili obročnom otplatom na 3, 6 ili 12 rata</li>
+	<li>karticu mogu zatražiti i oni koji nisu klijenti Banke</li>
+	<li>odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+	<li>mogućnost beskontaktnog plaćanja - prisloni i plati</li>
+	<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+	<li>posebne pogodnosti u svim poštanskim uredima</li>
+	<li><a class="md-primary" href="http://www.mastercard.com/hr/consumer/promotions-and-offers.html" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+	<li>prijevremena otplata troškova bez naplate naknade</li>
+</ul>
+
+		</div>
+
+		<div ng-show="{{info == 'prepaid'}}" flex>
+		
+	<br/>
+VISA Prepaid kartica s nadoplatom idealna je za sve vas koji ste do sada izbjegavali internetsku kupovinu. Uz limitiranje visine sredstava na računu i nemogućnost odlaska u minus, VISA Prepaid nudi vam potpunu kontrolu nad vašim troškovima te bezbrižnu i sigurnu online kupnju!<br/>
+<br/>
+<b>Prednosti:</b><br/><br/>
+<ul>
+<li>sigurna kupnja putem interneta</li>
+<li>bez članarine i mjesečne naknade</li>
+<li>jednostavno dobivanje kartice (bez kreditne sposobnosti, posjedovanja tekućeg računa i sl.)</li>
+<li>mogućnost plaćanja na svim VISA prodajnim mjestima u zemlji i inozemstvu</li>
+<li>podizanje gotovine na bankomatima u zemlji i inozemstvu</li>
+<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+<li><a class="md-primary" href="https://www.visa.com.hr/promocija/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+</ul>
+
+		</div>
+		
+		<div ng-show="{{info == 'visa_rate'}}">
+		
+		<br/>
+VISA kartica na rate je posebna kreditna kartica koju možete koristi bilo gdje u zemlji i inozemstvu. Otplatu na rate možete primijeniti na bilo kojem mjestu jer istu nije potrebno posebno komunicirati s trgovcem.<br/>
+<br/>
+<b>Prednosti:</b><br/><br/>
+<ul>
+<li>kupovina roba i usluga, podizanje gotovine s bankomata i kupnja putem interneta na rate bez obračuna kamata</li>
+<li>odabir modela otplate na 3, 6 ili 12 rata </li>
+<li>model otplate možete promijeniti u svakom trenutku </li>
+<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+<li><a class="md-primary" href="https://www.visa.com.hr/promocija/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+<li>prijevremena otplata troškova bez naplate naknade</li>
+</ul>
+
+		</div>
+		
+		
+		<div ng-show="{{info == 'mc_revolv'}}">
+		
+		<br/>
+Mastercard kreditna kartica, klasična je kreditna kartica koja omogućuje plaćanja i podizanje gotovine u zemlji i inozemstvu do iznosa odobrenog "revolving" kredita.<br/>
+<br/>
+<b>Prednosti:</b><br/><br/>
+<ul>
+<li>odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+<li>odabir visine postotka mjesečne otplate ukupnih troškova - 5, 10 ili 20 posto mjesečno</li>
+<li>kupovina na prodajnim mjestima u zemlji i inozemstvu i putem interneta</li>
+<li>podizanje gotovine na bankomatima u zemlji i inozemstvu</li>
+<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+<li><a class="md-primary" href="http://www.mastercard.com/hr/consumer/promotions-and-offers.html" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+<li>prijevremena otplata troškova bez naplate naknade</li>
+</ul>
+
+
+		</div>
+		
+		
+		<div ng-show="{{info == 'mc_charge'}}">
+		
+		<br/>
+Mastercard kartica s odgodom plaćanja nudi vam beskamatnu odgodu plaćanja vaših troškova. Troškovi se otplaćuju jednom mjesečno u cijelosti.<br/>
+<br/>
+<b>Prednosti:</b><br/><br/>
+<ul>
+<li>odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+<li>plaćanje svih troškova učinjenih u jednom obračunskom razdoblju (mjesec dana), jednom mjesečno u cijelosti</li>
+<li>kupovina na prodajnim mjestima u zemlji i inozemstvu i putem interneta</li>
+<li>podizanje gotovine na bankomatima u zemlji i inozemstvu</li>
+<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+<li><a class="md-primary" href="http://www.mastercard.com/hr/consumer/promotions-and-offers.html" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+<li>prijevremena otplata troškova bez naplate naknade</li>
+</ul>
+
+
+		</div>
+		
+		
+				<div ng-show="{{info == 'mc_gold'}}">
+		
+	<br/>
+Zlatna Mastercard kartica je prestižna i međunarodno prepoznatljiva kartica Hrvatske poštanske banke. Izdavanjem Zlatne Mastercard kartice Hrvatska poštanska banka ujedno prenosi poruku stabilnog i uspješnog poslovnog partnerstva.<br/>
+<br/>
+<b>Prednosti:</b><br/><br/>
+<ul>
+<li>visoki limiti potrošnje</li>
+<li>osiguranje korisnika od posljedica nezgode</li>
+<li>Mastercard Global Service - mogućnost prijave nestanka kartice bilo gdje u svijetu, hitne izrade zamjenske kartice i hitne isplate gotovine</li>
+<li>odabir datuma plaćanja - 5., 15. ili 25. u mjesecu</li>
+<li>kupovina na prodajnim mjestima u zemlji i inozemstvu i putem interneta</li>
+<li>podizanje gotovine na bankomatima u zemlji i inozemstvu</li>
+<li>kupovina prepaid bonova svih mobilnih operatera u Hrvatskoj te bonova za HAC - ENC uređaje</li>
+<li><a class="md-primary" href="http://www.mastercard.com/hr/consumer/promotions-and-offers.html" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">akcije i pogodnosti</a></li>
+<li>prijevremena otplata troškova bez naplate naknade</li>
+</ul>
+
+
+		</div>
+
+        </md-tab-body>
+      </md-tab>
+
+      <md-tab>
+        <md-tab-label>Uvjeti i cijena</md-tab-label>
+        <md-tab-body>
+
+		<div ng-show="{{info == 'hp_hpb'}}">
+		
+		
+
+<br/>
+Karticu može ugovoriti svaka poslovno sposobna osoba uz udovoljavanje uvjeta Banke.<br/><br/>
+
+U akcijskom razdoblju do 2. studenog 2018. Pošta &amp; HPB kartica dostupna je bez upisnine i s nižim naknadama za obročno plaćanje troškova:<br/><br/>
+
+<ul>
+<li>Model 1 na 3 rate - 1%</li>
+<li>Model 2 na 6 rata - 2%</li>
+<li>Model 3 na 12 rata - 4%</li>
+</ul><br/>
+
+Minimalni iznos ukupnih transakcija koji možete podijeliti na rate iznosi 200 kuna.<br/><br/>
+
+Učinjeni troškovi naplaćuju se izravno s vašeg tekućeg računa ili direktnom uplatom na račun kartice, a obavijest o učinjenim troškovima i iznosu terećenja računa dostavljamo vam poštom, e-mailom ili internetskim bankarstvom za fizičke osobe, 10 dana prije datuma dospijeća.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+
+		</div>
+		
+				<div ng-show="{{info == 'prepaid'}}">
+		
+		
+
+<br/>
+VISA Prepaid kartica namijenjena je svim osobama starijim od 14 godina, bez obzira na kreditnu sposobnost i posjedovanje tekućeg računa.<br/>
+<br/>
+Kartica se može koristiti u okviru raspoloživog iznosa na kartici, bez mogućnosti odlaska u minus po računu.<br/>
+<br/> 
+Uplate na karticu izvršavaju se višekratno, prema potrebama korisnika, i ne naplaćuju se. Maksimalni iznos uplate na karticu iznosi 50.000 kuna. <br/>
+<br/>
+Mjesečni izvadak se može primati isključivo putem elektroničke pošte.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+		</div>
+		
+						<div ng-show="{{info == 'visa_rate'}}">
+		
+		
+
+<br/>
+Karticu može ugovoriti svaka poslovno sposobna osoba uz udovoljavanje uvjeta Banke.<br/>
+<br/>
+Korištenjem VISA kartice na rate njeno se raspoloživo stanje umanjuje za ukupan iznos transakcije. <br/>
+<br/>
+Prva rata i jednokratna naknada terete vaš tekući račun odmah, dok preostale rate dospijevaju mjesečno, na dan u mjesecu dospijeća prve rate. <br/>
+<br/>
+Raspoloživo stanje sredstava na kartici povećava se za iznos svake otplaćene rate.<br/>
+<br/>
+Rate koje još nisu dospjele na naplatu možete i prijevremeno otplatiti.<br/>
+<br/>
+Minimalni iznos transakcije koji možete podijeliti na rate iznosi 200 kuna.<br/>
+<br/>
+Za korištenje kartice ne plaćate godišnju članarinu, već se članarina obračunava mjesečno.<br/>
+<br/>
+Učinjeni troškovi naplaćuju se izravno s vašeg tekućeg računa, a obavijest o učinjenim troškovima i iznosu terećenja računa dostavljamo vam poštom ili e-mailom, 10 dana prije datuma dospijeća.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+		</div>
+		
+		
+						<div ng-show="{{info == 'mc_revolv'}}">
+		
+		
+<br/>
+Karticu može ugovoriti svaka poslovno sposobna osoba uz udovoljavanje uvjeta Banke.<br/>
+<br/>
+Učinjeni troškovi naplaćuju se izravno s vašeg tekućeg računa u odabranom postotku ukupnih troškova, a obavijest o učinjenim troškovima i iznosu terećenja računa dostavit ćemo vam poštom ili putem e-pošte, 10 dana prije datuma naplate.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+		</div>
+		
+		
+						<div ng-show="{{info == 'mc_charge'}}">
+		
+		
+<br/>
+Karticu može ugovoriti svaka poslovno sposobna osoba uz udovoljavanje uvjeta Banke.<br/>
+<br/>
+Učinjeni troškovi naplaćuju se izravno s vašeg tekućeg računa, a obavijest o učinjenim troškovima i iznosu terećenja računa dostavit ćemo vam poštom ili putem e-pošte, 10 dana prije datuma naplate.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+		</div>
+		
+						<div ng-show="{{info == 'mc_gold'}}">
+		
+		
+<br/>
+Karticu može ugovoriti svaka poslovno sposobna osoba uz udovoljavanje uvjeta Banke.<br/>
+<br/>
+Učinjeni troškovi naplaćuju se izravno s vašeg tekućeg računa, a obavijest o učinjenim troškovima i iznosu terećenja računa dostavljamo vam poštom ili e-mailom, 10 dana prije datuma dospijeća.<br/><br/>
+
+<ul>
+<li><a class="md-primary" href="/opci-uvjeti-poslovanja/" onclick="if(confirm('Link će se otvoriti u novom tabu')) {window.open (this.href, '_blank'); return false} else {return false}">Naknade</a></li>
+</ul>
+
+		</div>
+		
+
+		
+        </md-tab-body>
+      </md-tab>
+
+	  
+      <md-tab>
+        <md-tab-label>Dokumenti</md-tab-label>
+        <md-tab-body>
+
+		
+		<div ng-show="{{info == 'hp_hpb'}}" >
+
+		<br/>
+<ul style="list-style:none; padding: 0">
+
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-Po%C5%A1ta-HPB-kartice-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}"><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje Pošta &amp; HPB kartice za fizičke osobe</a><br/><br/></li>
+
+</ul>
+
+		</div>
+		
+		
+				<div ng-show="{{info == 'prepaid'}}">
+		<br/>
+<ul style="list-style:none; padding: 0">
+
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-VISA-Prepaid-kartice-s-nadoplatom-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}" ><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje VISA Prepaid kartice s nadoplatom za fizičke osobe</a></li>
+
+
+</ul>
+
+
+		</div>
+		
+				<div ng-show="{{info == 'visa_rate'}}">
+		<br/>
+<ul style="list-style:none; padding: 0">
+
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-VISA-kartice-na-rate-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}" ><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje VISA kartice na rate za fizičke osobe</a></li>
+
+
+
+</ul>
+
+
+		</div>
+		
+				<div ng-show="{{info == 'mc_revolv'}}">
+		<br/>
+<ul style="list-style:none; padding: 0">
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-MasterCard-kreditne-kartice-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}" ><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje Mastercard kreditne kartice za fizičke osobe</a></li>
+
+<li><a class="md-primary" href="/wp-content/uploads/2017/10/Obrazac_prije_ugovaranja_kreditaREVOLV_web.pdf?1498820740" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}" ><img src="pdf.png" height="40" /> Obrazac o informacijama prije sklapanja ugovora o kreditu</a></li>
+
+
+</ul>
+
+
+		</div>
+		
+				<div ng-show="{{info == 'mc_charge'}}">
+		<br/>
+<ul style="list-style:none; padding: 0">
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-MasterCard-kartice-s-odgodom-pla%C4%87anja-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}" ><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje Mastercard kartice s odgodom plaćanja za fizičke osobe</a></li>
+
+
+</ul>
+
+
+		</div>
+		
+				<div ng-show="{{info == 'mc_gold'}}">
+		<br/>
+<ul style="list-style:none; padding: 0">
+<li><a class="md-primary" href="/wp-content/uploads/2017/12/Op%C4%87i-uvjeti-poslovanja-HPB-a-za-izdavanje-i-kori%C5%A1tenje-Zlatne-MasterCard-kartice-za-fizi%C4%8Dke-osobe3.pdf" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}"><img src="pdf.png" height="40" /> Opći uvjeti poslovanja Hrvatske poštanske banke, dioničko društvo, za izdavanje i korištenje Zlatne Mastercard kartice za fizičke osobe</a></li>
+
+<li><a class="md-primary" href="/wp-content/uploads/2017/10/20080414-usluga-osiguranja-korisnika-mastercard-gold-pdf-1698.pdf?1453589556" onclick="if(confirm('Dokument će se otvoriti u vašem PDF pregledniku')) {window.open (this.href, '_blank'); return false} else {return false}"><img src="pdf.png" height="40" /> Osiguranje korisnika Zlatne Mastercard kartice</a></li>
+
+
+
+</ul>
+
+
+		</div>
+		
+
+		
+        </md-tab-body>
+      </md-tab>
+	  
+      
+    </md-tabs>
+		
+	
+		
+		
+      </div>
+	  
+	  
+	  
+	  
+	  
+    </md-dialog-content>
+    
+
+</md-dialog>
