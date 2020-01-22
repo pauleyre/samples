@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<body>
+  
+<div id="swapi_div"></div>
+
+<script type="text/babel">
+
+class SWAPI extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      starships: [],
+	  nextURL: null,
+	  prevURL: null,
+	  mglti: 1000000,
+	  totalSS: null
+    };
+	
+    this.setURLNext = this.setURLNext.bind(this);
+	this.setURLPrev = this.setURLPrev.bind(this);
+	this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  setURLNext() {
+		if(this.state.nextURL) {
+			this.setState({isLoaded:false});
+			this.getStarships(this.state.nextURL);
+		}
+	}
+	
+	setURLPrev() {
+		if(this.state.prevURL) {
+			this.setState({isLoaded:false});
+			this.getStarships(this.state.prevURL);
+		}
+	}
+
+	handleChange(event) {
+		if(event.target.value > 0) {
+			this.setState({mglti: event.target.value});
+		}
+	}
+
+  handleSubmit(event) {
+    alert('MGLT input is ' + this.state.mglti + '. \nYou can change it if you wish!\nUse [Prev] and [Next] to browse ' + this.state.totalSS + ' different starships');
+    event.preventDefault();
+  }
+
+calc(consumables, MGLT) {
+
+	// sanity checks
+	if(MGLT == 'unknown' || consumables == 'unknown') {
+		return 'unknown';
+	}
+
+	var match, num; 
+	num = consumables.split(" ");
+
+	if(num[0] < 1 || !num[1]) {
+		return consumables;
+	}
+
+	match = consumables.search(/day|days/gi);
+	if(match > -1) {
+		return Math.floor(this.state.mglti / ((parseInt(num[0])) * 24 * MGLT));
+	}
+	
+	match = consumables.search(/week|weeks/gi);
+	if(match > -1) {
+		return Math.floor(this.state.mglti / ((parseInt(num[0]) * 7) * 24 * MGLT));
+	}
+	
+	match = consumables.search(/month|months/gi);
+	if(match > -1) {
+		return Math.floor(this.state.mglti / ((parseInt(num[0]) * 30) * 24 * MGLT));
+	}
+
+	match = consumables.search(/year|years/gi);
+	if(match > -1) {
+		return Math.floor(this.state.mglti / ((parseInt(num[0]) * 365) * 24 * MGLT));
+	}
+	
+	return consumables;
+}
+
+  getStarships(url) {
+    fetch(url)
+      .then(res => res.json())
+      .then(	  
+        (response) => {		
+          this.setState({
+            isLoaded: true,
+            starships: Object.values(response.results),
+			nextURL: response.next,
+			prevURL: response.previous,
+			totalSS: response.count
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+}
+
+  componentDidMount() {
+	this.getStarships('https://swapi.co/api/starships/');
+  }
+
+  render() {
+    const { error, isLoaded, starships } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading... Please stand by</div>;
+    } else {	
+      return (
+		<div>
+		Browse starships: <a href="#" onClick={this.setURLPrev}>[Prev]</a> | <a href="#" onClick={this.setURLNext}>[Next]</a><br/><br/>
+		
+		<form onSubmit={this.handleSubmit}>
+        <label>
+          MGLT Input: <input type="text" value={this.state.mglti} onChange={this.handleChange}  />
+        </label>
+        <input type="submit" value="?" />
+      </form><br/><br/>
+		
+		<ul>
+          {starships.map(starship => (
+            <li key={starship.name}>
+              <strong>{starship.name}</strong><br/>Number of stops: {this.calc(starship.consumables, starship.MGLT)}
+            </li>
+          ))}
+        </ul>
+		</div>
+      );
+    }
+  }
+}
+
+
+ReactDOM.render(<SWAPI />, document.getElementById('swapi_div'))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+Application can be used as is.
+It can run if opened directly from within Windows via file:/// protocol or via http:// protocol if placed in a web server documents root
