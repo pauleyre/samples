@@ -158,6 +158,6 @@ class __TwigTemplate_8843ef664b11680d50ac0594e3958d80c6f2541decfcb3b77c910e2830a
 </div>
 
 {% endblock %}
-", "yt_search/index.html.twig", "C:\\Users\\pgard\\yt\\templates\\yt_search\\index.html.twig");
+", "yt_search/index.html.twig", "C:\\Users\\pgard\\OneDrive\\Documents\\GitHub\\samples\\yt\\templates\\yt_search\\index.html.twig");
     }
 }

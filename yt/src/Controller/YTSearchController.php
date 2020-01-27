@@ -60,10 +60,10 @@ class YTSearchController extends AbstractController
 			   }
 			}
 
-		   } catch (Google_ServiceException $e) {
+		   } catch (\Google_ServiceException $e) {
 			$htmlBody .= sprintf('<p>A service error occurred: <code>%s</code></p>',
 			  htmlspecialchars($e->getMessage()));
-		  } catch (Google_Exception $e) {
+		  } catch (\Google_Exception $e) {
 			$htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>',
 			  htmlspecialchars($e->getMessage()));
 		  }

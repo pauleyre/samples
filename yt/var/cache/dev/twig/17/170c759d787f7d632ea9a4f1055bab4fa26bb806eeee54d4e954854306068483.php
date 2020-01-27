@@ -471,6 +471,6 @@ class __TwigTemplate_f7dcbbced2150b5c5719b14d528362bd6ff0c9bfd8f9091daa59d5cd8b4
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\pgard\\yt\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\pgard\\OneDrive\\Documents\\GitHub\\samples\\yt\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

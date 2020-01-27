@@ -413,6 +413,6 @@ class __TwigTemplate_d3d94d0463f8f4661c6358c71efb016c83dda34cf9b9239f9be2aaa51af
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\Users\\pgard\\yt\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "C:\\Users\\pgard\\OneDrive\\Documents\\GitHub\\samples\\yt\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }
