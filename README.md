@@ -7,6 +7,12 @@ Written in PHP/Javascript.
 
 Croatian knowledge market website written in PHP/Javascript.
 
+#ExchangeRates
+Unity project
+
+#ExchRatesDesktop
+Windows Build of #ExchangeRates
+
 #Gatetown
 
 Contest-winning video game module for a game developer corporation Bioware. 
